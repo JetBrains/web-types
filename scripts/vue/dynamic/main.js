@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import pkg from "$$PACKAGE$$";
 
 Vue.options.components = {};
 Vue.options.filters = {};
@@ -16,8 +17,6 @@ global.window = {
 
 window.Vue = Vue;
 global.Vue = Vue;
-
-import pkg from "$$PACKAGE$$";
 
 if (Object.getOwnPropertyNames(Vue.options.components).length === 0) {
     Vue.use(pkg);
@@ -65,10 +64,9 @@ function copyOptions(obj, visited) {
     }
 }
 
-function copyOptionsInner(options, visited) {
+function copyOptionsInner(options) {
     let result = {};
     result["props"] = copyProps(options["props"]);
-    result["mixins"] = copyOptions(options["mixins"], visited);
     result["name"] = options["name"];
     for (let key of Object.getOwnPropertyNames(options)) {
         if (key.startsWith("___$args")) {
@@ -91,6 +89,9 @@ function copyArgs(args, firstCall) {
         let result = [];
         for (let i = 0; i < args.length; i++) {
             result.push(copyArgs(args[i]));
+        }
+        while (result.length > 0 && result[result.length - 1] == null) {
+            result.pop();
         }
         return result;
     }

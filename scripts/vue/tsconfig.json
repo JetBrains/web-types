@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "outDir": "./tmp/static/",
+    "sourceMap": true,
+    "declaration": false,
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "strict": true
+  },
+  "include": [
+    "static/**/*"
+  ],
+  "exclude": [
+    ".git",
+    "node_modules"
+  ]
+}

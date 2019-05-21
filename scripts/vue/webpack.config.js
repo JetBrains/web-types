@@ -24,8 +24,15 @@ module.exports = {
                     new RegExp("node_modules\/" + pkg + "/"),
                 use:
                     [{
-                        loader: "./id-injector.js"
+                        loader: "./webpack/id-injector.js"
                     }]
+            }, {
+                test: /\.ts$/,
+                use:
+                    [{
+                        loader: "awesome-typescript-loader"
+                    }]
+
             }
         ]
     },
@@ -38,7 +45,7 @@ module.exports = {
             // for quasar framework
             ".mat.js", ".ios.js",
             // regular
-            '.js', '.vue', '.json',]
+            '.js', '.vue', '.json', ".ts"]
     },
     devtool: "cheap-source-map"
 };

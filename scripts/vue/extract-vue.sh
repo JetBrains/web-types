@@ -14,10 +14,16 @@ echo
 echo "Install $PACKAGE@$VERSION"
 npm install --no-save "$PACKAGE"@"$VERSION" || exit
 echo
-echo "Compile extraction script together with $PACKAGE using webpack"
-node_modules/.bin/webpack main.js || exit
+echo "Compile dynamic analisys script together with $PACKAGE using webpack"
+node_modules/.bin/webpack dynamic/main.js -o tmp/dynamic.js || exit
 mkdir -p ../../packages/"$PACKAGE"
 echo
-echo "Run extraction script"
-node dist/main.js > ../../packages/"$PACKAGE/$PACKAGE@$VERSION".web-types.json
+echo "Run dynamic analisys script"
+node tmp/dynamic.js > tmp/dynamic.out.json || exit
+echo
+echo "Compile static analisys script using tsc"
+node_modules/.bin/tsc || exit
+echo
+echo "Run static analisys script"
+node tmp/static/main.js "$(pwd)/tmp/dynamic.js" "$(pwd)/tmp/dynamic.out.json" > ../../packages/"$PACKAGE/$PACKAGE@$VERSION".web-types.json || exit
 echo "Done! Results saved to $(cd ../../packages/"$PACKAGE" || exit; pwd)/$PACKAGE@$VERSION.web-types.json"
