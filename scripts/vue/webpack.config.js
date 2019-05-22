@@ -1,4 +1,4 @@
-const pkg = process.env.PACKAGE;
+const pkg = process.env.LIBRARY_NAME;
 
 module.exports = {
     mode: "development",

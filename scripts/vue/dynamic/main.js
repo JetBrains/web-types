@@ -22,6 +22,15 @@ if (Object.getOwnPropertyNames(Vue.options.components).length === 0) {
     Vue.use(pkg);
 }
 
+const typesMapping = {
+    String: "string",
+    Number: "number",
+    Boolean: "boolean",
+    Function: "(...args: any[]) => any",
+    Array: "any[]",
+    Object: "any"
+};
+
 let result = {};
 for (let type of ['components', 'directives', 'filters']) {
     let obj = Vue.options[type];
@@ -118,11 +127,18 @@ function copyProps(obj) {
         if (typeof prop === "object" || typeof prop === "function") {
             for (let key of Object.getOwnPropertyNames(prop)) {
                 let value = prop[key];
-                if (key === "default" && typeof value === "function") {
-                    try {
-                        value = value();
-                    } catch (e) {
+                if (key === "default") {
+                    if (typeof value === "function") {
+                        try {
+                            value = value();
+                        } catch (e) {
+                            value = undefined;
+                        }
+                    }
+                    if (value === null || value === undefined) {
                         value = undefined;
+                    } else {
+                        value = JSON.stringify(value);
                     }
                 }
                 data[key] = convertValue(value)
@@ -147,7 +163,7 @@ function convertValue(value) {
     if (typeof value === "function") {
         for (let type of [String, Number, Boolean, Function, Array, Object]) {
             if (value === type) {
-                return "#" + type.name;
+                return typesMapping[type.name];
             }
         }
     }
