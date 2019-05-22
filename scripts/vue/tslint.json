@@ -14,7 +14,8 @@
         "multiline": "never",
         "singleline": "never"
       }
-    ]
+    ],
+    "no-conditional-assignment": false
   },
   "jsRules": {
     "max-line-length": {

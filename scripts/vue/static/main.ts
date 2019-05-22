@@ -3,10 +3,15 @@ import * as path from "path";
 import "streamjs";
 import * as ts from "typescript";
 import {
+    BinaryExpression,
     CallExpression,
     ElementAccessExpression,
+    ExpressionStatement,
+    FunctionLikeDeclarationBase,
+    IfStatement,
     LanguageServiceHost,
     NumericLiteral,
+    ParameterDeclaration,
     PropertyAccessExpression,
     PropertyAssignment,
     ScriptSnapshot,
@@ -57,10 +62,26 @@ const entities = stream.from(Object.values(staticJson))
     .toArray();
 
 const ID_PREFIX = "___$id";
+const ARGS_PREFIX = "___$args";
+const FUNCTION_NODES: Set<SyntaxKind> = new Set<SyntaxKind>([
+    SyntaxKind.MethodDeclaration,
+    SyntaxKind.FunctionDeclaration,
+    SyntaxKind.Constructor,
+    SyntaxKind.SetAccessor,
+    SyntaxKind.GetAccessor,
+    SyntaxKind.FunctionExpression,
+    SyntaxKind.ArrowFunction
+]);
+
+interface IEntityArguments {
+    [id: number]: any[];
+}
+
+type IArgumentBasedProvider = (args: IEntityArguments) => string[];
 
 interface IStaticEntityAnalysis {
-    slots: string[];
-    events: string[];
+    slots: Array<string | IArgumentBasedProvider>;
+    events: Array<string | IArgumentBasedProvider>;
     fileName?: string;
 }
 
@@ -107,22 +128,45 @@ function createTagsList() {
                 .map((id) => ids.get(id))
                 .filter((obj) => obj)
                 .toList();
+            const resolveArguments = createArgumentsResolver(component);
             result.push({
                 "name": key,
                 "source-file": staticComponentDef && staticComponentDef.fileName,
                 "attributes": createComponentAttributes(component),
                 "events": stream.from(staticDefs)
                     .flatMap((obj) => obj!.events)
+                    .flatMap(resolveArguments)
                     .distinct()
+                    .sorted()
                     .toList(),
                 "slots": stream.from(staticDefs)
                     .flatMap((obj) => obj!.slots)
+                    .flatMap(resolveArguments)
                     .distinct()
+                    .sorted()
                     .toList()
             });
         }
     }
+    sortNamedElements(result);
     return result;
+}
+
+function createArgumentsResolver(component: any) {
+    const args: IEntityArguments = {};
+    stream.from(Object.keys(component))
+        .filter((key) => key.startsWith(ARGS_PREFIX))
+        .map((key) => Number.parseInt(key.substr(ARGS_PREFIX.length), 10))
+        .forEach((id) => {
+            args[id] = component[ARGS_PREFIX + id.toString(10)];
+        });
+    return (value: string | IArgumentBasedProvider) => {
+        if (typeof value === "string") {
+            return [value];
+        } else {
+            return value(args);
+        }
+    };
 }
 
 function createComponentAttributes(component: any) {
@@ -138,7 +182,12 @@ function createComponentAttributes(component: any) {
             });
         }
     }
+    sortNamedElements(result);
     return result;
+}
+
+function sortNamedElements(arr: any[]) {
+    arr.sort((a, b) => (a.name > b.name) ? 1 : (a.name === b.name) ? 0 : -1);
 }
 
 function gatherStaticInformation(node: ts.Node) {
@@ -152,16 +201,18 @@ function gatherStaticInformation(node: ts.Node) {
             .map((expr) => Number.parseInt((expr as NumericLiteral).text, 10))
             .shift();
         if (id && ids.has(id)) {
-            ids.set(id, analyseEntity(obj));
+            ids.set(id, analyseEntity(obj, id));
             return;
         }
     }
     ts.forEachChild(node, gatherStaticInformation);
 }
 
-function analyseEntity(entity: ts.ObjectLiteralExpression): IStaticEntityAnalysis {
-    const slots: string[] = [];
-    const events: string[] = [];
+function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticEntityAnalysis {
+    const slots: Array<string | IArgumentBasedProvider> = [];
+    const events: Array<string | IArgumentBasedProvider> = [];
+    const enclosingFunctionCall = getParentOfKind(entity, FUNCTION_NODES);
+    const typeChecker = services.getProgram()!.getTypeChecker();
     visitEntityCode(entity);
     return {
         events,
@@ -183,7 +234,7 @@ function analyseEntity(entity: ts.ObjectLiteralExpression): IStaticEntityAnalysi
     function visitEntityCode(node: ts.Node) {
         const accessExpression = toAccessExpression(node);
         if (accessExpression && accessExpression.expression.kind === SyntaxKind.ThisKeyword) {
-            const accessedName = getAccessedName(accessExpression);
+            const accessedName = getAccessedName(accessExpression, true);
             if (accessedName === "$slots") {
                 visitSlot(accessExpression.parent);
                 return;
@@ -201,15 +252,88 @@ function analyseEntity(entity: ts.ObjectLiteralExpression): IStaticEntityAnalysi
     }
 
     function visitEventEmit(node: ts.Node) {
-        let eventName = "#<unresolved>";
+        let eventName: string | IArgumentBasedProvider = "#<unresolved>";
         if (node.kind === SyntaxKind.CallExpression) {
             const callExpr = node as CallExpression;
             const firstArg = callExpr.arguments.find(() => true);
-            if (firstArg && firstArg.kind === SyntaxKind.StringLiteral) {
-                eventName = (firstArg as StringLiteral).text;
+            if (firstArg) {
+                eventName = resolveExpression(firstArg);
             }
         }
         events.push(eventName);
+    }
+
+    function getAccessedName(accessExpression: ElementAccessExpression | PropertyAccessExpression | null,
+                             simple: boolean = false): IArgumentBasedProvider | string {
+        if (accessExpression) {
+            if (accessExpression.kind === SyntaxKind.PropertyAccessExpression) {
+                return (accessExpression as PropertyAccessExpression).name.text;
+            }
+            return resolveExpression((accessExpression as ElementAccessExpression).argumentExpression, simple);
+        }
+        return "#<unresolved>";
+    }
+
+    function resolveExpression(expression: ts.Expression, simple: boolean = false): string | IArgumentBasedProvider {
+        if (expression.kind === SyntaxKind.StringLiteral) {
+            return (expression as StringLiteral).text;
+        } else if (expression.kind === SyntaxKind.Identifier && !simple) {
+            const symbol = typeChecker.getSymbolAtLocation(expression);
+            if (symbol && (symbol.getDeclarations() || []).length === 1) {
+                const decl = symbol.getDeclarations()![0];
+                if (decl.kind === SyntaxKind.Parameter) {
+                    const parent = decl.parent;
+                    if (parent === enclosingFunctionCall && FUNCTION_NODES.has(decl.parent.kind)) {
+                        const index = (decl.parent as ts.SignatureDeclaration)
+                            .parameters.indexOf(decl as ParameterDeclaration);
+                        if (index >= 0) {
+                            const defaultValue = findDefaultValue(symbol, decl as ParameterDeclaration);
+                            return (args) => {
+                                return [(args[id] || [])[index] || defaultValue];
+                            };
+                        }
+                    }
+                }
+            }
+        }
+        return "#Error: expression too complex: " + (simple ? "" : ": " + expression.getFullText());
+    }
+
+    function findDefaultValue(symbol: ts.Symbol, parameter: ts.ParameterDeclaration) {
+        const body = (parameter.parent as FunctionLikeDeclarationBase).body;
+        return (body && ts.forEachChild(body, (node) => {
+            let condition;
+            let thenBlock;
+            let conditionRight;
+            let conditionLeft;
+            if (node.kind === SyntaxKind.IfStatement
+                && (condition = (node as IfStatement).expression)
+                && (thenBlock = (node as IfStatement).thenStatement)
+                && condition.kind === SyntaxKind.BinaryExpression
+                && (condition as BinaryExpression).operatorToken.kind === SyntaxKind.EqualsEqualsEqualsToken
+                && (conditionRight = (condition as BinaryExpression).right)
+                && conditionRight.kind === SyntaxKind.VoidExpression
+                && (conditionLeft = (condition as BinaryExpression).left)
+                && typeChecker.getSymbolAtLocation(conditionLeft) === symbol) {
+                return ts.forEachChild(thenBlock, (thenNode) => {
+                    let expression;
+                    let value;
+                    if (thenNode.kind === SyntaxKind.ExpressionStatement
+                        && (expression = (thenNode as ExpressionStatement).expression)
+                        && expression.kind === SyntaxKind.BinaryExpression
+                        && (expression as BinaryExpression).operatorToken.kind === SyntaxKind.EqualsToken
+                        && typeChecker.getSymbolAtLocation((expression as BinaryExpression).left) === symbol
+                        && (value = (expression as BinaryExpression).right)
+                    ) {
+                        if (value.kind === SyntaxKind.StringLiteral) {
+                            return (value as StringLiteral).text;
+                        } else {
+                            return "#Error: expression for default value too complex: " + value.getFullText();
+                        }
+                    }
+                });
+            }
+        })) || "#Error: default value not located: " + parameter.name;
     }
 }
 
@@ -217,9 +341,13 @@ function getPropertyName(prop: ts.ObjectLiteralElementLike) {
     return prop.name && prop.name.kind !== SyntaxKind.ComputedPropertyName ? prop.name.text : undefined;
 }
 
-function getParentOfKind(node: ts.Node, kind: SyntaxKind) {
+function getParentOfKind(node: ts.Node, kind: SyntaxKind | Set<SyntaxKind>) {
+    // noinspection SuspiciousTypeOfGuard
+    const check = kind instanceof Set
+        ? (k: SyntaxKind) => kind.has(k)
+        : (k: SyntaxKind) => k === kind;
     let result = node.parent;
-    while (result && result.kind !== kind) {
+    while (result && !check(result.kind)) {
         result = result.parent;
     }
     return result;
@@ -231,17 +359,4 @@ function toAccessExpression(node: ts.Node) {
         return node as ElementAccessExpression | PropertyAccessExpression;
     }
     return null;
-}
-
-function getAccessedName(accessExpression: ElementAccessExpression | PropertyAccessExpression | null) {
-    if (accessExpression) {
-        if (accessExpression.kind === SyntaxKind.PropertyAccessExpression) {
-            return (accessExpression as PropertyAccessExpression).name.text;
-        }
-        const arg = (accessExpression as ElementAccessExpression).argumentExpression;
-        if (arg.kind === SyntaxKind.StringLiteral) {
-            return (arg as StringLiteral).text;
-        }
-    }
-    return "#<unresolved>";
 }
