@@ -129,7 +129,7 @@ function createComponentAttributes(component: any) {
     const props = component.props;
     const result: any[] = [];
     for (const propName in props) {
-        if (props.hasOwnProperty(propName)) {
+        if (props.hasOwnProperty(propName) && !propName.startsWith("___$")) {
             const prop = props[propName];
             result.push({
                 name: propName,

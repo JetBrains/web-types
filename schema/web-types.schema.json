@@ -1,0 +1,179 @@
+{
+  "$id": "",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "web-types",
+  "type": "object",
+  "properties": {
+    "framework": {
+      "type": "string",
+      "enum": [
+        "vue"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "contributions": {
+      "type": "object",
+      "properties": {
+        "html": {
+          "$ref": "#/definitions/html"
+        }
+      }
+    }
+  },
+  "required": [
+    "framework",
+    "name",
+    "version",
+    "contributions"
+  ],
+  "definitions": {
+    "named-entity": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "doc-url": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    },
+    "typed-entity": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/named-entity"
+        }
+      ],
+      "properties": {
+        "type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "html": {
+      "type": "object",
+      "properties": {
+        "types-syntax": {
+          "type": "string",
+          "enum": [
+            "typescript"
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/html-tag"
+          }
+        }
+      }
+    },
+    "html-tag": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/named-entity"
+        }
+      ],
+      "properties": {
+        "source-file": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/html-tag-attribute"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/html-tag-event"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "slots": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/named-entity"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "html-tag-attribute": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/typed-entity"
+        }
+      ],
+      "properties": {
+        "default": {
+          "type": "string"
+        },
+        "required": {
+          "type": "boolean"
+        }
+      }
+    },
+    "html-tag-event": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/named-entity"
+        }
+      ],
+      "properties": {
+        "arguments": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "#/definitions/typed-entity"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
