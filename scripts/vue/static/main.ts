@@ -243,16 +243,24 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
                 return;
             }
         }
+        if (node.kind === SyntaxKind.Identifier
+            && (node as ts.Identifier).text === "$slots"
+            && toAccessExpression(node.parent)) {
+            visitSlot(node.parent);
+        }
 
         ts.forEachChild(node, visitEntityCode);
     }
 
     function visitSlot(node: ts.Node) {
-        slots.push(getAccessedName(toAccessExpression(node)));
+        if (node.kind !== SyntaxKind.VariableDeclaration
+            && node.kind !== SyntaxKind.CallExpression) {
+            slots.push(getAccessedName(toAccessExpression(node)));
+        }
     }
 
     function visitEventEmit(node: ts.Node) {
-        let eventName: string | IArgumentBasedProvider = "#<unresolved>";
+        let eventName: string | IArgumentBasedProvider | undefined;
         if (node.kind === SyntaxKind.CallExpression) {
             const callExpr = node as CallExpression;
             const firstArg = callExpr.arguments.find(() => true);
@@ -260,7 +268,7 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
                 eventName = resolveExpression(firstArg);
             }
         }
-        events.push(eventName);
+        events.push(eventName || "#Error: expression too complex: " + node.parent.getFullText());
     }
 
     function getAccessedName(accessExpression: ElementAccessExpression | PropertyAccessExpression | null,
@@ -271,7 +279,7 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
             }
             return resolveExpression((accessExpression as ElementAccessExpression).argumentExpression, simple);
         }
-        return "#<unresolved>";
+        return "#Error: no access expression";
     }
 
     function resolveExpression(expression: ts.Expression, simple: boolean = false): string | IArgumentBasedProvider {
@@ -296,7 +304,7 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
                 }
             }
         }
-        return "#Error: expression too complex: " + (simple ? "" : ": " + expression.getFullText());
+        return "#Error: expression too complex" + (simple ? "" : ": " + expression.parent.getFullText());
     }
 
     function findDefaultValue(symbol: ts.Symbol, parameter: ts.ParameterDeclaration) {
@@ -328,7 +336,7 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
                         if (value.kind === SyntaxKind.StringLiteral) {
                             return (value as StringLiteral).text;
                         } else {
-                            return "#Error: expression for default value too complex: " + value.getFullText();
+                            return "#Error: expression for default value too complex: " + value.parent.getFullText();
                         }
                     }
                 });

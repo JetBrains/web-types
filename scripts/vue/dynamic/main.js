@@ -122,6 +122,9 @@ function copyProps(obj) {
     }
     let result = {};
     for (let name of Object.getOwnPropertyNames(obj)) {
+        if (name.startsWith("___$")) {
+            continue;
+        }
         let prop = obj[name];
         let data = {};
         if (typeof prop === "object" || typeof prop === "function") {
