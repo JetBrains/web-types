@@ -33,6 +33,7 @@
   ],
   "definitions": {
     "named-entity": {
+      "type": "object",
       "properties": {
         "name": {
           "type": "string"
@@ -49,6 +50,7 @@
       ]
     },
     "typed-entity": {
+      "type": "object",
       "allOf": [
         {
           "$ref": "#/definitions/named-entity"
