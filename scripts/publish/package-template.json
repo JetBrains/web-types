@@ -1,0 +1,14 @@
+{
+  "name": "@web-types/%PACKAGE_NAME%",
+  "version": "%PACKAGE_VERSION%-%BUILD_NR%",
+  "description": "Web-types for %PACKAGE_NAME%@%PACKAGE_VERSION%",
+  "keywords": [
+    "web-types",
+    "%PACKAGE_NAME%"
+  ],
+  "author": "JetBrains",
+  "license": "MIT",
+  "readme": "README.MD",
+  "repository": "https://github.com/JetBrains/web-types",
+  "web-types": "%PACKAGE_NAME%.web-types.json"
+}

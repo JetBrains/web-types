@@ -25,6 +25,6 @@ echo "Compile static analisys script using tsc"
 node_modules/.bin/tsc || exit
 echo
 echo "Run static analisys script"
-node tmp/static/main.js "$(pwd)/tmp/dynamic.js" "$(pwd)/tmp/dynamic.out.json" > ../../packages/"$LIBRARY_NAME/$LIBRARY_NAME@$LIBRARY_VERSION".web-types.json || exit
+node tmp/static/main.js "$(pwd)/tmp/dynamic.js" "$(pwd)/tmp/dynamic.out.json" "$@" > ../../packages/"$LIBRARY_NAME/$LIBRARY_NAME@$LIBRARY_VERSION".web-types.json || exit
 echo
 echo "Done! Results saved to $(cd ../../packages/"$LIBRARY_NAME" || exit; pwd)/$LIBRARY_NAME@$LIBRARY_VERSION.web-types.json"

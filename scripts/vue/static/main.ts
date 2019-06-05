@@ -30,6 +30,11 @@ process.chdir(workingDir);
 const staticJsonData = fs.readFileSync(process.argv[3]);
 const staticJson = JSON.parse(staticJsonData as any);
 
+const production = process.argv.find((a) => a === "--production");
+if (!production) {
+    console.error("  ** development mode - errors are added to the output **");
+}
+
 const servicesHost: LanguageServiceHost = {
     getScriptFileNames: () => [dynamicScriptName],
     getScriptVersion: () => "1",
@@ -102,6 +107,7 @@ stream.from(entities)
 gatherStaticInformation(sourceFile!);
 
 const webTypes = {
+    $schema: "../../schema/web-types.schema.json",
     framework: "vue",
     name: process.env.LIBRARY_NAME,
     version: process.env.LIBRARY_VERSION,
@@ -114,6 +120,10 @@ const webTypes = {
 };
 
 console.log(JSON.stringify(webTypes, null, 2));
+
+function noError(name: string) {
+    return !production || name.indexOf("#Error") < 0;
+}
 
 function createTagsList() {
     const result: any[] = [];
@@ -136,14 +146,18 @@ function createTagsList() {
                 "events": stream.from(staticDefs)
                     .flatMap((obj) => obj!.events)
                     .flatMap(resolveArguments)
+                    .filter(noError)
                     .distinct()
                     .sorted()
+                    .map((name) => ({name}))
                     .toList(),
                 "slots": stream.from(staticDefs)
                     .flatMap((obj) => obj!.slots)
                     .flatMap(resolveArguments)
+                    .filter(noError)
                     .distinct()
                     .sorted()
+                    .map((name) => ({name}))
                     .toList()
             });
         }
@@ -173,7 +187,9 @@ function createComponentAttributes(component: any) {
     const props = component.props;
     const result: any[] = [];
     for (const propName in props) {
-        if (props.hasOwnProperty(propName) && !propName.startsWith("___$")) {
+        if (props.hasOwnProperty(propName)
+            && !propName.startsWith("___$")
+            && noError(propName)) {
             const prop = props[propName];
             result.push({
                 name: propName,
