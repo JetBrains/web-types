@@ -103,40 +103,19 @@
         "attributes": {
           "type": "array",
           "items": {
-            "anyOf": [
-              {
-                "$ref": "#/definitions/html-tag-attribute"
-              },
-              {
-                "type": "string"
-              }
-            ]
+            "$ref": "#/definitions/html-tag-attribute"
           }
         },
         "events": {
           "type": "array",
           "items": {
-            "anyOf": [
-              {
-                "$ref": "#/definitions/html-tag-event"
-              },
-              {
-                "type": "string"
-              }
-            ]
+            "$ref": "#/definitions/html-tag-event"
           }
         },
         "slots": {
           "type": "array",
           "items": {
-            "anyOf": [
-              {
-                "$ref": "#/definitions/named-entity"
-              },
-              {
-                "type": "string"
-              }
-            ]
+            "$ref": "#/definitions/named-entity"
           }
         }
       }
@@ -168,11 +147,7 @@
         "arguments": {
           "type": "array",
           "items": {
-            "anyOf": [
-              {
-                "$ref": "#/definitions/typed-entity"
-              }
-            ]
+            "$ref": "#/definitions/typed-entity"
           }
         }
       }
