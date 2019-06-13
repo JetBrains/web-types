@@ -10,8 +10,9 @@ module.exports = {
                 use: [{
                     loader: "string-replace-loader",
                     options: {
-                        search: "$$PACKAGE$$",
-                        replace: pkg
+                        search: "\\$\\$PACKAGE\\$\\$",
+                        replace: pkg,
+                        flags: "g"
                     }
                 }, {
                     loader: 'babel-loader'

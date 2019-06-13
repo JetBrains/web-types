@@ -1,22 +1,28 @@
 import Vue from 'vue'
-import pkg from "$$PACKAGE$$";
 
 Vue.options.components = {};
 Vue.options.filters = {};
 Vue.options.directives = {};
 
-global.window = {
-    navigator: {
-        userAgent: "fake"
-    },
-    addEventListener() {
-    },
-    removeEventListener() {
-    }
-};
+createBrowserPolyfills();
 
-window.Vue = Vue;
 global.Vue = Vue;
+
+// Do not register `window` global to avoid component
+// registration side-effects in quasar framework
+if ("$$PACKAGE$$" !== "quasar-framework") {
+    global.window = {
+        navigator,
+        document,
+        Vue,
+        addEventListener() {
+        },
+        removeEventListener() {
+        }
+    };
+}
+
+let pkg = require("$$PACKAGE$$").default;
 
 if (Object.getOwnPropertyNames(Vue.options.components).length === 0) {
     Vue.use(pkg);
@@ -138,7 +144,10 @@ function copyProps(obj) {
                             value = undefined;
                         }
                     }
-                    if (value === null || value === undefined) {
+                    if (value === null
+                        || value === undefined
+                        // discard GUID name from quasar framework
+                        || (typeof value.match === "function" && value.match(/[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+/))) {
                         value = undefined;
                     } else {
                         value = JSON.stringify(value);
@@ -171,4 +180,52 @@ function convertValue(value) {
         }
     }
     return value;
+}
+
+function createBrowserPolyfills() {
+    global.navigator = {
+        userAgent: "fake"
+    };
+    global.document = {
+        location: {
+            href: ""
+        },
+        addEventListener() {
+        },
+        removeEventListener() {
+        },
+        documentElement: {
+            setAttribute: function () {
+            }
+        },
+        querySelector: function () {
+        },
+        body: {
+            classList: {
+                add: function () {
+                }
+            },
+            addEventListener() {
+            },
+            removeEventListener() {
+            },
+        }
+    };
+    global.XMLHttpRequest = {
+        prototype: {
+            send() {
+            }
+        }
+    };
+    global.Event = function () {
+    };
+    global.Element = {
+        prototype: {}
+    };
+    global.CharacterData = {
+        prototype: {}
+    };
+    global.DocumentType = {
+        prototype: {}
+    };
 }
