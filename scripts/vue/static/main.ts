@@ -114,7 +114,8 @@ const webTypes = {
     contributions: {
         html: {
             "types-syntax": "typescript",
-            "tags": createTagsList()
+            "tags": createTagsList(),
+            "attributes": createGlobalAttributesList()
         }
     }
 };
@@ -159,6 +160,22 @@ function createTagsList() {
                     .sorted()
                     .map((name) => ({name}))
                     .toList()
+            });
+        }
+    }
+    sortNamedElements(result);
+    return result;
+}
+
+function createGlobalAttributesList() {
+    const result: any[] = [];
+    for (const key in staticJson.directives) {
+        if (staticJson.directives.hasOwnProperty(key)) {
+            const directive = staticJson.directives[key];
+            const staticDirectiveDef = ids.get(Number.parseInt(directive[ID_PREFIX], 10));
+            result.push({
+                "name": "v-" + fromAssetName(key),
+                "source-file": staticDirectiveDef && staticDirectiveDef.fileName
             });
         }
     }
@@ -383,4 +400,11 @@ function toAccessExpression(node: ts.Node) {
         return node as ElementAccessExpression | PropertyAccessExpression;
     }
     return null;
+}
+
+function fromAssetName(text: string): string {
+    return text.split(/(?=[A-Z])/)
+        .filter((s) => s !== "")
+        .map((s) => s.toLowerCase())
+        .join("-");
 }
