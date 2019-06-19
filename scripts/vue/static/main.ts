@@ -1,4 +1,6 @@
+import {evaluate, LogLevelKind} from "@wessberg/ts-evaluator";
 import * as fs from "fs";
+import cloneDeep from "lodash/cloneDeep";
 import * as path from "path";
 import "streamjs";
 import * as ts from "typescript";
@@ -63,7 +65,7 @@ const services = ts.createLanguageService(
 const sourceFile = services.getProgram()!.getSourceFile(dynamicScriptName);
 
 const entities = stream.from(Object.values(staticJson))
-    .flatMap(Object.values)
+    .flatMap((val) => Object.values(val as any) as any[])
     .toArray();
 
 const ID_PREFIX = "___$id";
@@ -82,7 +84,7 @@ interface IEntityArguments {
     [id: number]: any[];
 }
 
-type IArgumentBasedProvider = (args: IEntityArguments) => string[];
+type IArgumentBasedProvider = (args: IEntityArguments, id: number) => string[];
 
 interface IStaticEntityAnalysis {
     slots: Array<string | IArgumentBasedProvider>;
@@ -90,19 +92,39 @@ interface IStaticEntityAnalysis {
     fileName?: string;
 }
 
-const ids: Map<number, IStaticEntityAnalysis> = new Map<number, IStaticEntityAnalysis>();
+interface IDynamicEntityAnalysis {
+    props: any;
+    name: string;
+    model?: any;
+}
+
+const staticAnalysis: Map<number, IStaticEntityAnalysis> = new Map<number, IStaticEntityAnalysis>();
+const dynamicAnalysis: Map<number, IDynamicEntityAnalysis> = new Map<number, IDynamicEntityAnalysis>();
 
 const EMPTY = {slots: [], events: []};
 
 stream.from(entities)
-    .flatMap(Object.keys)
+    .flatMap((val) => Object.keys(val as any))
     .filter((key) => key.startsWith(ID_PREFIX) && key !== ID_PREFIX)
     .map((key) => key.substr(ID_PREFIX.length))
     .map((id) => Number.parseInt(id, 10))
     .distinct()
     .forEach((id) => {
-        ids.set(id, EMPTY);
+        staticAnalysis.set(id, EMPTY);
     });
+
+entities.forEach((entity) => {
+    if (entity[ID_PREFIX]) {
+        dynamicAnalysis.set(entity[ID_PREFIX], entity);
+
+        // workaround bug in evaluator for vuetify support
+        if (!entity.model) {
+            entity.model = {
+                event: "input"
+            };
+        }
+    }
+});
 
 gatherStaticInformation(sourceFile!);
 
@@ -131,12 +153,12 @@ function createTagsList() {
     for (const key in staticJson.components) {
         if (staticJson.components.hasOwnProperty(key)) {
             const component = staticJson.components[key];
-            const staticComponentDef = ids.get(Number.parseInt(component[ID_PREFIX], 10));
+            const staticComponentDef = staticAnalysis.get(Number.parseInt(component[ID_PREFIX], 10));
             const staticDefs = stream.from(Object.keys(component))
                 .filter((id) => id.startsWith(ID_PREFIX) && id !== ID_PREFIX)
                 .map((id) => id.substr(ID_PREFIX.length))
                 .map((id) => Number.parseInt(id, 10))
-                .map((id) => ids.get(id))
+                .map((id) => staticAnalysis.get(id))
                 .filter((obj) => obj)
                 .toList();
             const resolveArguments = createArgumentsResolver(component);
@@ -172,7 +194,7 @@ function createGlobalAttributesList() {
     for (const key in staticJson.directives) {
         if (staticJson.directives.hasOwnProperty(key)) {
             const directive = staticJson.directives[key];
-            const staticDirectiveDef = ids.get(Number.parseInt(directive[ID_PREFIX], 10));
+            const staticDirectiveDef = staticAnalysis.get(Number.parseInt(directive[ID_PREFIX], 10));
             result.push({
                 "name": "v-" + fromAssetName(key),
                 "source-file": staticDirectiveDef && staticDirectiveDef.fileName
@@ -195,7 +217,7 @@ function createArgumentsResolver(component: any) {
         if (typeof value === "string") {
             return [value];
         } else {
-            return value(args);
+            return value(args, component[ID_PREFIX]);
         }
     };
 }
@@ -233,8 +255,8 @@ function gatherStaticInformation(node: ts.Node) {
             .filter((expr) => expr.kind === SyntaxKind.NumericLiteral)
             .map((expr) => Number.parseInt((expr as NumericLiteral).text, 10))
             .shift();
-        if (id && ids.has(id)) {
-            ids.set(id, analyseEntity(obj, id));
+        if (id && staticAnalysis.has(id)) {
+            staticAnalysis.set(id, analyseEntity(obj, id));
             return;
         }
     }
@@ -271,7 +293,7 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
             if (accessedName === "$slots") {
                 visitSlot(accessExpression.parent);
                 return;
-            } else if (accessedName === "$emit") {
+            } else if (accessedName === "$emit" || (/* vuetify */ accessedName === "emitNodeCache")) {
                 visitEventEmit(accessExpression.parent);
                 return;
             }
@@ -299,9 +321,26 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
             const firstArg = callExpr.arguments.find(() => true);
             if (firstArg) {
                 eventName = resolveExpression(firstArg);
+                if (typeof eventName === "string" && eventName.startsWith("#Error:")) {
+                    if (/* vuetify */ eventName.indexOf("this.$emit(\"click:\"") > 0) {
+                        eventName = "click";
+                    } else if (/* vuetify */ isWithinFunction(node, "emitNodeCache")) {
+                        return;
+                    }
+                }
             }
         }
-        events.push(eventName || "#Error: expression too complex: " + node.parent.getFullText());
+        events.push(eventName || "#Error: expression too complex: " + node.parent.getFullText().trim());
+    }
+
+    function isWithinFunction(node: ts.Node, name: string): boolean {
+        while (node && node.kind !== SyntaxKind.FunctionExpression) {
+            node = node.parent;
+        }
+        if (node && (node as ts.FunctionExpression).name) {
+            return (node as ts.FunctionExpression).name!.text === name;
+        }
+        return false;
     }
 
     function getAccessedName(accessExpression: ElementAccessExpression | PropertyAccessExpression | null,
@@ -336,8 +375,72 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
                     }
                 }
             }
+        } else if (expression.kind === SyntaxKind.PropertyAccessExpression) {
+            const propAccess = expression as PropertyAccessExpression;
+            if (propAccess.expression.kind === SyntaxKind.ThisKeyword) {
+                return (args, actualId) => [evaluateThisPropertyValue(propAccess.name.text, actualId)];
+            }
         }
-        return "#Error: expression too complex" + (simple ? "" : ": " + expression.parent.getFullText());
+        return "#Error: expression too complex" + (simple ? "" : ": " + expression.parent.getFullText().trim());
+    }
+
+    function evaluateThisPropertyValue(name: string, actualId: number): string {
+        const assignmentExpressions: ts.Expression[] = [];
+        findAssignmentExpressions(entity);
+
+        const values = assignmentExpressions
+            .map((value) => evaluateExpression(value, actualId))
+            .filter((value) => !!value);
+
+        if (values.length > 1) {
+            return `#Error: too many values for 'this.${name}': ${JSON.stringify(values)}`;
+        } else if (values.length === 0) {
+            return `#Error: value for 'this.${name}' not found`;
+        }
+        return values[0]!;
+
+        function findAssignmentExpressions(node: ts.Node) {
+            if (node.kind === SyntaxKind.BinaryExpression) {
+                const expr = node as BinaryExpression;
+                if (expr.operatorToken.kind === SyntaxKind.EqualsToken
+                    && expr.left.kind === SyntaxKind.PropertyAccessExpression) {
+                    const propAccess = expr.left as PropertyAccessExpression;
+                    if (propAccess.expression.kind === SyntaxKind.ThisKeyword
+                        && name === propAccess.name.text) {
+                        assignmentExpressions.push(expr.right);
+                        return;
+                    }
+                }
+            }
+            ts.forEachChild(node, findAssignmentExpressions);
+        }
+    }
+
+    function evaluateExpression(expression: ts.Expression, actualId: number): string | null {
+        const result = evaluate({
+            node: expression,
+            typeChecker,
+            environment: {
+                extra: {
+                    this: {
+                        $options: cloneDeep(dynamicAnalysis.get(actualId))
+                    }
+                }
+            },
+            policy: {
+                deterministic: true,
+                io: {
+                    read: false,
+                    write: false
+                }
+            },
+            logLevel: LogLevelKind.SILENT
+        });
+        if (result.success) {
+            return (result.value as any).toString();
+        }
+        return "#Error: " + result.reason.name + ": " + result.reason.message
+            + ", while evaluating: " + expression.getFullText().trim();
     }
 
     function findDefaultValue(symbol: ts.Symbol, parameter: ts.ParameterDeclaration) {
@@ -369,7 +472,8 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
                         if (value.kind === SyntaxKind.StringLiteral) {
                             return (value as StringLiteral).text;
                         } else {
-                            return "#Error: expression for default value too complex: " + value.parent.getFullText();
+                            return "#Error: expression for default value too complex: "
+                                + value.parent.getFullText().trim();
                         }
                     }
                 });

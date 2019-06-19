@@ -6,13 +6,17 @@
   "keywords": [],
   "author": "JetBrains",
   "license": "MIT",
+  "private": true,
   "repository": "https://github.com/JetBrains/web-types/scripts/vue",
   "dependencies": {
     "@types/node": "^12.0.2",
     "@types/streamjs": "^1.5.28",
+    "@types/lodash": "^4.14.134",
+    "@wessberg/ts-evaluator": "0.0.21",
     "streamjs": "^1.6.4",
-    "typescript": "^3.4.5",
-    "vue": "^2.6.10"
+    "typescript": "3.5.1",
+    "vue": "^2.6.10",
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "awesome-typescript-loader": "^5.2.1",

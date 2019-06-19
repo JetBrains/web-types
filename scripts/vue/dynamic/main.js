@@ -83,6 +83,7 @@ function copyOptionsInner(options) {
     let result = {};
     result["props"] = copyProps(options["props"]);
     result["name"] = options["name"];
+    result["model"] = options["model"];
     for (let key of Object.getOwnPropertyNames(options)) {
         if (key.startsWith("___$args")) {
             result[key] = copyArgs(options[key], true);
