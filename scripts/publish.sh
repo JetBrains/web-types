@@ -122,7 +122,7 @@ for version in ${TO_DEPRECATE[@]}; do
   if [[ "$(npm view "@web-types/$PACKAGE_NAME@$version" deprecated)" == "" ]]; then
     echo "- making $version depracated"
     if [[ "$DRY_RUN" == "false" ]]; then
-      npm deprecate "@web-types/$PACKAGE_NAME@$version" "Deprecated"
+      npm deprecate "@web-types/$PACKAGE_NAME@$version" "Improved version available"
     fi
   else
     echo "- $version is already deprecated, skipping"
