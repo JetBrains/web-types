@@ -1,0 +1,7999 @@
+{
+  "$schema": "../../schema/web-types.schema.json",
+  "framework": "vue",
+  "name": "vuetify",
+  "version": "1.1.10",
+  "contributions": {
+    "html": {
+      "types-syntax": "typescript",
+      "tags": [
+        {
+          "name": "v-alert",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dismissible",
+              "type": "boolean"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "mode",
+              "type": "string"
+            },
+            {
+              "name": "origin",
+              "type": "string"
+            },
+            {
+              "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "transition",
+              "type": "string"
+            },
+            {
+              "name": "type",
+              "type": "string"
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "v-app",
+          "source-file": "./src/components/VApp/VApp.js",
+          "attributes": [
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "default": "\"app\""
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-autocomplete",
+          "source-file": "./src/components/VAutocomplete/VAutocomplete.js",
+          "attributes": [
+            {
+              "name": "activator"
+            },
+            {
+              "name": "allowOverflow",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "appendIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.dropdown\""
+            },
+            {
+              "name": "appendIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "appendOuterIcon",
+              "type": "string"
+            },
+            {
+              "name": "appendOuterIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "attach",
+              "default": "false"
+            },
+            {
+              "name": "auto",
+              "type": "boolean"
+            },
+            {
+              "name": "autofocus",
+              "type": "boolean"
+            },
+            {
+              "name": "backgroundColor",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "box",
+              "type": "boolean"
+            },
+            {
+              "name": "browserAutocomplete",
+              "type": "string",
+              "default": "\"off\""
+            },
+            {
+              "name": "cacheItems",
+              "type": "boolean"
+            },
+            {
+              "name": "chips",
+              "type": "boolean"
+            },
+            {
+              "name": "clearIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.clear\""
+            },
+            {
+              "name": "clearIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "clearable",
+              "type": "boolean"
+            },
+            {
+              "name": "closeOnClick",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "closeOnContentClick",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "contentClass",
+              "type": "string"
+            },
+            {
+              "name": "counter",
+              "type": [
+                "boolean",
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "deletableChips",
+              "type": "boolean"
+            },
+            {
+              "name": "dense",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "dontFillMaskBlanks",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "errorCount",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "errorMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "filter",
+              "type": "(...args: any[]) => any",
+              "default": "true"
+            },
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "fullWidth",
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "hideDetails",
+              "type": "boolean"
+            },
+            {
+              "name": "hideNoData",
+              "type": "boolean"
+            },
+            {
+              "name": "hideSelected",
+              "type": "boolean"
+            },
+            {
+              "name": "hint",
+              "type": "string"
+            },
+            {
+              "name": "inputActivator",
+              "type": "boolean"
+            },
+            {
+              "name": "itemAvatar",
+              "type": [
+                "string",
+                "any[]",
+                "(...args: any[]) => any"
+              ],
+              "default": "\"avatar\""
+            },
+            {
+              "name": "itemDisabled",
+              "type": [
+                "string",
+                "any[]",
+                "(...args: any[]) => any"
+              ],
+              "default": "\"disabled\""
+            },
+            {
+              "name": "itemText",
+              "type": [
+                "string",
+                "any[]",
+                "(...args: any[]) => any"
+              ],
+              "default": "\"text\""
+            },
+            {
+              "name": "itemValue",
+              "type": [
+                "string",
+                "any[]",
+                "(...args: any[]) => any"
+              ],
+              "default": "\"value\""
+            },
+            {
+              "name": "items",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "mask",
+              "type": [
+                "any",
+                "string"
+              ]
+            },
+            {
+              "name": "maxHeight",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "300"
+            },
+            {
+              "name": "maxWidth",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"auto\""
+            },
+            {
+              "name": "messages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "minWidth",
+              "type": [
+                "boolean",
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "multiLine",
+              "type": "boolean"
+            },
+            {
+              "name": "multiple",
+              "type": "boolean"
+            },
+            {
+              "name": "noDataText",
+              "type": "string",
+              "default": "\"$vuetify.noDataText\""
+            },
+            {
+              "name": "noFilter",
+              "type": "boolean"
+            },
+            {
+              "name": "nudgeBottom",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeLeft",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeRight",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeTop",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeWidth",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "offsetOverflow",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "offsetX",
+              "type": "boolean"
+            },
+            {
+              "name": "offsetY",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "openOnClear",
+              "type": "boolean"
+            },
+            {
+              "name": "openOnClick",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "openOnHover",
+              "type": "boolean"
+            },
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top left\""
+            },
+            {
+              "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "persistentHint",
+              "type": "boolean"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "positionX",
+              "type": "number"
+            },
+            {
+              "name": "positionY",
+              "type": "number"
+            },
+            {
+              "name": "prefix",
+              "type": "string"
+            },
+            {
+              "name": "prependIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "prependInnerIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependInnerIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "returnMaskedValue",
+              "type": "boolean"
+            },
+            {
+              "name": "returnObject",
+              "type": "boolean"
+            },
+            {
+              "name": "reverse",
+              "type": "boolean"
+            },
+            {
+              "name": "rules",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "searchInput"
+            },
+            {
+              "name": "singleLine",
+              "type": "boolean"
+            },
+            {
+              "name": "smallChips",
+              "type": "boolean"
+            },
+            {
+              "name": "solo",
+              "type": "boolean"
+            },
+            {
+              "name": "soloInverted",
+              "type": "boolean"
+            },
+            {
+              "name": "success",
+              "type": "boolean"
+            },
+            {
+              "name": "successMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "suffix",
+              "type": "string"
+            },
+            {
+              "name": "textarea",
+              "type": "boolean"
+            },
+            {
+              "name": "transition",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "validateOnBlur",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "valueComparator",
+              "type": "(...args: any[]) => any",
+              "default": "true"
+            },
+            {
+              "name": "zIndex",
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "keydown"
+            },
+            {
+              "name": "mousedown"
+            },
+            {
+              "name": "mouseup"
+            },
+            {
+              "name": "update:error"
+            },
+            {
+              "name": "update:searchInput"
+            }
+          ],
+          "slots": [
+            {
+              "name": "append"
+            },
+            {
+              "name": "append-outer"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "label"
+            },
+            {
+              "name": "no-data"
+            },
+            {
+              "name": "prepend"
+            },
+            {
+              "name": "prepend-inner"
+            },
+            {
+              "name": "progress"
+            }
+          ]
+        },
+        {
+          "name": "v-avatar",
+          "source-file": "./src/components/VAvatar/VAvatar.ts",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "48"
+            },
+            {
+              "name": "tile",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-badge",
+          "source-file": "./src/components/VBadge/VBadge.ts",
+          "attributes": [
+            {
+              "name": "bottom",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "left",
+              "type": "boolean"
+            },
+            {
+              "name": "mode",
+              "type": "string"
+            },
+            {
+              "name": "origin",
+              "type": "string"
+            },
+            {
+              "name": "overlap",
+              "type": "boolean"
+            },
+            {
+              "name": "transition",
+              "type": "string",
+              "default": "\"fab-transition\""
+            },
+            {
+              "name": "value",
+              "default": "true"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "badge"
+            },
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-bottom-nav",
+          "source-file": "./src/components/VBottomNav/VBottomNav.ts",
+          "attributes": [
+            {
+              "name": "absolute",
+              "type": "boolean"
+            },
+            {
+              "name": "active",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "app",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "fixed",
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "56"
+            },
+            {
+              "name": "mandatory",
+              "type": "boolean"
+            },
+            {
+              "name": "shift",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "update:active"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-bottom-sheet",
+          "source-file": "./src/components/VBottomSheet/VBottomSheet.js",
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "fullWidth",
+              "type": "boolean"
+            },
+            {
+              "name": "hideOverlay",
+              "type": "boolean"
+            },
+            {
+              "name": "inset",
+              "type": "boolean"
+            },
+            {
+              "name": "lazy",
+              "type": "boolean"
+            },
+            {
+              "name": "maxWidth",
+              "type": [
+                "string",
+                "number"
+              ],
+              "default": "\"auto\""
+            },
+            {
+              "name": "persistent",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "activator"
+            },
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-bottom-sheet-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-breadcrumbs",
+          "source-file": "./src/components/VBreadcrumbs/VBreadcrumbs.js",
+          "attributes": [
+            {
+              "name": "divider",
+              "type": "string",
+              "default": "\"/\""
+            },
+            {
+              "name": "justifyCenter",
+              "type": "boolean"
+            },
+            {
+              "name": "justifyEnd",
+              "type": "boolean"
+            },
+            {
+              "name": "large",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "divider"
+            }
+          ]
+        },
+        {
+          "name": "v-breadcrumbs-item",
+          "source-file": "./src/components/VBreadcrumbs/VBreadcrumbsItem.js",
+          "attributes": [
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"v-breadcrumbs__item--disabled\""
+            },
+            {
+              "name": "append",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "exact",
+              "type": "boolean"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string"
+            },
+            {
+              "name": "href",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "nuxt",
+              "type": "boolean"
+            },
+            {
+              "name": "replace",
+              "type": "boolean"
+            },
+            {
+              "name": "ripple",
+              "type": [
+                "boolean",
+                "any"
+              ]
+            },
+            {
+              "name": "tag",
+              "type": "string"
+            },
+            {
+              "name": "target",
+              "type": "string"
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-btn",
+          "source-file": "./src/components/VBtn/VBtn.ts",
+          "attributes": [
+            {
+              "name": "absolute",
+              "type": "boolean"
+            },
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"v-btn--active\""
+            },
+            {
+              "name": "append",
+              "type": "boolean"
+            },
+            {
+              "name": "block",
+              "type": "boolean"
+            },
+            {
+              "name": "bottom",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "depressed",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "exact",
+              "type": "boolean"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string"
+            },
+            {
+              "name": "fab",
+              "type": "boolean"
+            },
+            {
+              "name": "fixed",
+              "type": "boolean"
+            },
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "href",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "icon",
+              "type": "boolean"
+            },
+            {
+              "name": "inputValue"
+            },
+            {
+              "name": "large",
+              "type": "boolean"
+            },
+            {
+              "name": "left",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": "boolean"
+            },
+            {
+              "name": "nuxt",
+              "type": "boolean"
+            },
+            {
+              "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "replace",
+              "type": "boolean"
+            },
+            {
+              "name": "right",
+              "type": "boolean"
+            },
+            {
+              "name": "ripple",
+              "type": [
+                "boolean",
+                "any"
+              ],
+              "default": "true"
+            },
+            {
+              "name": "round",
+              "type": "boolean"
+            },
+            {
+              "name": "small",
+              "type": "boolean"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"button\""
+            },
+            {
+              "name": "target",
+              "type": "string"
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "top",
+              "type": "boolean"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"button\""
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "loader"
+            }
+          ]
+        },
+        {
+          "name": "v-btn-toggle",
+          "source-file": "./src/components/VBtnToggle/VBtnToggle.ts",
+          "attributes": [
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "inputValue"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "mandatory",
+              "type": "boolean"
+            },
+            {
+              "name": "multiple",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-card",
+          "source-file": "./src/components/VCard/VCard.ts",
+          "attributes": [
+            {
+              "name": "activeClass",
+              "type": "string"
+            },
+            {
+              "name": "append",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "exact",
+              "type": "boolean"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string"
+            },
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "hover",
+              "type": "boolean"
+            },
+            {
+              "name": "href",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "img",
+              "type": "string"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "nuxt",
+              "type": "boolean"
+            },
+            {
+              "name": "raised",
+              "type": "boolean"
+            },
+            {
+              "name": "replace",
+              "type": "boolean"
+            },
+            {
+              "name": "ripple",
+              "type": [
+                "boolean",
+                "any"
+              ]
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "target",
+              "type": "string"
+            },
+            {
+              "name": "tile",
+              "type": "boolean"
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "width",
+              "type": [
+                "string",
+                "number"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-card-actions",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-card-media",
+          "source-file": "./src/components/VCard/VCardMedia.ts",
+          "attributes": [
+            {
+              "name": "contain",
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"auto\""
+            },
+            {
+              "name": "src",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-card-text",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-card-title",
+          "source-file": "./src/components/VCard/VCardTitle.ts",
+          "attributes": [
+            {
+              "name": "primaryTitle",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-carousel",
+          "source-file": "./src/components/VCarousel/VCarousel.js",
+          "attributes": [
+            {
+              "name": "cycle",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "delimiterIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.delimiter\""
+            },
+            {
+              "name": "hideControls",
+              "type": "boolean"
+            },
+            {
+              "name": "hideDelimiters",
+              "type": "boolean"
+            },
+            {
+              "name": "interval",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "6000"
+            },
+            {
+              "name": "lazy",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "nextIcon",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "\"$vuetify.icons.next\""
+            },
+            {
+              "name": "prevIcon",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "\"$vuetify.icons.prev\""
+            },
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-carousel-item",
+          "source-file": "./src/components/VCarousel/VCarouselItem.js",
+          "attributes": [
+            {
+              "name": "reverseTransition",
+              "type": "string",
+              "default": "\"tab-reverse-transition\""
+            },
+            {
+              "name": "transition",
+              "type": "string",
+              "default": "\"tab-transition\""
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-carousel-reverse-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-carousel-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-checkbox",
+          "source-file": "./src/components/VCheckbox/VCheckbox.js",
+          "attributes": [
+            {
+              "name": "appendIcon",
+              "type": "string"
+            },
+            {
+              "name": "appendIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "backgroundColor",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"accent\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "errorCount",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "errorMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "falseValue"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "hideDetails",
+              "type": "boolean"
+            },
+            {
+              "name": "hint",
+              "type": "string"
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "indeterminate",
+              "type": "boolean"
+            },
+            {
+              "name": "indeterminateIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.checkboxIndeterminate\""
+            },
+            {
+              "name": "inputValue"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "messages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "multiple",
+              "type": "boolean"
+            },
+            {
+              "name": "offIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.checkboxOff\""
+            },
+            {
+              "name": "onIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.checkboxOn\""
+            },
+            {
+              "name": "persistentHint",
+              "type": "boolean"
+            },
+            {
+              "name": "prependIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "ripple",
+              "type": [
+                "boolean",
+                "any"
+              ],
+              "default": "true"
+            },
+            {
+              "name": "rules",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "success",
+              "type": "boolean"
+            },
+            {
+              "name": "successMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "toggleKeys",
+              "type": "any[]",
+              "default": "[13,32]"
+            },
+            {
+              "name": "trueValue"
+            },
+            {
+              "name": "validateOnBlur",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "valueComparator",
+              "type": "(...args: any[]) => any",
+              "default": "true"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "mousedown"
+            },
+            {
+              "name": "mouseup"
+            },
+            {
+              "name": "update:error"
+            }
+          ],
+          "slots": [
+            {
+              "name": "append"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "label"
+            },
+            {
+              "name": "prepend"
+            },
+            {
+              "name": "progress"
+            }
+          ]
+        },
+        {
+          "name": "v-chip",
+          "source-file": "./src/components/VChip/VChip.ts",
+          "attributes": [
+            {
+              "name": "close",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "selected",
+              "type": "boolean"
+            },
+            {
+              "name": "small",
+              "type": "boolean"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "boolean",
+              "default": "true"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-combobox",
+          "source-file": "./src/components/VCombobox/VCombobox.js",
+          "attributes": [
+            {
+              "name": "activator"
+            },
+            {
+              "name": "allowOverflow",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "appendIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.dropdown\""
+            },
+            {
+              "name": "appendIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "appendOuterIcon",
+              "type": "string"
+            },
+            {
+              "name": "appendOuterIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "attach",
+              "default": "false"
+            },
+            {
+              "name": "auto",
+              "type": "boolean"
+            },
+            {
+              "name": "autofocus",
+              "type": "boolean"
+            },
+            {
+              "name": "backgroundColor",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "box",
+              "type": "boolean"
+            },
+            {
+              "name": "browserAutocomplete",
+              "type": "string",
+              "default": "\"off\""
+            },
+            {
+              "name": "cacheItems",
+              "type": "boolean"
+            },
+            {
+              "name": "chips",
+              "type": "boolean"
+            },
+            {
+              "name": "clearIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.clear\""
+            },
+            {
+              "name": "clearIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "clearable",
+              "type": "boolean"
+            },
+            {
+              "name": "closeOnClick",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "closeOnContentClick",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "contentClass",
+              "type": "string"
+            },
+            {
+              "name": "counter",
+              "type": [
+                "boolean",
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "deletableChips",
+              "type": "boolean"
+            },
+            {
+              "name": "delimiters",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "dense",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "dontFillMaskBlanks",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "errorCount",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "errorMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "filter",
+              "type": "(...args: any[]) => any",
+              "default": "true"
+            },
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "fullWidth",
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "hideDetails",
+              "type": "boolean"
+            },
+            {
+              "name": "hideNoData",
+              "type": "boolean"
+            },
+            {
+              "name": "hideSelected",
+              "type": "boolean"
+            },
+            {
+              "name": "hint",
+              "type": "string"
+            },
+            {
+              "name": "inputActivator",
+              "type": "boolean"
+            },
+            {
+              "name": "itemAvatar",
+              "type": [
+                "string",
+                "any[]",
+                "(...args: any[]) => any"
+              ],
+              "default": "\"avatar\""
+            },
+            {
+              "name": "itemDisabled",
+              "type": [
+                "string",
+                "any[]",
+                "(...args: any[]) => any"
+              ],
+              "default": "\"disabled\""
+            },
+            {
+              "name": "itemText",
+              "type": [
+                "string",
+                "any[]",
+                "(...args: any[]) => any"
+              ],
+              "default": "\"text\""
+            },
+            {
+              "name": "itemValue",
+              "type": [
+                "string",
+                "any[]",
+                "(...args: any[]) => any"
+              ],
+              "default": "\"value\""
+            },
+            {
+              "name": "items",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "mask",
+              "type": [
+                "any",
+                "string"
+              ]
+            },
+            {
+              "name": "maxHeight",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "300"
+            },
+            {
+              "name": "maxWidth",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"auto\""
+            },
+            {
+              "name": "messages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "minWidth",
+              "type": [
+                "boolean",
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "multiLine",
+              "type": "boolean"
+            },
+            {
+              "name": "multiple",
+              "type": "boolean"
+            },
+            {
+              "name": "noDataText",
+              "type": "string",
+              "default": "\"$vuetify.noDataText\""
+            },
+            {
+              "name": "noFilter",
+              "type": "boolean"
+            },
+            {
+              "name": "nudgeBottom",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeLeft",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeRight",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeTop",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeWidth",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "offsetOverflow",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "offsetX",
+              "type": "boolean"
+            },
+            {
+              "name": "offsetY",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "openOnClear",
+              "type": "boolean"
+            },
+            {
+              "name": "openOnClick",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "openOnHover",
+              "type": "boolean"
+            },
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top left\""
+            },
+            {
+              "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "persistentHint",
+              "type": "boolean"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "positionX",
+              "type": "number"
+            },
+            {
+              "name": "positionY",
+              "type": "number"
+            },
+            {
+              "name": "prefix",
+              "type": "string"
+            },
+            {
+              "name": "prependIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "prependInnerIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependInnerIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "returnMaskedValue",
+              "type": "boolean"
+            },
+            {
+              "name": "returnObject",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "reverse",
+              "type": "boolean"
+            },
+            {
+              "name": "rules",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "searchInput"
+            },
+            {
+              "name": "singleLine",
+              "type": "boolean"
+            },
+            {
+              "name": "smallChips",
+              "type": "boolean"
+            },
+            {
+              "name": "solo",
+              "type": "boolean"
+            },
+            {
+              "name": "soloInverted",
+              "type": "boolean"
+            },
+            {
+              "name": "success",
+              "type": "boolean"
+            },
+            {
+              "name": "successMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "suffix",
+              "type": "string"
+            },
+            {
+              "name": "textarea",
+              "type": "boolean"
+            },
+            {
+              "name": "transition",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "validateOnBlur",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "valueComparator",
+              "type": "(...args: any[]) => any",
+              "default": "true"
+            },
+            {
+              "name": "zIndex",
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "keydown"
+            },
+            {
+              "name": "mousedown"
+            },
+            {
+              "name": "mouseup"
+            },
+            {
+              "name": "update:error"
+            },
+            {
+              "name": "update:searchInput"
+            }
+          ],
+          "slots": [
+            {
+              "name": "append"
+            },
+            {
+              "name": "append-outer"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "label"
+            },
+            {
+              "name": "no-data"
+            },
+            {
+              "name": "prepend"
+            },
+            {
+              "name": "prepend-inner"
+            },
+            {
+              "name": "progress"
+            }
+          ]
+        },
+        {
+          "name": "v-container",
+          "source-file": "./src/components/VGrid/grid.js",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-content",
+          "source-file": "./src/components/VGrid/VContent.js",
+          "attributes": [
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"main\""
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-counter",
+          "source-file": "./src/components/VCounter/VCounter.js",
+          "attributes": [
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "max",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "value",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-data-iterator",
+          "source-file": "./src/components/VDataIterator/VDataIterator.js",
+          "attributes": [
+            {
+              "name": "contentClass",
+              "type": "string"
+            },
+            {
+              "name": "contentProps",
+              "type": "any"
+            },
+            {
+              "name": "contentTag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "customFilter",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "customSort",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disableInitialSort",
+              "type": "boolean"
+            },
+            {
+              "name": "expand",
+              "type": "boolean"
+            },
+            {
+              "name": "filter",
+              "type": "(...args: any[]) => any",
+              "default": "false"
+            },
+            {
+              "name": "hideActions",
+              "type": "boolean"
+            },
+            {
+              "name": "itemKey",
+              "type": "string",
+              "default": "\"id\""
+            },
+            {
+              "name": "items",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "mustSort",
+              "type": "boolean"
+            },
+            {
+              "name": "nextIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.next\""
+            },
+            {
+              "name": "noDataText",
+              "type": "string",
+              "default": "\"$vuetify.noDataText\""
+            },
+            {
+              "name": "noResultsText",
+              "type": "string",
+              "default": "\"$vuetify.dataIterator.noResultsText\""
+            },
+            {
+              "name": "pagination",
+              "type": "any"
+            },
+            {
+              "name": "prevIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.prev\""
+            },
+            {
+              "name": "rowsPerPageItems",
+              "type": "any[]",
+              "default": "[5,10,25,{\"text\":\"$vuetify.dataIterator.rowsPerPageAll\",\"value\":-1}]"
+            },
+            {
+              "name": "rowsPerPageText",
+              "type": "string",
+              "default": "\"$vuetify.dataIterator.rowsPerPageText\""
+            },
+            {
+              "name": "search"
+            },
+            {
+              "name": "selectAll",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "totalItems",
+              "type": "number"
+            },
+            {
+              "name": "value",
+              "type": "any[]",
+              "default": "[]"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "update:pagination"
+            }
+          ],
+          "slots": [
+            {
+              "name": "footer"
+            },
+            {
+              "name": "header"
+            },
+            {
+              "name": "no-data"
+            },
+            {
+              "name": "no-results"
+            },
+            {
+              "name": "progress"
+            }
+          ]
+        },
+        {
+          "name": "v-data-table",
+          "source-file": "./src/components/VDataTable/VDataTable.js",
+          "attributes": [
+            {
+              "name": "customFilter",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "customSort",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disableInitialSort",
+              "type": "boolean"
+            },
+            {
+              "name": "expand",
+              "type": "boolean"
+            },
+            {
+              "name": "filter",
+              "type": "(...args: any[]) => any",
+              "default": "false"
+            },
+            {
+              "name": "headerText",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "headers",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "headersLength",
+              "type": "number"
+            },
+            {
+              "name": "hideActions",
+              "type": "boolean"
+            },
+            {
+              "name": "hideHeaders",
+              "type": "boolean"
+            },
+            {
+              "name": "itemKey",
+              "type": "string",
+              "default": "\"id\""
+            },
+            {
+              "name": "items",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "mustSort",
+              "type": "boolean"
+            },
+            {
+              "name": "nextIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.next\""
+            },
+            {
+              "name": "noDataText",
+              "type": "string",
+              "default": "\"$vuetify.noDataText\""
+            },
+            {
+              "name": "noResultsText",
+              "type": "string",
+              "default": "\"$vuetify.dataIterator.noResultsText\""
+            },
+            {
+              "name": "pagination",
+              "type": "any"
+            },
+            {
+              "name": "prevIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.prev\""
+            },
+            {
+              "name": "rowsPerPageItems",
+              "type": "any[]",
+              "default": "[5,10,25,{\"text\":\"$vuetify.dataIterator.rowsPerPageAll\",\"value\":-1}]"
+            },
+            {
+              "name": "rowsPerPageText",
+              "type": "string",
+              "default": "\"$vuetify.dataTable.rowsPerPageText\""
+            },
+            {
+              "name": "search"
+            },
+            {
+              "name": "selectAll",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "sortIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.sort\""
+            },
+            {
+              "name": "totalItems",
+              "type": "number"
+            },
+            {
+              "name": "value",
+              "type": "any[]",
+              "default": "[]"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "update:pagination"
+            }
+          ],
+          "slots": [
+            {
+              "name": "footer"
+            },
+            {
+              "name": "no-data"
+            },
+            {
+              "name": "no-results"
+            },
+            {
+              "name": "progress"
+            }
+          ]
+        },
+        {
+          "name": "v-date-picker",
+          "source-file": "./src/components/VDatePicker/VDatePicker.js",
+          "attributes": [
+            {
+              "name": "allowedDates",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "dayFormat",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "eventColor",
+              "type": [
+                "string",
+                "(...args: any[]) => any",
+                "any"
+              ],
+              "default": "\"warning\""
+            },
+            {
+              "name": "events",
+              "type": [
+                "any[]",
+                "any",
+                "(...args: any[]) => any"
+              ]
+            },
+            {
+              "name": "firstDayOfWeek",
+              "type": [
+                "string",
+                "number"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "fullWidth",
+              "type": "boolean"
+            },
+            {
+              "name": "headerColor",
+              "type": "string"
+            },
+            {
+              "name": "headerDateFormat",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "landscape",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "locale",
+              "type": "string",
+              "default": "\"en-us\""
+            },
+            {
+              "name": "max",
+              "type": "string"
+            },
+            {
+              "name": "min",
+              "type": "string"
+            },
+            {
+              "name": "monthFormat",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "nextIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.next\""
+            },
+            {
+              "name": "noTitle",
+              "type": "boolean"
+            },
+            {
+              "name": "pickerDate",
+              "type": "string"
+            },
+            {
+              "name": "prevIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.prev\""
+            },
+            {
+              "name": "reactive",
+              "type": "boolean"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "scrollable",
+              "type": "boolean"
+            },
+            {
+              "name": "showCurrent",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "true"
+            },
+            {
+              "name": "titleDateFormat",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"date\""
+            },
+            {
+              "name": "value",
+              "type": "string"
+            },
+            {
+              "name": "width",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "290"
+            },
+            {
+              "name": "yearFormat",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "yearIcon",
+              "type": "string"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "update:pickerDate"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-date-picker-date-table",
+          "source-file": "./src/components/VDatePicker/VDatePickerDateTable.js",
+          "attributes": [
+            {
+              "name": "allowedDates",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "current",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "eventColor",
+              "type": [
+                "string",
+                "(...args: any[]) => any",
+                "any"
+              ],
+              "default": "\"warning\""
+            },
+            {
+              "name": "events",
+              "type": [
+                "any[]",
+                "any",
+                "(...args: any[]) => any"
+              ]
+            },
+            {
+              "name": "firstDayOfWeek",
+              "type": [
+                "string",
+                "number"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "format",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "locale",
+              "type": "string",
+              "default": "\"en-us\""
+            },
+            {
+              "name": "max",
+              "type": "string"
+            },
+            {
+              "name": "min",
+              "type": "string"
+            },
+            {
+              "name": "scrollable",
+              "type": "boolean"
+            },
+            {
+              "name": "tableDate",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "string"
+            },
+            {
+              "name": "weekdayFormat",
+              "type": "(...args: any[]) => any"
+            }
+          ],
+          "events": [
+            {
+              "name": "tableDate"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "v-date-picker-header",
+          "source-file": "./src/components/VDatePicker/VDatePickerHeader.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "format",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "locale",
+              "type": "string",
+              "default": "\"en-us\""
+            },
+            {
+              "name": "max",
+              "type": "string"
+            },
+            {
+              "name": "min",
+              "type": "string"
+            },
+            {
+              "name": "nextIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.next\""
+            },
+            {
+              "name": "prevIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.prev\""
+            },
+            {
+              "name": "value",
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-date-picker-month-table",
+          "source-file": "./src/components/VDatePicker/VDatePickerMonthTable.js",
+          "attributes": [
+            {
+              "name": "allowedDates",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "current",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "format",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "locale",
+              "type": "string",
+              "default": "\"en-us\""
+            },
+            {
+              "name": "max",
+              "type": "string"
+            },
+            {
+              "name": "min",
+              "type": "string"
+            },
+            {
+              "name": "scrollable",
+              "type": "boolean"
+            },
+            {
+              "name": "tableDate",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ],
+          "events": [
+            {
+              "name": "tableDate"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "v-date-picker-title",
+          "source-file": "./src/components/VDatePicker/VDatePickerTitle.js",
+          "attributes": [
+            {
+              "name": "date",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "selectingYear",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": "string"
+            },
+            {
+              "name": "year",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"\""
+            },
+            {
+              "name": "yearIcon",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-date-picker-years",
+          "source-file": "./src/components/VDatePicker/VDatePickerYears.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "format",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "locale",
+              "type": "string",
+              "default": "\"en-us\""
+            },
+            {
+              "name": "max",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "min",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "value",
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-dialog",
+          "source-file": "./src/components/VDialog/VDialog.js",
+          "attributes": [
+            {
+              "name": "attach",
+              "default": "false"
+            },
+            {
+              "name": "contentClass",
+              "default": "\"\""
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "fullWidth",
+              "type": "boolean"
+            },
+            {
+              "name": "fullscreen",
+              "type": "boolean"
+            },
+            {
+              "name": "hideOverlay",
+              "type": "boolean"
+            },
+            {
+              "name": "lazy",
+              "type": "boolean"
+            },
+            {
+              "name": "maxWidth",
+              "type": [
+                "string",
+                "number"
+              ],
+              "default": "\"none\""
+            },
+            {
+              "name": "noClickAnimation",
+              "type": "boolean"
+            },
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"center center\""
+            },
+            {
+              "name": "persistent",
+              "type": "boolean"
+            },
+            {
+              "name": "returnValue"
+            },
+            {
+              "name": "scrollable",
+              "type": "boolean"
+            },
+            {
+              "name": "transition",
+              "type": [
+                "string",
+                "boolean"
+              ],
+              "default": "\"dialog-transition\""
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "width",
+              "type": [
+                "string",
+                "number"
+              ],
+              "default": "\"auto\""
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "keydown"
+            },
+            {
+              "name": "update:returnValue"
+            }
+          ],
+          "slots": [
+            {
+              "name": "activator"
+            },
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-dialog-bottom-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-dialog-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-divider",
+          "source-file": "./src/components/VDivider/VDivider.ts",
+          "attributes": [
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "inset",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "vertical",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-edit-dialog",
+          "source-file": "./src/components/VDataTable/VEditDialog.js",
+          "attributes": [
+            {
+              "name": "cancelText",
+              "default": "\"Cancel\""
+            },
+            {
+              "name": "large",
+              "type": "boolean"
+            },
+            {
+              "name": "lazy",
+              "type": "boolean"
+            },
+            {
+              "name": "persistent",
+              "type": "boolean"
+            },
+            {
+              "name": "returnValue"
+            },
+            {
+              "name": "saveText",
+              "default": "\"Save\""
+            },
+            {
+              "name": "transition",
+              "type": "string",
+              "default": "\"slide-x-reverse-transition\""
+            }
+          ],
+          "events": [
+            {
+              "name": "cancel"
+            },
+            {
+              "name": "close"
+            },
+            {
+              "name": "open"
+            },
+            {
+              "name": "update:returnValue"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "input"
+            }
+          ]
+        },
+        {
+          "name": "v-expand-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "css",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "mode",
+              "type": "string",
+              "default": "\"in-out\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-expansion-panel",
+          "source-file": "./src/components/VExpansionPanel/VExpansionPanel.ts",
+          "attributes": [
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "expand",
+              "type": "boolean"
+            },
+            {
+              "name": "focusable",
+              "type": "boolean"
+            },
+            {
+              "name": "inset",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "popout",
+              "type": "boolean"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": [
+                "number",
+                "any[]"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-expansion-panel-content",
+          "source-file": "./src/components/VExpansionPanel/VExpansionPanelContent.ts",
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "expandIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.expand\""
+            },
+            {
+              "name": "hideActions",
+              "type": "boolean"
+            },
+            {
+              "name": "lazy",
+              "type": "boolean"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "ripple",
+              "type": [
+                "boolean",
+                "any"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "actions"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "header"
+            }
+          ]
+        },
+        {
+          "name": "v-fab-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"center center\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-fade-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-flex",
+          "source-file": "./src/components/VGrid/grid.js",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-footer",
+          "source-file": "./src/components/VFooter/VFooter.js",
+          "attributes": [
+            {
+              "name": "absolute",
+              "type": "boolean"
+            },
+            {
+              "name": "app",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "fixed",
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "32"
+            },
+            {
+              "name": "inset",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-form",
+          "source-file": "./src/components/VForm/VForm.js",
+          "attributes": [
+            {
+              "name": "lazyValidation",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-icon",
+          "source-file": "./src/components/VIcon/VIcon.ts",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "large",
+              "type": "boolean"
+            },
+            {
+              "name": "left",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "medium",
+              "type": "boolean"
+            },
+            {
+              "name": "right",
+              "type": "boolean"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "small",
+              "type": "boolean"
+            },
+            {
+              "name": "xLarge",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-input",
+          "source-file": "./src/components/VInput/VInput.js",
+          "attributes": [
+            {
+              "name": "appendIcon",
+              "type": "string"
+            },
+            {
+              "name": "appendIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "backgroundColor",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "errorCount",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "errorMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "hideDetails",
+              "type": "boolean"
+            },
+            {
+              "name": "hint",
+              "type": "string"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "messages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "persistentHint",
+              "type": "boolean"
+            },
+            {
+              "name": "prependIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "rules",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "success",
+              "type": "boolean"
+            },
+            {
+              "name": "successMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "validateOnBlur",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "mousedown"
+            },
+            {
+              "name": "mouseup"
+            },
+            {
+              "name": "update:error"
+            }
+          ],
+          "slots": [
+            {
+              "name": "append"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "label"
+            },
+            {
+              "name": "prepend"
+            },
+            {
+              "name": "progress"
+            }
+          ]
+        },
+        {
+          "name": "v-jumbotron",
+          "source-file": "./src/components/VJumbotron/VJumbotron.js",
+          "attributes": [
+            {
+              "name": "activeClass",
+              "type": "string"
+            },
+            {
+              "name": "append",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "exact",
+              "type": "boolean"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string"
+            },
+            {
+              "name": "gradient",
+              "type": "string"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"400px\""
+            },
+            {
+              "name": "href",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "nuxt",
+              "type": "boolean"
+            },
+            {
+              "name": "replace",
+              "type": "boolean"
+            },
+            {
+              "name": "ripple",
+              "type": [
+                "boolean",
+                "any"
+              ]
+            },
+            {
+              "name": "src",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "target",
+              "type": "string"
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "img"
+            }
+          ]
+        },
+        {
+          "name": "v-label",
+          "source-file": "./src/components/VLabel/VLabel.js",
+          "attributes": [
+            {
+              "name": "absolute",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "focused",
+              "type": "boolean"
+            },
+            {
+              "name": "for",
+              "type": "string"
+            },
+            {
+              "name": "left",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "right",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"auto\""
+            },
+            {
+              "name": "value",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-layout",
+          "source-file": "./src/components/VGrid/grid.js",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-list",
+          "source-file": "./src/components/VList/VList.js",
+          "attributes": [
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "dense",
+              "type": "boolean"
+            },
+            {
+              "name": "expand",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "subheader",
+              "type": "boolean"
+            },
+            {
+              "name": "threeLine",
+              "type": "boolean"
+            },
+            {
+              "name": "twoLine",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-list-group",
+          "source-file": "./src/components/VList/VListGroup.js",
+          "attributes": [
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"primary--text\""
+            },
+            {
+              "name": "appendIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.expand\""
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "group",
+              "type": "string"
+            },
+            {
+              "name": "lazy",
+              "type": "boolean"
+            },
+            {
+              "name": "noAction",
+              "type": "boolean"
+            },
+            {
+              "name": "prependIcon",
+              "type": "string"
+            },
+            {
+              "name": "subGroup",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "activator"
+            },
+            {
+              "name": "appendIcon"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "prependIcon"
+            }
+          ]
+        },
+        {
+          "name": "v-list-tile",
+          "source-file": "./src/components/VList/VListTile.js",
+          "attributes": [
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"primary--text\""
+            },
+            {
+              "name": "append",
+              "type": "boolean"
+            },
+            {
+              "name": "avatar",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "exact",
+              "type": "boolean"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string"
+            },
+            {
+              "name": "href",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "inactive",
+              "type": "boolean"
+            },
+            {
+              "name": "nuxt",
+              "type": "boolean"
+            },
+            {
+              "name": "replace",
+              "type": "boolean"
+            },
+            {
+              "name": "ripple",
+              "type": [
+                "boolean",
+                "any"
+              ]
+            },
+            {
+              "name": "tag",
+              "type": "string"
+            },
+            {
+              "name": "target",
+              "type": "string"
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-list-tile-action",
+          "source-file": "./src/components/VList/VListTileAction.js",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-list-tile-action-text",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-list-tile-avatar",
+          "source-file": "./src/components/VList/VListTileAvatar.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "40"
+            },
+            {
+              "name": "tile",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-list-tile-content",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-list-tile-sub-title",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-list-tile-title",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-menu",
+          "source-file": "./src/components/VMenu/VMenu.js",
+          "attributes": [
+            {
+              "name": "absolute",
+              "type": "boolean"
+            },
+            {
+              "name": "activator"
+            },
+            {
+              "name": "allowOverflow",
+              "type": "boolean"
+            },
+            {
+              "name": "attach",
+              "default": "false"
+            },
+            {
+              "name": "auto",
+              "type": "boolean"
+            },
+            {
+              "name": "bottom",
+              "type": "boolean"
+            },
+            {
+              "name": "closeDelay",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "200"
+            },
+            {
+              "name": "closeOnClick",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "closeOnContentClick",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "contentClass",
+              "default": "\"\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "fixed",
+              "type": "boolean"
+            },
+            {
+              "name": "fullWidth",
+              "type": "boolean"
+            },
+            {
+              "name": "inputActivator",
+              "type": "boolean"
+            },
+            {
+              "name": "lazy",
+              "type": "boolean"
+            },
+            {
+              "name": "left",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "maxHeight",
+              "default": "\"auto\""
+            },
+            {
+              "name": "maxWidth",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"auto\""
+            },
+            {
+              "name": "minWidth",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "nudgeBottom",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeLeft",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeRight",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeTop",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeWidth",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "offsetOverflow",
+              "type": "boolean"
+            },
+            {
+              "name": "offsetX",
+              "type": "boolean"
+            },
+            {
+              "name": "offsetY",
+              "type": "boolean"
+            },
+            {
+              "name": "openDelay",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "openOnClick",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "openOnHover",
+              "type": "boolean"
+            },
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top left\""
+            },
+            {
+              "name": "positionX",
+              "type": "number"
+            },
+            {
+              "name": "positionY",
+              "type": "number"
+            },
+            {
+              "name": "returnValue"
+            },
+            {
+              "name": "right",
+              "type": "boolean"
+            },
+            {
+              "name": "top",
+              "type": "boolean"
+            },
+            {
+              "name": "transition",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "\"v-menu-transition\""
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "zIndex",
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "update:returnValue"
+            }
+          ],
+          "slots": [
+            {
+              "name": "activator"
+            },
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-menu-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-messages",
+          "source-file": "./src/components/VMessages/VMessages.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": "any[]",
+              "default": "[]"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-navigation-drawer",
+          "source-file": "./src/components/VNavigationDrawer/VNavigationDrawer.js",
+          "attributes": [
+            {
+              "name": "absolute",
+              "type": "boolean"
+            },
+            {
+              "name": "app",
+              "type": "boolean"
+            },
+            {
+              "name": "clipped",
+              "type": "boolean"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disableResizeWatcher",
+              "type": "boolean"
+            },
+            {
+              "name": "disableRouteWatcher",
+              "type": "boolean"
+            },
+            {
+              "name": "fixed",
+              "type": "boolean"
+            },
+            {
+              "name": "floating",
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"100%\""
+            },
+            {
+              "name": "hideOverlay",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "miniVariant",
+              "type": "boolean"
+            },
+            {
+              "name": "miniVariantWidth",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "80"
+            },
+            {
+              "name": "mobileBreakPoint",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1264"
+            },
+            {
+              "name": "permanent",
+              "type": "boolean"
+            },
+            {
+              "name": "right",
+              "type": "boolean"
+            },
+            {
+              "name": "stateless",
+              "type": "boolean"
+            },
+            {
+              "name": "temporary",
+              "type": "boolean"
+            },
+            {
+              "name": "touchless",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "width",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "300"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-overflow-btn",
+          "source-file": "./src/components/VOverflowBtn/VOverflowBtn.js",
+          "attributes": [
+            {
+              "name": "activator"
+            },
+            {
+              "name": "allowOverflow",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "appendIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.dropdown\""
+            },
+            {
+              "name": "appendIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "appendOuterIcon",
+              "type": "string"
+            },
+            {
+              "name": "appendOuterIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "attach",
+              "default": "false"
+            },
+            {
+              "name": "auto",
+              "type": "boolean"
+            },
+            {
+              "name": "autofocus",
+              "type": "boolean"
+            },
+            {
+              "name": "backgroundColor",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "box",
+              "type": "boolean"
+            },
+            {
+              "name": "browserAutocomplete",
+              "type": "string",
+              "default": "\"off\""
+            },
+            {
+              "name": "cacheItems",
+              "type": "boolean"
+            },
+            {
+              "name": "chips",
+              "type": "boolean"
+            },
+            {
+              "name": "clearIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.clear\""
+            },
+            {
+              "name": "clearIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "clearable",
+              "type": "boolean"
+            },
+            {
+              "name": "closeOnClick",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "closeOnContentClick",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "contentClass",
+              "type": "string"
+            },
+            {
+              "name": "counter",
+              "type": [
+                "boolean",
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "deletableChips",
+              "type": "boolean"
+            },
+            {
+              "name": "dense",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "dontFillMaskBlanks",
+              "type": "boolean"
+            },
+            {
+              "name": "editable",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "errorCount",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "errorMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "filter",
+              "type": "(...args: any[]) => any",
+              "default": "true"
+            },
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "fullWidth",
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "hideDetails",
+              "type": "boolean"
+            },
+            {
+              "name": "hideNoData",
+              "type": "boolean"
+            },
+            {
+              "name": "hideSelected",
+              "type": "boolean"
+            },
+            {
+              "name": "hint",
+              "type": "string"
+            },
+            {
+              "name": "inputActivator",
+              "type": "boolean"
+            },
+            {
+              "name": "itemAvatar",
+              "type": [
+                "string",
+                "any[]",
+                "(...args: any[]) => any"
+              ],
+              "default": "\"avatar\""
+            },
+            {
+              "name": "itemDisabled",
+              "type": [
+                "string",
+                "any[]",
+                "(...args: any[]) => any"
+              ],
+              "default": "\"disabled\""
+            },
+            {
+              "name": "itemText",
+              "type": [
+                "string",
+                "any[]",
+                "(...args: any[]) => any"
+              ],
+              "default": "\"text\""
+            },
+            {
+              "name": "itemValue",
+              "type": [
+                "string",
+                "any[]",
+                "(...args: any[]) => any"
+              ],
+              "default": "\"value\""
+            },
+            {
+              "name": "items",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "mask",
+              "type": [
+                "any",
+                "string"
+              ]
+            },
+            {
+              "name": "maxHeight",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "300"
+            },
+            {
+              "name": "maxWidth",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"auto\""
+            },
+            {
+              "name": "messages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "minWidth",
+              "type": [
+                "boolean",
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "multiLine",
+              "type": "boolean"
+            },
+            {
+              "name": "multiple",
+              "type": "boolean"
+            },
+            {
+              "name": "noDataText",
+              "type": "string",
+              "default": "\"$vuetify.noDataText\""
+            },
+            {
+              "name": "noFilter",
+              "type": "boolean"
+            },
+            {
+              "name": "nudgeBottom",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeLeft",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeRight",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeTop",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeWidth",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "offsetOverflow",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "offsetX",
+              "type": "boolean"
+            },
+            {
+              "name": "offsetY",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "openOnClear",
+              "type": "boolean"
+            },
+            {
+              "name": "openOnClick",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "openOnHover",
+              "type": "boolean"
+            },
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top left\""
+            },
+            {
+              "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "persistentHint",
+              "type": "boolean"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "positionX",
+              "type": "number"
+            },
+            {
+              "name": "positionY",
+              "type": "number"
+            },
+            {
+              "name": "prefix",
+              "type": "string"
+            },
+            {
+              "name": "prependIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "prependInnerIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependInnerIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "returnMaskedValue",
+              "type": "boolean"
+            },
+            {
+              "name": "returnObject",
+              "type": "boolean"
+            },
+            {
+              "name": "reverse",
+              "type": "boolean"
+            },
+            {
+              "name": "rules",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "searchInput"
+            },
+            {
+              "name": "segmented",
+              "type": "boolean"
+            },
+            {
+              "name": "singleLine",
+              "type": "boolean"
+            },
+            {
+              "name": "smallChips",
+              "type": "boolean"
+            },
+            {
+              "name": "solo",
+              "type": "boolean"
+            },
+            {
+              "name": "soloInverted",
+              "type": "boolean"
+            },
+            {
+              "name": "success",
+              "type": "boolean"
+            },
+            {
+              "name": "successMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "suffix",
+              "type": "string"
+            },
+            {
+              "name": "textarea",
+              "type": "boolean"
+            },
+            {
+              "name": "transition"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "validateOnBlur",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "valueComparator",
+              "type": "(...args: any[]) => any",
+              "default": "true"
+            },
+            {
+              "name": "zIndex",
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "keydown"
+            },
+            {
+              "name": "mousedown"
+            },
+            {
+              "name": "mouseup"
+            },
+            {
+              "name": "update:error"
+            },
+            {
+              "name": "update:searchInput"
+            }
+          ],
+          "slots": [
+            {
+              "name": "append"
+            },
+            {
+              "name": "append-outer"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "label"
+            },
+            {
+              "name": "no-data"
+            },
+            {
+              "name": "prepend"
+            },
+            {
+              "name": "prepend-inner"
+            },
+            {
+              "name": "progress"
+            }
+          ]
+        },
+        {
+          "name": "v-pagination",
+          "source-file": "./src/components/VPagination/VPagination.js",
+          "attributes": [
+            {
+              "name": "circle",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "length",
+              "type": "number",
+              "default": "0"
+            },
+            {
+              "name": "nextIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.next\""
+            },
+            {
+              "name": "prevIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.prev\""
+            },
+            {
+              "name": "totalVisible",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "value",
+              "type": "number",
+              "default": "0"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "next"
+            },
+            {
+              "name": "previous"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "v-parallax",
+          "source-file": "./src/components/VParallax/VParallax.ts",
+          "attributes": [
+            {
+              "name": "alt",
+              "type": "string"
+            },
+            {
+              "name": "height",
+              "type": [
+                "string",
+                "number"
+              ],
+              "default": "500"
+            },
+            {
+              "name": "src",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-picker",
+          "source-file": "./src/components/VPicker/VPicker.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "fullWidth",
+              "type": "boolean"
+            },
+            {
+              "name": "landscape",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "transition",
+              "type": "string",
+              "default": "\"fade-transition\""
+            },
+            {
+              "name": "width",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "290"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "actions"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "title"
+            }
+          ]
+        },
+        {
+          "name": "v-progress-circular",
+          "source-file": "./src/components/VProgressCircular/VProgressCircular.ts",
+          "attributes": [
+            {
+              "name": "button",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "indeterminate",
+              "type": "boolean"
+            },
+            {
+              "name": "rotate",
+              "type": "number",
+              "default": "0"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "32"
+            },
+            {
+              "name": "value",
+              "type": "number",
+              "default": "0"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "default": "4"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-progress-linear",
+          "source-file": "./src/components/VProgressLinear/VProgressLinear.ts",
+          "attributes": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "backgroundColor",
+              "type": "string"
+            },
+            {
+              "name": "backgroundOpacity",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "bufferValue",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "100"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "7"
+            },
+            {
+              "name": "indeterminate",
+              "type": "boolean"
+            },
+            {
+              "name": "query",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-radio",
+          "source-file": "./src/components/VRadioGroup/VRadio.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "\"accent\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "offIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.radioOff\""
+            },
+            {
+              "name": "onIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.radioOn\""
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "ripple",
+              "type": [
+                "boolean",
+                "any"
+              ],
+              "default": "true"
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            }
+          ],
+          "slots": [
+            {
+              "name": "label"
+            }
+          ]
+        },
+        {
+          "name": "v-radio-group",
+          "source-file": "./src/components/VRadioGroup/VRadioGroup.js",
+          "attributes": [
+            {
+              "name": "appendIcon",
+              "type": "string"
+            },
+            {
+              "name": "appendIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "backgroundColor",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "column",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "errorCount",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "errorMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"auto\""
+            },
+            {
+              "name": "hideDetails",
+              "type": "boolean"
+            },
+            {
+              "name": "hint",
+              "type": "string"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "mandatory",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "messages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "persistentHint",
+              "type": "boolean"
+            },
+            {
+              "name": "prependIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "row",
+              "type": "boolean"
+            },
+            {
+              "name": "rules",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "success",
+              "type": "boolean"
+            },
+            {
+              "name": "successMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "validateOnBlur",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "valueComparator",
+              "type": "(...args: any[]) => any",
+              "default": "true"
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "mousedown"
+            },
+            {
+              "name": "mouseup"
+            },
+            {
+              "name": "update:error"
+            }
+          ],
+          "slots": [
+            {
+              "name": "append"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "label"
+            },
+            {
+              "name": "prepend"
+            },
+            {
+              "name": "progress"
+            }
+          ]
+        },
+        {
+          "name": "v-range-slider",
+          "source-file": "./src/components/VRangeSlider/VRangeSlider.js",
+          "attributes": [
+            {
+              "name": "alwaysDirty",
+              "type": "boolean"
+            },
+            {
+              "name": "appendIcon",
+              "type": "string"
+            },
+            {
+              "name": "appendIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "backgroundColor",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "errorCount",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "errorMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "hideDetails",
+              "type": "boolean"
+            },
+            {
+              "name": "hint",
+              "type": "string"
+            },
+            {
+              "name": "inverseLabel",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "max",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "100"
+            },
+            {
+              "name": "messages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "min",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "persistentHint",
+              "type": "boolean"
+            },
+            {
+              "name": "prependIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "range",
+              "type": "boolean"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "rules",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "step",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "success",
+              "type": "boolean"
+            },
+            {
+              "name": "successMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "thumbColor",
+              "type": "string"
+            },
+            {
+              "name": "thumbLabel",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "thumbSize",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "32"
+            },
+            {
+              "name": "tickLabels",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "tickSize",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "ticks",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "trackColor",
+              "type": "string"
+            },
+            {
+              "name": "validateOnBlur",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": "any[]",
+              "default": "[]"
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "end"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "mousedown"
+            },
+            {
+              "name": "mouseup"
+            },
+            {
+              "name": "start"
+            },
+            {
+              "name": "update:error"
+            }
+          ],
+          "slots": [
+            {
+              "name": "append"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "label"
+            },
+            {
+              "name": "prepend"
+            },
+            {
+              "name": "progress"
+            }
+          ]
+        },
+        {
+          "name": "v-row-expand-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "css",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "mode",
+              "type": "string",
+              "default": "\"in-out\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-scale-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-select",
+          "attributes": [
+            {
+              "name": "autocomplete",
+              "type": "boolean"
+            },
+            {
+              "name": "combobox",
+              "type": "boolean"
+            },
+            {
+              "name": "editable",
+              "type": "boolean"
+            },
+            {
+              "name": "multiple",
+              "type": "boolean"
+            },
+            {
+              "name": "overflow",
+              "type": "boolean"
+            },
+            {
+              "name": "segmented",
+              "type": "boolean"
+            },
+            {
+              "name": "tags",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-slide-x-reverse-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-slide-x-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-slide-y-reverse-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-slide-y-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-slider",
+          "source-file": "./src/components/VSlider/VSlider.js",
+          "attributes": [
+            {
+              "name": "alwaysDirty",
+              "type": "boolean"
+            },
+            {
+              "name": "appendIcon",
+              "type": "string"
+            },
+            {
+              "name": "appendIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "backgroundColor",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "errorCount",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "errorMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "hideDetails",
+              "type": "boolean"
+            },
+            {
+              "name": "hint",
+              "type": "string"
+            },
+            {
+              "name": "inverseLabel",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "max",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "100"
+            },
+            {
+              "name": "messages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "min",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "persistentHint",
+              "type": "boolean"
+            },
+            {
+              "name": "prependIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "range",
+              "type": "boolean"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "rules",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "step",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "success",
+              "type": "boolean"
+            },
+            {
+              "name": "successMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "thumbColor",
+              "type": "string"
+            },
+            {
+              "name": "thumbLabel",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "thumbSize",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "32"
+            },
+            {
+              "name": "tickLabels",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "tickSize",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "ticks",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "trackColor",
+              "type": "string"
+            },
+            {
+              "name": "validateOnBlur",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "end"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "mousedown"
+            },
+            {
+              "name": "mouseup"
+            },
+            {
+              "name": "start"
+            },
+            {
+              "name": "update:error"
+            }
+          ],
+          "slots": [
+            {
+              "name": "append"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "label"
+            },
+            {
+              "name": "prepend"
+            },
+            {
+              "name": "progress"
+            }
+          ]
+        },
+        {
+          "name": "v-snackbar",
+          "source-file": "./src/components/VSnackbar/VSnackbar.ts",
+          "attributes": [
+            {
+              "name": "absolute",
+              "type": "boolean"
+            },
+            {
+              "name": "autoHeight",
+              "type": "boolean"
+            },
+            {
+              "name": "bottom",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "left",
+              "type": "boolean"
+            },
+            {
+              "name": "multiLine",
+              "type": "boolean"
+            },
+            {
+              "name": "right",
+              "type": "boolean"
+            },
+            {
+              "name": "timeout",
+              "type": "number",
+              "default": "6000"
+            },
+            {
+              "name": "top",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "vertical",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-spacer",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-speed-dial",
+          "source-file": "./src/components/VSpeedDial/VSpeedDial.js",
+          "attributes": [
+            {
+              "name": "absolute",
+              "type": "boolean"
+            },
+            {
+              "name": "bottom",
+              "type": "boolean"
+            },
+            {
+              "name": "direction",
+              "type": "string",
+              "default": "\"top\""
+            },
+            {
+              "name": "fixed",
+              "type": "boolean"
+            },
+            {
+              "name": "left",
+              "type": "boolean"
+            },
+            {
+              "name": "mode",
+              "type": "string"
+            },
+            {
+              "name": "openOnHover",
+              "type": "boolean"
+            },
+            {
+              "name": "origin",
+              "type": "string"
+            },
+            {
+              "name": "right",
+              "type": "boolean"
+            },
+            {
+              "name": "top",
+              "type": "boolean"
+            },
+            {
+              "name": "transition",
+              "type": "string",
+              "default": "\"scale-transition\""
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "activator"
+            },
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-stepper",
+          "source-file": "./src/components/VStepper/VStepper.js",
+          "attributes": [
+            {
+              "name": "altLabels",
+              "type": "boolean"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "nonLinear",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "vertical",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-stepper-content",
+          "source-file": "./src/components/VStepper/VStepperContent.js",
+          "attributes": [
+            {
+              "name": "step",
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-stepper-header",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-stepper-items",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-stepper-step",
+          "source-file": "./src/components/VStepper/VStepperStep.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "complete",
+              "type": "boolean"
+            },
+            {
+              "name": "completeIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.complete\""
+            },
+            {
+              "name": "editIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.edit\""
+            },
+            {
+              "name": "editable",
+              "type": "boolean"
+            },
+            {
+              "name": "errorIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.error\""
+            },
+            {
+              "name": "rules",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "step",
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-subheader",
+          "source-file": "./src/components/VSubheader/VSubheader.js",
+          "attributes": [
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "inset",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-switch",
+          "source-file": "./src/components/VSwitch/VSwitch.js",
+          "attributes": [
+            {
+              "name": "appendIcon",
+              "type": "string"
+            },
+            {
+              "name": "appendIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "backgroundColor",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"accent\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "errorCount",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "errorMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "falseValue"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "hideDetails",
+              "type": "boolean"
+            },
+            {
+              "name": "hint",
+              "type": "string"
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "inputValue"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "messages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "multiple",
+              "type": "boolean"
+            },
+            {
+              "name": "persistentHint",
+              "type": "boolean"
+            },
+            {
+              "name": "prependIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "ripple",
+              "type": [
+                "boolean",
+                "any"
+              ],
+              "default": "true"
+            },
+            {
+              "name": "rules",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "success",
+              "type": "boolean"
+            },
+            {
+              "name": "successMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "toggleKeys",
+              "type": "any[]",
+              "default": "[13,32]"
+            },
+            {
+              "name": "trueValue"
+            },
+            {
+              "name": "validateOnBlur",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "valueComparator",
+              "type": "(...args: any[]) => any",
+              "default": "true"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "mousedown"
+            },
+            {
+              "name": "mouseup"
+            },
+            {
+              "name": "update:error"
+            }
+          ],
+          "slots": [
+            {
+              "name": "append"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "label"
+            },
+            {
+              "name": "prepend"
+            },
+            {
+              "name": "progress"
+            }
+          ]
+        },
+        {
+          "name": "v-system-bar",
+          "source-file": "./src/components/VSystemBar/VSystemBar.js",
+          "attributes": [
+            {
+              "name": "absolute",
+              "type": "boolean"
+            },
+            {
+              "name": "app",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "fixed",
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "lightsOut",
+              "type": "boolean"
+            },
+            {
+              "name": "status",
+              "type": "boolean"
+            },
+            {
+              "name": "window",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-tab",
+          "source-file": "./src/components/VTabs/VTab.js",
+          "attributes": [
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"v-tabs__item--active\""
+            },
+            {
+              "name": "append",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "exact",
+              "type": "boolean"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string"
+            },
+            {
+              "name": "href",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "nuxt",
+              "type": "boolean"
+            },
+            {
+              "name": "replace",
+              "type": "boolean"
+            },
+            {
+              "name": "ripple",
+              "type": [
+                "boolean",
+                "any"
+              ],
+              "default": "true"
+            },
+            {
+              "name": "tag",
+              "type": "string"
+            },
+            {
+              "name": "target",
+              "type": "string"
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-tab-item",
+          "source-file": "./src/components/VTabs/VTabItem.js",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "lazy",
+              "type": "boolean"
+            },
+            {
+              "name": "reverseTransition",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "\"tab-reverse-transition\""
+            },
+            {
+              "name": "transition",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "\"tab-transition\""
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-tab-reverse-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-tab-transition",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [
+            {
+              "name": "origin",
+              "type": "string",
+              "default": "\"top center 0\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-table-overflow",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-tabs",
+          "source-file": "./src/components/VTabs/VTabs.js",
+          "attributes": [
+            {
+              "name": "alignWithTitle",
+              "type": "boolean"
+            },
+            {
+              "name": "centered",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "fixedTabs",
+              "type": "boolean"
+            },
+            {
+              "name": "grow",
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "hideSlider",
+              "type": "boolean"
+            },
+            {
+              "name": "iconsAndText",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "mobileBreakPoint",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1264"
+            },
+            {
+              "name": "nextIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.next\""
+            },
+            {
+              "name": "prevIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.prev\""
+            },
+            {
+              "name": "right",
+              "type": "boolean"
+            },
+            {
+              "name": "showArrows",
+              "type": "boolean"
+            },
+            {
+              "name": "sliderColor",
+              "type": "string",
+              "default": "\"accent\""
+            },
+            {
+              "name": "value",
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-tabs-items",
+          "source-file": "./src/components/VTabs/VTabsItems.js",
+          "attributes": [
+            {
+              "name": "cycle",
+              "type": "boolean"
+            },
+            {
+              "name": "touchless",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-tabs-slider",
+          "source-file": "./src/components/VTabs/VTabsSlider.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-text-field",
+          "attributes": [
+            {
+              "name": "multiLine",
+              "type": "boolean"
+            },
+            {
+              "name": "textarea",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-textarea",
+          "source-file": "./src/components/VTextarea/VTextarea.js",
+          "attributes": [
+            {
+              "name": "appendIcon",
+              "type": "string"
+            },
+            {
+              "name": "appendIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "appendOuterIcon",
+              "type": "string"
+            },
+            {
+              "name": "appendOuterIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "autoGrow",
+              "type": "boolean"
+            },
+            {
+              "name": "autofocus",
+              "type": "boolean"
+            },
+            {
+              "name": "backgroundColor",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "box",
+              "type": "boolean"
+            },
+            {
+              "name": "browserAutocomplete",
+              "type": "string"
+            },
+            {
+              "name": "clearIcon",
+              "type": "string",
+              "default": "\"$vuetify.icons.clear\""
+            },
+            {
+              "name": "clearIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "clearable",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "counter",
+              "type": [
+                "boolean",
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "dontFillMaskBlanks",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "errorCount",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "1"
+            },
+            {
+              "name": "errorMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "fullWidth",
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "hideDetails",
+              "type": "boolean"
+            },
+            {
+              "name": "hint",
+              "type": "string"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "mask",
+              "type": [
+                "any",
+                "string"
+              ]
+            },
+            {
+              "name": "messages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "noResize",
+              "type": "boolean"
+            },
+            {
+              "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "persistentHint",
+              "type": "boolean"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "prefix",
+              "type": "string"
+            },
+            {
+              "name": "prependIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "prependInnerIcon",
+              "type": "string"
+            },
+            {
+              "name": "prependInnerIconCb",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "returnMaskedValue",
+              "type": "boolean"
+            },
+            {
+              "name": "reverse",
+              "type": "boolean"
+            },
+            {
+              "name": "rowHeight",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "24"
+            },
+            {
+              "name": "rows",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "5"
+            },
+            {
+              "name": "rules",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "singleLine",
+              "type": "boolean"
+            },
+            {
+              "name": "solo",
+              "type": "boolean"
+            },
+            {
+              "name": "soloInverted",
+              "type": "boolean"
+            },
+            {
+              "name": "success",
+              "type": "boolean"
+            },
+            {
+              "name": "successMessages",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "suffix",
+              "type": "string"
+            },
+            {
+              "name": "textarea",
+              "type": "boolean"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "validateOnBlur",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "keydown"
+            },
+            {
+              "name": "mousedown"
+            },
+            {
+              "name": "mouseup"
+            },
+            {
+              "name": "update:error"
+            }
+          ],
+          "slots": [
+            {
+              "name": "append"
+            },
+            {
+              "name": "append-outer"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "label"
+            },
+            {
+              "name": "prepend"
+            },
+            {
+              "name": "prepend-inner"
+            },
+            {
+              "name": "progress"
+            }
+          ]
+        },
+        {
+          "name": "v-time-picker",
+          "source-file": "./src/components/VTimePicker/VTimePicker.js",
+          "attributes": [
+            {
+              "name": "allowedHours",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "allowedMinutes",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "format",
+              "type": "string",
+              "default": "\"ampm\""
+            },
+            {
+              "name": "fullWidth",
+              "type": "boolean"
+            },
+            {
+              "name": "headerColor",
+              "type": "string"
+            },
+            {
+              "name": "landscape",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "max",
+              "type": "string"
+            },
+            {
+              "name": "min",
+              "type": "string"
+            },
+            {
+              "name": "noTitle",
+              "type": "boolean"
+            },
+            {
+              "name": "scrollable",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "width",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "290"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "v-time-picker-clock",
+          "source-file": "./src/components/VTimePicker/VTimePickerClock.js",
+          "attributes": [
+            {
+              "name": "allowedValues",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "double",
+              "type": "boolean"
+            },
+            {
+              "name": "format",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "max",
+              "type": "number"
+            },
+            {
+              "name": "min",
+              "type": "number"
+            },
+            {
+              "name": "rotate",
+              "type": "number",
+              "default": "0"
+            },
+            {
+              "name": "scrollable",
+              "type": "boolean"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "270"
+            },
+            {
+              "name": "step",
+              "type": "number",
+              "default": "1"
+            },
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "v-time-picker-title",
+          "source-file": "./src/components/VTimePicker/VTimePickerTitle.js",
+          "attributes": [
+            {
+              "name": "ampm",
+              "type": "boolean"
+            },
+            {
+              "name": "hour",
+              "type": "number"
+            },
+            {
+              "name": "minute",
+              "type": "number"
+            },
+            {
+              "name": "period",
+              "type": "string"
+            },
+            {
+              "name": "selectingHour",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-toolbar",
+          "source-file": "./src/components/VToolbar/VToolbar.js",
+          "attributes": [
+            {
+              "name": "absolute",
+              "type": "boolean"
+            },
+            {
+              "name": "app",
+              "type": "boolean"
+            },
+            {
+              "name": "card",
+              "type": "boolean"
+            },
+            {
+              "name": "clippedLeft",
+              "type": "boolean"
+            },
+            {
+              "name": "clippedRight",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "dense",
+              "type": "boolean"
+            },
+            {
+              "name": "extended",
+              "type": "boolean"
+            },
+            {
+              "name": "extensionHeight",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "fixed",
+              "type": "boolean"
+            },
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "floating",
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "invertedScroll",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "manualScroll",
+              "type": "boolean"
+            },
+            {
+              "name": "prominent",
+              "type": "boolean"
+            },
+            {
+              "name": "scrollOffScreen",
+              "type": "boolean"
+            },
+            {
+              "name": "scrollTarget",
+              "type": "string"
+            },
+            {
+              "name": "scrollThreshold",
+              "type": "number",
+              "default": "300"
+            },
+            {
+              "name": "scrollToolbarOffScreen",
+              "type": "boolean"
+            },
+            {
+              "name": "tabs",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "extension"
+            }
+          ]
+        },
+        {
+          "name": "v-toolbar-items",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-toolbar-side-icon",
+          "source-file": "./src/components/VToolbar/VToolbarSideIcon.js",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-toolbar-title",
+          "source-file": "./src/util/helpers.ts",
+          "attributes": [],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "v-tooltip",
+          "source-file": "./src/components/VTooltip/VTooltip.js",
+          "attributes": [
+            {
+              "name": "absolute",
+              "type": "boolean"
+            },
+            {
+              "name": "activator"
+            },
+            {
+              "name": "allowOverflow",
+              "type": "boolean"
+            },
+            {
+              "name": "attach",
+              "default": "false"
+            },
+            {
+              "name": "bottom",
+              "type": "boolean"
+            },
+            {
+              "name": "closeDelay",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "200"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "contentClass",
+              "default": "\"\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "debounce",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "fixed",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "inputActivator",
+              "type": "boolean"
+            },
+            {
+              "name": "lazy",
+              "type": "boolean"
+            },
+            {
+              "name": "left",
+              "type": "boolean"
+            },
+            {
+              "name": "light",
+              "type": "boolean"
+            },
+            {
+              "name": "maxWidth",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"auto\""
+            },
+            {
+              "name": "minWidth",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "nudgeBottom",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeLeft",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeRight",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeTop",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "nudgeWidth",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "offsetOverflow",
+              "type": "boolean"
+            },
+            {
+              "name": "openDelay",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "200"
+            },
+            {
+              "name": "positionX",
+              "type": "number"
+            },
+            {
+              "name": "positionY",
+              "type": "number"
+            },
+            {
+              "name": "right",
+              "type": "boolean"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"span\""
+            },
+            {
+              "name": "top",
+              "type": "boolean"
+            },
+            {
+              "name": "transition",
+              "type": "string"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "zIndex"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "activator"
+            },
+            {
+              "name": "default"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "name": "v-click-outside",
+          "source-file": "./src/directives/click-outside.ts"
+        },
+        {
+          "name": "v-install"
+        },
+        {
+          "name": "v-resize",
+          "source-file": "./src/directives/resize.ts"
+        },
+        {
+          "name": "v-ripple",
+          "source-file": "./src/directives/ripple.ts"
+        },
+        {
+          "name": "v-scroll",
+          "source-file": "./src/directives/scroll.ts"
+        },
+        {
+          "name": "v-touch",
+          "source-file": "./src/directives/touch.ts"
+        }
+      ]
+    }
+  }
+}
