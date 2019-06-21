@@ -38,7 +38,8 @@ const typesMapping = {
     Function: "(...args: any[]) => any",
     Array: "any[]",
     Object: "any",
-    Date: "Date"
+    Date: "Date",
+    RegExp: "RegExp"
 };
 
 let result = {};
@@ -181,7 +182,7 @@ function convertValue(value) {
         return result;
     }
     if (typeof value === "function") {
-        for (let type of [String, Number, Boolean, Function, Array, Object, Date]) {
+        for (let type of [String, Number, Boolean, Function, Array, Object, Date, RegExp]) {
             if (value === type) {
                 return typesMapping[type.name];
             }
@@ -191,6 +192,15 @@ function convertValue(value) {
 }
 
 function createBrowserPolyfills() {
+    const element = {
+        setAttribute: function () {
+        },
+        appendChild: function() {
+        }
+    };
+    const textNode = {
+
+    };
     global.navigator = {
         userAgent: "fake"
     };
@@ -202,11 +212,17 @@ function createBrowserPolyfills() {
         },
         removeEventListener() {
         },
-        documentElement: {
-            setAttribute: function () {
-            }
-        },
+        documentElement: element,
         querySelector: function () {
+        },
+        getElementsByTagName: function() {
+            return [element]
+        },
+        createElement: function() {
+            return element
+        },
+        createTextNode: function() {
+            return textNode
         },
         body: {
             classList: {

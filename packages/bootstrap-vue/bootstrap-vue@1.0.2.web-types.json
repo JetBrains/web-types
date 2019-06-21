@@ -1,0 +1,5788 @@
+{
+  "$schema": "../../schema/web-types.schema.json",
+  "framework": "vue",
+  "name": "bootstrap-vue",
+  "version": "1.0.2",
+  "contributions": {
+    "html": {
+      "types-syntax": "typescript",
+      "tags": [
+        {
+          "name": "bAlert",
+          "attributes": [
+            {
+              "name": "dismissLabel",
+              "type": "string",
+              "default": "\"Close\""
+            },
+            {
+              "name": "dismissible",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "show",
+              "type": [
+                "boolean",
+                "number"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "variant",
+              "type": "string",
+              "default": "\"info\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bBadge",
+          "attributes": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "append",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "\"click\""
+            },
+            {
+              "name": "exact",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "href",
+              "type": "string"
+            },
+            {
+              "name": "pill",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "rel",
+              "type": "string"
+            },
+            {
+              "name": "replace",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "routerTag",
+              "type": "string",
+              "default": "\"a\""
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"span\""
+            },
+            {
+              "name": "target",
+              "type": "string",
+              "default": "\"_self\""
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "variant",
+              "type": "string",
+              "default": "\"secondary\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bBreadcrumb",
+          "attributes": [
+            {
+              "name": "items",
+              "type": "any[]"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bBreadcrumbItem",
+          "attributes": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "append",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "ariaCurrent",
+              "type": "string",
+              "default": "\"location\""
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "\"click\""
+            },
+            {
+              "name": "exact",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "href",
+              "type": "string"
+            },
+            {
+              "name": "rel",
+              "type": "string"
+            },
+            {
+              "name": "replace",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "routerTag",
+              "type": "string",
+              "default": "\"a\""
+            },
+            {
+              "name": "target",
+              "type": "string",
+              "default": "\"_self\""
+            },
+            {
+              "name": "text",
+              "type": "string"
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bBreadcrumbLink",
+          "attributes": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "append",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "ariaCurrent",
+              "type": "string",
+              "default": "\"location\""
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "\"click\""
+            },
+            {
+              "name": "exact",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "href",
+              "type": "string",
+              "default": "\"#\""
+            },
+            {
+              "name": "rel",
+              "type": "string"
+            },
+            {
+              "name": "replace",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "routerTag",
+              "type": "string",
+              "default": "\"a\""
+            },
+            {
+              "name": "target",
+              "type": "string",
+              "default": "\"_self\""
+            },
+            {
+              "name": "text",
+              "type": "string"
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bBtn",
+          "attributes": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "append",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "block",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "\"click\""
+            },
+            {
+              "name": "exact",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "href",
+              "type": "string"
+            },
+            {
+              "name": "pressed",
+              "type": "boolean"
+            },
+            {
+              "name": "rel",
+              "type": "string"
+            },
+            {
+              "name": "replace",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "routerTag",
+              "type": "string",
+              "default": "\"a\""
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "target",
+              "type": "string",
+              "default": "\"_self\""
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"button\""
+            },
+            {
+              "name": "variant",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bBtnClose",
+          "attributes": [
+            {
+              "name": "ariaLabel",
+              "type": "string",
+              "default": "\"Close\""
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "textVariant",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bBtnGroup",
+          "attributes": [
+            {
+              "name": "ariaRole",
+              "type": "string",
+              "default": "\"group\""
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "vertical",
+              "type": "boolean",
+              "default": "false"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bBtnToolbar",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "justify",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "keyNav",
+              "type": "boolean",
+              "default": "false"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bButton",
+          "attributes": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "append",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "block",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "\"click\""
+            },
+            {
+              "name": "exact",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "href",
+              "type": "string"
+            },
+            {
+              "name": "pressed",
+              "type": "boolean"
+            },
+            {
+              "name": "rel",
+              "type": "string"
+            },
+            {
+              "name": "replace",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "routerTag",
+              "type": "string",
+              "default": "\"a\""
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "target",
+              "type": "string",
+              "default": "\"_self\""
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"button\""
+            },
+            {
+              "name": "variant",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bButtonClose",
+          "attributes": [
+            {
+              "name": "ariaLabel",
+              "type": "string",
+              "default": "\"Close\""
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "textVariant",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bButtonGroup",
+          "attributes": [
+            {
+              "name": "ariaRole",
+              "type": "string",
+              "default": "\"group\""
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "vertical",
+              "type": "boolean",
+              "default": "false"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bButtonToolbar",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "justify",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "keyNav",
+              "type": "boolean",
+              "default": "false"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bCard",
+          "attributes": [
+            {
+              "name": "align",
+              "type": "string"
+            },
+            {
+              "name": "bgVariant",
+              "type": "string"
+            },
+            {
+              "name": "bodyBgVariant",
+              "type": "string"
+            },
+            {
+              "name": "bodyBorderVariant",
+              "type": "string"
+            },
+            {
+              "name": "bodyClass",
+              "type": [
+                "string",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "bodyTag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "bodyTextVariant",
+              "type": "string"
+            },
+            {
+              "name": "borderVariant",
+              "type": "string"
+            },
+            {
+              "name": "footer",
+              "type": "string"
+            },
+            {
+              "name": "footerBgVariant",
+              "type": "string"
+            },
+            {
+              "name": "footerBorderVariant",
+              "type": "string"
+            },
+            {
+              "name": "footerClass",
+              "type": [
+                "string",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "footerTag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "footerTextVariant",
+              "type": "string"
+            },
+            {
+              "name": "header",
+              "type": "string"
+            },
+            {
+              "name": "headerBgVariant",
+              "type": "string"
+            },
+            {
+              "name": "headerBorderVariant",
+              "type": "string"
+            },
+            {
+              "name": "headerClass",
+              "type": [
+                "string",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "headerTag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "headerTextVariant",
+              "type": "string"
+            },
+            {
+              "name": "imgAlt",
+              "type": "string"
+            },
+            {
+              "name": "imgBottom",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "imgFluid",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "imgSrc",
+              "type": "string"
+            },
+            {
+              "name": "imgTop",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noBody",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "overlay",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "subTitle",
+              "type": "string"
+            },
+            {
+              "name": "subTitleTag",
+              "type": "string",
+              "default": "\"h6\""
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "textVariant",
+              "type": "string"
+            },
+            {
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "name": "titleTag",
+              "type": "string",
+              "default": "\"h4\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bCardBody",
+          "attributes": [
+            {
+              "name": "bodyBgVariant",
+              "type": "string"
+            },
+            {
+              "name": "bodyBorderVariant",
+              "type": "string"
+            },
+            {
+              "name": "bodyClass",
+              "type": [
+                "string",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "bodyTag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "bodyTextVariant",
+              "type": "string"
+            },
+            {
+              "name": "overlay",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "subTitle",
+              "type": "string"
+            },
+            {
+              "name": "subTitleTag",
+              "type": "string",
+              "default": "\"h6\""
+            },
+            {
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "name": "titleTag",
+              "type": "string",
+              "default": "\"h4\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bCardFooter",
+          "attributes": [
+            {
+              "name": "footer",
+              "type": "string"
+            },
+            {
+              "name": "footerBgVariant",
+              "type": "string"
+            },
+            {
+              "name": "footerBorderVariant",
+              "type": "string"
+            },
+            {
+              "name": "footerClass",
+              "type": [
+                "string",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "footerTag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "footerTextVariant",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bCardGroup",
+          "attributes": [
+            {
+              "name": "columns",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "deck",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bCardHeader",
+          "attributes": [
+            {
+              "name": "header",
+              "type": "string"
+            },
+            {
+              "name": "headerBgVariant",
+              "type": "string"
+            },
+            {
+              "name": "headerBorderVariant",
+              "type": "string"
+            },
+            {
+              "name": "headerClass",
+              "type": [
+                "string",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "headerTag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "headerTextVariant",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bCardImg",
+          "attributes": [
+            {
+              "name": "alt",
+              "type": "string"
+            },
+            {
+              "name": "bottom",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "fluid",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "src",
+              "type": "string"
+            },
+            {
+              "name": "top",
+              "type": "boolean",
+              "default": "false"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bCarousel",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "background",
+              "type": "string"
+            },
+            {
+              "name": "controls",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id"
+            },
+            {
+              "name": "imgHeight",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "imgWidth",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "indicators",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "interval",
+              "type": "number",
+              "default": "5000"
+            },
+            {
+              "name": "labelGotoSlide",
+              "type": "string",
+              "default": "\"Goto Slide\""
+            },
+            {
+              "name": "labelIndicators",
+              "type": "string",
+              "default": "\"Select a slide to display\""
+            },
+            {
+              "name": "labelNext",
+              "type": "string",
+              "default": "\"Next Slide\""
+            },
+            {
+              "name": "labelPrev",
+              "type": "string",
+              "default": "\"Previous Slide\""
+            },
+            {
+              "name": "value",
+              "type": "number",
+              "default": "0"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "sliding-start"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bCarouselSlide",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "background",
+              "type": "string"
+            },
+            {
+              "name": "caption",
+              "type": "string"
+            },
+            {
+              "name": "captionTag",
+              "type": "string",
+              "default": "\"h3\""
+            },
+            {
+              "name": "contentTag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "contentVisibleUp",
+              "type": "string"
+            },
+            {
+              "name": "id"
+            },
+            {
+              "name": "imgAlt",
+              "type": "string"
+            },
+            {
+              "name": "imgBlank",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "imgBlankColor",
+              "type": "string",
+              "default": "\"transparent\""
+            },
+            {
+              "name": "imgHeight",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "imgSrc",
+              "type": "string"
+            },
+            {
+              "name": "imgWidth",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "src",
+              "type": "string"
+            },
+            {
+              "name": "text",
+              "type": "string"
+            },
+            {
+              "name": "textTag",
+              "type": "string",
+              "default": "\"p\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bCheck",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "buttonVariant",
+              "type": "string"
+            },
+            {
+              "name": "checked"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "indeterminate",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "plain",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "uncheckedValue",
+              "default": "false"
+            },
+            {
+              "name": "value",
+              "default": "true"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "update:indeterminate"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bCheckGroup",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "ariaInvalid",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "buttonVariant",
+              "type": "string",
+              "default": "\"secondary\""
+            },
+            {
+              "name": "buttons",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "checked",
+              "type": [
+                "string",
+                "number",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "disabledField",
+              "type": "string",
+              "default": "\"disabled\""
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "type": [
+                "any[]",
+                "any"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "plain",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "stacked",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "textField",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "validated",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "valueField",
+              "type": "string",
+              "default": "\"value\""
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bCheckbox",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "buttonVariant",
+              "type": "string"
+            },
+            {
+              "name": "checked"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "indeterminate",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "plain",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "uncheckedValue",
+              "default": "false"
+            },
+            {
+              "name": "value",
+              "default": "true"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "update:indeterminate"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bCheckboxGroup",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "ariaInvalid",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "buttonVariant",
+              "type": "string",
+              "default": "\"secondary\""
+            },
+            {
+              "name": "buttons",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "checked",
+              "type": [
+                "string",
+                "number",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "disabledField",
+              "type": "string",
+              "default": "\"disabled\""
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "type": [
+                "any[]",
+                "any"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "plain",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "stacked",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "textField",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "validated",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "valueField",
+              "type": "string",
+              "default": "\"value\""
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bCol",
+          "attributes": [
+            {
+              "name": "alignSelf",
+              "type": "string"
+            },
+            {
+              "name": "col",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "cols",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "lg",
+              "type": [
+                "boolean",
+                "string",
+                "number"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "md",
+              "type": [
+                "boolean",
+                "string",
+                "number"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "offset",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "offsetLg",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "offsetMd",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "offsetSm",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "offsetXl",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "order",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "orderLg",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "orderMd",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "orderSm",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "orderXl",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "sm",
+              "type": [
+                "boolean",
+                "string",
+                "number"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "xl",
+              "type": [
+                "boolean",
+                "string",
+                "number"
+              ],
+              "default": "false"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bCollapse",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "accordion",
+              "type": "string"
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "isNav",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "visible",
+              "type": "boolean",
+              "default": "false"
+            }
+          ],
+          "events": [
+            {
+              "name": "hidden"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "show"
+            },
+            {
+              "name": "shown"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bContainer",
+          "attributes": [
+            {
+              "name": "fluid",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bDd",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "dropup",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id"
+            },
+            {
+              "name": "noCaret",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noFlip",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "offset",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "popperOpts",
+              "type": "any"
+            },
+            {
+              "name": "right",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "role",
+              "type": "string",
+              "default": "\"menu\""
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "split",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "toggleText",
+              "type": "string",
+              "default": "\"Toggle Dropdown\""
+            },
+            {
+              "name": "variant",
+              "type": "string"
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "hidden"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "show"
+            },
+            {
+              "name": "shown"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bDdDivider",
+          "attributes": [
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bDdHeader",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"h6\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bDdItem",
+          "attributes": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "append",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "\"click\""
+            },
+            {
+              "name": "exact",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "href",
+              "type": "string"
+            },
+            {
+              "name": "rel",
+              "type": "string"
+            },
+            {
+              "name": "replace",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "routerTag",
+              "type": "string",
+              "default": "\"a\""
+            },
+            {
+              "name": "target",
+              "type": "string",
+              "default": "\"_self\""
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bDdItemBtn",
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bDdItemButton",
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bDropdown",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "dropup",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id"
+            },
+            {
+              "name": "noCaret",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noFlip",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "offset",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "popperOpts",
+              "type": "any"
+            },
+            {
+              "name": "right",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "role",
+              "type": "string",
+              "default": "\"menu\""
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "split",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "toggleText",
+              "type": "string",
+              "default": "\"Toggle Dropdown\""
+            },
+            {
+              "name": "variant",
+              "type": "string"
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "hidden"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "show"
+            },
+            {
+              "name": "shown"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bDropdownDivider",
+          "attributes": [
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bDropdownHeader",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"h6\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bDropdownItem",
+          "attributes": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "append",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "\"click\""
+            },
+            {
+              "name": "exact",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "href",
+              "type": "string"
+            },
+            {
+              "name": "rel",
+              "type": "string"
+            },
+            {
+              "name": "replace",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "routerTag",
+              "type": "string",
+              "default": "\"a\""
+            },
+            {
+              "name": "target",
+              "type": "string",
+              "default": "\"_self\""
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bDropdownItemBtn",
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bDropdownItemButton",
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bEmbed",
+          "attributes": [
+            {
+              "name": "aspect",
+              "type": "string",
+              "default": "\"16by9\""
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"iframe\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bFile",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "accept",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "capture",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "chooseLabel",
+              "type": "string"
+            },
+            {
+              "name": "directory",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "dropLabel",
+              "type": "string",
+              "default": "\"Drop files here\""
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "multiple",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "noDrop",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noTraverse",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "plain",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "selectedFormat",
+              "type": "string",
+              "default": "\":count Files\""
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bForm",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "inline",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "novalidate",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "validated",
+              "type": "boolean",
+              "default": "false"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bFormCheckbox",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "buttonVariant",
+              "type": "string"
+            },
+            {
+              "name": "checked"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "indeterminate",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "plain",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "uncheckedValue",
+              "default": "false"
+            },
+            {
+              "name": "value",
+              "default": "true"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "update:indeterminate"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bFormCheckboxGroup",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "ariaInvalid",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "buttonVariant",
+              "type": "string",
+              "default": "\"secondary\""
+            },
+            {
+              "name": "buttons",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "checked",
+              "type": [
+                "string",
+                "number",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "disabledField",
+              "type": "string",
+              "default": "\"disabled\""
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "type": [
+                "any[]",
+                "any"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "plain",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "stacked",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "textField",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "validated",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "valueField",
+              "type": "string",
+              "default": "\"value\""
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bFormFeedback",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bFormFieldset",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "breakpoint",
+              "type": "string",
+              "default": "\"sm\""
+            },
+            {
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "name": "feedback",
+              "type": "string"
+            },
+            {
+              "name": "horizontal",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "labelCols",
+              "type": "number",
+              "default": "3"
+            },
+            {
+              "name": "labelSrOnly",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "labelTextAlign",
+              "type": "string"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "validated",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bFormFile",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "accept",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "capture",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "chooseLabel",
+              "type": "string"
+            },
+            {
+              "name": "directory",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "dropLabel",
+              "type": "string",
+              "default": "\"Drop files here\""
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "multiple",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "noDrop",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noTraverse",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "plain",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "selectedFormat",
+              "type": "string",
+              "default": "\":count Files\""
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bFormGroup",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "breakpoint",
+              "type": "string",
+              "default": "\"sm\""
+            },
+            {
+              "name": "description",
+              "type": "string"
+            },
+            {
+              "name": "feedback",
+              "type": "string"
+            },
+            {
+              "name": "horizontal",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "labelCols",
+              "type": "number",
+              "default": "3"
+            },
+            {
+              "name": "labelSrOnly",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "labelTextAlign",
+              "type": "string"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "validated",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bFormInput",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "ariaInvalid",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "autocomplete",
+              "type": "string"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "formatter",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "lazyFormatter",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "plaintext",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bFormRadio",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "buttonVariant",
+              "type": "string"
+            },
+            {
+              "name": "checked"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bFormRadioGroup",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "ariaInvalid",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "buttonVariant",
+              "type": "string",
+              "default": "\"secondary\""
+            },
+            {
+              "name": "buttons",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "checked",
+              "type": [
+                "string",
+                "any",
+                "number",
+                "boolean"
+              ]
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "disabledField",
+              "type": "string",
+              "default": "\"disabled\""
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "type": [
+                "any[]",
+                "any"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "plain",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "stacked",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "textField",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "validated",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "valueField",
+              "type": "string",
+              "default": "\"value\""
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bFormRow",
+          "attributes": [
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bFormSelect",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "ariaInvalid",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "disabledField",
+              "type": "string",
+              "default": "\"disabled\""
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "multiple",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "type": [
+                "any[]",
+                "any"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "plain",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "selectSize",
+              "type": "number",
+              "default": "0"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "textField",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "valueField",
+              "type": "string",
+              "default": "\"value\""
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bFormText",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "inline",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"small\""
+            },
+            {
+              "name": "textVariant",
+              "type": "string",
+              "default": "\"muted\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bFormTextarea",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "ariaInvalid",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "autocomplete",
+              "type": "string"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "maxRows",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "noResize",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "plaintext",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "rows",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "value",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "wrap",
+              "type": "string",
+              "default": "\"soft\""
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bImg",
+          "attributes": [
+            {
+              "name": "alt",
+              "type": "string"
+            },
+            {
+              "name": "blank",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "blankColor",
+              "type": "string",
+              "default": "\"transparent\""
+            },
+            {
+              "name": "block",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "center",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "fluid",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "fluidGrow",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "left",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "right",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "rounded",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "src",
+              "type": "string"
+            },
+            {
+              "name": "thumbnail",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "width",
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bImgLazy",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "alt",
+              "type": "string"
+            },
+            {
+              "name": "blankColor",
+              "type": "string",
+              "default": "\"transparent\""
+            },
+            {
+              "name": "blankHeight",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "blankSrc",
+              "type": "string"
+            },
+            {
+              "name": "blankWidth",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "block",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "center",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "fluid",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "fluidGrow",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "height",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "left",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "offset",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "360"
+            },
+            {
+              "name": "right",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "rounded",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "src",
+              "type": "string"
+            },
+            {
+              "name": "throttle",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "100"
+            },
+            {
+              "name": "thumbnail",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "width",
+              "type": [
+                "number",
+                "string"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bInput",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "ariaInvalid",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "autocomplete",
+              "type": "string"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "formatter",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "lazyFormatter",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "plaintext",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bInputGroup",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "left",
+              "type": "string"
+            },
+            {
+              "name": "right",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bInputGroupAddon",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bInputGroupBtn",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bInputGroupButton",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bJumbotron",
+          "attributes": [
+            {
+              "name": "bgVariant",
+              "type": "string"
+            },
+            {
+              "name": "borderVariant",
+              "type": "string"
+            },
+            {
+              "name": "containerFluid",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "fluid",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "header",
+              "type": "string"
+            },
+            {
+              "name": "headerLevel",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"3\""
+            },
+            {
+              "name": "headerTag",
+              "type": "string",
+              "default": "\"h1\""
+            },
+            {
+              "name": "lead",
+              "type": "string"
+            },
+            {
+              "name": "leadTag",
+              "type": "string",
+              "default": "\"p\""
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "textVariant",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bLink",
+          "attributes": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "append",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "\"click\""
+            },
+            {
+              "name": "exact",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "href",
+              "type": "string"
+            },
+            {
+              "name": "rel",
+              "type": "string"
+            },
+            {
+              "name": "replace",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "routerTag",
+              "type": "string",
+              "default": "\"a\""
+            },
+            {
+              "name": "target",
+              "type": "string",
+              "default": "\"_self\""
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bListGroup",
+          "attributes": [
+            {
+              "name": "flush",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bListGroupItem",
+          "attributes": [
+            {
+              "name": "action",
+              "type": "boolean"
+            },
+            {
+              "name": "active",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "append",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "\"click\""
+            },
+            {
+              "name": "exact",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "href",
+              "type": "string"
+            },
+            {
+              "name": "rel",
+              "type": "string"
+            },
+            {
+              "name": "replace",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "routerTag",
+              "type": "string",
+              "default": "\"a\""
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "target",
+              "type": "string",
+              "default": "\"_self\""
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "variant",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bMedia",
+          "attributes": [
+            {
+              "name": "noBody",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "rightAlign",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "verticalAlign",
+              "type": "string",
+              "default": "\"top\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bMediaAside",
+          "attributes": [
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "verticalAlign",
+              "type": "string",
+              "default": "\"top\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bMediaBody",
+          "attributes": [
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bModal",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "bodyBgVariant",
+              "type": "string"
+            },
+            {
+              "name": "bodyTextVariant",
+              "type": "string"
+            },
+            {
+              "name": "busy",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "buttonSize",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "cancelDisabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "cancelTitle",
+              "type": "string",
+              "default": "\"Cancel\""
+            },
+            {
+              "name": "cancelVariant",
+              "type": "string",
+              "default": "\"secondary\""
+            },
+            {
+              "name": "centered",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "footerBgVariant",
+              "type": "string"
+            },
+            {
+              "name": "footerBorderVariant",
+              "type": "string"
+            },
+            {
+              "name": "footerTextVariant",
+              "type": "string"
+            },
+            {
+              "name": "headerBgVariant",
+              "type": "string"
+            },
+            {
+              "name": "headerBorderVariant",
+              "type": "string"
+            },
+            {
+              "name": "headerCloseLabel",
+              "type": "string",
+              "default": "\"Close\""
+            },
+            {
+              "name": "headerTextVariant",
+              "type": "string"
+            },
+            {
+              "name": "hideBackdrop",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "hideFooter",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "hideHeader",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "hideHeaderClose",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id"
+            },
+            {
+              "name": "lazy",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noCloseOnBackdrop",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noCloseOnEsc",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noEnforceFocus",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noFade",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "okDisabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "okOnly",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "okTitle",
+              "type": "string",
+              "default": "\"OK\""
+            },
+            {
+              "name": "okVariant",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "returnFocus"
+            },
+            {
+              "name": "size",
+              "type": "string",
+              "default": "\"md\""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "titleTag",
+              "type": "string",
+              "default": "\"h5\""
+            },
+            {
+              "name": "visible",
+              "type": "boolean",
+              "default": "false"
+            }
+          ],
+          "events": [
+            {
+              "name": "cancel"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "ok"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bNav",
+          "attributes": [
+            {
+              "name": "fill",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "isNavBar",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "justified",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "pills",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tabs",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"ul\""
+            },
+            {
+              "name": "vertical",
+              "type": "boolean",
+              "default": "false"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bNavDd",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "dropup",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id"
+            },
+            {
+              "name": "noCaret",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noFlip",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "offset",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "popperOpts",
+              "type": "any"
+            },
+            {
+              "name": "right",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "role",
+              "type": "string",
+              "default": "\"menu\""
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "default": "\"\""
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "hidden"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "show"
+            },
+            {
+              "name": "shown"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bNavDropdown",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "dropup",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id"
+            },
+            {
+              "name": "noCaret",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noFlip",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "offset",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "popperOpts",
+              "type": "any"
+            },
+            {
+              "name": "right",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "role",
+              "type": "string",
+              "default": "\"menu\""
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "default": "\"\""
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "hidden"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "show"
+            },
+            {
+              "name": "shown"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bNavForm",
+          "attributes": [
+            {
+              "name": "id",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bNavItem",
+          "attributes": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "append",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "\"click\""
+            },
+            {
+              "name": "exact",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "href",
+              "type": "string"
+            },
+            {
+              "name": "rel",
+              "type": "string"
+            },
+            {
+              "name": "replace",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "routerTag",
+              "type": "string",
+              "default": "\"a\""
+            },
+            {
+              "name": "target",
+              "type": "string",
+              "default": "\"_self\""
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bNavItemDd",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "dropup",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id"
+            },
+            {
+              "name": "noCaret",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noFlip",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "offset",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "popperOpts",
+              "type": "any"
+            },
+            {
+              "name": "right",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "role",
+              "type": "string",
+              "default": "\"menu\""
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "default": "\"\""
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "hidden"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "show"
+            },
+            {
+              "name": "shown"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bNavItemDropdown",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "dropup",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id"
+            },
+            {
+              "name": "noCaret",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noFlip",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "offset",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "popperOpts",
+              "type": "any"
+            },
+            {
+              "name": "right",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "role",
+              "type": "string",
+              "default": "\"menu\""
+            },
+            {
+              "name": "text",
+              "type": "string",
+              "default": "\"\""
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "hidden"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "show"
+            },
+            {
+              "name": "shown"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bNavText",
+          "attributes": [
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"span\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bNavToggle",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "label",
+              "type": "string",
+              "default": "\"Toggle navigation\""
+            },
+            {
+              "name": "position",
+              "type": "string",
+              "default": "\"right\""
+            },
+            {
+              "name": "target",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bNavbar",
+          "attributes": [
+            {
+              "name": "fixed",
+              "type": "string"
+            },
+            {
+              "name": "sticky",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"nav\""
+            },
+            {
+              "name": "toggleBreakpoint",
+              "type": "string"
+            },
+            {
+              "name": "toggleable",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"light\""
+            },
+            {
+              "name": "variant",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bNavbarBrand",
+          "attributes": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "append",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "\"click\""
+            },
+            {
+              "name": "exact",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "href",
+              "type": "string"
+            },
+            {
+              "name": "rel",
+              "type": "string"
+            },
+            {
+              "name": "replace",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "routerTag",
+              "type": "string",
+              "default": "\"a\""
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "target",
+              "type": "string",
+              "default": "\"_self\""
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bNavbarNav",
+          "attributes": [
+            {
+              "name": "fill",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "justified",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"ul\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bNavbarToggle",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "label",
+              "type": "string",
+              "default": "\"Toggle navigation\""
+            },
+            {
+              "name": "position",
+              "type": "string",
+              "default": "\"right\""
+            },
+            {
+              "name": "target",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bPagination",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "align",
+              "type": "string",
+              "default": "\"left\""
+            },
+            {
+              "name": "ariaControls",
+              "type": "string"
+            },
+            {
+              "name": "ariaLabel",
+              "type": "string",
+              "default": "\"Pagination\""
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "ellipsisText",
+              "type": "string",
+              "default": "\"&hellip;\""
+            },
+            {
+              "name": "firstText",
+              "type": "string",
+              "default": "\"&laquo;\""
+            },
+            {
+              "name": "hideEllipsis",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "hideGotoEndButtons",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "labelFirstPage",
+              "type": "string",
+              "default": "\"Goto first page\""
+            },
+            {
+              "name": "labelLastPage",
+              "type": "string",
+              "default": "\"Goto last page\""
+            },
+            {
+              "name": "labelNextPage",
+              "type": "string",
+              "default": "\"Goto next page\""
+            },
+            {
+              "name": "labelPage",
+              "type": "string",
+              "default": "\"Goto page\""
+            },
+            {
+              "name": "labelPrevPage",
+              "type": "string",
+              "default": "\"Goto previous page\""
+            },
+            {
+              "name": "lastText",
+              "type": "string",
+              "default": "\"&raquo;\""
+            },
+            {
+              "name": "limit",
+              "type": "number",
+              "default": "5"
+            },
+            {
+              "name": "nextText",
+              "type": "string",
+              "default": "\"&rsaquo;\""
+            },
+            {
+              "name": "perPage",
+              "type": "number",
+              "default": "20"
+            },
+            {
+              "name": "prevText",
+              "type": "string",
+              "default": "\"&lsaquo;\""
+            },
+            {
+              "name": "size",
+              "type": "string",
+              "default": "\"md\""
+            },
+            {
+              "name": "totalRows",
+              "type": "number",
+              "default": "20"
+            },
+            {
+              "name": "value",
+              "type": "number",
+              "default": "1"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bPaginationNav",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "activeClass",
+              "type": "string",
+              "default": "\"active\""
+            },
+            {
+              "name": "align",
+              "type": "string",
+              "default": "\"left\""
+            },
+            {
+              "name": "ariaLabel",
+              "type": "string",
+              "default": "\"Pagination\""
+            },
+            {
+              "name": "baseUrl",
+              "type": "string",
+              "default": "\"/\""
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "ellipsisText",
+              "type": "string",
+              "default": "\"&hellip;\""
+            },
+            {
+              "name": "firstText",
+              "type": "string",
+              "default": "\"&laquo;\""
+            },
+            {
+              "name": "hideEllipsis",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "hideGotoEndButtons",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "labelFirstPage",
+              "type": "string",
+              "default": "\"Goto first page\""
+            },
+            {
+              "name": "labelLastPage",
+              "type": "string",
+              "default": "\"Goto last page\""
+            },
+            {
+              "name": "labelNextPage",
+              "type": "string",
+              "default": "\"Goto next page\""
+            },
+            {
+              "name": "labelPage",
+              "type": "string",
+              "default": "\"Goto page\""
+            },
+            {
+              "name": "labelPrevPage",
+              "type": "string",
+              "default": "\"Goto previous page\""
+            },
+            {
+              "name": "lastText",
+              "type": "string",
+              "default": "\"&raquo;\""
+            },
+            {
+              "name": "limit",
+              "type": "number",
+              "default": "5"
+            },
+            {
+              "name": "linkGen",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "nextText",
+              "type": "string",
+              "default": "\"&rsaquo;\""
+            },
+            {
+              "name": "numberOfPages",
+              "type": "number",
+              "default": "1"
+            },
+            {
+              "name": "pageGen",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "prevText",
+              "type": "string",
+              "default": "\"&lsaquo;\""
+            },
+            {
+              "name": "size",
+              "type": "string",
+              "default": "\"md\""
+            },
+            {
+              "name": "useRouter",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "value",
+              "type": "number",
+              "default": "1"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bPopover",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "container",
+              "type": "string"
+            },
+            {
+              "name": "content",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "delay",
+              "type": [
+                "number",
+                "any",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "noFade",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "offset",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "placement",
+              "type": "string",
+              "default": "\"right\""
+            },
+            {
+              "name": "target",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "triggers",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "\"click\""
+            }
+          ],
+          "events": [
+            {
+              "name": "hidden"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "show"
+            },
+            {
+              "name": "shown"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bProgress",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "animated",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "height",
+              "type": "string",
+              "default": "\"1rem\""
+            },
+            {
+              "name": "max",
+              "type": "number",
+              "default": "100"
+            },
+            {
+              "name": "precision",
+              "type": "number",
+              "default": "0"
+            },
+            {
+              "name": "showProgress",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "showValue",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "striped",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "value",
+              "type": "number",
+              "default": "0"
+            },
+            {
+              "name": "variant",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bProgressBar",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "animated",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "max",
+              "type": "number"
+            },
+            {
+              "name": "precision",
+              "type": "number"
+            },
+            {
+              "name": "showProgress",
+              "type": "boolean"
+            },
+            {
+              "name": "showValue",
+              "type": "boolean"
+            },
+            {
+              "name": "striped",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": "number",
+              "default": "0"
+            },
+            {
+              "name": "variant",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bRadio",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "buttonVariant",
+              "type": "string"
+            },
+            {
+              "name": "checked"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bRadioGroup",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "ariaInvalid",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "buttonVariant",
+              "type": "string",
+              "default": "\"secondary\""
+            },
+            {
+              "name": "buttons",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "checked",
+              "type": [
+                "string",
+                "any",
+                "number",
+                "boolean"
+              ]
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "disabledField",
+              "type": "string",
+              "default": "\"disabled\""
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "type": [
+                "any[]",
+                "any"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "plain",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "stacked",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "textField",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "validated",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "valueField",
+              "type": "string",
+              "default": "\"value\""
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bRow",
+          "attributes": [
+            {
+              "name": "alignContent",
+              "type": "string"
+            },
+            {
+              "name": "alignH",
+              "type": "string"
+            },
+            {
+              "name": "alignV",
+              "type": "string"
+            },
+            {
+              "name": "noGutters",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bSelect",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "ariaInvalid",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "disabledField",
+              "type": "string",
+              "default": "\"disabled\""
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "multiple",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "options",
+              "type": [
+                "any[]",
+                "any"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "plain",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "selectSize",
+              "type": "number",
+              "default": "0"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "textField",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "valueField",
+              "type": "string",
+              "default": "\"value\""
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bTab",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "active",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "buttonId",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "disabled",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "headHtml",
+              "type": "string"
+            },
+            {
+              "name": "href",
+              "type": "string",
+              "default": "\"#\""
+            },
+            {
+              "name": "id"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "titleItemClass",
+              "type": [
+                "string",
+                "any[]",
+                "any"
+              ]
+            },
+            {
+              "name": "titleLinkClass",
+              "type": [
+                "string",
+                "any[]",
+                "any"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "bTable",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "apiUrl",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "bordered",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "busy",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "caption",
+              "type": "string"
+            },
+            {
+              "name": "currentPage",
+              "type": "number",
+              "default": "1"
+            },
+            {
+              "name": "dark",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "emptyFilteredText",
+              "type": "string",
+              "default": "\"There are no records matching your request\""
+            },
+            {
+              "name": "emptyText",
+              "type": "string",
+              "default": "\"There are no records to show\""
+            },
+            {
+              "name": "fields",
+              "type": [
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "filter",
+              "type": [
+                "string",
+                "RegExp",
+                "(...args: any[]) => any"
+              ]
+            },
+            {
+              "name": "fixed",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "footClone",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "footVariant",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "headVariant",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "hover",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "inverse",
+              "type": "boolean"
+            },
+            {
+              "name": "items",
+              "type": [
+                "any[]",
+                "(...args: any[]) => any"
+              ],
+              "default": "[]"
+            },
+            {
+              "name": "labelSortAsc",
+              "type": "string",
+              "default": "\"Click to sort Ascending\""
+            },
+            {
+              "name": "labelSortDesc",
+              "type": "string",
+              "default": "\"Click to sort Descending\""
+            },
+            {
+              "name": "noLocalSorting",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noProviderFiltering",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noProviderPaging",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noProviderSorting",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "perPage",
+              "type": "number"
+            },
+            {
+              "name": "responsive",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "showEmpty",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "small",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "sortBy",
+              "type": "string"
+            },
+            {
+              "name": "sortCompare",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "sortDesc",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "striped",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "value",
+              "type": "any[]",
+              "default": "[]"
+            }
+          ],
+          "events": [
+            {
+              "name": "context-changed"
+            },
+            {
+              "name": "filtered"
+            },
+            {
+              "name": "head-clicked"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "refreshed"
+            },
+            {
+              "name": "row-clicked"
+            },
+            {
+              "name": "row-dblclicked"
+            },
+            {
+              "name": "row-hovered"
+            },
+            {
+              "name": "sort-changed"
+            },
+            {
+              "name": "update:busy"
+            },
+            {
+              "name": "update:sortBy"
+            },
+            {
+              "name": "update:sortDesc"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bTabs",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "bottom",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "card",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id"
+            },
+            {
+              "name": "lazy",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noFade",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "pills",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "small",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bTextarea",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "ariaInvalid",
+              "type": [
+                "boolean",
+                "string"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "autocomplete",
+              "type": "string"
+            },
+            {
+              "name": "disabled",
+              "type": "boolean"
+            },
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "maxRows",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "noResize",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "plaintext",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "required",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "rows",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "state",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "value",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "wrap",
+              "type": "string",
+              "default": "\"soft\""
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "bTooltip",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js",
+          "attributes": [
+            {
+              "name": "container",
+              "type": "string"
+            },
+            {
+              "name": "delay",
+              "type": [
+                "number",
+                "any",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "noFade",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "offset",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "placement",
+              "type": "string",
+              "default": "\"top\""
+            },
+            {
+              "name": "target",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "triggers",
+              "type": [
+                "string",
+                "any[]"
+              ],
+              "default": "\"hover focus\""
+            }
+          ],
+          "events": [
+            {
+              "name": "hidden"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "show"
+            },
+            {
+              "name": "shown"
+            }
+          ],
+          "slots": []
+        }
+      ],
+      "attributes": [
+        {
+          "name": "v-b-modal"
+        },
+        {
+          "name": "v-b-popover",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js"
+        },
+        {
+          "name": "v-b-scrollspy",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js"
+        },
+        {
+          "name": "v-b-toggle",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js"
+        },
+        {
+          "name": "v-b-tooltip",
+          "source-file": "./node_modules/bootstrap-vue/dist/bootstrap-vue.esm.js"
+        }
+      ]
+    }
+  }
+}

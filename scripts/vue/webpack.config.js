@@ -1,3 +1,5 @@
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+
 const pkg = process.env.LIBRARY_NAME;
 
 module.exports = {
@@ -34,6 +36,18 @@ module.exports = {
                         loader: "awesome-typescript-loader"
                     }]
 
+            }, {
+                test: /\.vue$/,
+                use: [{
+                    loader: "vue-loader"
+                }]
+            }, {
+                test: /\.css$/,
+                use: [{
+                    loader: "vue-style-loader"
+                },{
+                    loader: "css-loader"
+                }]
             }
         ]
     },
@@ -48,5 +62,8 @@ module.exports = {
             // regular
             '.js', '.vue', '.json', ".ts"]
     },
-    devtool: "cheap-source-map"
+    devtool: "cheap-source-map",
+    plugins: [
+        new VueLoaderPlugin()
+    ]
 };

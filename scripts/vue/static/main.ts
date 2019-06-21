@@ -299,8 +299,7 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
             }
         }
         if (node.kind === SyntaxKind.Identifier
-            && (node as ts.Identifier).text === "$slots"
-            && toAccessExpression(node.parent)) {
+            && (node as ts.Identifier).text === "$slots") {
             visitSlot(node.parent);
         }
 
@@ -308,9 +307,19 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
     }
 
     function visitSlot(node: ts.Node) {
-        if (node.kind !== SyntaxKind.VariableDeclaration
+        if (node
+            && node.kind !== SyntaxKind.VariableDeclaration
             && node.kind !== SyntaxKind.CallExpression) {
-            slots.push(getAccessedName(toAccessExpression(node)));
+            const access = toAccessExpression(node);
+            if (access) {
+                if (access.expression.kind !== SyntaxKind.Identifier
+                    || (access.expression as ts.Identifier).text !== "$slots"
+                ) {
+                    visitSlot(access.parent);
+                } else {
+                    slots.push(getAccessedName(access));
+                }
+            }
         }
     }
 
