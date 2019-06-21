@@ -1,0 +1,6559 @@
+{
+  "$schema": "../../schema/web-types.schema.json",
+  "framework": "vue",
+  "name": "quasar-framework",
+  "version": "0.17.17",
+  "contributions": {
+    "html": {
+      "types-syntax": "typescript",
+      "tags": [
+        {
+          "name": "QActionSheet",
+          "source-file": "./node_modules/quasar-framework/src/components/action-sheet/QActionSheet.js",
+          "attributes": [
+            {
+              "name": "actions",
+              "type": "any[]"
+            },
+            {
+              "name": "dismissLabel",
+              "type": "string"
+            },
+            {
+              "name": "grid",
+              "type": "boolean"
+            },
+            {
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "cancel"
+            },
+            {
+              "name": "escape-key"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "ok"
+            },
+            {
+              "name": "show"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "title"
+            }
+          ]
+        },
+        {
+          "name": "QAjaxBar",
+          "source-file": "./node_modules/quasar-framework/src/components/ajax-bar/QAjaxBar.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"red\""
+            },
+            {
+              "name": "position",
+              "type": "string",
+              "default": "\"top\""
+            },
+            {
+              "name": "reverse",
+              "type": "boolean"
+            },
+            {
+              "name": "size",
+              "type": "string",
+              "default": "\"2px\""
+            },
+            {
+              "name": "skipHijack",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "start"
+            },
+            {
+              "name": "stop"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QAlert",
+          "source-file": "./node_modules/quasar-framework/src/components/alert/QAlert.js",
+          "attributes": [
+            {
+              "name": "actions",
+              "type": "any[]"
+            },
+            {
+              "name": "avatar",
+              "type": "string"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"negative\""
+            },
+            {
+              "name": "detail",
+              "type": "string"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "message",
+              "type": "string"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            },
+            {
+              "name": "type",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "detail"
+            }
+          ]
+        },
+        {
+          "name": "QAutocomplete",
+          "source-file": "./node_modules/quasar-framework/src/components/autocomplete/QAutocomplete.js",
+          "attributes": [
+            {
+              "name": "debounce",
+              "type": "number",
+              "default": "500"
+            },
+            {
+              "name": "filter",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "maxHeight",
+              "type": "string"
+            },
+            {
+              "name": "maxResults",
+              "type": "number",
+              "default": "6"
+            },
+            {
+              "name": "minCharacters",
+              "type": "number",
+              "default": "1"
+            },
+            {
+              "name": "separator",
+              "type": "boolean"
+            },
+            {
+              "name": "staticData",
+              "type": "any"
+            },
+            {
+              "name": "valueField",
+              "type": [
+                "string",
+                "(...args: any[]) => any"
+              ],
+              "default": "\"value\""
+            }
+          ],
+          "events": [
+            {
+              "name": "hide"
+            },
+            {
+              "name": "search"
+            },
+            {
+              "name": "selected"
+            },
+            {
+              "name": "show"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QBreadcrumbs",
+          "source-file": "./node_modules/quasar-framework/src/components/breadcrumbs/QBreadcrumbs.js",
+          "attributes": [
+            {
+              "name": "activeColor",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "align",
+              "type": "string",
+              "default": "\"left\""
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"faded\""
+            },
+            {
+              "name": "separator",
+              "type": "string",
+              "default": "\"/\""
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QBreadcrumbsEl",
+          "source-file": "./node_modules/quasar-framework/src/components/breadcrumbs/QBreadcrumbsEl.js",
+          "attributes": [
+            {
+              "name": "activeClass",
+              "type": "string"
+            },
+            {
+              "name": "append",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ]
+            },
+            {
+              "name": "exact",
+              "type": "boolean"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "replace",
+              "type": "boolean"
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QBtn",
+          "source-file": "./node_modules/quasar-framework/src/components/btn/QBtn.js",
+          "attributes": [
+            {
+              "name": "align",
+              "type": "string",
+              "default": "\"center\""
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "darkPercentage",
+              "type": "boolean"
+            },
+            {
+              "name": "dense",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "fab",
+              "type": "boolean"
+            },
+            {
+              "name": "fabMini",
+              "type": "boolean"
+            },
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "glossy",
+              "type": "boolean"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "iconRight",
+              "type": "string"
+            },
+            {
+              "name": "label",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "loading",
+              "type": "boolean"
+            },
+            {
+              "name": "noCaps",
+              "type": "boolean"
+            },
+            {
+              "name": "noRipple",
+              "type": "boolean"
+            },
+            {
+              "name": "noWrap",
+              "type": "boolean"
+            },
+            {
+              "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "percentage",
+              "type": "number"
+            },
+            {
+              "name": "push",
+              "type": "boolean"
+            },
+            {
+              "name": "repeatTimeout",
+              "type": [
+                "number",
+                "(...args: any[]) => any"
+              ]
+            },
+            {
+              "name": "replace",
+              "type": "boolean"
+            },
+            {
+              "name": "round",
+              "type": "boolean"
+            },
+            {
+              "name": "rounded",
+              "type": "boolean"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "tabindex",
+              "type": "number"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            },
+            {
+              "name": "to",
+              "type": [
+                "any",
+                "string"
+              ]
+            },
+            {
+              "name": "type",
+              "type": "string"
+            },
+            {
+              "name": "waitForRipple",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "loading"
+            }
+          ]
+        },
+        {
+          "name": "QBtnDropdown",
+          "source-file": "./node_modules/quasar-framework/src/components/btn/QBtnDropdown.js",
+          "attributes": [
+            {
+              "name": "align",
+              "type": "string",
+              "default": "\"center\""
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "contentClass",
+              "type": [
+                "any[]",
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "contentStyle",
+              "type": [
+                "any[]",
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "dense",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "fab",
+              "type": "boolean"
+            },
+            {
+              "name": "fabMini",
+              "type": "boolean"
+            },
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "glossy",
+              "type": "boolean"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "iconRight",
+              "type": "string"
+            },
+            {
+              "name": "label",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "loading",
+              "type": "boolean"
+            },
+            {
+              "name": "noCaps",
+              "type": "boolean"
+            },
+            {
+              "name": "noRipple",
+              "type": "boolean"
+            },
+            {
+              "name": "noWrap",
+              "type": "boolean"
+            },
+            {
+              "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "popoverAnchor",
+              "type": "string",
+              "default": "\"bottom right\""
+            },
+            {
+              "name": "popoverSelf",
+              "type": "string",
+              "default": "\"top right\""
+            },
+            {
+              "name": "push",
+              "type": "boolean"
+            },
+            {
+              "name": "replace",
+              "type": "boolean"
+            },
+            {
+              "name": "round",
+              "type": "boolean"
+            },
+            {
+              "name": "rounded",
+              "type": "boolean"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "split",
+              "type": "boolean"
+            },
+            {
+              "name": "tabindex",
+              "type": "number"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            },
+            {
+              "name": "to",
+              "type": [
+                "any",
+                "string"
+              ]
+            },
+            {
+              "name": "type",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "show"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QBtnGroup",
+          "source-file": "./node_modules/quasar-framework/src/components/btn/QBtnGroup.js",
+          "attributes": [
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "push",
+              "type": "boolean"
+            },
+            {
+              "name": "rounded",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QBtnToggle",
+          "source-file": "./node_modules/quasar-framework/src/components/btn/QBtnToggle.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dense",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "glossy",
+              "type": "boolean"
+            },
+            {
+              "name": "noCaps",
+              "type": "boolean"
+            },
+            {
+              "name": "noRipple",
+              "type": "boolean"
+            },
+            {
+              "name": "noWrap",
+              "type": "boolean"
+            },
+            {
+              "name": "options",
+              "type": "any[]"
+            },
+            {
+              "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "push",
+              "type": "boolean"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "rounded",
+              "type": "boolean"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            },
+            {
+              "name": "toggleColor",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "toggleTextColor",
+              "type": "string"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "waitForRipple",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QCard",
+          "source-file": "./node_modules/quasar-framework/src/components/card/QCard.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "inline",
+              "type": "boolean"
+            },
+            {
+              "name": "square",
+              "type": "boolean"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QCardActions",
+          "source-file": "./node_modules/quasar-framework/src/components/card/QCardActions.js",
+          "attributes": [
+            {
+              "name": "align",
+              "type": "string",
+              "default": "\"start\""
+            },
+            {
+              "name": "vertical",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QCardMain",
+          "source-file": "./node_modules/quasar-framework/src/components/card/QCardMain.js",
+          "attributes": [],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QCardMedia",
+          "source-file": "./node_modules/quasar-framework/src/components/card/QCardMedia.js",
+          "attributes": [
+            {
+              "name": "overlayPosition",
+              "type": "string",
+              "default": "\"bottom\""
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "overlay"
+            }
+          ]
+        },
+        {
+          "name": "QCardSeparator",
+          "source-file": "./node_modules/quasar-framework/src/components/card/QCardSeparator.js",
+          "attributes": [
+            {
+              "name": "inset",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QCardTitle",
+          "source-file": "./node_modules/quasar-framework/src/components/card/QCardTitle.js",
+          "attributes": [],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "right"
+            },
+            {
+              "name": "subtitle"
+            }
+          ]
+        },
+        {
+          "name": "QCarousel",
+          "source-file": "./node_modules/quasar-framework/src/components/carousel/QCarousel.js",
+          "attributes": [
+            {
+              "name": "animation",
+              "type": [
+                "number",
+                "boolean"
+              ],
+              "default": "true"
+            },
+            {
+              "name": "arrows",
+              "type": "boolean"
+            },
+            {
+              "name": "autoplay",
+              "type": [
+                "number",
+                "boolean"
+              ]
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "easing",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "handleArrowKeys",
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "type": "string"
+            },
+            {
+              "name": "infinite",
+              "type": "boolean"
+            },
+            {
+              "name": "noSwipe",
+              "type": "boolean"
+            },
+            {
+              "name": "quickNav",
+              "type": "boolean"
+            },
+            {
+              "name": "quickNavIcon",
+              "type": "string"
+            },
+            {
+              "name": "quickNavPosition",
+              "type": "string",
+              "default": "\"bottom\""
+            },
+            {
+              "name": "swipeEasing",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "thumbnails",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "thumbnailsHorizontal",
+              "type": "boolean"
+            },
+            {
+              "name": "thumbnailsIcon",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ],
+          "events": [
+            {
+              "name": "fullscreen"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "slide"
+            },
+            {
+              "name": "slide-direction"
+            },
+            {
+              "name": "slide-trigger"
+            }
+          ],
+          "slots": [
+            {
+              "name": "control"
+            },
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QCarouselControl",
+          "source-file": "./node_modules/quasar-framework/src/components/carousel/QCarouselControl.js",
+          "attributes": [
+            {
+              "name": "offset",
+              "type": "any[]",
+              "default": "[18,18]"
+            },
+            {
+              "name": "position",
+              "type": "string",
+              "default": "\"bottom-right\""
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QCarouselSlide",
+          "source-file": "./node_modules/quasar-framework/src/components/carousel/QCarouselSlide.js",
+          "attributes": [
+            {
+              "name": "imgSrc",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QChatMessage",
+          "source-file": "./node_modules/quasar-framework/src/components/chat/QChatMessage.js",
+          "attributes": [
+            {
+              "name": "avatar",
+              "type": "string"
+            },
+            {
+              "name": "bgColor",
+              "type": "string"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "sent",
+              "type": "boolean"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "stamp",
+              "type": "string"
+            },
+            {
+              "name": "text",
+              "type": "any[]"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "avatar"
+            },
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QCheckbox",
+          "source-file": "./node_modules/quasar-framework/src/components/checkbox/QCheckbox.js",
+          "attributes": [
+            {
+              "name": "checkedIcon",
+              "type": "string"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "falseValue",
+              "default": "false"
+            },
+            {
+              "name": "indeterminateIcon",
+              "type": "string"
+            },
+            {
+              "name": "indeterminateValue"
+            },
+            {
+              "name": "keepColor",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "leftLabel",
+              "type": "boolean"
+            },
+            {
+              "name": "noFocus",
+              "type": "boolean"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "toggleIndeterminate",
+              "type": "boolean"
+            },
+            {
+              "name": "trueValue",
+              "default": "true"
+            },
+            {
+              "name": "uncheckedIcon",
+              "type": "string"
+            },
+            {
+              "name": "val"
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QChip",
+          "source-file": "./node_modules/quasar-framework/src/components/chip/QChip.js",
+          "attributes": [
+            {
+              "name": "avatar",
+              "type": "string"
+            },
+            {
+              "name": "closable",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dense",
+              "type": "boolean"
+            },
+            {
+              "name": "detail",
+              "type": "boolean"
+            },
+            {
+              "name": "floating",
+              "type": "boolean"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "iconRight",
+              "type": "string"
+            },
+            {
+              "name": "pointing",
+              "type": "string"
+            },
+            {
+              "name": "small",
+              "type": "boolean"
+            },
+            {
+              "name": "square",
+              "type": "boolean"
+            },
+            {
+              "name": "tag",
+              "type": "boolean"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "hide"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QChipsInput",
+          "source-file": "./node_modules/quasar-framework/src/components/chips-input/QChipsInput.js",
+          "attributes": [
+            {
+              "name": "addIcon",
+              "type": "string"
+            },
+            {
+              "name": "after",
+              "type": "any[]"
+            },
+            {
+              "name": "align",
+              "default": "\"left\""
+            },
+            {
+              "name": "autofocus",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "before",
+              "type": "any[]"
+            },
+            {
+              "name": "chipsBgColor",
+              "type": "string"
+            },
+            {
+              "name": "chipsColor",
+              "type": "string"
+            },
+            {
+              "name": "clearValue"
+            },
+            {
+              "name": "clearable",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "floatLabel",
+              "type": "string"
+            },
+            {
+              "name": "hideUnderline",
+              "type": "boolean"
+            },
+            {
+              "name": "inverted",
+              "type": "boolean"
+            },
+            {
+              "name": "invertedLight",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": "boolean"
+            },
+            {
+              "name": "lowerCase",
+              "type": "boolean"
+            },
+            {
+              "name": "maxHeight",
+              "type": "number"
+            },
+            {
+              "name": "noParentField",
+              "type": "boolean"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "prefix",
+              "type": "string"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "stackLabel",
+              "type": "string"
+            },
+            {
+              "name": "suffix",
+              "type": "string"
+            },
+            {
+              "name": "upperCase",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": "any[]"
+            },
+            {
+              "name": "warning",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "add"
+            },
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "clear"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "duplicate"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "keydown"
+            },
+            {
+              "name": "keyup"
+            },
+            {
+              "name": "paste"
+            },
+            {
+              "name": "remove"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "loading"
+            }
+          ]
+        },
+        {
+          "name": "QCollapsible",
+          "source-file": "./node_modules/quasar-framework/src/components/collapsible/QCollapsible.js",
+          "attributes": [
+            {
+              "name": "activeClass",
+              "type": "string"
+            },
+            {
+              "name": "append",
+              "type": "boolean"
+            },
+            {
+              "name": "avatar",
+              "type": "string"
+            },
+            {
+              "name": "collapseIcon",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "dense",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "duration",
+              "type": "number"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ]
+            },
+            {
+              "name": "exact",
+              "type": "boolean"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string"
+            },
+            {
+              "name": "group",
+              "type": "string"
+            },
+            {
+              "name": "headerClass",
+              "type": [
+                "any[]",
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "headerStyle",
+              "type": [
+                "any[]",
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "highlight",
+              "type": "boolean"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "iconToggle",
+              "type": "boolean"
+            },
+            {
+              "name": "image",
+              "type": "string"
+            },
+            {
+              "name": "indent",
+              "type": "boolean"
+            },
+            {
+              "name": "insetSeparator",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "labelLines",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "letter",
+              "type": "string"
+            },
+            {
+              "name": "link",
+              "type": "boolean"
+            },
+            {
+              "name": "multiline",
+              "type": "boolean"
+            },
+            {
+              "name": "opened",
+              "type": "boolean"
+            },
+            {
+              "name": "popup",
+              "type": "boolean"
+            },
+            {
+              "name": "replace",
+              "type": "boolean"
+            },
+            {
+              "name": "rightAvatar",
+              "type": "string"
+            },
+            {
+              "name": "rightIcon",
+              "type": "string"
+            },
+            {
+              "name": "rightImage",
+              "type": "string"
+            },
+            {
+              "name": "rightLetter",
+              "type": "string"
+            },
+            {
+              "name": "separator",
+              "type": "boolean"
+            },
+            {
+              "name": "sparse",
+              "type": "boolean"
+            },
+            {
+              "name": "sublabel",
+              "type": "string"
+            },
+            {
+              "name": "sublabelLines",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "value",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "hide"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "show"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "header"
+            }
+          ]
+        },
+        {
+          "name": "QColor",
+          "source-file": "./node_modules/quasar-framework/src/components/color/QColor.js",
+          "attributes": [
+            {
+              "name": "after",
+              "type": "any[]"
+            },
+            {
+              "name": "align",
+              "default": "\"left\""
+            },
+            {
+              "name": "before",
+              "type": "any[]"
+            },
+            {
+              "name": "cancelLabel",
+              "type": "string"
+            },
+            {
+              "name": "clearValue"
+            },
+            {
+              "name": "clearable",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "defaultValue",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "displayValue",
+              "type": "string"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "floatLabel",
+              "type": "string"
+            },
+            {
+              "name": "formatModel",
+              "type": "string",
+              "default": "\"auto\""
+            },
+            {
+              "name": "hideUnderline",
+              "type": "boolean"
+            },
+            {
+              "name": "inverted",
+              "type": "boolean"
+            },
+            {
+              "name": "invertedLight",
+              "type": "boolean"
+            },
+            {
+              "name": "modal",
+              "type": "boolean"
+            },
+            {
+              "name": "noParentField",
+              "type": "boolean"
+            },
+            {
+              "name": "okLabel",
+              "type": "string"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "popover",
+              "type": "boolean"
+            },
+            {
+              "name": "prefix",
+              "type": "string"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "stackLabel",
+              "type": "string"
+            },
+            {
+              "name": "suffix",
+              "type": "string"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "warning",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "clear"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QColorPicker",
+          "source-file": "./node_modules/quasar-framework/src/components/color/QColorPicker.js",
+          "attributes": [
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "defaultValue",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "formatModel",
+              "type": "string",
+              "default": "\"auto\""
+            },
+            {
+              "name": "noParentField",
+              "type": "boolean"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QContextMenu",
+          "source-file": "./node_modules/quasar-framework/src/components/context-menu/QContextMenu.js",
+          "attributes": [
+            {
+              "name": "disable",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "hide"
+            },
+            {
+              "name": "show"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QDatetime",
+          "source-file": "./node_modules/quasar-framework/src/components/datetime/QDatetime.js",
+          "attributes": [
+            {
+              "name": "after",
+              "type": "any[]"
+            },
+            {
+              "name": "align",
+              "default": "\"left\""
+            },
+            {
+              "name": "before",
+              "type": "any[]"
+            },
+            {
+              "name": "cancelLabel",
+              "type": "string"
+            },
+            {
+              "name": "clearValue"
+            },
+            {
+              "name": "clearable",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "defaultValue",
+              "type": [
+                "string",
+                "number",
+                null
+              ]
+            },
+            {
+              "name": "defaultView",
+              "type": "string"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "displayValue",
+              "type": "string"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "firstDayOfWeek",
+              "type": "number"
+            },
+            {
+              "name": "floatLabel",
+              "type": "string"
+            },
+            {
+              "name": "format",
+              "type": "string"
+            },
+            {
+              "name": "format24h",
+              "type": [
+                "boolean",
+                "number"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "formatModel",
+              "type": "string",
+              "default": "\"auto\""
+            },
+            {
+              "name": "headerLabel",
+              "type": "string"
+            },
+            {
+              "name": "hideUnderline",
+              "type": "boolean"
+            },
+            {
+              "name": "inverted",
+              "type": "boolean"
+            },
+            {
+              "name": "invertedLight",
+              "type": "boolean"
+            },
+            {
+              "name": "max"
+            },
+            {
+              "name": "min"
+            },
+            {
+              "name": "minimal",
+              "type": "boolean"
+            },
+            {
+              "name": "modal",
+              "type": "boolean"
+            },
+            {
+              "name": "noParentField",
+              "type": "boolean"
+            },
+            {
+              "name": "okLabel",
+              "type": "string"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "popover",
+              "type": "boolean"
+            },
+            {
+              "name": "prefix",
+              "type": "string"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "stackLabel",
+              "type": "string"
+            },
+            {
+              "name": "suffix",
+              "type": "string"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"date\""
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "warning",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "clear"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QDatetimePicker",
+          "source-file": "./node_modules/quasar-framework/src/components/datetime/QDatetimePicker.mat.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "defaultValue",
+              "type": [
+                "string",
+                "number",
+                null
+              ]
+            },
+            {
+              "name": "defaultView",
+              "type": "string"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "firstDayOfWeek",
+              "type": "number"
+            },
+            {
+              "name": "format24h",
+              "type": [
+                "boolean",
+                "number"
+              ],
+              "default": "0"
+            },
+            {
+              "name": "formatModel",
+              "type": "string",
+              "default": "\"auto\""
+            },
+            {
+              "name": "headerLabel",
+              "type": "string"
+            },
+            {
+              "name": "max"
+            },
+            {
+              "name": "min"
+            },
+            {
+              "name": "minimal",
+              "type": "boolean"
+            },
+            {
+              "name": "noParentField",
+              "type": "boolean"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"date\""
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "canClose"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QDialog",
+          "source-file": "./node_modules/quasar-framework/src/components/dialog/QDialog.js",
+          "attributes": [
+            {
+              "name": "cancel",
+              "type": [
+                "string",
+                "any",
+                "boolean"
+              ]
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "message",
+              "type": "string"
+            },
+            {
+              "name": "noBackdropDismiss",
+              "type": "boolean"
+            },
+            {
+              "name": "noEscDismiss",
+              "type": "boolean"
+            },
+            {
+              "name": "noRefocus",
+              "type": "boolean"
+            },
+            {
+              "name": "ok",
+              "type": [
+                "string",
+                "any",
+                "boolean"
+              ],
+              "default": "true"
+            },
+            {
+              "name": "options",
+              "type": "any"
+            },
+            {
+              "name": "position",
+              "type": "string"
+            },
+            {
+              "name": "preventClose",
+              "type": "boolean"
+            },
+            {
+              "name": "prompt",
+              "type": "any"
+            },
+            {
+              "name": "stackButtons",
+              "type": "boolean"
+            },
+            {
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "cancel"
+            },
+            {
+              "name": "escape-key"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "ok"
+            },
+            {
+              "name": "show"
+            }
+          ],
+          "slots": [
+            {
+              "name": "body"
+            },
+            {
+              "name": "message"
+            },
+            {
+              "name": "title"
+            }
+          ]
+        },
+        {
+          "name": "QEditor",
+          "source-file": "./node_modules/quasar-framework/src/components/editor/QEditor.js",
+          "attributes": [
+            {
+              "name": "contentClass",
+              "type": [
+                "any",
+                "any[]",
+                "string"
+              ]
+            },
+            {
+              "name": "contentStyle",
+              "type": "any"
+            },
+            {
+              "name": "definitions",
+              "type": "any"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "fonts",
+              "type": "any"
+            },
+            {
+              "name": "height",
+              "type": "string"
+            },
+            {
+              "name": "maxHeight",
+              "type": "string"
+            },
+            {
+              "name": "minHeight",
+              "type": "string",
+              "default": "\"10rem\""
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "toolbar",
+              "type": "any[]",
+              "default": "[[\"left\",\"center\",\"right\",\"justify\"],[\"bold\",\"italic\",\"underline\",\"strike\"],[\"undo\",\"redo\"]]"
+            },
+            {
+              "name": "toolbarBg",
+              "type": "string",
+              "default": "\"grey-3\""
+            },
+            {
+              "name": "toolbarColor",
+              "type": "string"
+            },
+            {
+              "name": "toolbarFlat",
+              "type": "boolean"
+            },
+            {
+              "name": "toolbarOutline",
+              "type": "boolean"
+            },
+            {
+              "name": "toolbarPush",
+              "type": "boolean"
+            },
+            {
+              "name": "toolbarRounded",
+              "type": "boolean"
+            },
+            {
+              "name": "toolbarTextColor",
+              "type": "string"
+            },
+            {
+              "name": "toolbarToggleColor",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ],
+          "events": [
+            {
+              "name": "fullscreen"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QFab",
+          "source-file": "./node_modules/quasar-framework/src/components/fab/QFab.js",
+          "attributes": [
+            {
+              "name": "activeIcon",
+              "type": "string"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "direction",
+              "type": "string",
+              "default": "\"right\""
+            },
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "glossy",
+              "type": "boolean"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "persistent",
+              "type": "boolean"
+            },
+            {
+              "name": "push",
+              "type": "boolean"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "hide"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "show"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "tooltip"
+            }
+          ]
+        },
+        {
+          "name": "QFabAction",
+          "source-file": "./node_modules/quasar-framework/src/components/fab/QFabAction.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "flat",
+              "type": "boolean"
+            },
+            {
+              "name": "glossy",
+              "type": "boolean"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "push",
+              "type": "boolean"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QField",
+          "source-file": "./node_modules/quasar-framework/src/components/field/QField.js",
+          "attributes": [
+            {
+              "name": "count",
+              "type": [
+                "number",
+                "boolean"
+              ],
+              "default": "false"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "errorLabel",
+              "type": "string"
+            },
+            {
+              "name": "helper",
+              "type": "string"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "iconColor",
+              "type": "string"
+            },
+            {
+              "name": "inset",
+              "type": "string"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "labelWidth",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "5"
+            },
+            {
+              "name": "orientation",
+              "type": "string"
+            },
+            {
+              "name": "warning",
+              "type": "boolean"
+            },
+            {
+              "name": "warningLabel",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "error-label"
+            },
+            {
+              "name": "helper"
+            },
+            {
+              "name": "label"
+            },
+            {
+              "name": "warning-label"
+            }
+          ]
+        },
+        {
+          "name": "QIcon",
+          "source-file": "./node_modules/quasar-framework/src/components/icon/QIcon.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QInfiniteScroll",
+          "source-file": "./node_modules/quasar-framework/src/components/infinite-scroll/QInfiniteScroll.js",
+          "attributes": [
+            {
+              "name": "handler",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "inline",
+              "type": "boolean"
+            },
+            {
+              "name": "offset",
+              "type": "number",
+              "default": "0"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "message"
+            }
+          ]
+        },
+        {
+          "name": "QInnerLoading",
+          "source-file": "./node_modules/quasar-framework/src/components/inner-loading/QInnerLoading.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "size",
+              "type": [
+                "string",
+                "number"
+              ],
+              "default": "42"
+            },
+            {
+              "name": "visible",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QInput",
+          "source-file": "./node_modules/quasar-framework/src/components/input/QInput.js",
+          "attributes": [
+            {
+              "name": "after",
+              "type": "any[]"
+            },
+            {
+              "name": "align",
+              "type": "string"
+            },
+            {
+              "name": "autofocus",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "before",
+              "type": "any[]"
+            },
+            {
+              "name": "clearValue"
+            },
+            {
+              "name": "clearable",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "decimals",
+              "type": "number"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "floatLabel",
+              "type": "string"
+            },
+            {
+              "name": "hideUnderline",
+              "type": "boolean"
+            },
+            {
+              "name": "initialShowPassword",
+              "type": "boolean"
+            },
+            {
+              "name": "inverted",
+              "type": "boolean"
+            },
+            {
+              "name": "invertedLight",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": "boolean"
+            },
+            {
+              "name": "lowerCase",
+              "type": "boolean"
+            },
+            {
+              "name": "maxHeight",
+              "type": "number"
+            },
+            {
+              "name": "noParentField",
+              "type": "boolean"
+            },
+            {
+              "name": "noPassToggle",
+              "type": "boolean"
+            },
+            {
+              "name": "numericKeyboardToggle",
+              "type": "boolean"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "prefix",
+              "type": "string"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "stackLabel",
+              "type": "string"
+            },
+            {
+              "name": "step",
+              "type": "number"
+            },
+            {
+              "name": "suffix",
+              "type": "string"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"text\""
+            },
+            {
+              "name": "upperCase",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "warning",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "autofill"
+            },
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "clear"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "keydown"
+            },
+            {
+              "name": "keyup"
+            },
+            {
+              "name": "paste"
+            }
+          ],
+          "slots": [
+            {
+              "name": "after"
+            },
+            {
+              "name": "before"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "loading"
+            }
+          ]
+        },
+        {
+          "name": "QInputFrame",
+          "source-file": "./node_modules/quasar-framework/src/components/input-frame/QInputFrame.js",
+          "attributes": [
+            {
+              "name": "additionalLength",
+              "type": "boolean"
+            },
+            {
+              "name": "after",
+              "type": "any[]"
+            },
+            {
+              "name": "align",
+              "default": "\"left\""
+            },
+            {
+              "name": "before",
+              "type": "any[]"
+            },
+            {
+              "name": "clearValue"
+            },
+            {
+              "name": "clearable",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "floatLabel",
+              "type": "string"
+            },
+            {
+              "name": "focusable",
+              "type": "boolean"
+            },
+            {
+              "name": "focused",
+              "type": "boolean"
+            },
+            {
+              "name": "hideUnderline",
+              "type": "boolean"
+            },
+            {
+              "name": "inverted",
+              "type": "boolean"
+            },
+            {
+              "name": "invertedLight",
+              "type": "boolean"
+            },
+            {
+              "name": "length",
+              "type": "number"
+            },
+            {
+              "name": "noParentField",
+              "type": "boolean"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "prefix",
+              "type": "string"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "stackLabel",
+              "type": "string"
+            },
+            {
+              "name": "suffix",
+              "type": "string"
+            },
+            {
+              "name": "warning",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "clear"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "focus"
+            }
+          ],
+          "slots": [
+            {
+              "name": "after"
+            },
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QItem",
+          "source-file": "./node_modules/quasar-framework/src/components/list/QItem.js",
+          "attributes": [
+            {
+              "name": "active",
+              "type": "boolean"
+            },
+            {
+              "name": "activeClass",
+              "type": "string"
+            },
+            {
+              "name": "append",
+              "type": "boolean"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "dense",
+              "type": "boolean"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ]
+            },
+            {
+              "name": "exact",
+              "type": "boolean"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string"
+            },
+            {
+              "name": "highlight",
+              "type": "boolean"
+            },
+            {
+              "name": "insetSeparator",
+              "type": "boolean"
+            },
+            {
+              "name": "link",
+              "type": "boolean"
+            },
+            {
+              "name": "multiline",
+              "type": "boolean"
+            },
+            {
+              "name": "replace",
+              "type": "boolean"
+            },
+            {
+              "name": "separator",
+              "type": "boolean"
+            },
+            {
+              "name": "sparse",
+              "type": "boolean"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QItemMain",
+          "source-file": "./node_modules/quasar-framework/src/components/list/QItemMain.js",
+          "attributes": [
+            {
+              "name": "inset",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "labelLines",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "sublabel",
+              "type": "string"
+            },
+            {
+              "name": "sublabelLines",
+              "type": [
+                "string",
+                "number"
+              ]
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QItemSeparator",
+          "source-file": "./node_modules/quasar-framework/src/components/list/QItemSeparator.js",
+          "attributes": [
+            {
+              "name": "inset",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QItemSide",
+          "source-file": "./node_modules/quasar-framework/src/components/list/QItemSide.js",
+          "attributes": [
+            {
+              "name": "avatar",
+              "type": "string"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "image",
+              "type": "string"
+            },
+            {
+              "name": "inverted",
+              "type": "boolean"
+            },
+            {
+              "name": "letter",
+              "type": "string"
+            },
+            {
+              "name": "right",
+              "type": "boolean"
+            },
+            {
+              "name": "stamp",
+              "type": "string"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QItemTile",
+          "source-file": "./node_modules/quasar-framework/src/components/list/QItemTile.js",
+          "attributes": [
+            {
+              "name": "avatar",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "image",
+              "type": "boolean"
+            },
+            {
+              "name": "inverted",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "boolean"
+            },
+            {
+              "name": "letter",
+              "type": "boolean"
+            },
+            {
+              "name": "lines",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "stamp",
+              "type": "boolean"
+            },
+            {
+              "name": "sublabel",
+              "type": "boolean"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QItemWrapper",
+          "source-file": "./node_modules/quasar-framework/src/components/list/QItemWrapper.js",
+          "attributes": [
+            {
+              "name": "cfg",
+              "type": "any",
+              "default": "{}"
+            },
+            {
+              "name": "slotReplace",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "left"
+            },
+            {
+              "name": "main"
+            },
+            {
+              "name": "right"
+            }
+          ]
+        },
+        {
+          "name": "QJumbotron",
+          "source-file": "./node_modules/quasar-framework/src/components/jumbotron/QJumbotron.js",
+          "attributes": [
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "gradient",
+              "type": "string"
+            },
+            {
+              "name": "imgSrc",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QKnob",
+          "source-file": "./node_modules/quasar-framework/src/components/knob/QKnob.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "decimals",
+              "type": "number"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "lineWidth",
+              "type": "string",
+              "default": "\"6px\""
+            },
+            {
+              "name": "max",
+              "type": "number",
+              "default": "100"
+            },
+            {
+              "name": "min",
+              "type": "number",
+              "default": "0"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "size",
+              "type": "string",
+              "default": "\"100px\""
+            },
+            {
+              "name": "step",
+              "type": "number",
+              "default": "1"
+            },
+            {
+              "name": "trackColor",
+              "type": "string",
+              "default": "\"grey-3\""
+            },
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "drag-value"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QLayout",
+          "source-file": "./node_modules/quasar-framework/src/components/layout/QLayout.js",
+          "attributes": [
+            {
+              "name": "container",
+              "type": "boolean"
+            },
+            {
+              "name": "view",
+              "type": "string",
+              "default": "\"hhh lpr fff\""
+            }
+          ],
+          "events": [
+            {
+              "name": "resize"
+            },
+            {
+              "name": "scroll"
+            },
+            {
+              "name": "scrollHeight"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QLayoutDrawer",
+          "source-file": "./node_modules/quasar-framework/src/components/layout/QLayoutDrawer.js",
+          "attributes": [
+            {
+              "name": "behavior",
+              "type": "string",
+              "default": "\"default\""
+            },
+            {
+              "name": "breakpoint",
+              "type": "number",
+              "default": "992"
+            },
+            {
+              "name": "contentClass",
+              "type": [
+                "string",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "contentStyle",
+              "type": "any"
+            },
+            {
+              "name": "mini",
+              "type": "boolean"
+            },
+            {
+              "name": "miniWidth",
+              "type": "number",
+              "default": "60"
+            },
+            {
+              "name": "noHideOnRouteChange",
+              "type": "boolean"
+            },
+            {
+              "name": "noSwipeClose",
+              "type": "boolean"
+            },
+            {
+              "name": "noSwipeOpen",
+              "type": "boolean"
+            },
+            {
+              "name": "overlay",
+              "type": "boolean"
+            },
+            {
+              "name": "showIfAbove",
+              "type": "boolean"
+            },
+            {
+              "name": "side",
+              "type": "string",
+              "default": "\"left\""
+            },
+            {
+              "name": "value",
+              "type": "boolean"
+            },
+            {
+              "name": "width",
+              "type": "number",
+              "default": "280"
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "mouseout"
+            },
+            {
+              "name": "mouseover"
+            },
+            {
+              "name": "on-layout"
+            },
+            {
+              "name": "show"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "mini"
+            }
+          ]
+        },
+        {
+          "name": "QLayoutFooter",
+          "source-file": "./node_modules/quasar-framework/src/components/layout/QLayoutFooter.js",
+          "attributes": [
+            {
+              "name": "reveal",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": "boolean",
+              "default": "true"
+            }
+          ],
+          "events": [
+            {
+              "name": "reveal"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QLayoutHeader",
+          "source-file": "./node_modules/quasar-framework/src/components/layout/QLayoutHeader.js",
+          "attributes": [
+            {
+              "name": "reveal",
+              "type": "boolean"
+            },
+            {
+              "name": "revealOffset",
+              "type": "number",
+              "default": "250"
+            },
+            {
+              "name": "value",
+              "type": "boolean",
+              "default": "true"
+            }
+          ],
+          "events": [
+            {
+              "name": "reveal"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QList",
+          "source-file": "./node_modules/quasar-framework/src/components/list/QList.js",
+          "attributes": [
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "dense",
+              "type": "boolean"
+            },
+            {
+              "name": "highlight",
+              "type": "boolean"
+            },
+            {
+              "name": "insetSeparator",
+              "type": "boolean"
+            },
+            {
+              "name": "link",
+              "type": "boolean"
+            },
+            {
+              "name": "multiline",
+              "type": "boolean"
+            },
+            {
+              "name": "noBorder",
+              "type": "boolean"
+            },
+            {
+              "name": "separator",
+              "type": "boolean"
+            },
+            {
+              "name": "sparse",
+              "type": "boolean"
+            },
+            {
+              "name": "striped",
+              "type": "boolean"
+            },
+            {
+              "name": "stripedOdd",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QListHeader",
+          "source-file": "./node_modules/quasar-framework/src/components/list/QListHeader.js",
+          "attributes": [
+            {
+              "name": "inset",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QModal",
+          "source-file": "./node_modules/quasar-framework/src/components/modal/QModal.js",
+          "attributes": [
+            {
+              "name": "contentClasses",
+              "type": [
+                "any",
+                "any[]",
+                "string"
+              ]
+            },
+            {
+              "name": "contentCss",
+              "type": [
+                "any",
+                "any[]",
+                "string"
+              ]
+            },
+            {
+              "name": "enterClass",
+              "type": "string"
+            },
+            {
+              "name": "leaveClass",
+              "type": "string"
+            },
+            {
+              "name": "maximized",
+              "type": "boolean"
+            },
+            {
+              "name": "minimized",
+              "type": "boolean"
+            },
+            {
+              "name": "noBackdropDismiss",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noEscDismiss",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noRefocus",
+              "type": "boolean"
+            },
+            {
+              "name": "noRouteDismiss",
+              "type": "boolean"
+            },
+            {
+              "name": "position",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "positionClasses",
+              "type": "string",
+              "default": "\"flex-center\""
+            },
+            {
+              "name": "transition",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "dismiss"
+            },
+            {
+              "name": "escape-key"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "show"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QModalLayout",
+          "source-file": "./node_modules/quasar-framework/src/components/modal/QModalLayout.js",
+          "attributes": [
+            {
+              "name": "contentClass",
+              "type": [
+                "string",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "contentStyle",
+              "type": [
+                "string",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "footerClass",
+              "type": [
+                "string",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "footerStyle",
+              "type": [
+                "string",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "headerClass",
+              "type": [
+                "string",
+                "any",
+                "any[]"
+              ]
+            },
+            {
+              "name": "headerStyle",
+              "type": [
+                "string",
+                "any",
+                "any[]"
+              ]
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "footer"
+            },
+            {
+              "name": "header"
+            },
+            {
+              "name": "navigation"
+            }
+          ]
+        },
+        {
+          "name": "QNoSsr",
+          "source-file": "./node_modules/quasar-framework/src/components/no-ssr/QNoSsr.js",
+          "attributes": [
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"div\""
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "placeholder"
+            }
+          ]
+        },
+        {
+          "name": "QOptionGroup",
+          "source-file": "./node_modules/quasar-framework/src/components/option-group/QOptionGroup.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "inline",
+              "type": "boolean"
+            },
+            {
+              "name": "keepColor",
+              "type": "boolean"
+            },
+            {
+              "name": "leftLabel",
+              "type": "boolean"
+            },
+            {
+              "name": "noParentField",
+              "type": "boolean"
+            },
+            {
+              "name": "options",
+              "type": "any[]"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "type",
+              "default": "\"radio\""
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QPage",
+          "source-file": "./node_modules/quasar-framework/src/components/layout/QPage.js",
+          "attributes": [
+            {
+              "name": "padding",
+              "type": "boolean"
+            },
+            {
+              "name": "styleFn",
+              "type": "(...args: any[]) => any"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QPageContainer",
+          "source-file": "./node_modules/quasar-framework/src/components/layout/QPageContainer.js",
+          "attributes": [],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QPageSticky",
+          "source-file": "./node_modules/quasar-framework/src/components/layout/QPageSticky.js",
+          "attributes": [
+            {
+              "name": "expand",
+              "type": "boolean"
+            },
+            {
+              "name": "offset",
+              "type": "any[]"
+            },
+            {
+              "name": "position",
+              "type": "string",
+              "default": "\"bottom-right\""
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QPagination",
+          "source-file": "./node_modules/quasar-framework/src/components/pagination/QPagination.js",
+          "attributes": [
+            {
+              "name": "boundaryLinks",
+              "type": "boolean"
+            },
+            {
+              "name": "boundaryNumbers",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "directionLinks",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "ellipses",
+              "type": "boolean"
+            },
+            {
+              "name": "input",
+              "type": "boolean"
+            },
+            {
+              "name": "max",
+              "type": "number"
+            },
+            {
+              "name": "maxPages",
+              "type": "number",
+              "default": "0"
+            },
+            {
+              "name": "min",
+              "type": "number",
+              "default": "1"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QParallax",
+          "source-file": "./node_modules/quasar-framework/src/components/parallax/QParallax.js",
+          "attributes": [
+            {
+              "name": "height",
+              "type": "number",
+              "default": "500"
+            },
+            {
+              "name": "speed",
+              "type": "number",
+              "default": "1"
+            },
+            {
+              "name": "src",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "media"
+            }
+          ]
+        },
+        {
+          "name": "QPopover",
+          "source-file": "./node_modules/quasar-framework/src/components/popover/QPopover.js",
+          "attributes": [
+            {
+              "name": "anchor",
+              "type": "string"
+            },
+            {
+              "name": "anchorClick",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "cover",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "fit",
+              "type": "boolean"
+            },
+            {
+              "name": "keepOnScreen",
+              "type": "boolean"
+            },
+            {
+              "name": "maxHeight",
+              "type": "string"
+            },
+            {
+              "name": "noFocus",
+              "type": "boolean"
+            },
+            {
+              "name": "noRefocus",
+              "type": "boolean"
+            },
+            {
+              "name": "offset",
+              "type": "any[]"
+            },
+            {
+              "name": "persistent",
+              "type": "boolean"
+            },
+            {
+              "name": "self",
+              "type": "string"
+            },
+            {
+              "name": "touchPosition",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "escape-key"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "show"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QPopupEdit",
+          "source-file": "./node_modules/quasar-framework/src/components/popup-edit/QPopupEdit.js",
+          "attributes": [
+            {
+              "name": "buttons",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "keepOnScreen",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "labelCancel",
+              "type": "string"
+            },
+            {
+              "name": "labelSet",
+              "type": "string"
+            },
+            {
+              "name": "persistent",
+              "type": "boolean"
+            },
+            {
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "name": "validate",
+              "type": "(...args: any[]) => any",
+              "default": "true"
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "cancel"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "save"
+            },
+            {
+              "name": "show"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "title"
+            }
+          ]
+        },
+        {
+          "name": "QProgress",
+          "source-file": "./node_modules/quasar-framework/src/components/progress/QProgress.js",
+          "attributes": [
+            {
+              "name": "animate",
+              "type": "boolean"
+            },
+            {
+              "name": "buffer",
+              "type": "number"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "height",
+              "type": "string",
+              "default": "\"4px\""
+            },
+            {
+              "name": "indeterminate",
+              "type": "boolean"
+            },
+            {
+              "name": "percentage",
+              "type": "number",
+              "default": "0"
+            },
+            {
+              "name": "stripe",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QPullToRefresh",
+          "source-file": "./node_modules/quasar-framework/src/components/pull-to-refresh/QPullToRefresh.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "distance",
+              "type": "number",
+              "default": "35"
+            },
+            {
+              "name": "handler",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "inline",
+              "type": "boolean"
+            },
+            {
+              "name": "pullMessage",
+              "type": "string"
+            },
+            {
+              "name": "refreshIcon",
+              "type": "string"
+            },
+            {
+              "name": "refreshMessage",
+              "type": "string"
+            },
+            {
+              "name": "releaseMessage",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QRadio",
+          "source-file": "./node_modules/quasar-framework/src/components/radio/QRadio.js",
+          "attributes": [
+            {
+              "name": "checkedIcon",
+              "type": "string"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "keepColor",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "leftLabel",
+              "type": "boolean"
+            },
+            {
+              "name": "noFocus",
+              "type": "boolean"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "uncheckedIcon",
+              "type": "string"
+            },
+            {
+              "name": "val"
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QRange",
+          "source-file": "./node_modules/quasar-framework/src/components/range/QRange.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "decimals",
+              "type": "number"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "dragOnlyRange",
+              "type": "boolean"
+            },
+            {
+              "name": "dragRange",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "fillHandleAlways",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "boolean"
+            },
+            {
+              "name": "labelAlways",
+              "type": "boolean"
+            },
+            {
+              "name": "leftLabelColor",
+              "type": "string"
+            },
+            {
+              "name": "leftLabelValue",
+              "type": "string"
+            },
+            {
+              "name": "markers",
+              "type": "boolean"
+            },
+            {
+              "name": "max",
+              "type": "number",
+              "default": "5"
+            },
+            {
+              "name": "min",
+              "type": "number",
+              "default": "1"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "rightLabelColor",
+              "type": "string"
+            },
+            {
+              "name": "rightLabelValue",
+              "type": "string"
+            },
+            {
+              "name": "snap",
+              "type": "boolean"
+            },
+            {
+              "name": "square",
+              "type": "boolean"
+            },
+            {
+              "name": "step",
+              "type": "number",
+              "default": "1"
+            },
+            {
+              "name": "value",
+              "type": "any",
+              "default": "{\"min\":0,\"max\":0}"
+            },
+            {
+              "name": "warning",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QRating",
+          "source-file": "./node_modules/quasar-framework/src/components/rating/QRating.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "max",
+              "type": "number",
+              "default": "5"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "size",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QResizeObservable",
+          "source-file": "./node_modules/quasar-framework/src/components/observables/QResizeObservable.js",
+          "attributes": [
+            {
+              "name": "debounce",
+              "type": "number",
+              "default": "100"
+            }
+          ],
+          "events": [
+            {
+              "name": "resize"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QRouteTab",
+          "source-file": "./node_modules/quasar-framework/src/components/tab/QRouteTab.js",
+          "attributes": [
+            {
+              "name": "activeClass",
+              "type": "string"
+            },
+            {
+              "name": "alert",
+              "type": "boolean"
+            },
+            {
+              "name": "append",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "count",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ]
+            },
+            {
+              "name": "exact",
+              "type": "boolean"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string"
+            },
+            {
+              "name": "hidden",
+              "type": "boolean"
+            },
+            {
+              "name": "hide",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "replace",
+              "type": "boolean"
+            },
+            {
+              "name": "tabindex",
+              "type": "number"
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "select"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QScrollArea",
+          "source-file": "./node_modules/quasar-framework/src/components/scroll-area/QScrollArea.js",
+          "attributes": [
+            {
+              "name": "contentActiveStyle",
+              "type": "any",
+              "default": "{}"
+            },
+            {
+              "name": "contentStyle",
+              "type": "any",
+              "default": "{}"
+            },
+            {
+              "name": "delay",
+              "type": "number",
+              "default": "1000"
+            },
+            {
+              "name": "thumbStyle",
+              "type": "any",
+              "default": "{}"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QScrollObservable",
+          "source-file": "./node_modules/quasar-framework/src/components/observables/QScrollObservable.js",
+          "attributes": [
+            {
+              "name": "debounce",
+              "type": "number"
+            }
+          ],
+          "events": [
+            {
+              "name": "scroll"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QSearch",
+          "source-file": "./node_modules/quasar-framework/src/components/search/QSearch.js",
+          "attributes": [
+            {
+              "name": "after",
+              "type": "any[]"
+            },
+            {
+              "name": "align",
+              "default": "\"left\""
+            },
+            {
+              "name": "autofocus",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            {
+              "name": "before",
+              "type": "any[]"
+            },
+            {
+              "name": "clearValue"
+            },
+            {
+              "name": "clearable",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "debounce",
+              "type": "number",
+              "default": "300"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "floatLabel",
+              "type": "string"
+            },
+            {
+              "name": "hideUnderline",
+              "type": "boolean"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "inverted",
+              "type": "boolean"
+            },
+            {
+              "name": "invertedLight",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": "boolean"
+            },
+            {
+              "name": "lowerCase",
+              "type": "boolean"
+            },
+            {
+              "name": "maxHeight",
+              "type": "number"
+            },
+            {
+              "name": "noIcon",
+              "type": "boolean"
+            },
+            {
+              "name": "noParentField",
+              "type": "boolean"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "prefix",
+              "type": "string"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "stackLabel",
+              "type": "string"
+            },
+            {
+              "name": "suffix",
+              "type": "string"
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "default": "\"search\""
+            },
+            {
+              "name": "upperCase",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "warning",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "clear"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "keydown"
+            },
+            {
+              "name": "keyup"
+            },
+            {
+              "name": "paste"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QSelect",
+          "source-file": "./node_modules/quasar-framework/src/components/select/QSelect.js",
+          "attributes": [
+            {
+              "name": "after",
+              "type": "any[]"
+            },
+            {
+              "name": "align",
+              "default": "\"left\""
+            },
+            {
+              "name": "before",
+              "type": "any[]"
+            },
+            {
+              "name": "chips",
+              "type": "boolean"
+            },
+            {
+              "name": "chipsBgColor",
+              "type": "string"
+            },
+            {
+              "name": "chipsColor",
+              "type": "string"
+            },
+            {
+              "name": "clearValue"
+            },
+            {
+              "name": "clearable",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "displayValue",
+              "type": "string"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "filter",
+              "type": [
+                "(...args: any[]) => any",
+                "boolean"
+              ]
+            },
+            {
+              "name": "filterPlaceholder",
+              "type": "string"
+            },
+            {
+              "name": "floatLabel",
+              "type": "string"
+            },
+            {
+              "name": "hideUnderline",
+              "type": "boolean"
+            },
+            {
+              "name": "inverted",
+              "type": "boolean"
+            },
+            {
+              "name": "invertedLight",
+              "type": "boolean"
+            },
+            {
+              "name": "multiple",
+              "type": "boolean"
+            },
+            {
+              "name": "noParentField",
+              "type": "boolean"
+            },
+            {
+              "name": "options",
+              "type": "any[]"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "popupMaxHeight",
+              "type": "string"
+            },
+            {
+              "name": "prefix",
+              "type": "string"
+            },
+            {
+              "name": "radio",
+              "type": "boolean"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "separator",
+              "type": "boolean"
+            },
+            {
+              "name": "stackLabel",
+              "type": "string"
+            },
+            {
+              "name": "suffix",
+              "type": "string"
+            },
+            {
+              "name": "toggle",
+              "type": "boolean"
+            },
+            {
+              "name": "value"
+            },
+            {
+              "name": "warning",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "add"
+            },
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "clear"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "remove"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QSlideTransition",
+          "source-file": "./node_modules/quasar-framework/src/components/slide-transition/QSlideTransition.js",
+          "attributes": [
+            {
+              "name": "appear",
+              "type": "boolean"
+            },
+            {
+              "name": "duration",
+              "type": "number",
+              "default": "300"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QSlider",
+          "source-file": "./node_modules/quasar-framework/src/components/slider/QSlider.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "decimals",
+              "type": "number"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "fillHandleAlways",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "boolean"
+            },
+            {
+              "name": "labelAlways",
+              "type": "boolean"
+            },
+            {
+              "name": "labelValue",
+              "type": "string"
+            },
+            {
+              "name": "markers",
+              "type": "boolean"
+            },
+            {
+              "name": "max",
+              "type": "number",
+              "default": "5"
+            },
+            {
+              "name": "min",
+              "type": "number",
+              "default": "1"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "snap",
+              "type": "boolean"
+            },
+            {
+              "name": "square",
+              "type": "boolean"
+            },
+            {
+              "name": "step",
+              "type": "number",
+              "default": "1"
+            },
+            {
+              "name": "value",
+              "type": "number"
+            },
+            {
+              "name": "warning",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QSpinner",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinner.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerAudio",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerAudio.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerBall",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerBall.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerBars",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerBars.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerCircles",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerCircles.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerComment",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerComment.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerCube",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerCube.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerDots",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerDots.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerFacebook",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerFacebook.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerGears",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerGears.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerGrid",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerGrid.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerHearts",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerHearts.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerHourglass",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerHourglass.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerInfinity",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerInfinity.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerIos",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinner.ios.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerMat",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinner.mat.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerOval",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerOval.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerPie",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerPie.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerPuff",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerPuff.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerRadio",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerRadio.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerRings",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerRings.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QSpinnerTail",
+          "source-file": "./node_modules/quasar-framework/src/components/spinner/QSpinnerTail.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "size",
+              "type": [
+                "number",
+                "string"
+              ],
+              "default": "\"1em\""
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QStep",
+          "source-file": "./node_modules/quasar-framework/src/components/stepper/QStep.js",
+          "attributes": [
+            {
+              "name": "activeIcon",
+              "type": "string"
+            },
+            {
+              "name": "default",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "doneIcon",
+              "type": "string"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "errorIcon",
+              "type": "string"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "order",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "subtitle",
+              "type": "string"
+            },
+            {
+              "name": "title",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QStepper",
+          "source-file": "./node_modules/quasar-framework/src/components/stepper/QStepper.js",
+          "attributes": [
+            {
+              "name": "activeIcon",
+              "type": "boolean"
+            },
+            {
+              "name": "alternativeLabels",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "contractable",
+              "type": "boolean"
+            },
+            {
+              "name": "doneIcon",
+              "type": "boolean"
+            },
+            {
+              "name": "errorIcon",
+              "type": "boolean"
+            },
+            {
+              "name": "noHeaderNavigation",
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "vertical",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "step"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QStepperNavigation",
+          "source-file": "./node_modules/quasar-framework/src/components/stepper/QStepperNavigation.js",
+          "attributes": [],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "left"
+            }
+          ]
+        },
+        {
+          "name": "QTab",
+          "source-file": "./node_modules/quasar-framework/src/components/tab/QTab.js",
+          "attributes": [
+            {
+              "name": "alert",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "count",
+              "type": [
+                "number",
+                "string"
+              ]
+            },
+            {
+              "name": "default",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "hidden",
+              "type": "boolean"
+            },
+            {
+              "name": "hide",
+              "type": "string",
+              "default": "\"\""
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "tabindex",
+              "type": "number"
+            }
+          ],
+          "events": [
+            {
+              "name": "click"
+            },
+            {
+              "name": "select"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QTabPane",
+          "source-file": "./node_modules/quasar-framework/src/components/tab/QTabPane.js",
+          "attributes": [
+            {
+              "name": "keepAlive",
+              "type": "boolean"
+            },
+            {
+              "name": "name",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QTable",
+          "source-file": "./node_modules/quasar-framework/src/components/table/QTable.js",
+          "attributes": [
+            {
+              "name": "binaryStateSort",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"grey-8\""
+            },
+            {
+              "name": "columns",
+              "type": "any[]"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "data",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "dense",
+              "type": "boolean"
+            },
+            {
+              "name": "filter",
+              "type": [
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "filterMethod",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "grid",
+              "type": "boolean"
+            },
+            {
+              "name": "hideBottom",
+              "type": "boolean"
+            },
+            {
+              "name": "hideHeader",
+              "type": "boolean"
+            },
+            {
+              "name": "loading",
+              "type": "boolean"
+            },
+            {
+              "name": "loadingLabel",
+              "type": "string"
+            },
+            {
+              "name": "noDataLabel",
+              "type": "string"
+            },
+            {
+              "name": "noResultsLabel",
+              "type": "string"
+            },
+            {
+              "name": "pagination",
+              "type": "any"
+            },
+            {
+              "name": "paginationLabel",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "rowKey",
+              "type": "string",
+              "default": "\"id\""
+            },
+            {
+              "name": "rowsPerPageLabel",
+              "type": "string"
+            },
+            {
+              "name": "rowsPerPageOptions",
+              "type": "any[]",
+              "default": "[3,5,7,10,15,20,25,50,0]"
+            },
+            {
+              "name": "selected",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "selectedRowsLabel",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "selection",
+              "type": "string",
+              "default": "\"none\""
+            },
+            {
+              "name": "separator",
+              "type": "string",
+              "default": "\"horizontal\""
+            },
+            {
+              "name": "sortMethod",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "tableClass",
+              "type": [
+                "string",
+                "any[]",
+                "any"
+              ],
+              "default": "\"\""
+            },
+            {
+              "name": "tableStyle",
+              "type": [
+                "string",
+                "any[]",
+                "any"
+              ],
+              "default": "\"\""
+            },
+            {
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "name": "visibleColumns",
+              "type": "any[]"
+            }
+          ],
+          "events": [
+            {
+              "name": "fullscreen"
+            },
+            {
+              "name": "request"
+            },
+            {
+              "name": "update:pagination"
+            },
+            {
+              "name": "update:selected"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QTableColumns",
+          "source-file": "./node_modules/quasar-framework/src/components/table/QTableColumns.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "columns",
+              "type": "any[]"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "any[]"
+            }
+          ],
+          "events": [
+            {
+              "name": "change"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QTabs",
+          "source-file": "./node_modules/quasar-framework/src/components/tab/QTabs.js",
+          "attributes": [
+            {
+              "name": "align",
+              "type": "string",
+              "default": "\"left\""
+            },
+            {
+              "name": "animated",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "glossy",
+              "type": "boolean"
+            },
+            {
+              "name": "inverted",
+              "type": "boolean"
+            },
+            {
+              "name": "panesContainerClass",
+              "type": "string"
+            },
+            {
+              "name": "position",
+              "type": "string",
+              "default": "\"top\""
+            },
+            {
+              "name": "swipeable",
+              "type": "boolean"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            },
+            {
+              "name": "twoLines",
+              "type": "boolean"
+            },
+            {
+              "name": "underlineColor",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ],
+          "events": [
+            {
+              "name": "input"
+            },
+            {
+              "name": "select"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "title"
+            }
+          ]
+        },
+        {
+          "name": "QTd",
+          "source-file": "./node_modules/quasar-framework/src/components/table/QTd.js",
+          "attributes": [
+            {
+              "name": "autoWidth",
+              "type": "boolean"
+            },
+            {
+              "name": "props",
+              "type": "any"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QTh",
+          "source-file": "./node_modules/quasar-framework/src/components/table/QTh.js",
+          "attributes": [
+            {
+              "name": "autoWidth",
+              "type": "boolean"
+            },
+            {
+              "name": "props",
+              "type": "any"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QTimeline",
+          "source-file": "./node_modules/quasar-framework/src/components/timeline/QTimeline.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "noHover",
+              "type": "boolean"
+            },
+            {
+              "name": "responsive",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QTimelineEntry",
+          "source-file": "./node_modules/quasar-framework/src/components/timeline/QTimelineEntry.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string"
+            },
+            {
+              "name": "heading",
+              "type": "boolean"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "side",
+              "type": "string",
+              "default": "\"right\""
+            },
+            {
+              "name": "subtitle",
+              "type": "string"
+            },
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"h3\""
+            },
+            {
+              "name": "title",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QToggle",
+          "source-file": "./node_modules/quasar-framework/src/components/toggle/QToggle.js",
+          "attributes": [
+            {
+              "name": "checkedIcon",
+              "type": "string"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "falseValue",
+              "default": "false"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "keepColor",
+              "type": "boolean"
+            },
+            {
+              "name": "label",
+              "type": "string"
+            },
+            {
+              "name": "leftLabel",
+              "type": "boolean"
+            },
+            {
+              "name": "noFocus",
+              "type": "boolean"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "trueValue",
+              "default": "true"
+            },
+            {
+              "name": "uncheckedIcon",
+              "type": "string"
+            },
+            {
+              "name": "val"
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QToolbar",
+          "source-file": "./node_modules/quasar-framework/src/components/toolbar/QToolbar.js",
+          "attributes": [
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "glossy",
+              "type": "boolean"
+            },
+            {
+              "name": "inverted",
+              "type": "boolean"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QToolbarTitle",
+          "source-file": "./node_modules/quasar-framework/src/components/toolbar/QToolbarTitle.js",
+          "attributes": [
+            {
+              "name": "shrink",
+              "type": "boolean"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "subtitle"
+            }
+          ]
+        },
+        {
+          "name": "QTooltip",
+          "source-file": "./node_modules/quasar-framework/src/components/tooltip/QTooltip.js",
+          "attributes": [
+            {
+              "name": "anchor",
+              "type": "string",
+              "default": "\"top middle\""
+            },
+            {
+              "name": "delay",
+              "type": "number",
+              "default": "0"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "maxHeight",
+              "type": "string"
+            },
+            {
+              "name": "offset",
+              "type": "any[]"
+            },
+            {
+              "name": "self",
+              "type": "string",
+              "default": "\"bottom middle\""
+            },
+            {
+              "name": "value",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "hide"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "show"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QTr",
+          "source-file": "./node_modules/quasar-framework/src/components/table/QTr.js",
+          "attributes": [
+            {
+              "name": "props",
+              "type": "any"
+            }
+          ],
+          "events": [],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QTree",
+          "source-file": "./node_modules/quasar-framework/src/components/tree/QTree.js",
+          "attributes": [
+            {
+              "name": "accordion",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"grey\""
+            },
+            {
+              "name": "controlColor",
+              "type": "string"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "defaultExpandAll",
+              "type": "boolean"
+            },
+            {
+              "name": "duration",
+              "type": "number"
+            },
+            {
+              "name": "expanded",
+              "type": "any[]"
+            },
+            {
+              "name": "filter",
+              "type": "string"
+            },
+            {
+              "name": "filterMethod",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "icon",
+              "type": "string"
+            },
+            {
+              "name": "labelKey",
+              "type": "string",
+              "default": "\"label\""
+            },
+            {
+              "name": "noNodesLabel",
+              "type": "string"
+            },
+            {
+              "name": "noResultsLabel",
+              "type": "string"
+            },
+            {
+              "name": "nodeKey",
+              "type": "string"
+            },
+            {
+              "name": "nodes",
+              "type": "any[]"
+            },
+            {
+              "name": "selected"
+            },
+            {
+              "name": "textColor",
+              "type": "string"
+            },
+            {
+              "name": "tickStrategy",
+              "type": "string",
+              "default": "\"none\""
+            },
+            {
+              "name": "ticked",
+              "type": "any[]"
+            }
+          ],
+          "events": [
+            {
+              "name": "lazy-load"
+            },
+            {
+              "name": "update:expanded"
+            },
+            {
+              "name": "update:selected"
+            }
+          ],
+          "slots": []
+        },
+        {
+          "name": "QUploader",
+          "source-file": "./node_modules/quasar-framework/src/components/uploader/QUploader.js",
+          "attributes": [
+            {
+              "name": "additionalFields",
+              "type": "any[]",
+              "default": "[]"
+            },
+            {
+              "name": "after",
+              "type": "any[]"
+            },
+            {
+              "name": "align",
+              "default": "\"left\""
+            },
+            {
+              "name": "autoExpand",
+              "type": "boolean"
+            },
+            {
+              "name": "before",
+              "type": "any[]"
+            },
+            {
+              "name": "clearValue"
+            },
+            {
+              "name": "clearable",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "type": "boolean"
+            },
+            {
+              "name": "expandClass",
+              "type": [
+                "any[]",
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "expandStyle",
+              "type": [
+                "any[]",
+                "string",
+                "any"
+              ]
+            },
+            {
+              "name": "extensions",
+              "type": "string"
+            },
+            {
+              "name": "filter",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "floatLabel",
+              "type": "string"
+            },
+            {
+              "name": "headers",
+              "type": "any"
+            },
+            {
+              "name": "hideUnderline",
+              "type": "boolean"
+            },
+            {
+              "name": "hideUploadButton",
+              "type": "boolean"
+            },
+            {
+              "name": "hideUploadProgress",
+              "type": "boolean"
+            },
+            {
+              "name": "inverted",
+              "type": "boolean"
+            },
+            {
+              "name": "invertedLight",
+              "type": "boolean"
+            },
+            {
+              "name": "method",
+              "type": "string",
+              "default": "\"POST\""
+            },
+            {
+              "name": "multiple",
+              "type": "boolean"
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "default": "\"file\""
+            },
+            {
+              "name": "noContentType",
+              "type": "boolean"
+            },
+            {
+              "name": "noParentField",
+              "type": "boolean"
+            },
+            {
+              "name": "noThumbnails",
+              "type": "boolean"
+            },
+            {
+              "name": "placeholder",
+              "type": "string"
+            },
+            {
+              "name": "prefix",
+              "type": "string"
+            },
+            {
+              "name": "readonly",
+              "type": "boolean"
+            },
+            {
+              "name": "sendRaw",
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "stackLabel",
+              "type": "string"
+            },
+            {
+              "name": "suffix",
+              "type": "string"
+            },
+            {
+              "name": "uploadFactory",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "url",
+              "type": "string"
+            },
+            {
+              "name": "urlFactory",
+              "type": "(...args: any[]) => any"
+            },
+            {
+              "name": "warning",
+              "type": "boolean"
+            },
+            {
+              "name": "withCredentials",
+              "type": "boolean"
+            }
+          ],
+          "events": [
+            {
+              "name": "abort"
+            },
+            {
+              "name": "add"
+            },
+            {
+              "name": "clear"
+            },
+            {
+              "name": "fail"
+            },
+            {
+              "name": "finish"
+            },
+            {
+              "name": "remove:abort"
+            },
+            {
+              "name": "reset"
+            },
+            {
+              "name": "start"
+            },
+            {
+              "name": "uploaded"
+            }
+          ],
+          "slots": [
+            {
+              "name": "loading"
+            }
+          ]
+        },
+        {
+          "name": "QVideo",
+          "source-file": "./node_modules/quasar-framework/src/components/video/QVideo.js",
+          "attributes": [
+            {
+              "name": "src",
+              "type": "string"
+            }
+          ],
+          "events": [],
+          "slots": []
+        },
+        {
+          "name": "QWindowResizeObservable",
+          "source-file": "./node_modules/quasar-framework/src/components/observables/QWindowResizeObservable.js",
+          "attributes": [
+            {
+              "name": "debounce",
+              "type": "number",
+              "default": "80"
+            }
+          ],
+          "events": [
+            {
+              "name": "resize"
+            }
+          ],
+          "slots": []
+        }
+      ]
+    }
+  }
+}
