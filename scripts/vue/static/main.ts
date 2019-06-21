@@ -334,13 +334,12 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
     }
 
     function isWithinFunction(node: ts.Node, name: string): boolean {
-        while (node && node.kind !== SyntaxKind.FunctionExpression) {
+        while (node && (node.kind !== SyntaxKind.FunctionExpression
+            || ((node as ts.FunctionExpression).name
+                && (node as ts.FunctionExpression).name!.text === name))) {
             node = node.parent;
         }
-        if (node && (node as ts.FunctionExpression).name) {
-            return (node as ts.FunctionExpression).name!.text === name;
-        }
-        return false;
+        return !!node;
     }
 
     function getAccessedName(accessExpression: ElementAccessExpression | PropertyAccessExpression | null,
@@ -375,6 +374,15 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
                     }
                 }
             }
+            return (args, actualId) => {
+                const result = evaluateExpression(expression, actualId, args[id]);
+                if (result.startsWith("#Error:")
+                    /* vuetify 1.5+ */
+                    && isWithinFunction(expression, "getMouseEventHandlers")) {
+                    return [];
+                }
+                return [result];
+            };
         } else if (expression.kind === SyntaxKind.PropertyAccessExpression) {
             const propAccess = expression as PropertyAccessExpression;
             if (propAccess.expression.kind === SyntaxKind.ThisKeyword) {
@@ -416,7 +424,7 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
         }
     }
 
-    function evaluateExpression(expression: ts.Expression, actualId: number): string | null {
+    function evaluateExpression(expression: ts.Expression, actualId: number, args?: any[]): string {
         const result = evaluate({
             node: expression,
             typeChecker,
@@ -424,7 +432,8 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
                 extra: {
                     this: {
                         $options: cloneDeep(dynamicAnalysis.get(actualId))
-                    }
+                    },
+                    arguments: args
                 }
             },
             policy: {

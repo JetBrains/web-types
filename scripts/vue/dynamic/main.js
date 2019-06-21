@@ -22,7 +22,10 @@ if ("$$PACKAGE$$" !== "quasar-framework") {
     };
 }
 
-let pkg = require("$$PACKAGE$$").default;
+let pkg = require("$$PACKAGE$$");
+if (pkg.default && !pkg.install) {
+    pkg = pkg.default
+}
 
 if (Object.getOwnPropertyNames(Vue.options.components).length === 0) {
     Vue.use(pkg);
@@ -147,8 +150,11 @@ function copyProps(obj) {
                     }
                     if (value === null
                         || value === undefined
-                        // discard GUID name from quasar framework
-                        || (typeof value.match === "function" && value.match(/[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+/))) {
+                        || (typeof value.match === "function"
+                            // discard GUID name from quasar framework
+                            && (value.match(/[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+-[a-z0-9]+/)
+                                // and date from vuetify framework
+                                || value.match(/[0-9]+-[0-9]+-[0-9]+/)))) {
                         value = undefined;
                     } else {
                         value = JSON.stringify(value);
