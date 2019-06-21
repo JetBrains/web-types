@@ -1,7 +1,7 @@
 {
   "name": "@web-types/%PACKAGE_NAME%",
-  "version": "%PACKAGE_VERSION%-%BUILD_NR%",
-  "description": "Web-types for %PACKAGE_NAME%@%PACKAGE_VERSION%",
+  "version": "%PACKAGE_VERSION_FULL%",
+  "description": "Web-types for %PACKAGE_NAME",
   "keywords": [
     "web-types",
     "%PACKAGE_NAME%"
