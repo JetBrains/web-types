@@ -2,7 +2,7 @@
   "$schema": "../../schema/web-types.schema.json",
   "framework": "vue",
   "name": "quasar-framework",
-  "version": "0.17.6",
+  "version": "0.17.2",
   "contributions": {
     "html": {
       "types-syntax": "typescript",
@@ -2737,10 +2737,6 @@
               "type": "boolean"
             },
             {
-              "name": "placeholder",
-              "type": "string"
-            },
-            {
               "name": "prefix",
               "type": "string"
             },
@@ -2755,6 +2751,10 @@
             {
               "name": "suffix",
               "type": "string"
+            },
+            {
+              "name": "topAddons",
+              "type": "boolean"
             },
             {
               "name": "warning",
@@ -6220,10 +6220,6 @@
               "type": "boolean"
             },
             {
-              "name": "placeholder",
-              "type": "string"
-            },
-            {
               "name": "prefix",
               "type": "string"
             },
@@ -6328,7 +6324,8 @@
       ],
       "attributes": [
         {
-          "name": "v-back-to-top"
+          "name": "v-back-to-top",
+          "source-file": "./node_modules/quasar-framework/src/directives/back-to-top.js"
         },
         {
           "name": "v-close-overlay",

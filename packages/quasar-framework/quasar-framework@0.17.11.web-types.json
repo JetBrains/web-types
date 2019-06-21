@@ -1826,7 +1826,7 @@
               "type": [
                 "string",
                 "number",
-                null
+                "Date"
               ]
             },
             {
@@ -1982,7 +1982,7 @@
               "type": [
                 "string",
                 "number",
-                null
+                "Date"
               ]
             },
             {
@@ -6493,6 +6493,44 @@
             }
           ],
           "slots": []
+        }
+      ],
+      "attributes": [
+        {
+          "name": "v-back-to-top",
+          "source-file": "./node_modules/quasar-framework/src/directives/back-to-top.js"
+        },
+        {
+          "name": "v-close-overlay",
+          "source-file": "./node_modules/quasar-framework/src/directives/close-overlay.js"
+        },
+        {
+          "name": "v-go-back",
+          "source-file": "./node_modules/quasar-framework/src/directives/go-back.js"
+        },
+        {
+          "name": "v-ripple",
+          "source-file": "./node_modules/quasar-framework/src/directives/ripple.js"
+        },
+        {
+          "name": "v-scroll",
+          "source-file": "./node_modules/quasar-framework/src/directives/scroll.js"
+        },
+        {
+          "name": "v-scroll-fire",
+          "source-file": "./node_modules/quasar-framework/src/directives/scroll-fire.js"
+        },
+        {
+          "name": "v-touch-hold",
+          "source-file": "./node_modules/quasar-framework/src/directives/touch-hold.js"
+        },
+        {
+          "name": "v-touch-pan",
+          "source-file": "./node_modules/quasar-framework/src/directives/touch-pan.js"
+        },
+        {
+          "name": "v-touch-swipe",
+          "source-file": "./node_modules/quasar-framework/src/directives/touch-swipe.js"
         }
       ]
     }

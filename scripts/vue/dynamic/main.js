@@ -37,7 +37,8 @@ const typesMapping = {
     Boolean: "boolean",
     Function: "(...args: any[]) => any",
     Array: "any[]",
-    Object: "any"
+    Object: "any",
+    Date: "Date"
 };
 
 let result = {};
@@ -180,7 +181,7 @@ function convertValue(value) {
         return result;
     }
     if (typeof value === "function") {
-        for (let type of [String, Number, Boolean, Function, Array, Object]) {
+        for (let type of [String, Number, Boolean, Function, Array, Object, Date]) {
             if (value === type) {
                 return typesMapping[type.name];
             }

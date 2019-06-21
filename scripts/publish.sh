@@ -115,7 +115,7 @@ done
 
 TO_DEPRECATE=$(diff <(printf "%s\n" "${PUBLISHED[@]}" | sort -V) <(printf "%s\n" "${EXISTING_VERSIONS_NPM[@]}" | sort -V) | grep ">" | sed -e 's/> //g')
 
-echo "Depracating following versions: ${TO_DEPRECATE[@}"
+echo "Depracating following versions: ${TO_DEPRECATE[*]}"
 
 # shellcheck disable=SC2068
 for version in ${TO_DEPRECATE[@]}; do

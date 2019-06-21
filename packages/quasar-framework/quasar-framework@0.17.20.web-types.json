@@ -2,7 +2,7 @@
   "$schema": "../../schema/web-types.schema.json",
   "framework": "vue",
   "name": "quasar-framework",
-  "version": "0.17.6",
+  "version": "0.17.20",
   "contributions": {
     "html": {
       "types-syntax": "typescript",
@@ -187,8 +187,7 @@
               "type": [
                 "string",
                 "(...args: any[]) => any"
-              ],
-              "default": "\"value\""
+              ]
             }
           ],
           "events": [
@@ -736,6 +735,10 @@
               "type": "string"
             },
             {
+              "name": "dark",
+              "type": "boolean"
+            },
+            {
               "name": "flat",
               "type": "boolean"
             },
@@ -928,6 +931,9 @@
             }
           ],
           "events": [
+            {
+              "name": "fullscreen"
+            },
             {
               "name": "input"
             },
@@ -1360,12 +1366,18 @@
               "name": "keyup"
             },
             {
+              "name": "paste"
+            },
+            {
               "name": "remove"
             }
           ],
           "slots": [
             {
               "name": "default"
+            },
+            {
+              "name": "loading"
             }
           ]
         },
@@ -1373,6 +1385,14 @@
           "name": "QCollapsible",
           "source-file": "./node_modules/quasar-framework/src/components/collapsible/QCollapsible.js",
           "attributes": [
+            {
+              "name": "activeClass",
+              "type": "string"
+            },
+            {
+              "name": "append",
+              "type": "boolean"
+            },
             {
               "name": "avatar",
               "type": "string"
@@ -1392,6 +1412,25 @@
             {
               "name": "disable",
               "type": "boolean"
+            },
+            {
+              "name": "duration",
+              "type": "number"
+            },
+            {
+              "name": "event",
+              "type": [
+                "string",
+                "any[]"
+              ]
+            },
+            {
+              "name": "exact",
+              "type": "boolean"
+            },
+            {
+              "name": "exactActiveClass",
+              "type": "string"
             },
             {
               "name": "group",
@@ -1469,6 +1508,10 @@
               "type": "boolean"
             },
             {
+              "name": "replace",
+              "type": "boolean"
+            },
+            {
               "name": "rightAvatar",
               "type": "string"
             },
@@ -1507,6 +1550,13 @@
               "name": "tag",
               "type": "string",
               "default": "\"div\""
+            },
+            {
+              "name": "to",
+              "type": [
+                "string",
+                "any"
+              ]
             },
             {
               "name": "value",
@@ -1831,6 +1881,10 @@
               "default": "\"auto\""
             },
             {
+              "name": "headerLabel",
+              "type": "string"
+            },
+            {
               "name": "hideUnderline",
               "type": "boolean"
             },
@@ -1965,6 +2019,10 @@
               "name": "formatModel",
               "type": "string",
               "default": "\"auto\""
+            },
+            {
+              "name": "headerLabel",
+              "type": "string"
             },
             {
               "name": "max"
@@ -2204,6 +2262,9 @@
           ],
           "events": [
             {
+              "name": "fullscreen"
+            },
+            {
               "name": "input"
             }
           ],
@@ -2240,6 +2301,10 @@
             },
             {
               "name": "outline",
+              "type": "boolean"
+            },
+            {
+              "name": "persistent",
               "type": "boolean"
             },
             {
@@ -2547,6 +2612,10 @@
               "type": "boolean"
             },
             {
+              "name": "initialShowPassword",
+              "type": "boolean"
+            },
+            {
               "name": "inverted",
               "type": "boolean"
             },
@@ -2646,6 +2715,9 @@
             },
             {
               "name": "keyup"
+            },
+            {
+              "name": "paste"
             }
           ],
           "slots": [
@@ -2657,6 +2729,9 @@
             },
             {
               "name": "default"
+            },
+            {
+              "name": "loading"
             }
           ]
         },
@@ -3175,6 +3250,10 @@
           "source-file": "./node_modules/quasar-framework/src/components/layout/QLayout.js",
           "attributes": [
             {
+              "name": "container",
+              "type": "boolean"
+            },
+            {
               "name": "view",
               "type": "string",
               "default": "\"hhh lpr fff\""
@@ -3249,6 +3328,10 @@
               "type": "boolean"
             },
             {
+              "name": "showIfAbove",
+              "type": "boolean"
+            },
+            {
               "name": "side",
               "type": "string",
               "default": "\"left\""
@@ -3278,6 +3361,9 @@
             },
             {
               "name": "mouseover"
+            },
+            {
+              "name": "on-layout"
             },
             {
               "name": "show"
@@ -3823,7 +3909,7 @@
               "name": "default"
             },
             {
-              "name": "loading"
+              "name": "media"
             }
           ]
         },
@@ -3841,11 +3927,19 @@
               "default": "true"
             },
             {
+              "name": "cover",
+              "type": "boolean"
+            },
+            {
               "name": "disable",
               "type": "boolean"
             },
             {
               "name": "fit",
+              "type": "boolean"
+            },
+            {
+              "name": "keepOnScreen",
               "type": "boolean"
             },
             {
@@ -3865,6 +3959,10 @@
               "type": "any[]"
             },
             {
+              "name": "persistent",
+              "type": "boolean"
+            },
+            {
               "name": "self",
               "type": "string"
             },
@@ -3879,6 +3977,9 @@
           ],
           "events": [
             {
+              "name": "escape-key"
+            },
+            {
               "name": "hide"
             },
             {
@@ -3891,6 +3992,79 @@
           "slots": [
             {
               "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "QPopupEdit",
+          "source-file": "./node_modules/quasar-framework/src/components/popup-edit/QPopupEdit.js",
+          "attributes": [
+            {
+              "name": "buttons",
+              "type": "boolean"
+            },
+            {
+              "name": "color",
+              "type": "string",
+              "default": "\"primary\""
+            },
+            {
+              "name": "disable",
+              "type": "boolean"
+            },
+            {
+              "name": "keepOnScreen",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "labelCancel",
+              "type": "string"
+            },
+            {
+              "name": "labelSet",
+              "type": "string"
+            },
+            {
+              "name": "persistent",
+              "type": "boolean"
+            },
+            {
+              "name": "title",
+              "type": "string"
+            },
+            {
+              "name": "validate",
+              "type": "(...args: any[]) => any",
+              "default": "true"
+            },
+            {
+              "name": "value"
+            }
+          ],
+          "events": [
+            {
+              "name": "cancel"
+            },
+            {
+              "name": "hide"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "save"
+            },
+            {
+              "name": "show"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "title"
             }
           ]
         },
@@ -4482,7 +4656,8 @@
             },
             {
               "name": "type",
-              "type": "string"
+              "type": "string",
+              "default": "\"search\""
             },
             {
               "name": "upperCase",
@@ -4520,6 +4695,9 @@
             },
             {
               "name": "keyup"
+            },
+            {
+              "name": "paste"
             }
           ],
           "slots": [
@@ -4628,6 +4806,15 @@
               "type": "string"
             },
             {
+              "name": "popupCover",
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "popupMaxHeight",
+              "type": "string"
+            },
+            {
               "name": "prefix",
               "type": "string"
             },
@@ -4695,16 +4882,14 @@
             {
               "name": "appear",
               "type": "boolean"
-            }
-          ],
-          "events": [
-            {
-              "name": "hide"
             },
             {
-              "name": "show"
+              "name": "duration",
+              "type": "number",
+              "default": "300"
             }
           ],
+          "events": [],
           "slots": [
             {
               "name": "default"
@@ -5467,6 +5652,10 @@
           "source-file": "./node_modules/quasar-framework/src/components/table/QTable.js",
           "attributes": [
             {
+              "name": "binaryStateSort",
+              "type": "boolean"
+            },
+            {
               "name": "color",
               "type": "string",
               "default": "\"grey-8\""
@@ -5490,7 +5679,10 @@
             },
             {
               "name": "filter",
-              "type": "string"
+              "type": [
+                "string",
+                "any"
+              ]
             },
             {
               "name": "filterMethod",
@@ -5598,6 +5790,9 @@
           ],
           "events": [
             {
+              "name": "fullscreen"
+            },
+            {
               "name": "request"
             },
             {
@@ -5620,6 +5815,10 @@
             {
               "name": "columns",
               "type": "any[]"
+            },
+            {
+              "name": "dark",
+              "type": "boolean"
             },
             {
               "name": "label",
@@ -5650,6 +5849,10 @@
               "default": "\"left\""
             },
             {
+              "name": "animated",
+              "type": "boolean"
+            },
+            {
               "name": "color",
               "type": "string",
               "default": "\"primary\""
@@ -5663,10 +5866,6 @@
               "type": "boolean"
             },
             {
-              "name": "noPaneBorder",
-              "type": "boolean"
-            },
-            {
               "name": "panesContainerClass",
               "type": "string"
             },
@@ -5676,12 +5875,20 @@
               "default": "\"top\""
             },
             {
+              "name": "swipeable",
+              "type": "boolean"
+            },
+            {
               "name": "textColor",
               "type": "string"
             },
             {
               "name": "twoLines",
               "type": "boolean"
+            },
+            {
+              "name": "underlineColor",
+              "type": "string"
             },
             {
               "name": "value",
@@ -5757,6 +5964,14 @@
             {
               "name": "dark",
               "type": "boolean"
+            },
+            {
+              "name": "noHover",
+              "type": "boolean"
+            },
+            {
+              "name": "responsive",
+              "type": "boolean"
             }
           ],
           "events": [],
@@ -5805,6 +6020,12 @@
           "slots": [
             {
               "name": "default"
+            },
+            {
+              "name": "subtitle"
+            },
+            {
+              "name": "title"
             }
           ]
         },
@@ -6035,6 +6256,10 @@
               "type": "boolean"
             },
             {
+              "name": "duration",
+              "type": "number"
+            },
+            {
               "name": "expanded",
               "type": "any[]"
             },
@@ -6049,6 +6274,11 @@
             {
               "name": "icon",
               "type": "string"
+            },
+            {
+              "name": "labelKey",
+              "type": "string",
+              "default": "\"label\""
             },
             {
               "name": "noNodesLabel",
@@ -6164,6 +6394,10 @@
             {
               "name": "extensions",
               "type": "string"
+            },
+            {
+              "name": "filter",
+              "type": "(...args: any[]) => any"
             },
             {
               "name": "floatLabel",
@@ -6294,7 +6528,11 @@
               "name": "uploaded"
             }
           ],
-          "slots": []
+          "slots": [
+            {
+              "name": "loading"
+            }
+          ]
         },
         {
           "name": "QVideo",

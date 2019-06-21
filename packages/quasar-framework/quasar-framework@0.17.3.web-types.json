@@ -2,7 +2,7 @@
   "$schema": "../../schema/web-types.schema.json",
   "framework": "vue",
   "name": "quasar-framework",
-  "version": "0.17.6",
+  "version": "0.17.3",
   "contributions": {
     "html": {
       "types-syntax": "typescript",
@@ -2737,10 +2737,6 @@
               "type": "boolean"
             },
             {
-              "name": "placeholder",
-              "type": "string"
-            },
-            {
               "name": "prefix",
               "type": "string"
             },
@@ -2755,6 +2751,10 @@
             {
               "name": "suffix",
               "type": "string"
+            },
+            {
+              "name": "topAddons",
+              "type": "boolean"
             },
             {
               "name": "warning",
@@ -6218,10 +6218,6 @@
             {
               "name": "noThumbnails",
               "type": "boolean"
-            },
-            {
-              "name": "placeholder",
-              "type": "string"
             },
             {
               "name": "prefix",
