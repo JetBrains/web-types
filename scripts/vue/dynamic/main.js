@@ -10,7 +10,7 @@ global.Vue = Vue;
 
 // Do not register `window` global to avoid component
 // registration side-effects in quasar framework
-if ("$$PACKAGE$$" !== "quasar-framework") {
+if ("$$PACKAGE$$" !== "quasar-framework" && "$$PACKAGE$$" !== "quasar") {
     global.window = {
         navigator,
         document,
@@ -192,6 +192,7 @@ function convertValue(value) {
 }
 
 function createBrowserPolyfills() {
+    // noinspection JSUnusedGlobalSymbols
     const element = {
         setAttribute: function () {
         },
@@ -201,9 +202,15 @@ function createBrowserPolyfills() {
     const textNode = {
 
     };
+    // noinspection JSUnusedGlobalSymbols
+    const style = {
+        getPropertyValue: function () {
+        }
+    };
     global.navigator = {
         userAgent: "fake"
     };
+    // noinspection JSUnusedGlobalSymbols
     global.document = {
         location: {
             href: ""
@@ -252,4 +259,7 @@ function createBrowserPolyfills() {
     global.DocumentType = {
         prototype: {}
     };
+    global.getComputedStyle = function() {
+        return style
+    }
 }

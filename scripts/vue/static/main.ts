@@ -32,6 +32,8 @@ process.chdir(workingDir);
 const staticJsonData = fs.readFileSync(process.argv[3]);
 const staticJson = JSON.parse(staticJsonData as any);
 
+const library = process.argv[4];
+
 const production = process.argv.find((a) => a === "--production");
 if (!production) {
     console.error("  ** development mode - errors are added to the output **");
@@ -293,9 +295,15 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
             if (accessedName === "$slots") {
                 visitSlot(accessExpression.parent);
                 return;
-            } else if (accessedName === "$emit" || (/* vuetify */ accessedName === "emitNodeCache")) {
+            } else if (accessedName === "$emit"
+                || (library === "vuetify" && accessedName === "emitNodeCache")) {
                 visitEventEmit(accessExpression.parent);
                 return;
+            } else if (library === "quasar" && accessedName === "__emit"
+                && accessExpression.parent.kind === SyntaxKind.CallExpression
+                && (accessExpression.parent as CallExpression).expression === accessExpression
+                && (accessExpression.parent as CallExpression).arguments.find(() => true)) {
+                visitEventEmit(accessExpression.parent);
             }
         }
         if (node.kind === SyntaxKind.Identifier
@@ -331,10 +339,18 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
             if (firstArg) {
                 eventName = resolveExpression(firstArg);
                 if (typeof eventName === "string" && eventName.startsWith("#Error:")) {
-                    if (/* vuetify */ eventName.indexOf("this.$emit(\"click:\"") > 0) {
-                        eventName = "click";
-                    } else if (/* vuetify */ isWithinFunction(node, "emitNodeCache")) {
-                        return;
+                    if (library === "vuetify") {
+                        if (eventName.indexOf("this.$emit(\"click:\"") > 0) {
+                            eventName = "click";
+                        } else if (isWithinFunction(node, "emitNodeCache")) {
+                            return;
+                        }
+                    } else if (library === "quasar") {
+                        if (eventName.indexOf("this.$emit('validation-' + (res === true ? 'success' : 'error'") > 0) {
+                            events.push("validation-success");
+                            events.push("validation-error");
+                            return;
+                        }
                     }
                 }
             }
@@ -363,8 +379,9 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
     }
 
     function resolveExpression(expression: ts.Expression, simple: boolean = false): string | IArgumentBasedProvider {
-        if (expression.kind === SyntaxKind.StringLiteral) {
-            return (expression as StringLiteral).text;
+        if (expression.kind === SyntaxKind.StringLiteral
+            || expression.kind === SyntaxKind.NoSubstitutionTemplateLiteral) {
+            return (expression as ts.StringLiteralLike).text;
         } else if (expression.kind === SyntaxKind.Identifier && !simple) {
             const symbol = typeChecker.getSymbolAtLocation(expression);
             if (symbol && (symbol.getDeclarations() || []).length === 1) {
@@ -385,17 +402,31 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
             }
             return (args, actualId) => {
                 const result = evaluateExpression(expression, actualId, args[id]);
-                if (result.startsWith("#Error:")
-                    /* vuetify 1.5+ */
-                    && isWithinFunction(expression, "getMouseEventHandlers")) {
-                    return [];
+                if (result.startsWith("#Error:")) {
+                    if (library === "vuetify"
+                        && isWithinFunction(expression, "getMouseEventHandlers")) {
+                        return [];
+                    } else if (library === "quasar") {
+                        if (isWithinFunction(expression, "__emit")) {
+                            return [];
+                        }
+                    }
                 }
                 return [result];
             };
         } else if (expression.kind === SyntaxKind.PropertyAccessExpression) {
             const propAccess = expression as PropertyAccessExpression;
             if (propAccess.expression.kind === SyntaxKind.ThisKeyword) {
-                return (args, actualId) => [evaluateThisPropertyValue(propAccess.name.text, actualId)];
+                return (args, actualId) => {
+                    const result = evaluateThisPropertyValue(propAccess.name.text, actualId);
+                    if (result.startsWith("#Error:")) {
+                        if (library === "quasar"
+                            && result.indexOf("Unexpected Node: 'Parameter', while evaluating: showing") > 0) {
+                            return ["left", "right"];
+                        }
+                    }
+                    return [result];
+                };
             }
         }
         return "#Error: expression too complex" + (simple ? "" : ": " + expression.parent.getFullText().trim());
