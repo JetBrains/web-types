@@ -7,7 +7,7 @@
     "%PACKAGE_NAME%"
   ],
   "author": "JetBrains",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "readme": "README.MD",
   "repository": "https://github.com/JetBrains/web-types",
   "web-types": "%PACKAGE_NAME%.web-types.json"

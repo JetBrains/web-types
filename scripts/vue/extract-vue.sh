@@ -3,7 +3,7 @@ cd "$(dirname "$BASH_SOURCE")" || exit
 export LIBRARY_NAME=$1
 export LIBRARY_VERSION=$2
 if [ "$LIBRARY_NAME" == "" ] || [ "$LIBRARY_VERSION" == "" ]; then
-  echo "Usage extract.sh vue [package] [version]"
+  echo "Usage extract.sh vue <package-name> <sem-version-range> [--production,--discard-same]"
   exit
 fi
 echo "--== Extracting web-types from $LIBRARY_NAME@$LIBRARY_VERSION ==--"

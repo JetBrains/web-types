@@ -26,7 +26,7 @@ for PACKAGE_VERSION in $VERSIONS; do
       ./vue/extract-vue.sh "$PACKAGE_NAME" "$PACKAGE_VERSION" "$@" || exit 1
       ;;
     *)
-      echo "Usage: extract.sh {vue} {package-name} {sem-version-range} [--production,--discard-same]"
+      echo "Usage: extract.sh vue <package-name> <sem-version-range> [--production,--discard-same]"
       exit 1
   esac
 done
