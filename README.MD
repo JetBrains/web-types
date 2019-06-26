@@ -69,7 +69,7 @@ Versioning and naming rules are as follows:
 Web-types latest generated schema is available in `schema` folder. This is a generated version made
 for easier model generation by an IDE. It is built from `schema/src/web-types.schema.json`.
 
-#Contributions
+# Contributions
 
 All contributions are welcome! We need your help to improve the web-types standard specification,
 to support other frameworks and to improve quality of generated metadata through scripts. 
