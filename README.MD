@@ -20,7 +20,7 @@ Currently following frameworks and libraries are supported in such a way:
     * quasar-framework
     * vuetify 
 
-Published JSONs are checked into repository under `packages` folder.    
+Published JSONs are checked into repository under `packages` folder. In case of web-types published to `@web-types` scope,  IDEs are supposed to download required JSONs without any changes to user project structure.
 
 # Generating web-types
 
