@@ -91,6 +91,7 @@ type IArgumentBasedProvider = (args: IEntityArguments, id: number) => string[];
 interface IStaticEntityAnalysis {
     slots: Array<string | IArgumentBasedProvider>;
     events: Array<string | IArgumentBasedProvider>;
+    scopedSlots: Map<string | IArgumentBasedProvider, Set<string>>;
     fileName?: string;
 }
 
@@ -103,7 +104,7 @@ interface IDynamicEntityAnalysis {
 const staticAnalysis: Map<number, IStaticEntityAnalysis> = new Map<number, IStaticEntityAnalysis>();
 const dynamicAnalysis: Map<number, IDynamicEntityAnalysis> = new Map<number, IDynamicEntityAnalysis>();
 
-const EMPTY = {slots: [], events: []};
+const EMPTY = {slots: [], events: [], scopedSlots: new Map()};
 
 stream.from(entities)
     .flatMap((val) => Object.keys(val as any))
@@ -161,34 +162,66 @@ function createTagsList() {
                 .map((id) => id.substr(ID_PREFIX.length))
                 .map((id) => Number.parseInt(id, 10))
                 .map((id) => staticAnalysis.get(id))
-                .filter((obj) => obj)
-                .toList();
+                .filter((obj) => !!obj)
+                .toList() as IStaticEntityAnalysis[];
             const resolveArguments = createArgumentsResolver(component);
             result.push({
                 "name": key,
                 "source-file": staticComponentDef && staticComponentDef.fileName,
-                "attributes": createComponentAttributes(component),
-                "events": stream.from(staticDefs)
+                "attributes": undefinedIfEmpty(createComponentAttributes(component)),
+                "events": undefinedIfEmpty(stream.from(staticDefs)
                     .flatMap((obj) => obj!.events)
                     .flatMap(resolveArguments)
                     .filter(noError)
                     .distinct()
                     .sorted()
                     .map((name) => ({name}))
-                    .toList(),
-                "slots": stream.from(staticDefs)
+                    .toList()),
+                "slots": undefinedIfEmpty(stream.from(staticDefs)
                     .flatMap((obj) => obj!.slots)
                     .flatMap(resolveArguments)
                     .filter(noError)
                     .distinct()
                     .sorted()
                     .map((name) => ({name}))
-                    .toList()
+                    .toList()),
+                "scopedSlots": undefinedIfEmpty(createScopedSlots(staticDefs, resolveArguments))
             });
         }
     }
     sortNamedElements(result);
     return result;
+
+    function createScopedSlots(staticDefs: IStaticEntityAnalysis[],
+                               resolveArguments: (value: (string | IArgumentBasedProvider)) => (string[])) {
+        const merged = new Map<string, Set<string>>();
+        stream.from(staticDefs)
+            .flatMap((obj) => Array.from(obj!.scopedSlots.entries()))
+            .flatMap((entry) => resolveArguments(entry[0])
+                .map((name) => [name, entry[1]] as [string, Set<string>]))
+            .filter((entry) => noError(entry[0]) && Array.from(entry[1].values()).every(noError))
+            .forEach((entry) => {
+                let props = merged.get(entry[0]);
+                if (props === undefined) {
+                    props = new Set<string>();
+                    merged.set(entry[0], props);
+                }
+                entry[1].forEach((e) => props!.add(e));
+            });
+        return Array.from(merged.entries())
+            .map((entry) => ({
+                name: entry[0],
+                properties: entry[1].size === 0
+                    ? undefined
+                    : Array.from(entry[1]).map((prop) => ({
+                        name: prop
+                    }))
+            }));
+    }
+
+    function undefinedIfEmpty<T>(list: T[]): T[] | undefined {
+        return list.length === 0 ? undefined : list;
+    }
 }
 
 function createGlobalAttributesList() {
@@ -267,6 +300,7 @@ function gatherStaticInformation(node: ts.Node) {
 
 function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticEntityAnalysis {
     const slots: Array<string | IArgumentBasedProvider> = [];
+    const scopedSlots: Map<string | IArgumentBasedProvider, Set<string>> = new Map();
     const events: Array<string | IArgumentBasedProvider> = [];
     const enclosingFunctionCall = getParentOfKind(entity, FUNCTION_NODES);
     const typeChecker = services.getProgram()!.getTypeChecker();
@@ -274,6 +308,7 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
     return {
         events,
         slots,
+        scopedSlots,
         fileName: discoverFileName()
     };
 
@@ -293,7 +328,7 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
         if (accessExpression && accessExpression.expression.kind === SyntaxKind.ThisKeyword) {
             const accessedName = getAccessedName(accessExpression, true);
             if (accessedName === "$slots") {
-                visitSlot(accessExpression.parent);
+                visitSlot(accessExpression.parent, false);
                 return;
             } else if (accessedName === "$emit"
                 || (library === "vuetify" && accessedName === "emitNodeCache")) {
@@ -304,28 +339,41 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
                 && (accessExpression.parent as CallExpression).expression === accessExpression
                 && (accessExpression.parent as CallExpression).arguments.find(() => true)) {
                 visitEventEmit(accessExpression.parent);
+            } else if (accessedName === "$scopedSlots") {
+                visitSlot(accessExpression.parent, true);
+                return;
             }
         }
         if (node.kind === SyntaxKind.Identifier
             && (node as ts.Identifier).text === "$slots") {
-            visitSlot(node.parent);
+            visitSlot(node.parent, false);
         }
 
         ts.forEachChild(node, visitEntityCode);
     }
 
-    function visitSlot(node: ts.Node) {
+    function visitSlot(node: ts.Node, scoped: boolean) {
         if (node
             && node.kind !== SyntaxKind.VariableDeclaration
             && node.kind !== SyntaxKind.CallExpression) {
             const access = toAccessExpression(node);
             if (access) {
-                if (access.expression.kind !== SyntaxKind.Identifier
-                    || (access.expression as ts.Identifier).text !== "$slots"
+                if (access.expression.kind === SyntaxKind.Identifier
+                    && (access.expression as ts.Identifier).text === (scoped ? "$scopedSlots" : "$slots")
                 ) {
-                    visitSlot(access.parent);
+                    visitSlot(access.parent, scoped);
                 } else {
-                    slots.push(getAccessedName(access));
+                    const slotName = getAccessedName(access);
+                    if (scoped) {
+                        let props = scopedSlots.get(slotName);
+                        if (!props) {
+                            props = new Set();
+                            scopedSlots.set(slotName, props);
+                        }
+                        gatherScopedSlotProps(access, props);
+                    } else {
+                        slots.push(slotName);
+                    }
                 }
             }
         }
@@ -337,7 +385,7 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
             const callExpr = node as CallExpression;
             const firstArg = callExpr.arguments.find(() => true);
             if (firstArg) {
-                eventName = resolveExpression(firstArg);
+                eventName = getExpressionStringValue(firstArg);
                 if (typeof eventName === "string" && eventName.startsWith("#Error:")) {
                     if (library === "vuetify") {
                         if (eventName.indexOf("this.$emit(\"click:\"") > 0) {
@@ -358,6 +406,48 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
         events.push(eventName || "#Error: expression too complex: " + node.parent.getFullText().trim());
     }
 
+    function gatherScopedSlotProps(accessExpression: ElementAccessExpression | PropertyAccessExpression,
+                                   props: Set<string>) {
+        if (accessExpression.parent.kind === SyntaxKind.CallExpression) {
+            const callExpr = accessExpression.parent as CallExpression;
+            if (callExpr.expression !== accessExpression) {
+                return;
+            }
+            const firstArg = callExpr.arguments.find(() => true);
+            if (firstArg) {
+                if (firstArg.kind === SyntaxKind.ObjectLiteralExpression) {
+                    gatherProps(firstArg as ts.ObjectLiteralExpression, props);
+                    return;
+                }
+            }
+        } else if (accessExpression.parent.kind === SyntaxKind.BinaryExpression) {
+            const binaryExpression = accessExpression.parent as BinaryExpression
+            if (binaryExpression.operatorToken.kind !== SyntaxKind.EqualsToken) {
+                return;
+            }
+        } else if (accessExpression.parent.kind === SyntaxKind.VariableDeclaration) {
+            // Implement
+        } else {
+            return;
+        }
+        props.add("#Error: Unsupported scopedProp expression:" + accessExpression.parent.getFullText());
+    }
+
+    function gatherProps(objectLiteral: ts.ObjectLiteralExpression, props: Set<string>) {
+        objectLiteral.properties.forEach((prop) => {
+            if (prop.kind === SyntaxKind.PropertyAssignment) {
+                if (prop.name.kind === SyntaxKind.Identifier) {
+                    props.add(prop.name.text);
+                } else {
+                    props.add("#Error: Unsupported property name kind " + prop.kind + ": "
+                        + objectLiteral.parent.getFullText());
+                }
+            } else {
+                props.add("#Error: Unsupported property kind " + prop.kind + ": " + objectLiteral.parent.getFullText());
+            }
+        });
+    }
+
     function isWithinFunction(node: ts.Node, name: string): boolean {
         while (node && (node.kind !== SyntaxKind.FunctionExpression
             || ((node as ts.FunctionExpression).name
@@ -373,12 +463,13 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
             if (accessExpression.kind === SyntaxKind.PropertyAccessExpression) {
                 return (accessExpression as PropertyAccessExpression).name.text;
             }
-            return resolveExpression((accessExpression as ElementAccessExpression).argumentExpression, simple);
+            return getExpressionStringValue((accessExpression as ElementAccessExpression).argumentExpression, simple);
         }
         return "#Error: no access expression";
     }
 
-    function resolveExpression(expression: ts.Expression, simple: boolean = false): string | IArgumentBasedProvider {
+    function getExpressionStringValue(expression: ts.Expression,
+                                      simple: boolean = false): string | IArgumentBasedProvider {
         if (expression.kind === SyntaxKind.StringLiteral
             || expression.kind === SyntaxKind.NoSubstitutionTemplateLiteral) {
             return (expression as ts.StringLiteralLike).text;

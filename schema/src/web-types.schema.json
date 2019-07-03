@@ -123,6 +123,12 @@
           "items": {
             "$ref": "#/definitions/named-entity"
           }
+        },
+        "scopedSlots": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/html-tag-scoped-slot"
+          }
         }
       }
     },
@@ -164,6 +170,22 @@
       ],
       "properties": {
         "arguments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typed-entity"
+          }
+        }
+      }
+    },
+    "html-tag-scoped-slot": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/named-entity"
+        }
+      ],
+      "properties": {
+        "properties": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/typed-entity"
