@@ -1,0 +1,130 @@
+{
+  "$schema": "../../schema/web-types.schema.json",
+  "framework": "vue",
+  "name": "vue",
+  "version": "2.1.0",
+  "contributions": {
+    "html": {
+      "types-syntax": "typescript",
+      "tags": [
+        {
+          "name": "KeepAlive",
+          "source-file": "./node_modules/vue/dist/vue.runtime.common.js",
+          "attributes": [
+            {
+              "name": "exclude"
+            },
+            {
+              "name": "include"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "Transition",
+          "source-file": "./node_modules/vue/dist/vue.runtime.common.js",
+          "attributes": [
+            {
+              "name": "appear"
+            },
+            {
+              "name": "appearActiveClass"
+            },
+            {
+              "name": "appearClass"
+            },
+            {
+              "name": "css"
+            },
+            {
+              "name": "enterActiveClass"
+            },
+            {
+              "name": "enterClass"
+            },
+            {
+              "name": "leaveActiveClass"
+            },
+            {
+              "name": "leaveClass"
+            },
+            {
+              "name": "mode"
+            },
+            {
+              "name": "name"
+            },
+            {
+              "name": "type"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "TransitionGroup",
+          "source-file": "./node_modules/vue/dist/vue.runtime.common.js",
+          "attributes": [
+            {
+              "name": "appear"
+            },
+            {
+              "name": "appearActiveClass"
+            },
+            {
+              "name": "appearClass"
+            },
+            {
+              "name": "css"
+            },
+            {
+              "name": "enterActiveClass"
+            },
+            {
+              "name": "enterClass"
+            },
+            {
+              "name": "leaveActiveClass"
+            },
+            {
+              "name": "leaveClass"
+            },
+            {
+              "name": "moveClass"
+            },
+            {
+              "name": "name"
+            },
+            {
+              "name": "tag"
+            },
+            {
+              "name": "type"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default"
+            }
+          ]
+        }
+      ],
+      "attributes": [
+        {
+          "name": "v-model"
+        },
+        {
+          "name": "v-show",
+          "source-file": "./node_modules/vue/dist/vue.runtime.common.js"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "../../schema/web-types.schema.json",
+  "framework": "vue",
+  "name": "vue",
+  "version": "1.0.0",
+  "contributions": {
+    "html": {
+      "types-syntax": "typescript",
+      "tags": [],
+      "attributes": [
+        {
+          "name": "v-bind"
+        },
+        {
+          "name": "v-cloak"
+        },
+        {
+          "name": "v-el",
+          "source-file": "./node_modules/vue/src/directives/public/el.js"
+        },
+        {
+          "name": "v-for",
+          "source-file": "./node_modules/vue/src/directives/public/for.js"
+        },
+        {
+          "name": "v-html"
+        },
+        {
+          "name": "v-if",
+          "source-file": "./node_modules/vue/src/directives/public/if.js"
+        },
+        {
+          "name": "v-model",
+          "source-file": "./node_modules/vue/src/directives/public/model/index.js"
+        },
+        {
+          "name": "v-on",
+          "source-file": "./node_modules/vue/src/directives/public/on.js"
+        },
+        {
+          "name": "v-ref"
+        },
+        {
+          "name": "v-show"
+        },
+        {
+          "name": "v-text"
+        }
+      ]
+    }
+  }
+}

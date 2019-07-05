@@ -1,16 +1,22 @@
-import Vue from 'vue'
-
-Vue.options.components = {};
-Vue.options.filters = {};
-Vue.options.directives = {};
-
 createBrowserPolyfills();
+
+let Vue = require("vue");
+Vue = Vue.default || Vue;
+
+const packageName = "$$PACKAGE$$";
+
+if (packageName !== "vue") {
+    Vue.options.components = {};
+    Vue.options.filters = {};
+    Vue.options.directives = {};
+}
+
 
 global.Vue = Vue;
 
 // Do not register `window` global to avoid component
 // registration side-effects in quasar framework
-if ("$$PACKAGE$$" !== "quasar-framework" && "$$PACKAGE$$" !== "quasar") {
+if (packageName !== "quasar-framework" && packageName !== "quasar") {
     global.window = {
         navigator,
         document,
@@ -22,13 +28,16 @@ if ("$$PACKAGE$$" !== "quasar-framework" && "$$PACKAGE$$" !== "quasar") {
     };
 }
 
-let pkg = require("$$PACKAGE$$");
-if (pkg.default && !pkg.install) {
-    pkg = pkg.default
-}
+if (packageName !== "vue") {
+    let pkg = require("$$PACKAGE$$");
 
-if (Object.getOwnPropertyNames(Vue.options.components).length === 0) {
-    Vue.use(pkg);
+    if (pkg.default && !pkg.install) {
+        pkg = pkg.default
+    }
+
+    if (Object.getOwnPropertyNames(Vue.options.components).length === 0) {
+        Vue.use(pkg);
+    }
 }
 
 const typesMapping = {
@@ -196,12 +205,10 @@ function createBrowserPolyfills() {
     const element = {
         setAttribute: function () {
         },
-        appendChild: function() {
+        appendChild: function () {
         }
     };
-    const textNode = {
-
-    };
+    const textNode = {};
     // noinspection JSUnusedGlobalSymbols
     const style = {
         getPropertyValue: function () {
@@ -222,13 +229,13 @@ function createBrowserPolyfills() {
         documentElement: element,
         querySelector: function () {
         },
-        getElementsByTagName: function() {
+        getElementsByTagName: function () {
             return [element]
         },
-        createElement: function() {
+        createElement: function () {
             return element
         },
-        createTextNode: function() {
+        createTextNode: function () {
             return textNode
         },
         body: {
@@ -259,7 +266,7 @@ function createBrowserPolyfills() {
     global.DocumentType = {
         prototype: {}
     };
-    global.getComputedStyle = function() {
+    global.getComputedStyle = function () {
         return style
     }
 }
