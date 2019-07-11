@@ -151,7 +151,7 @@
                       }
                     }
                   },
-                  "scopedSlots": {
+                  "vue-scoped-slots": {
                     "type": "array",
                     "items": {
                       "type": "object",
@@ -201,6 +201,17 @@
                         "doc-url": {
                           "type": "string"
                         }
+                      }
+                    }
+                  },
+                  "vue-model": {
+                    "type": "object",
+                    "properties": {
+                      "prop": {
+                        "type": "string"
+                      },
+                      "event": {
+                        "type": "string"
                       }
                     }
                   },

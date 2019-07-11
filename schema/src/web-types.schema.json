@@ -124,11 +124,14 @@
             "$ref": "#/definitions/named-entity"
           }
         },
-        "scopedSlots": {
+        "vue-scoped-slots": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/html-tag-scoped-slot"
+            "$ref": "#/definitions/html-tag-vue-scoped-slot"
           }
+        },
+        "vue-model": {
+          "$ref": "#/definitions/html-tag-vue-model"
         }
       }
     },
@@ -177,7 +180,7 @@
         }
       }
     },
-    "html-tag-scoped-slot": {
+    "html-tag-vue-scoped-slot": {
       "type": "object",
       "allOf": [
         {
@@ -190,6 +193,17 @@
           "items": {
             "$ref": "#/definitions/typed-entity"
           }
+        }
+      }
+    },
+    "html-tag-vue-model": {
+      "type": "object",
+      "properties": {
+        "prop": {
+          "type": "string"
+        },
+        "event": {
+          "type": "string"
         }
       }
     }

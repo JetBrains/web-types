@@ -29,8 +29,8 @@ const dynamicScriptName = path.basename(pkgSource);
 const workingDir = path.dirname(pkgSource);
 process.chdir(workingDir);
 
-const staticJsonData = fs.readFileSync(process.argv[3]);
-const staticJson = JSON.parse(staticJsonData as any);
+const dynamicJsonData = fs.readFileSync(process.argv[3]);
+const dynamicJson = JSON.parse(dynamicJsonData as any);
 
 const library = process.argv[4];
 
@@ -66,7 +66,7 @@ const services = ts.createLanguageService(
 
 const sourceFile = services.getProgram()!.getSourceFile(dynamicScriptName);
 
-const entities = stream.from(Object.values(staticJson))
+const entities = stream.from(Object.values(dynamicJson))
     .flatMap((val) => Object.values(val as any) as any[])
     .toArray();
 
@@ -153,9 +153,9 @@ function noError(name: string) {
 
 function createTagsList() {
     const result: any[] = [];
-    for (const key in staticJson.components) {
-        if (staticJson.components.hasOwnProperty(key)) {
-            const component = staticJson.components[key];
+    for (const key in dynamicJson.components) {
+        if (dynamicJson.components.hasOwnProperty(key)) {
+            const component = dynamicJson.components[key];
             const staticComponentDef = staticAnalysis.get(Number.parseInt(component[ID_PREFIX], 10));
             const staticDefs = stream.from(Object.keys(component))
                 .filter((id) => id.startsWith(ID_PREFIX) && id !== ID_PREFIX)
@@ -185,7 +185,8 @@ function createTagsList() {
                     .sorted()
                     .map((name) => ({name}))
                     .toList()),
-                "scopedSlots": undefinedIfEmpty(createScopedSlots(staticDefs, resolveArguments))
+                "vue-scoped-slots": undefinedIfEmpty(createScopedSlots(staticDefs, resolveArguments)),
+                "vue-model": createVueModel(component.model)
             });
         }
     }
@@ -219,6 +220,13 @@ function createTagsList() {
             }));
     }
 
+    function createVueModel(model: any): any {
+        model = model || {};
+        const prop = typeof model.prop === "string" && model.prop !== "value" ? model.prop : undefined;
+        const event = typeof model.event === "string" && model.event !== "input" ? model.event : undefined;
+        return prop === undefined && event === undefined ? undefined : {prop, event};
+    }
+
     function undefinedIfEmpty<T>(list: T[]): T[] | undefined {
         return list.length === 0 ? undefined : list;
     }
@@ -226,9 +234,9 @@ function createTagsList() {
 
 function createGlobalAttributesList() {
     const result: any[] = [];
-    for (const key in staticJson.directives) {
-        if (staticJson.directives.hasOwnProperty(key)) {
-            const directive = staticJson.directives[key];
+    for (const key in dynamicJson.directives) {
+        if (dynamicJson.directives.hasOwnProperty(key)) {
+            const directive = dynamicJson.directives[key];
             const staticDirectiveDef = staticAnalysis.get(Number.parseInt(directive[ID_PREFIX], 10));
             result.push({
                 "name": "v-" + fromAssetName(key),
@@ -421,7 +429,7 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
                 }
             }
         } else if (accessExpression.parent.kind === SyntaxKind.BinaryExpression) {
-            const binaryExpression = accessExpression.parent as BinaryExpression
+            const binaryExpression = accessExpression.parent as BinaryExpression;
             if (binaryExpression.operatorToken.kind !== SyntaxKind.EqualsToken) {
                 return;
             }
