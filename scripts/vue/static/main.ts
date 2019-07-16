@@ -276,7 +276,8 @@ function createComponentAttributes(component: any) {
             result.push({
                 name: propName,
                 type: prop.type !== null ? prop.type : undefined,
-                default: prop.default
+                default: prop.default,
+                required: prop.required ? true : undefined
             });
         }
     }
