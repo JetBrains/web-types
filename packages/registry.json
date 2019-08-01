@@ -1,0 +1,9 @@
+{
+  "vue": [
+    "bootstrap-vue",
+    "quasar",
+    "quasar-framework",
+    "vue",
+    "vuetify"
+  ]
+}
