@@ -25,6 +25,10 @@ Published JSONs are checked into repository under `packages` folder. In case of 
 Various IDEs perform optimizations when scanning `node_modules` directory, so to ensure that `web-types` for 
 your package are always available, make sure it's listed in `pacakges/registry.json`.
 
+# Schema
+
+Web-types schema is available in `schema` folder.
+
 # Generating web-types
 
 You can use `scripts/extract.sh` bash script to extract metadata information from a library. 
@@ -44,6 +48,10 @@ use `--production` parameter to exclude errors from the output.
 
 Some versions of libraries contain exactly the same information and with `--discard-same` parameter
 we can minimize amount of generated JSONS and produce only those, which are unique.
+
+# Local development with web-types
+
+You can use web-types in your local project or library. Just link a generated web-types file in your `package.json` and IDE will pick up global components from it.
 
 # Publishing to `@web-types` scope
 
@@ -66,11 +74,6 @@ Versioning and naming rules are as follows:
   e.g. to find web-types for version `1.2.6`, query package list with `<1.2.6`, which can match 
   web-types in version `1.2.4-12` 
 * all outdated versions are marked as deprecated and should be ignored by an IDE
-
-# Schema
-
-Web-types latest generated schema is available in `schema` folder. This is a generated version made
-for easier model generation by an IDE. It is built from `schema/src/web-types.schema.json`.
 
 # Contributions
 
