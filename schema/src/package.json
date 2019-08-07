@@ -1,9 +1,0 @@
-{
-  "name": "web-types-schema",
-  "description": "Web Types JSON schema",
-  "private": true,
-  "dependencies": {
-    "json-schema-merge-allof": "^0.6.0",
-    "json-schema-ref-parser": "^6.1.0"
-  }
-}

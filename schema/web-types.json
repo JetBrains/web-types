@@ -34,84 +34,6 @@
     "contributions"
   ],
   "definitions": {
-    "named-entity": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "description": {
-          "description": "Short description to be rendered in documentation popup. May contain HTML tags.",
-          "type": "string"
-        },
-        "doc-url": {
-          "description": "Link to online documentation.",
-          "type": "string"
-        }
-      },
-      "required": [
-        "name"
-      ]
-    },
-    "typed-entity": {
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/named-entity"
-        }
-      ],
-      "properties": {
-        "type": {
-          "$ref": "#/definitions/type"
-        }
-      }
-    },
-    "source-entity": {
-      "type": "object",
-      "properties": {
-        "source": {
-          "description": "Allows to specify the source of the entity. For Vue.js component this may be for instance a class.",
-          "type": "object",
-          "oneOf": [
-            {
-              "type": "object",
-              "properties": {
-                "file": {
-                  "description": "Path to the file, relative to the web-types JSON.",
-                  "type": "string"
-                },
-                "offset": {
-                  "description": "Offset in the file under which the source symbol, like class name, is located.",
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "file",
-                "offset"
-              ],
-              "additionalProperties": false
-            },
-            {
-              "type": "object",
-              "properties": {
-                "module": {
-                  "description": "Name of module, which exports the symbol. May be omitted, in which case it's assumed to be the name of the library.",
-                  "type": "string"
-                },
-                "symbol": {
-                  "description": "Name of the exported symbol.",
-                  "type": "string"
-                }
-              },
-              "required": [
-                "symbol"
-              ],
-              "additionalProperties": false
-            }
-          ]
-        }
-      }
-    },
     "html": {
       "type": "object",
       "properties": {
@@ -145,20 +67,24 @@
     },
     "html-tag": {
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/named-entity"
-        },
-        {
-          "$ref": "#/definitions/source-entity"
-        }
-      ],
       "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "doc-url": {
+          "$ref": "#/definitions/doc-url"
+        },
         "attributes": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/html-tag-attribute"
           }
+        },
+        "source": {
+          "$ref": "#/definitions/source"
         },
         "events": {
           "description": "",
@@ -183,43 +109,28 @@
           "$ref": "#/definitions/html-tag-vue-model"
         }
       },
+      "required": [
+        "name"
+      ],
       "additionalProperties": false
     },
     "html-tag-attribute": {
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/named-entity"
-        },
-        {
-          "oneOf": [
-            {
-              "type": "object",
-              "properties": {
-                "value": {
-                  "$ref": "#/definitions/html-attribute-value"
-                }
-              }
-            },
-            {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "description": "Deprecated. Use 'value' property instead",
-                  "deprecationMessage": "Use 'value' property instead",
-                  "$ref": "#/definitions/type"
-                }
-              }
-            }
-          ]
-        }
-      ],
       "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "doc-url": {
+          "$ref": "#/definitions/doc-url"
+        },
         "default": {
-          "type": "string"
+          "$ref": "#/definitions/html-attribute-default"
         },
         "required": {
-          "type": "boolean"
+          "$ref": "#/definitions/html-attribute-required"
         },
         "value": {
           "$ref": "#/definitions/html-attribute-value"
@@ -229,19 +140,35 @@
           "const": "boolean"
         }
       },
+      "required": [
+        "name"
+      ],
       "additionalProperties": false
     },
     "html-attribute": {
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/html-tag-attribute"
-        },
-        {
-          "$ref": "#/definitions/source-entity"
-        }
-      ],
       "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "doc-url": {
+          "$ref": "#/definitions/doc-url"
+        },
+        "default": {
+          "$ref": "#/definitions/html-attribute-default"
+        },
+        "required": {
+          "$ref": "#/definitions/html-attribute-required"
+        },
+        "value": {
+          "$ref": "#/definitions/html-attribute-value"
+        },
+        "source": {
+          "$ref": "#/definitions/source"
+        },
         "vue-modifiers": {
           "type": "array",
           "items": {
@@ -249,16 +176,48 @@
           }
         }
       },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "html-vue-filter-argument": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "doc-url": {
+          "$ref": "#/definitions/doc-url"
+        },
+        "type": {
+          "$ref": "#/definitions/type"
+        },
+        "optional": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name"
+      ],
       "additionalProperties": false
     },
     "html-vue-filter": {
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/named-entity"
-        }
-      ],
       "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "doc-url": {
+          "$ref": "#/definitions/doc-url"
+        },
         "accepts": {
           "description": "Type of expression on the left hand-side of the pipe of operator",
           "$ref": "#/definitions/type"
@@ -271,31 +230,27 @@
           "description": "List of arguments accepted by the filter. All arguments are non-optional by default.",
           "type": "array",
           "items": {
-            "allOf": [
-              {
-                "$ref": "#/definitions/typed-entity"
-              }
-            ],
-            "properties": {
-              "optional": {
-                "default": false,
-                "type": "boolean"
-              }
-            },
-            "additionalProperties": false
+            "$ref": "#/definitions/html-vue-filter-argument"
           }
         }
       },
+      "required": [
+        "name"
+      ],
       "additionalProperties": false
     },
     "html-tag-event": {
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/named-entity"
-        }
-      ],
       "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "doc-url": {
+          "$ref": "#/definitions/doc-url"
+        },
         "arguments": {
           "type": "array",
           "items": {
@@ -303,16 +258,23 @@
           }
         }
       },
+      "required": [
+        "name"
+      ],
       "additionalProperties": false
     },
     "html-tag-vue-scoped-slot": {
       "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/named-entity"
-        }
-      ],
       "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "doc-url": {
+          "$ref": "#/definitions/doc-url"
+        },
         "properties": {
           "description": "Specify properties of the slot scope",
           "type": "array",
@@ -321,6 +283,9 @@
           }
         }
       },
+      "required": [
+        "name"
+      ],
       "additionalProperties": false
     },
     "html-tag-vue-model": {
@@ -398,6 +363,45 @@
         }
       ]
     },
+    "named-entity": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "doc-url": {
+          "$ref": "#/definitions/doc-url"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
+    "typed-entity": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "doc-url": {
+          "$ref": "#/definitions/doc-url"
+        },
+        "type": {
+          "$ref": "#/definitions/type"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
     "type": {
       "description": "Specify type according to selected language for type syntax. The type can be specified by a string expression, an object with list of imports and an expression, or an array of possible types.",
       "anyOf": [
@@ -441,6 +445,64 @@
         "expression"
       ],
       "additionalProperties": false
+    },
+    "source": {
+      "description": "Allows to specify the source of the entity. For Vue.js component this may be for instance a class.",
+      "type": "object",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "file": {
+              "description": "Path to the file, relative to the web-types JSON.",
+              "type": "string"
+            },
+            "offset": {
+              "description": "Offset in the file under which the source symbol, like class name, is located.",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "file",
+            "offset"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "module": {
+              "description": "Name of module, which exports the symbol. May be omitted, in which case it's assumed to be the name of the library.",
+              "type": "string"
+            },
+            "symbol": {
+              "description": "Name of the exported symbol.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "symbol"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "description": "Short description to be rendered in documentation popup. May contain HTML tags.",
+      "type": "string"
+    },
+    "doc-url": {
+      "description": "Link to online documentation.",
+      "type": "string"
+    },
+    "html-attribute-default": {
+      "type": "string"
+    },
+    "html-attribute-required": {
+      "type": "boolean"
     }
   }
 }
