@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schema/web-types.schema.json",
+  "$schema": "../../schema/web-types.json",
   "framework": "vue",
   "name": "vuetify",
   "version": "0.16.2",
@@ -9,37 +9,58 @@
       "tags": [
         {
           "name": "v-alert",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VAlert"
+          },
           "attributes": [
             {
               "name": "color",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "dismissible",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "icon",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "mode",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "origin",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "transition",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "value"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -48,23 +69,36 @@
         },
         {
           "name": "v-app",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VApp"
+          },
           "attributes": [
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "id",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"app\""
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -73,45 +107,74 @@
         },
         {
           "name": "v-avatar",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VAvatar"
+          },
           "attributes": [
             {
               "name": "size",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"48px\""
             },
             {
               "name": "tile",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-badge",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VBadge"
+          },
           "attributes": [
             {
               "name": "bottom",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "color",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"primary\""
             },
             {
               "name": "left",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "overlap",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "transition",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"fab-transition\""
             },
             {
@@ -119,7 +182,6 @@
               "default": "true"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "badge"
@@ -131,21 +193,35 @@
         },
         {
           "name": "v-bottom-nav",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VBottomNav"
+          },
           "attributes": [
             {
               "name": "absolute",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "active",
-              "type": [
-                "number",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
             },
             {
               "name": "shift",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -165,17 +241,23 @@
         },
         {
           "name": "v-bottom-sheet",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VBottomSheet"
+          },
           "attributes": [
             {
               "name": "inset",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "value"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "activator"
@@ -187,32 +269,45 @@
         },
         {
           "name": "v-bottom-sheet-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VBottomSheetTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-breadcrumbs",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VBreadcrumbs"
+          },
           "attributes": [
             {
               "name": "divider",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"/\""
             },
             {
               "name": "icons",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -221,61 +316,102 @@
         },
         {
           "name": "v-breadcrumbs-item",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VBreadcrumbsItem"
+          },
           "attributes": [
             {
               "name": "activeClass",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"breadcrumbs__item--disabled\""
             },
             {
               "name": "append",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "exact",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "href",
-              "type": [
-                "string",
-                "any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "object"
+                ]
+              }
             },
             {
               "name": "nuxt",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "replace",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "ripple",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "tag",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "target",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "to",
-              "type": [
-                "string",
-                "any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "object"
+                ]
+              }
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -284,74 +420,138 @@
         },
         {
           "name": "v-btn",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VBtn"
+          },
           "attributes": [
             {
               "name": "absolute",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "activeClass",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"btn--active\""
             },
             {
               "name": "append",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "block",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "bottom",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "color",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "error",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "exact",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "fab",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "fixed",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "flat",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "href",
-              "type": [
-                "string",
-                "any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "object"
+                ]
+              }
             },
             {
               "name": "icon",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "info",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -359,92 +559,168 @@
             },
             {
               "name": "large",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "left",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "loading",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "nuxt",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "outline",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "primary",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "raised",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             },
             {
               "name": "replace",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "right",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "ripple",
-              "type": [
-                "boolean",
-                "any"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "object"
+                ]
+              },
+              "type": "boolean",
               "default": "true"
             },
             {
               "name": "round",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "secondary",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "small",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "success",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "tag",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"button\""
             },
             {
               "name": "target",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "to",
-              "type": [
-                "string",
-                "any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "object"
+                ]
+              }
             },
             {
               "name": "top",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "type",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"button\""
             },
             {
@@ -452,6 +728,10 @@
             },
             {
               "name": "warning",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
           ],
@@ -467,14 +747,24 @@
             {
               "name": "loader"
             }
-          ]
+          ],
+          "vue-model": {
+            "prop": "inputValue"
+          }
         },
         {
           "name": "v-btn-toggle",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VBtnToggle"
+          },
           "attributes": [
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -482,19 +772,34 @@
             },
             {
               "name": "items",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[]"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "mandatory",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "multiple",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
           ],
@@ -507,98 +812,173 @@
             {
               "name": "default"
             }
-          ]
+          ],
+          "vue-model": {
+            "prop": "inputValue",
+            "event": "change"
+          }
         },
         {
           "name": "v-card",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VCard"
+          },
           "attributes": [
             {
               "name": "activeClass",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "append",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "exact",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "flat",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "height",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"auto\""
             },
             {
               "name": "hover",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "href",
-              "type": [
-                "string",
-                "any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "object"
+                ]
+              }
             },
             {
               "name": "img",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "nuxt",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "raised",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "replace",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "ripple",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "tag",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"div\""
             },
             {
               "name": "target",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "tile",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "to",
-              "type": [
-                "string",
-                "any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "object"
+                ]
+              }
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -607,33 +987,45 @@
         },
         {
           "name": "v-card-actions",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VCardActions"
+          }
         },
         {
           "name": "v-card-media",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VCardMedia"
+          },
           "attributes": [
             {
               "name": "contain",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "height",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "\"auto\""
             },
             {
               "name": "src",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -642,80 +1034,125 @@
         },
         {
           "name": "v-card-text",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VCardText"
+          }
         },
         {
           "name": "v-card-title",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VCardTitle"
+          },
           "attributes": [
             {
               "name": "primaryTitle",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-carousel",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VCarousel"
+          },
           "attributes": [
             {
               "name": "cycle",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "hideControls",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "icon",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"fiber_manual_record\""
             },
             {
               "name": "interval",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "6000"
             },
             {
               "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "leftControlIcon",
-              "type": [
-                "boolean",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
               "default": "\"chevron_left\""
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "rightControlIcon",
-              "type": [
-                "boolean",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
               "default": "\"chevron_right\""
             },
             {
               "name": "value",
-              "type": "number"
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              }
             }
           ],
           "events": [
@@ -731,24 +1168,36 @@
         },
         {
           "name": "v-carousel-item",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VCarouselItem"
+          },
           "attributes": [
             {
               "name": "reverseTransition",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"tab-reverse-transition\""
             },
             {
               "name": "src",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "required": true
             },
             {
               "name": "transition",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"tab-transition\""
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -757,64 +1206,99 @@
         },
         {
           "name": "v-carousel-reverse-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VCarouselReverseTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-carousel-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VCarouselTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-checkbox",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VCheckbox"
+          },
           "attributes": [
             {
               "name": "appendIcon",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "appendIconCb",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "color",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "error",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "errorMessages",
-              "type": [
-                "string",
-                "any[]"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]"
+                ]
+              },
               "default": "[]"
             },
             {
@@ -822,18 +1306,32 @@
             },
             {
               "name": "hideDetails",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "hint",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "id",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "indeterminate",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -841,47 +1339,82 @@
             },
             {
               "name": "label",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "loading",
-              "type": [
-                "boolean",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
               "default": "false"
             },
             {
               "name": "persistentHint",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "placeholder",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "prependIcon",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "prependIconCb",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "readonly",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "required",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "rules",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[]"
             },
             {
@@ -890,7 +1423,10 @@
             },
             {
               "name": "toggleKeys",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[13,32]"
             },
             {
@@ -898,6 +1434,10 @@
             },
             {
               "name": "validateOnBlur",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -928,51 +1468,93 @@
             {
               "name": "progress"
             }
-          ]
+          ],
+          "vue-model": {
+            "prop": "inputValue",
+            "event": "change"
+          }
         },
         {
           "name": "v-chip",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VChip"
+          },
           "attributes": [
             {
               "name": "close",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "label",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "outline",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "selected",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "small",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -981,21 +1563,26 @@
         },
         {
           "name": "v-container",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VContainer"
+          },
           "attributes": [
             {
               "name": "id",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-content",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VContent"
+          },
           "slots": [
             {
               "name": "default"
@@ -1004,91 +1591,155 @@
         },
         {
           "name": "v-data-table",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VDataTable"
+          },
           "attributes": [
             {
               "name": "customFilter",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "customSort",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "expand",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "filter",
-              "type": "(...args: any[]) => any",
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              },
               "default": "false"
             },
             {
               "name": "headerText",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"text\""
             },
             {
               "name": "headers",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[]"
             },
             {
               "name": "hideActions",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "itemKey",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"id\""
             },
             {
               "name": "items",
-              "type": "any[]",
-              "default": "[]"
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
+              "default": "[]",
+              "required": true
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "loading",
-              "type": [
-                "boolean",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
               "default": "false"
             },
             {
               "name": "mustSort",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "noDataText",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"No data available\""
             },
             {
               "name": "noResultsText",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"No matching records found\""
             },
             {
               "name": "pagination",
-              "type": "any"
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              }
             },
             {
               "name": "rowsPerPageItems",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[5,10,25,{\"text\":\"All\",\"value\":-1}]"
             },
             {
               "name": "rowsPerPageText",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"Rows per page:\""
             },
             {
@@ -1096,18 +1747,28 @@
             },
             {
               "name": "selectAll",
-              "type": [
-                "boolean",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean"
             },
             {
               "name": "totalItems",
-              "type": "number"
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              }
             },
             {
               "name": "value",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[]"
             }
           ],
@@ -1126,42 +1787,104 @@
             {
               "name": "progress"
             }
+          ],
+          "vue-scoped-slots": [
+            {
+              "name": "headers",
+              "properties": [
+                {
+                  "name": "headers"
+                },
+                {
+                  "name": "indeterminate"
+                },
+                {
+                  "name": "all"
+                }
+              ]
+            },
+            {
+              "name": "headerCell",
+              "properties": [
+                {
+                  "name": "header"
+                }
+              ]
+            },
+            {
+              "name": "pageText",
+              "properties": [
+                {
+                  "name": "pageStart"
+                },
+                {
+                  "name": "pageStop"
+                },
+                {
+                  "name": "itemsLength"
+                }
+              ]
+            }
           ]
         },
         {
           "name": "v-date-picker",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VDatePicker"
+          },
           "attributes": [
             {
               "name": "actions",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "allowedDates",
-              "type": [
-                "any[]",
-                "any",
-                "(...args: any[]) => any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "any[]",
+                  "object",
+                  "(...args: any[]) => any"
+                ]
+              }
             },
             {
               "name": "autosave",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dateFormat",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "firstDayOfWeek",
-              "type": [
-                "string",
-                "number"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "number"
+                ]
+              },
               "default": "0"
             },
             {
@@ -1169,59 +1892,94 @@
             },
             {
               "name": "headerDateFormat",
-              "type": [
-                "any",
-                "(...args: any[]) => any"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "object",
+                  "(...args: any[]) => any"
+                ]
+              },
               "default": "{\"month\":\"long\",\"year\":\"numeric\"}"
             },
             {
               "name": "landscape",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "locale",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"en-us\""
             },
             {
               "name": "monthFormat",
-              "type": [
-                "any",
-                "(...args: any[]) => any"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "object",
+                  "(...args: any[]) => any"
+                ]
+              },
               "default": "{\"month\":\"short\"}"
             },
             {
               "name": "noTitle",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "scrollable",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "titleDateFormat",
-              "type": [
-                "any",
-                "(...args: any[]) => any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "object",
+                  "(...args: any[]) => any"
+                ]
+              }
             },
             {
               "name": "type",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"date\""
             },
             {
-              "name": "value"
+              "name": "value",
+              "required": true
             },
             {
               "name": "yearIcon",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             }
           ],
           "events": [
@@ -1232,11 +1990,26 @@
               "name": "update:formattedValue"
             }
           ],
-          "slots": []
+          "vue-scoped-slots": [
+            {
+              "name": "default",
+              "properties": [
+                {
+                  "name": "save"
+                },
+                {
+                  "name": "cancel"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "v-dialog",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VDialog"
+          },
           "attributes": [
             {
               "name": "contentClass",
@@ -1244,43 +2017,78 @@
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "fullWidth",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "fullscreen",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "hideOverlay",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"center center\""
             },
             {
               "name": "persistent",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "scrollable",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "transition",
-              "type": [
-                "string",
-                "boolean"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "boolean"
+                ]
+              },
+              "type": "boolean",
               "default": "\"dialog-transition\""
             },
             {
@@ -1288,14 +2096,16 @@
             },
             {
               "name": "width",
-              "type": [
-                "string",
-                "number"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "number"
+                ]
+              },
               "default": "290"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "activator"
@@ -1307,53 +2117,77 @@
         },
         {
           "name": "v-dialog-bottom-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VDialogBottomTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-dialog-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VDialogTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-divider",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VDivider"
+          },
           "attributes": [
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "inset",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-edit-dialog",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VEditDialog"
+          },
           "attributes": [
             {
               "name": "cancelText",
@@ -1361,10 +2195,18 @@
             },
             {
               "name": "large",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -1373,7 +2215,10 @@
             },
             {
               "name": "transition",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"slide-x-reverse-transition\""
             }
           ],
@@ -1402,52 +2247,86 @@
         },
         {
           "name": "v-expand-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VExpandTransition"
+          },
           "attributes": [
             {
               "name": "css",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             },
             {
               "name": "mode",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"in-out\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-expansion-panel",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VExpansionPanel"
+          },
           "attributes": [
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "expand",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "focusable",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "inset",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "popout",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -1456,25 +2335,39 @@
         },
         {
           "name": "v-expansion-panel-content",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VExpansionPanelContent"
+          },
           "attributes": [
             {
               "name": "hideActions",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "ripple",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "value"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "actions"
@@ -1489,68 +2382,102 @@
         },
         {
           "name": "v-fab-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VFabTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"center center\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-fade-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VFadeTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-flex",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VFlex"
+          },
           "attributes": [
             {
               "name": "id",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-footer",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VFooter"
+          },
           "attributes": [
             {
               "name": "absolute",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "app",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "fixed",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -1559,14 +2486,25 @@
         },
         {
           "name": "v-form",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VForm"
+          },
           "attributes": [
             {
               "name": "lazyValidation",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
           ],
@@ -1583,114 +2521,204 @@
         },
         {
           "name": "v-icon",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VIcon"
+          },
           "attributes": [
             {
               "name": "color",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "error",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "info",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "large",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "left",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "medium",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "primary",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "right",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "secondary",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "success",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "warning",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "xLarge",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-layout",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VLayout"
+          },
           "attributes": [
             {
               "name": "id",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-list",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VList"
+          },
           "attributes": [
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dense",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "subheader",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "threeLine",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "twoLine",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -1699,25 +2727,38 @@
         },
         {
           "name": "v-list-group",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VListGroup"
+          },
           "attributes": [
             {
               "name": "group",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "noAction",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "value"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -1729,73 +2770,122 @@
         },
         {
           "name": "v-list-tile",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VListTile"
+          },
           "attributes": [
             {
               "name": "active",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             },
             {
               "name": "activeClass",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"list__tile--active\""
             },
             {
               "name": "append",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "avatar",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "exact",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "href",
-              "type": [
-                "string",
-                "any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "object"
+                ]
+              }
             },
             {
               "name": "nuxt",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "replace",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "ripple",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "tag",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "target",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "to",
-              "type": [
-                "string",
-                "any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "object"
+                ]
+              }
             },
             {
               "name": "value"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -1804,52 +2894,59 @@
         },
         {
           "name": "v-list-tile-action",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VListTileAction"
+          }
         },
         {
           "name": "v-list-tile-action-text",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VListTileActionText"
+          }
         },
         {
           "name": "v-list-tile-avatar",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VListTileAvatar"
+          }
         },
         {
           "name": "v-list-tile-content",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VListTileContent"
+          }
         },
         {
           "name": "v-list-tile-sub-title",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VListTileSubTitle"
+          }
         },
         {
           "name": "v-list-tile-title",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VListTileTitle"
+          }
         },
         {
           "name": "v-menu",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VMenu"
+          },
           "attributes": [
             {
               "name": "absolute",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -1857,31 +2954,54 @@
             },
             {
               "name": "allowOverflow",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "auto",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "bottom",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "closeDelay",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "200"
             },
             {
               "name": "closeOnClick",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             },
             {
               "name": "closeOnContentClick",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             },
@@ -1891,22 +3011,42 @@
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "fixed",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "fullWidth",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "left",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -1915,100 +3055,165 @@
             },
             {
               "name": "maxWidth",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "\"auto\""
             },
             {
               "name": "minWidth",
-              "type": [
-                "number",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
             },
             {
               "name": "nudgeBottom",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             },
             {
               "name": "nudgeLeft",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             },
             {
               "name": "nudgeRight",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             },
             {
               "name": "nudgeTop",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             },
             {
               "name": "nudgeWidth",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             },
             {
               "name": "offsetOverflow",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "offsetX",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "offsetY",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "openDelay",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "0"
             },
             {
               "name": "openOnClick",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             },
             {
               "name": "openOnHover",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top left\""
             },
             {
               "name": "positionX",
-              "type": "number"
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              }
             },
             {
               "name": "positionY",
-              "type": "number"
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              }
             },
             {
               "name": "right",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "top",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "transition",
-              "type": [
-                "boolean",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
               "default": "\"menu-transition\""
             },
             {
@@ -2016,13 +3221,15 @@
             },
             {
               "name": "zIndex",
-              "type": [
-                "number",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "activator"
@@ -2034,96 +3241,172 @@
         },
         {
           "name": "v-menu-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VMenuTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-navigation-drawer",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VNavigationDrawer"
+          },
           "attributes": [
             {
               "name": "absolute",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "app",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "clipped",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disableRouteWatcher",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "enableResizeWatcher",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "floating",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "height",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "hideOverlay",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "miniVariant",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "miniVariantWidth",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "80"
             },
             {
               "name": "mobileBreakPoint",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "1264"
             },
             {
               "name": "permanent",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "persistent",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "right",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "temporary",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "touchless",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -2131,10 +3414,13 @@
             },
             {
               "name": "width",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "300"
             }
           ],
@@ -2151,41 +3437,67 @@
         },
         {
           "name": "v-pagination",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VPagination"
+          },
           "attributes": [
             {
               "name": "circle",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "length",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             },
             {
               "name": "nextIcon",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"chevron_right\""
             },
             {
               "name": "prevIcon",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"chevron_left\""
             },
             {
               "name": "totalVisible",
-              "type": [
-                "number",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
             },
             {
               "name": "value",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             }
           ],
@@ -2199,35 +3511,49 @@
             {
               "name": "previous"
             }
-          ],
-          "slots": []
+          ]
         },
         {
           "name": "v-parallax",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VParallax"
+          },
           "attributes": [
             {
               "name": "alt",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "height",
-              "type": [
-                "string",
-                "number"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "number"
+                ]
+              },
               "default": "500"
             },
             {
               "name": "jumbotron",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "src",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -2236,49 +3562,77 @@
         },
         {
           "name": "v-progress-circular",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VProgressCircular"
+          },
           "attributes": [
             {
               "name": "button",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "color",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "fill",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "indeterminate",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "rotate",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             },
             {
               "name": "size",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "32"
             },
             {
               "name": "value",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             },
             {
               "name": "width",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "4"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -2287,87 +3641,139 @@
         },
         {
           "name": "v-progress-linear",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VProgressLinear"
+          },
           "attributes": [
             {
               "name": "active",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             },
             {
               "name": "backgroundColor",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "backgroundOpacity",
-              "type": [
-                "number",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
             },
             {
               "name": "bufferValue",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "100"
             },
             {
               "name": "color",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"primary\""
             },
             {
               "name": "height",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "7"
             },
             {
               "name": "indeterminate",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "query",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "value",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "0"
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-radio",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VRadio"
+          },
           "attributes": [
             {
               "name": "color",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "label",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -2387,108 +3793,189 @@
         },
         {
           "name": "v-radio-group",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VRadioGroup"
+          },
           "attributes": [
             {
               "name": "appendIcon",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "appendIconCb",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "column",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "error",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "errorMessages",
-              "type": [
-                "string",
-                "any[]"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]"
+                ]
+              },
               "default": "[]"
             },
             {
               "name": "hideDetails",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "hint",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "inputValue"
             },
             {
               "name": "label",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "loading",
-              "type": [
-                "boolean",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
               "default": "false"
             },
             {
               "name": "mandatory",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             },
             {
               "name": "name",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "persistentHint",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "placeholder",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "prependIcon",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "prependIconCb",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "readonly",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "required",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "row",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "rules",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[]"
             },
             {
@@ -2497,11 +3984,18 @@
             },
             {
               "name": "toggleKeys",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[13,32]"
             },
             {
               "name": "validateOnBlur",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -2532,248 +4026,418 @@
             {
               "name": "progress"
             }
-          ]
+          ],
+          "vue-model": {
+            "prop": "inputValue",
+            "event": "change"
+          }
         },
         {
           "name": "v-row-expand-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VRowExpandTransition"
+          },
           "attributes": [
             {
               "name": "css",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             },
             {
               "name": "mode",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"in-out\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-scale-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VScaleTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-select",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VSelect"
+          },
           "attributes": [
             {
               "name": "appendIcon",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"arrow_drop_down\""
             },
             {
               "name": "appendIconCb",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "auto",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "autocomplete",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "browserAutocomplete",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"on\""
             },
             {
               "name": "cacheItems",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "chips",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "clearable",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "color",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"primary\""
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "debounceSearch",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "200"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dontFillMaskBlanks",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "editable",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "error",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "errorMessages",
-              "type": [
-                "string",
-                "any[]"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]"
+                ]
+              },
               "default": "[]"
             },
             {
               "name": "filter",
-              "type": "(...args: any[]) => any",
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              },
               "default": "true"
             },
             {
               "name": "hideDetails",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "hint",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "itemAvatar",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"avatar\""
             },
             {
               "name": "itemDisabled",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"disabled\""
             },
             {
               "name": "itemText",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"text\""
             },
             {
               "name": "itemValue",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"value\""
             },
             {
               "name": "items",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[]"
             },
             {
               "name": "label",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "loading",
-              "type": [
-                "boolean",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
               "default": "false"
             },
             {
               "name": "mask",
-              "type": [
-                "any",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "object",
+                  "string"
+                ]
+              }
             },
             {
               "name": "maxHeight",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "300"
             },
             {
               "name": "minWidth",
-              "type": [
-                "boolean",
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "number",
+                  "string"
+                ]
+              },
+              "type": "boolean",
               "default": "false"
             },
             {
               "name": "multiLine",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "multiple",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "noDataText",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"No data available\""
             },
             {
               "name": "overflow",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "persistentHint",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "placeholder",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "prependIcon",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "prependIconCb",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "readonly",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "required",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "returnMaskedValue",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "returnObject",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "rules",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[]"
             },
             {
@@ -2781,14 +4445,26 @@
             },
             {
               "name": "segmented",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "singleLine",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "solo",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -2797,15 +4473,26 @@
             },
             {
               "name": "tags",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "toggleKeys",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[13,32]"
             },
             {
               "name": "validateOnBlur",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -2839,175 +4526,286 @@
             {
               "name": "progress"
             }
+          ],
+          "vue-scoped-slots": [
+            {
+              "name": "item",
+              "properties": [
+                {
+                  "name": "parent"
+                },
+                {
+                  "name": "item"
+                }
+              ]
+            }
           ]
         },
         {
           "name": "v-slide-x-reverse-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VSlideXReverseTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-slide-x-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VSlideXTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-slide-y-reverse-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VSlideYReverseTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-slide-y-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VSlideYTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-slider",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VSlider"
+          },
           "attributes": [
             {
               "name": "appendIcon",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "appendIconCb",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "color",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "error",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "errorMessages",
-              "type": [
-                "string",
-                "any[]"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]"
+                ]
+              },
               "default": "[]"
             },
             {
               "name": "hideDetails",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "hint",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "label",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "loading",
-              "type": [
-                "boolean",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
               "default": "false"
             },
             {
               "name": "max",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "100"
             },
             {
               "name": "min",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "0"
             },
             {
               "name": "persistentHint",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "placeholder",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "prependIcon",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "prependIconCb",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "readonly",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "required",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "rules",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[]"
             },
             {
               "name": "snap",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "step",
-              "type": [
-                "number",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
             },
             {
               "name": "tabindex",
@@ -3015,31 +4813,51 @@
             },
             {
               "name": "thumbColor",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "thumbLabel",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "toggleKeys",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[13,32]"
             },
             {
               "name": "trackColor",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "validateOnBlur",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "value",
-              "type": [
-                "number",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
             }
           ],
           "events": [
@@ -3064,39 +4882,72 @@
         },
         {
           "name": "v-snackbar",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VSnackbar"
+          },
           "attributes": [
             {
               "name": "absolute",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "bottom",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "color",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "left",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "multiLine",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "right",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "timeout",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "6000"
             },
             {
               "name": "top",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -3104,10 +4955,13 @@
             },
             {
               "name": "vertical",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -3116,58 +4970,94 @@
         },
         {
           "name": "v-spacer",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VSpacer"
+          }
         },
         {
           "name": "v-speed-dial",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VSpeedDial"
+          },
           "attributes": [
             {
               "name": "absolute",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "bottom",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "direction",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top\""
             },
             {
               "name": "fixed",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "hover",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "left",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "right",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "top",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "transition",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"scale-transition\""
             },
             {
               "name": "value"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "activator"
@@ -3179,33 +5069,59 @@
         },
         {
           "name": "v-stepper",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VStepper"
+          },
           "attributes": [
             {
               "name": "altLabels",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "nonLinear",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "value",
-              "type": [
-                "number",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
             },
             {
               "name": "vertical",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
           ],
@@ -3222,17 +5138,23 @@
         },
         {
           "name": "v-stepper-content",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VStepperContent"
+          },
           "attributes": [
             {
               "name": "step",
-              "type": [
-                "number",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
+              "required": true
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -3241,59 +5163,84 @@
         },
         {
           "name": "v-stepper-header",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VStepperHeader"
+          }
         },
         {
           "name": "v-stepper-items",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VStepperItems"
+          }
         },
         {
           "name": "v-stepper-step",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VStepperStep"
+          },
           "attributes": [
             {
               "name": "complete",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "completeIcon",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"check\""
             },
             {
               "name": "editIcon",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"edit\""
             },
             {
               "name": "editable",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "errorIcon",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"warning\""
             },
             {
               "name": "rules",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[]"
             },
             {
               "name": "step",
-              "type": [
-                "number",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -3302,58 +5249,98 @@
         },
         {
           "name": "v-subheader",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VSubheader"
+          },
           "attributes": [
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "inset",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-switch",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VSwitch"
+          },
           "attributes": [
             {
               "name": "appendIcon",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "appendIconCb",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "color",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "error",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "errorMessages",
-              "type": [
-                "string",
-                "any[]"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]"
+                ]
+              },
               "default": "[]"
             },
             {
@@ -3361,62 +5348,107 @@
             },
             {
               "name": "hideDetails",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "hint",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "id",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "inputValue"
             },
             {
               "name": "label",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "loading",
-              "type": [
-                "boolean",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
               "default": "false"
             },
             {
               "name": "persistentHint",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "placeholder",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "prependIcon",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "prependIconCb",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "readonly",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "required",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "rules",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[]"
             },
             {
@@ -3425,7 +5457,10 @@
             },
             {
               "name": "toggleKeys",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[13,32]"
             },
             {
@@ -3433,6 +5468,10 @@
             },
             {
               "name": "validateOnBlur",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -3457,38 +5496,68 @@
             {
               "name": "progress"
             }
-          ]
+          ],
+          "vue-model": {
+            "prop": "inputValue",
+            "event": "change"
+          }
         },
         {
           "name": "v-system-bar",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VSystemBar"
+          },
           "attributes": [
             {
               "name": "app",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "lightsOut",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "status",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "window",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -3497,84 +5566,128 @@
         },
         {
           "name": "v-tab-reverse-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VTabReverseTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-tab-transition",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VTabTransition"
+          },
           "attributes": [
             {
               "name": "origin",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"top center 0\""
             }
-          ],
-          "events": [],
-          "slots": []
+          ]
         },
         {
           "name": "v-table-overflow",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VTableOverflow"
+          }
         },
         {
           "name": "v-tabs",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VTabs"
+          },
           "attributes": [
             {
               "name": "centered",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "fixed",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "grow",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "icons",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "mobileBreakPoint",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "1280"
             },
             {
               "name": "scrollable",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             },
             {
               "name": "value",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -3583,9 +5696,10 @@
         },
         {
           "name": "v-tabs-bar",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VTabsBar"
+          },
           "slots": [
             {
               "name": "default"
@@ -3594,34 +5708,52 @@
         },
         {
           "name": "v-tabs-content",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VTabsContent"
+          },
           "attributes": [
             {
               "name": "id",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "required": true
             },
             {
               "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "reverseTransition",
-              "type": [
-                "boolean",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
               "default": "\"tab-reverse-transition\""
             },
             {
               "name": "transition",
-              "type": [
-                "boolean",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
               "default": "\"tab-transition\""
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -3630,61 +5762,102 @@
         },
         {
           "name": "v-tabs-item",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VTabsItem"
+          },
           "attributes": [
             {
               "name": "activeClass",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"tabs__item--active\""
             },
             {
               "name": "append",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "exact",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "href",
-              "type": [
-                "string",
-                "any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "object"
+                ]
+              }
             },
             {
               "name": "nuxt",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "replace",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "ripple",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "tag",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "target",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "to",
-              "type": [
-                "string",
-                "any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "object"
+                ]
+              }
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -3693,18 +5866,28 @@
         },
         {
           "name": "v-tabs-items",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VTabsItems"
+          },
           "attributes": [
             {
               "name": "cycle",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "touchless",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -3713,145 +5896,253 @@
         },
         {
           "name": "v-tabs-slider",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VTabsSlider"
+          }
         },
         {
           "name": "v-text-field",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VTextField"
+          },
           "attributes": [
             {
               "name": "appendIcon",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "appendIconCb",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "autoGrow",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "box",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "clearable",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "color",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"primary\""
             },
             {
               "name": "counter",
-              "type": [
-                "boolean",
-                "number",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "number",
+                  "string"
+                ]
+              },
+              "type": "boolean"
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dontFillMaskBlanks",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "error",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "errorMessages",
-              "type": [
-                "string",
-                "any[]"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]"
+                ]
+              },
               "default": "[]"
             },
             {
               "name": "fullWidth",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "hideDetails",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "hint",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "label",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "loading",
-              "type": [
-                "boolean",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
               "default": "false"
             },
             {
               "name": "mask",
-              "type": [
-                "any",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "object",
+                  "string"
+                ]
+              }
             },
             {
               "name": "multiLine",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "persistentHint",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "placeholder",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "prefix",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "prependIcon",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "prependIconCb",
-              "type": "(...args: any[]) => any"
+              "value": {
+                "kind": "expression",
+                "type": "(...args: any[]) => any"
+              }
             },
             {
               "name": "readonly",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "required",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "returnMaskedValue",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -3860,20 +6151,34 @@
             },
             {
               "name": "rules",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[]"
             },
             {
               "name": "singleLine",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "solo",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "suffix",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "tabindex",
@@ -3881,20 +6186,34 @@
             },
             {
               "name": "textarea",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "toggleKeys",
-              "type": "any[]",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
               "default": "[13,32]"
             },
             {
               "name": "type",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"text\""
             },
             {
               "name": "validateOnBlur",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -3929,59 +6248,100 @@
         },
         {
           "name": "v-time-picker",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VTimePicker"
+          },
           "attributes": [
             {
               "name": "actions",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "allowedHours",
-              "type": [
-                "any[]",
-                "any",
-                "(...args: any[]) => any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "any[]",
+                  "object",
+                  "(...args: any[]) => any"
+                ]
+              }
             },
             {
               "name": "allowedMinutes",
-              "type": [
-                "any[]",
-                "any",
-                "(...args: any[]) => any"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "any[]",
+                  "object",
+                  "(...args: any[]) => any"
+                ]
+              }
             },
             {
               "name": "autosave",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "format",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"ampm\""
             },
             {
               "name": "landscape",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "noTitle",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "scrollable",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
-              "name": "value"
+              "name": "value",
+              "required": true
             }
           ],
           "events": [
@@ -3989,90 +6349,173 @@
               "name": "input"
             }
           ],
-          "slots": []
+          "vue-scoped-slots": [
+            {
+              "name": "default",
+              "properties": [
+                {
+                  "name": "save"
+                },
+                {
+                  "name": "cancel"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "v-toolbar",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VToolbar"
+          },
           "attributes": [
             {
               "name": "absolute",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "app",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "card",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "clippedLeft",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "clippedRight",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "dense",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "extended",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "fixed",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "flat",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "floating",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "height",
-              "type": [
-                "number",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
             },
             {
               "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "manualScroll",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "prominent",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "scrollOffScreen",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "scrollTarget",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "scrollThreshold",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "100"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "default"
@@ -4084,31 +6527,38 @@
         },
         {
           "name": "v-toolbar-items",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VToolbarItems"
+          }
         },
         {
           "name": "v-toolbar-side-icon",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VToolbarSideIcon"
+          }
         },
         {
           "name": "v-toolbar-title",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
-          "attributes": [],
-          "events": [],
-          "slots": []
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VToolbarTitle"
+          }
         },
         {
           "name": "v-tooltip",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VTooltip"
+          },
           "attributes": [
             {
               "name": "absolute",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
@@ -4116,23 +6566,37 @@
             },
             {
               "name": "allowOverflow",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "bottom",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "closeDelay",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "200"
             },
             {
               "name": "color",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "contentClass",
@@ -4140,101 +6604,164 @@
             },
             {
               "name": "debounce",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "0"
             },
             {
               "name": "fixed",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean",
               "default": "true"
             },
             {
               "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "left",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "maxWidth",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "\"auto\""
             },
             {
               "name": "minWidth",
-              "type": [
-                "number",
-                "string"
-              ]
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
             },
             {
               "name": "nudgeBottom",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             },
             {
               "name": "nudgeLeft",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             },
             {
               "name": "nudgeRight",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             },
             {
               "name": "nudgeTop",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             },
             {
               "name": "nudgeWidth",
-              "type": "number",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
               "default": "0"
             },
             {
               "name": "offsetOverflow",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "openDelay",
-              "type": [
-                "number",
-                "string"
-              ],
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
               "default": "0"
             },
             {
               "name": "positionX",
-              "type": "number"
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              }
             },
             {
               "name": "positionY",
-              "type": "number"
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              }
             },
             {
               "name": "right",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "tag",
-              "type": "string",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
               "default": "\"span\""
             },
             {
               "name": "top",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
               "type": "boolean"
             },
             {
               "name": "transition",
-              "type": "string"
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "value"
@@ -4243,7 +6770,6 @@
               "name": "zIndex"
             }
           ],
-          "events": [],
           "slots": [
             {
               "name": "activator"
@@ -4257,26 +6783,45 @@
       "attributes": [
         {
           "name": "v-click-outside",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js"
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "ClickOutside"
+          }
         },
         {
-          "name": "v-install"
+          "name": "v-install",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "Install"
+          }
         },
         {
           "name": "v-resize",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js"
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "Resize"
+          }
         },
         {
           "name": "v-ripple",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js"
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "Ripple"
+          }
         },
         {
           "name": "v-scroll",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js"
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "Scroll"
+          }
         },
         {
           "name": "v-touch",
-          "source-file": "./node_modules/vuetify/dist/vuetify.js"
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "Touch"
+          }
         }
       ]
     }

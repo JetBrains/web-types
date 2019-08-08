@@ -46,7 +46,7 @@ const typesMapping = {
     Boolean: "boolean",
     Function: "(...args: any[]) => any",
     Array: "any[]",
-    Object: "any",
+    Object: "object",
     Date: "Date",
     RegExp: "RegExp"
 };

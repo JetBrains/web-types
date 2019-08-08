@@ -26,13 +26,16 @@ for PACKAGE_VERSION in $VERSIONS; do
       ./vue/extract-vue.sh "$PACKAGE_NAME" "$PACKAGE_VERSION" "$@" || exit 1
       ;;
     *)
-      echo "Usage: extract.sh vue <package-name> <sem-version-range> [--production,--discard-same]"
+      echo "Usage: extract.sh vue <package-name> <sem-version-range> [--production,--no-discard-same]"
       exit 1
   esac
 done
 
 # Remove JSONs which have a newer version, but same content as older version
-if [[ "$*" == *--discard-same* ]] ; then
+if [[ "$*" == *--no-discard-same* ]] ; then
+  echo "Done!"
+else
+  echo "Removing similar JSONs"
   # shellcheck disable=SC2206
   versions_arr=( $VERSIONS )
   cd "../packages/$PACKAGE_NAME" || exit 1
@@ -49,6 +52,6 @@ if [[ "$*" == *--discard-same* ]] ; then
     fi
 
   done
-
+  echo "Done!"
 fi
 

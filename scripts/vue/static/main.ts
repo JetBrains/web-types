@@ -132,7 +132,7 @@ entities.forEach((entity) => {
 gatherStaticInformation(sourceFile!);
 
 const webTypes = {
-    $schema: "../../schema/web-types.schema.json",
+    $schema: "../../schema/web-types.json",
     framework: "vue",
     name: process.env.LIBRARY_NAME,
     version: process.env.LIBRARY_VERSION,
@@ -151,6 +151,42 @@ function noError(name: string) {
     return !production || name.indexOf("#Error") < 0;
 }
 
+function createSourceConfiguration(name: string, moduleSourceFile: string | undefined) {
+    name = toAssetName(name);
+    switch (library) {
+        case "vuetify":
+            return {
+                module: "vuetify/lib",
+                symbol: name
+            };
+        case "quasar-framework":
+            if (moduleSourceFile === undefined) {
+                return undefined;
+            }
+            if (moduleSourceFile.indexOf("./node_modules/") !== 0) {
+                throw new Error(`Error with ${name}: ${moduleSourceFile}`);
+            }
+            return {
+                module: moduleSourceFile.slice("./node_modules/".length),
+                symbol: "default"
+            };
+    }
+    if (!require(library)[name]) {
+        if (!require(library)["V" + name]) {
+            return production
+                ? undefined
+                : {
+                    symbol: `#Error: Cannot find symbol '${name}' in module '${library}'`
+                };
+        } else {
+            name = "V" + name;
+        }
+    }
+    return {
+        symbol: name
+    };
+}
+
 function createTagsList() {
     const result: any[] = [];
     for (const key in dynamicJson.components) {
@@ -165,9 +201,10 @@ function createTagsList() {
                 .filter((obj) => !!obj)
                 .toList() as IStaticEntityAnalysis[];
             const resolveArguments = createArgumentsResolver(component);
+            const source = createSourceConfiguration(key, staticComponentDef && staticComponentDef.fileName);
             result.push({
                 "name": key,
-                "source-file": staticComponentDef && staticComponentDef.fileName,
+                source,
                 "attributes": undefinedIfEmpty(createComponentAttributes(component)),
                 "events": undefinedIfEmpty(stream.from(staticDefs)
                     .flatMap((obj) => obj!.events)
@@ -239,8 +276,8 @@ function createGlobalAttributesList() {
             const directive = dynamicJson.directives[key];
             const staticDirectiveDef = staticAnalysis.get(Number.parseInt(directive[ID_PREFIX], 10));
             result.push({
-                "name": "v-" + fromAssetName(key),
-                "source-file": staticDirectiveDef && staticDirectiveDef.fileName
+                name: "v-" + fromAssetName(key),
+                source: createSourceConfiguration(key, staticDirectiveDef && staticDirectiveDef.fileName)
             });
         }
     }
@@ -265,6 +302,12 @@ function createArgumentsResolver(component: any) {
     };
 }
 
+function outputBooleanTypeIfNeeded(type: any) {
+    return !!(Array.isArray(type) ? type : [type])
+        .find((t: any) => t === "boolean")
+        ? "boolean" : undefined;
+}
+
 function createComponentAttributes(component: any) {
     const props = component.props;
     const result: any[] = [];
@@ -275,7 +318,11 @@ function createComponentAttributes(component: any) {
             const prop = props[propName];
             result.push({
                 name: propName,
-                type: prop.type !== null ? prop.type : undefined,
+                value: prop.type !== null && prop.type !== undefined ? {
+                    kind: "expression",
+                    type: prop.type
+                } : undefined,
+                type: outputBooleanTypeIfNeeded(prop.type),
                 default: prop.default,
                 required: prop.required ? true : undefined
             });
@@ -373,6 +420,9 @@ function analyseEntity(entity: ts.ObjectLiteralExpression, id: number): IStaticE
                     visitSlot(access.parent, scoped);
                 } else {
                     const slotName = getAccessedName(access);
+                    if (slotName === "$slots") {
+                        return;
+                    }
                     if (scoped) {
                         let props = scopedSlots.get(slotName);
                         if (!props) {
@@ -660,4 +710,11 @@ function fromAssetName(text: string): string {
         .filter((s) => s !== "")
         .map((s) => s.toLowerCase())
         .join("-");
+}
+
+function toAssetName(text: string): string {
+    return text.split(/-/)
+        .filter((s) => s !== "")
+        .map((s) => s.charAt(0).toUpperCase() + s.slice(1))
+        .join("");
 }

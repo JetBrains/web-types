@@ -2,13 +2,16 @@
   "$schema": "../../schema/web-types.json",
   "framework": "vue",
   "name": "bootstrap-vue",
-  "version": "2.0.0-rc.20",
+  "version": "2.0.0-rc.26",
   "contributions": {
     "html": {
       "types-syntax": "typescript",
       "tags": [
         {
           "name": "BAlert",
+          "source": {
+            "symbol": "BAlert"
+          },
           "attributes": [
             {
               "name": "dismissLabel",
@@ -75,6 +78,9 @@
         },
         {
           "name": "BBadge",
+          "source": {
+            "symbol": "BBadge"
+          },
           "attributes": [
             {
               "name": "active",
@@ -224,6 +230,9 @@
         },
         {
           "name": "BBreadcrumb",
+          "source": {
+            "symbol": "BBreadcrumb"
+          },
           "attributes": [
             {
               "name": "items",
@@ -236,6 +245,9 @@
         },
         {
           "name": "BBreadcrumbItem",
+          "source": {
+            "symbol": "BBreadcrumbItem"
+          },
           "attributes": [
             {
               "name": "active",
@@ -664,6 +676,15 @@
               }
             },
             {
+              "name": "squared",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "tag",
               "value": {
                 "kind": "expression",
@@ -798,6 +819,9 @@
         },
         {
           "name": "BButton",
+          "source": {
+            "symbol": "BButton"
+          },
           "attributes": [
             {
               "name": "active",
@@ -934,6 +958,15 @@
               }
             },
             {
+              "name": "squared",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "tag",
               "value": {
                 "kind": "expression",
@@ -979,6 +1012,9 @@
         },
         {
           "name": "BButtonClose",
+          "source": {
+            "symbol": "BButtonClose"
+          },
           "attributes": [
             {
               "name": "ariaLabel",
@@ -1008,6 +1044,9 @@
         },
         {
           "name": "BButtonGroup",
+          "source": {
+            "symbol": "BButtonGroup"
+          },
           "attributes": [
             {
               "name": "ariaRole",
@@ -1045,6 +1084,9 @@
         },
         {
           "name": "BButtonToolbar",
+          "source": {
+            "symbol": "BButtonToolbar"
+          },
           "attributes": [
             {
               "name": "justify",
@@ -1068,6 +1110,9 @@
         },
         {
           "name": "BCard",
+          "source": {
+            "symbol": "BCard"
+          },
           "attributes": [
             {
               "name": "align",
@@ -1397,6 +1442,9 @@
         },
         {
           "name": "BCardBody",
+          "source": {
+            "symbol": "BCardBody"
+          },
           "attributes": [
             {
               "name": "bodyBgVariant",
@@ -1491,6 +1539,9 @@
         },
         {
           "name": "BCardFooter",
+          "source": {
+            "symbol": "BCardFooter"
+          },
           "attributes": [
             {
               "name": "footer",
@@ -1550,6 +1601,9 @@
         },
         {
           "name": "BCardGroup",
+          "source": {
+            "symbol": "BCardGroup"
+          },
           "attributes": [
             {
               "name": "columns",
@@ -1581,6 +1635,9 @@
         },
         {
           "name": "BCardHeader",
+          "source": {
+            "symbol": "BCardHeader"
+          },
           "attributes": [
             {
               "name": "header",
@@ -1640,6 +1697,9 @@
         },
         {
           "name": "BCardImg",
+          "source": {
+            "symbol": "BCardImg"
+          },
           "attributes": [
             {
               "name": "alt",
@@ -1728,6 +1788,9 @@
         },
         {
           "name": "BCardImgLazy",
+          "source": {
+            "symbol": "BCardImgLazy"
+          },
           "attributes": [
             {
               "name": "alt",
@@ -1888,6 +1951,9 @@
         },
         {
           "name": "BCardSubTitle",
+          "source": {
+            "symbol": "BCardSubTitle"
+          },
           "attributes": [
             {
               "name": "subTitle",
@@ -1917,6 +1983,9 @@
         },
         {
           "name": "BCardText",
+          "source": {
+            "symbol": "BCardText"
+          },
           "attributes": [
             {
               "name": "textTag",
@@ -1930,6 +1999,9 @@
         },
         {
           "name": "BCardTitle",
+          "source": {
+            "symbol": "BCardTitle"
+          },
           "attributes": [
             {
               "name": "title",
@@ -1951,6 +2023,9 @@
         },
         {
           "name": "BCarousel",
+          "source": {
+            "symbol": "BCarousel"
+          },
           "attributes": [
             {
               "name": "background",
@@ -2100,6 +2175,9 @@
         },
         {
           "name": "BCarouselSlide",
+          "source": {
+            "symbol": "BCarouselSlide"
+          },
           "attributes": [
             {
               "name": "background",
@@ -2243,6 +2321,15 @@
                 "kind": "expression",
                 "type": "string"
               }
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "button",
@@ -2401,6 +2488,15 @@
                   "boolean",
                   "string"
                 ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
               },
               "type": "boolean",
               "default": "false"
@@ -2599,6 +2695,15 @@
               }
             },
             {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "button",
               "value": {
                 "kind": "expression",
@@ -2755,6 +2860,15 @@
                   "boolean",
                   "string"
                 ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
               },
               "type": "boolean",
               "default": "false"
@@ -2937,6 +3051,9 @@
         },
         {
           "name": "BCol",
+          "source": {
+            "symbol": "BCol"
+          },
           "attributes": [
             {
               "name": "alignSelf",
@@ -3128,6 +3245,9 @@
         },
         {
           "name": "BCollapse",
+          "source": {
+            "symbol": "BCollapse"
+          },
           "attributes": [
             {
               "name": "accordion",
@@ -3194,6 +3314,9 @@
         },
         {
           "name": "BContainer",
+          "source": {
+            "symbol": "BContainer"
+          },
           "attributes": [
             {
               "name": "fluid",
@@ -3333,6 +3456,15 @@
                 "kind": "expression",
                 "type": "string"
               }
+            },
+            {
+              "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "menuClass",
@@ -3872,6 +4004,9 @@
         },
         {
           "name": "BDropdown",
+          "source": {
+            "symbol": "BDropdown"
+          },
           "attributes": [
             {
               "name": "boundary",
@@ -3933,6 +4068,15 @@
                 "kind": "expression",
                 "type": "string"
               }
+            },
+            {
+              "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "menuClass",
@@ -4090,6 +4234,9 @@
         },
         {
           "name": "BDropdownDivider",
+          "source": {
+            "symbol": "BDropdownDivider"
+          },
           "attributes": [
             {
               "name": "tag",
@@ -4103,6 +4250,9 @@
         },
         {
           "name": "BDropdownForm",
+          "source": {
+            "symbol": "BDropdownForm"
+          },
           "attributes": [
             {
               "name": "disabled",
@@ -4151,6 +4301,9 @@
         },
         {
           "name": "BDropdownGroup",
+          "source": {
+            "symbol": "BDropdownGroup"
+          },
           "attributes": [
             {
               "name": "ariaDescribedby",
@@ -4203,6 +4356,9 @@
         },
         {
           "name": "BDropdownHeader",
+          "source": {
+            "symbol": "BDropdownHeader"
+          },
           "attributes": [
             {
               "name": "id",
@@ -4230,6 +4386,9 @@
         },
         {
           "name": "BDropdownItem",
+          "source": {
+            "symbol": "BDropdownItem"
+          },
           "attributes": [
             {
               "name": "active",
@@ -4409,6 +4568,9 @@
         },
         {
           "name": "BDropdownItemButton",
+          "source": {
+            "symbol": "BDropdownItemButton"
+          },
           "attributes": [
             {
               "name": "active",
@@ -4452,6 +4614,9 @@
         },
         {
           "name": "BDropdownText",
+          "source": {
+            "symbol": "BDropdownText"
+          },
           "attributes": [
             {
               "name": "tag",
@@ -4472,6 +4637,9 @@
         },
         {
           "name": "BEmbed",
+          "source": {
+            "symbol": "BEmbed"
+          },
           "attributes": [
             {
               "name": "aspect",
@@ -4509,6 +4677,15 @@
                 "type": "string"
               },
               "default": "\"\""
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "browseText",
@@ -4659,6 +4836,9 @@
         },
         {
           "name": "BForm",
+          "source": {
+            "symbol": "BForm"
+          },
           "attributes": [
             {
               "name": "id",
@@ -4698,6 +4878,9 @@
         },
         {
           "name": "BFormCheckbox",
+          "source": {
+            "symbol": "BFormCheckbox"
+          },
           "attributes": [
             {
               "name": "ariaLabel",
@@ -4712,6 +4895,15 @@
                 "kind": "expression",
                 "type": "string"
               }
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "button",
@@ -4861,6 +5053,9 @@
         },
         {
           "name": "BFormCheckboxGroup",
+          "source": {
+            "symbol": "BFormCheckboxGroup"
+          },
           "attributes": [
             {
               "name": "ariaInvalid",
@@ -4870,6 +5065,15 @@
                   "boolean",
                   "string"
                 ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
               },
               "type": "boolean",
               "default": "false"
@@ -5052,6 +5256,9 @@
         },
         {
           "name": "BFormDatalist",
+          "source": {
+            "symbol": "BFormDatalist"
+          },
           "attributes": [
             {
               "name": "disabledField",
@@ -5417,6 +5624,9 @@
         },
         {
           "name": "BFormFile",
+          "source": {
+            "symbol": "BFormFile"
+          },
           "attributes": [
             {
               "name": "accept",
@@ -5425,6 +5635,15 @@
                 "type": "string"
               },
               "default": "\"\""
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "browseText",
@@ -5575,6 +5794,9 @@
         },
         {
           "name": "BFormGroup",
+          "source": {
+            "symbol": "BFormGroup"
+          },
           "attributes": [
             {
               "name": "breakpoint",
@@ -5821,6 +6043,9 @@
         },
         {
           "name": "BFormInput",
+          "source": {
+            "symbol": "BFormInput"
+          },
           "attributes": [
             {
               "name": "ariaInvalid",
@@ -5840,6 +6065,15 @@
                 "kind": "expression",
                 "type": "string"
               }
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "disabled",
@@ -6041,6 +6275,9 @@
         },
         {
           "name": "BFormInvalidFeedback",
+          "source": {
+            "symbol": "BFormInvalidFeedback"
+          },
           "attributes": [
             {
               "name": "ariaLive",
@@ -6104,6 +6341,9 @@
         },
         {
           "name": "BFormRadio",
+          "source": {
+            "symbol": "BFormRadio"
+          },
           "attributes": [
             {
               "name": "ariaLabel",
@@ -6118,6 +6358,15 @@
                 "kind": "expression",
                 "type": "string"
               }
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "button",
@@ -6240,6 +6489,9 @@
         },
         {
           "name": "BFormRadioGroup",
+          "source": {
+            "symbol": "BFormRadioGroup"
+          },
           "attributes": [
             {
               "name": "ariaInvalid",
@@ -6249,6 +6501,15 @@
                   "boolean",
                   "string"
                 ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
               },
               "type": "boolean",
               "default": "false"
@@ -6421,6 +6682,9 @@
         },
         {
           "name": "BFormRow",
+          "source": {
+            "symbol": "BFormRow"
+          },
           "attributes": [
             {
               "name": "tag",
@@ -6434,6 +6698,9 @@
         },
         {
           "name": "BFormSelect",
+          "source": {
+            "symbol": "BFormSelect"
+          },
           "attributes": [
             {
               "name": "ariaInvalid",
@@ -6443,6 +6710,15 @@
                   "boolean",
                   "string"
                 ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
               },
               "type": "boolean",
               "default": "false"
@@ -6584,6 +6860,9 @@
         },
         {
           "name": "BFormText",
+          "source": {
+            "symbol": "BFormText"
+          },
           "attributes": [
             {
               "name": "id",
@@ -6621,6 +6900,9 @@
         },
         {
           "name": "BFormTextarea",
+          "source": {
+            "symbol": "BFormTextarea"
+          },
           "attributes": [
             {
               "name": "ariaInvalid",
@@ -6640,6 +6922,15 @@
                 "kind": "expression",
                 "type": "string"
               }
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "disabled",
@@ -6834,6 +7125,9 @@
         },
         {
           "name": "BFormValidFeedback",
+          "source": {
+            "symbol": "BFormValidFeedback"
+          },
           "attributes": [
             {
               "name": "ariaLive",
@@ -6897,6 +7191,9 @@
         },
         {
           "name": "BImg",
+          "source": {
+            "symbol": "BImg"
+          },
           "attributes": [
             {
               "name": "alt",
@@ -7028,6 +7325,9 @@
         },
         {
           "name": "BImgLazy",
+          "source": {
+            "symbol": "BImgLazy"
+          },
           "attributes": [
             {
               "name": "alt",
@@ -7235,6 +7535,15 @@
               }
             },
             {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "disabled",
               "value": {
                 "kind": "expression",
@@ -7434,6 +7743,9 @@
         },
         {
           "name": "BInputGroup",
+          "source": {
+            "symbol": "BInputGroup"
+          },
           "attributes": [
             {
               "name": "append",
@@ -7443,7 +7755,7 @@
               }
             },
             {
-              "name": "appendHTML",
+              "name": "appendHtml",
               "value": {
                 "kind": "expression",
                 "type": "string"
@@ -7464,7 +7776,7 @@
               }
             },
             {
-              "name": "prependHTML",
+              "name": "prependHtml",
               "value": {
                 "kind": "expression",
                 "type": "string"
@@ -7489,6 +7801,9 @@
         },
         {
           "name": "BInputGroupAddon",
+          "source": {
+            "symbol": "BInputGroupAddon"
+          },
           "attributes": [
             {
               "name": "append",
@@ -7527,6 +7842,9 @@
         },
         {
           "name": "BInputGroupAppend",
+          "source": {
+            "symbol": "BInputGroupAppend"
+          },
           "attributes": [
             {
               "name": "id",
@@ -7556,6 +7874,9 @@
         },
         {
           "name": "BInputGroupPrepend",
+          "source": {
+            "symbol": "BInputGroupPrepend"
+          },
           "attributes": [
             {
               "name": "id",
@@ -7585,6 +7906,9 @@
         },
         {
           "name": "BInputGroupText",
+          "source": {
+            "symbol": "BInputGroupText"
+          },
           "attributes": [
             {
               "name": "tag",
@@ -7598,6 +7922,9 @@
         },
         {
           "name": "BJumbotron",
+          "source": {
+            "symbol": "BJumbotron"
+          },
           "attributes": [
             {
               "name": "bgVariant",
@@ -7705,6 +8032,9 @@
         },
         {
           "name": "BLink",
+          "source": {
+            "symbol": "BLink"
+          },
           "attributes": [
             {
               "name": "active",
@@ -7829,6 +8159,9 @@
         },
         {
           "name": "BListGroup",
+          "source": {
+            "symbol": "BListGroup"
+          },
           "attributes": [
             {
               "name": "flush",
@@ -7863,6 +8196,9 @@
         },
         {
           "name": "BListGroupItem",
+          "source": {
+            "symbol": "BListGroupItem"
+          },
           "attributes": [
             {
               "name": "action",
@@ -8018,6 +8354,9 @@
         },
         {
           "name": "BMedia",
+          "source": {
+            "symbol": "BMedia"
+          },
           "attributes": [
             {
               "name": "noBody",
@@ -8057,6 +8396,9 @@
         },
         {
           "name": "BMediaAside",
+          "source": {
+            "symbol": "BMediaAside"
+          },
           "attributes": [
             {
               "name": "tag",
@@ -8078,6 +8420,9 @@
         },
         {
           "name": "BMediaBody",
+          "source": {
+            "symbol": "BMediaBody"
+          },
           "attributes": [
             {
               "name": "tag",
@@ -8091,6 +8436,9 @@
         },
         {
           "name": "BModal",
+          "source": {
+            "symbol": "BModal"
+          },
           "attributes": [
             {
               "name": "bodyBgVariant",
@@ -8502,6 +8850,9 @@
         },
         {
           "name": "BNav",
+          "source": {
+            "symbol": "BNav"
+          },
           "attributes": [
             {
               "name": "align",
@@ -8651,6 +9002,15 @@
                 "kind": "expression",
                 "type": "string"
               }
+            },
+            {
+              "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "menuClass",
@@ -8820,6 +9180,15 @@
               }
             },
             {
+              "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "menuClass",
               "value": {
                 "kind": "expression",
@@ -8919,6 +9288,9 @@
         },
         {
           "name": "BNavForm",
+          "source": {
+            "symbol": "BNavForm"
+          },
           "attributes": [
             {
               "name": "id",
@@ -8949,6 +9321,9 @@
         },
         {
           "name": "BNavItem",
+          "source": {
+            "symbol": "BNavItem"
+          },
           "attributes": [
             {
               "name": "active",
@@ -9160,6 +9535,15 @@
               }
             },
             {
+              "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "menuClass",
               "value": {
                 "kind": "expression",
@@ -9259,6 +9643,9 @@
         },
         {
           "name": "BNavItemDropdown",
+          "source": {
+            "symbol": "BNavItemDropdown"
+          },
           "attributes": [
             {
               "name": "disabled",
@@ -9325,6 +9712,15 @@
                 "kind": "expression",
                 "type": "string"
               }
+            },
+            {
+              "name": "lazy",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "menuClass",
@@ -9426,6 +9822,9 @@
         },
         {
           "name": "BNavText",
+          "source": {
+            "symbol": "BNavText"
+          },
           "attributes": [
             {
               "name": "tag",
@@ -9465,6 +9864,9 @@
         },
         {
           "name": "BNavbar",
+          "source": {
+            "symbol": "BNavbar"
+          },
           "attributes": [
             {
               "name": "fixed",
@@ -9530,6 +9932,9 @@
         },
         {
           "name": "BNavbarBrand",
+          "source": {
+            "symbol": "BNavbarBrand"
+          },
           "attributes": [
             {
               "name": "active",
@@ -9662,6 +10067,9 @@
         },
         {
           "name": "BNavbarNav",
+          "source": {
+            "symbol": "BNavbarNav"
+          },
           "attributes": [
             {
               "name": "align",
@@ -9709,6 +10117,9 @@
         },
         {
           "name": "BNavbarToggle",
+          "source": {
+            "symbol": "BNavbarToggle"
+          },
           "attributes": [
             {
               "name": "label",
@@ -9735,6 +10146,9 @@
         },
         {
           "name": "BPagination",
+          "source": {
+            "symbol": "BPagination"
+          },
           "attributes": [
             {
               "name": "align",
@@ -9932,6 +10346,9 @@
         },
         {
           "name": "BPaginationNav",
+          "source": {
+            "symbol": "BPaginationNav"
+          },
           "attributes": [
             {
               "name": "activeClass",
@@ -10187,6 +10604,9 @@
         },
         {
           "name": "BPopover",
+          "source": {
+            "symbol": "BPopover"
+          },
           "attributes": [
             {
               "name": "boundary",
@@ -10223,6 +10643,13 @@
               "default": "\"\""
             },
             {
+              "name": "customClass",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
               "name": "delay",
               "value": {
                 "kind": "expression",
@@ -10242,6 +10669,17 @@
               },
               "type": "boolean",
               "default": "false"
+            },
+            {
+              "name": "fallbackPlacement",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]"
+                ]
+              },
+              "default": "\"flip\""
             },
             {
               "name": "noFade",
@@ -10310,6 +10748,13 @@
                 ]
               },
               "default": "\"click\""
+            },
+            {
+              "name": "variant",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             }
           ],
           "events": [
@@ -10341,6 +10786,9 @@
         },
         {
           "name": "BProgress",
+          "source": {
+            "symbol": "BProgress"
+          },
           "attributes": [
             {
               "name": "animated",
@@ -10420,6 +10868,9 @@
         },
         {
           "name": "BProgressBar",
+          "source": {
+            "symbol": "BProgressBar"
+          },
           "attributes": [
             {
               "name": "animated",
@@ -10514,6 +10965,15 @@
                 "kind": "expression",
                 "type": "string"
               }
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "button",
@@ -10645,6 +11105,15 @@
                   "boolean",
                   "string"
                 ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
               },
               "type": "boolean",
               "default": "false"
@@ -10817,6 +11286,9 @@
         },
         {
           "name": "BRow",
+          "source": {
+            "symbol": "BRow"
+          },
           "attributes": [
             {
               "name": "alignContent",
@@ -10869,6 +11341,15 @@
                   "boolean",
                   "string"
                 ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
               },
               "type": "boolean",
               "default": "false"
@@ -11010,6 +11491,9 @@
         },
         {
           "name": "BSpinner",
+          "source": {
+            "symbol": "BSpinner"
+          },
           "attributes": [
             {
               "name": "label",
@@ -11062,6 +11546,9 @@
         },
         {
           "name": "BTab",
+          "source": {
+            "symbol": "BTab"
+          },
           "attributes": [
             {
               "name": "active",
@@ -11176,6 +11663,9 @@
         },
         {
           "name": "BTable",
+          "source": {
+            "symbol": "BTable"
+          },
           "attributes": [
             {
               "name": "apiUrl",
@@ -11539,7 +12029,8 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              }
+              },
+              "default": "\"\""
             },
             {
               "name": "sortCompare",
@@ -11547,6 +12038,21 @@
                 "kind": "expression",
                 "type": "(...args: any[]) => any"
               }
+            },
+            {
+              "name": "sortCompareLocale",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "sortCompareOptions",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              },
+              "default": "{\"numeric\":true}"
             },
             {
               "name": "sortDesc",
@@ -11737,7 +12243,319 @@
           ]
         },
         {
+          "name": "BTableLite",
+          "source": {
+            "symbol": "BTableLite"
+          },
+          "attributes": [
+            {
+              "name": "bordered",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "borderless",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "caption",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "captionHtml",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "captionTop",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "fields",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "any[]",
+                  "object"
+                ]
+              }
+            },
+            {
+              "name": "fixed",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "footClone",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "footVariant",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "headVariant",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "hover",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "items",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
+              "default": "[]"
+            },
+            {
+              "name": "outlined",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "primaryKey",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "responsive",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "small",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "stacked",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "striped",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tableClass",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]",
+                  "object"
+                ]
+              }
+            },
+            {
+              "name": "tbodyClass",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]"
+                ]
+              }
+            },
+            {
+              "name": "tbodyTrClass",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]",
+                  "(...args: any[]) => any"
+                ]
+              }
+            },
+            {
+              "name": "tbodyTransitionHandlers",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              }
+            },
+            {
+              "name": "tbodyTransitionProps",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              }
+            },
+            {
+              "name": "tfootClass",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]",
+                  "object"
+                ]
+              }
+            },
+            {
+              "name": "tfootTrClass",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]",
+                  "object"
+                ]
+              }
+            },
+            {
+              "name": "theadClass",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]",
+                  "object"
+                ]
+              }
+            },
+            {
+              "name": "theadTrClass",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]",
+                  "object"
+                ]
+              }
+            },
+            {
+              "name": "value",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
+              "default": "[]"
+            }
+          ],
+          "events": [
+            {
+              "name": "context-changed"
+            },
+            {
+              "name": "head-clicked"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "row-clicked"
+            },
+            {
+              "name": "row-contextmenu"
+            },
+            {
+              "name": "row-dblclicked"
+            },
+            {
+              "name": "row-hovered"
+            },
+            {
+              "name": "row-middle-clicked"
+            },
+            {
+              "name": "row-unhovered"
+            }
+          ]
+        },
+        {
           "name": "BTabs",
+          "source": {
+            "symbol": "BTabs"
+          },
           "attributes": [
             {
               "name": "activeNavItemClass",
@@ -11961,6 +12779,15 @@
               }
             },
             {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "disabled",
               "value": {
                 "kind": "expression",
@@ -12153,6 +12980,9 @@
         },
         {
           "name": "BToast",
+          "source": {
+            "symbol": "BToast"
+          },
           "attributes": [
             {
               "name": "appendToast",
@@ -12338,22 +13168,23 @@
         },
         {
           "name": "BToaster",
+          "source": {
+            "symbol": "BToaster"
+          },
           "attributes": [
             {
               "name": "ariaAtomic",
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"true\""
+              }
             },
             {
               "name": "ariaLive",
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"polite\""
+              }
             },
             {
               "name": "name",
@@ -12374,6 +13205,9 @@
         },
         {
           "name": "BTooltip",
+          "source": {
+            "symbol": "BTooltip"
+          },
           "attributes": [
             {
               "name": "boundary",
@@ -12402,6 +13236,13 @@
               }
             },
             {
+              "name": "customClass",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
               "name": "delay",
               "value": {
                 "kind": "expression",
@@ -12421,6 +13262,17 @@
               },
               "type": "boolean",
               "default": "false"
+            },
+            {
+              "name": "fallbackPlacement",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]"
+                ]
+              },
+              "default": "\"flip\""
             },
             {
               "name": "noFade",
@@ -12489,6 +13341,13 @@
                 ]
               },
               "default": "\"hover focus\""
+            },
+            {
+              "name": "variant",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             }
           ],
           "events": [
@@ -12521,19 +13380,34 @@
       ],
       "attributes": [
         {
-          "name": "v-b-modal"
+          "name": "v-b-modal",
+          "source": {
+            "symbol": "BModal"
+          }
         },
         {
-          "name": "v-b-popover"
+          "name": "v-b-popover",
+          "source": {
+            "symbol": "BPopover"
+          }
         },
         {
-          "name": "v-b-scrollspy"
+          "name": "v-b-scrollspy",
+          "source": {
+            "symbol": "VBScrollspy"
+          }
         },
         {
-          "name": "v-b-toggle"
+          "name": "v-b-toggle",
+          "source": {
+            "symbol": "VBToggle"
+          }
         },
         {
-          "name": "v-b-tooltip"
+          "name": "v-b-tooltip",
+          "source": {
+            "symbol": "BTooltip"
+          }
         }
       ]
     }
