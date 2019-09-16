@@ -10,7 +10,10 @@ of a web components library. It also provides extensions for a framework specifi
 # Distribution
 
 Library providers are welcome to include detailed web-types JSONs and link them through `web-types`
-property in `package.json`. 
+property in `package.json`. Currently following libraries are providing this feature:
+ * Vue.js
+   * vuetify (https://github.com/vuetifyjs/vuetify/pull/7906)
+   * quasar (https://github.com/quasarframework/quasar/pull/4749)
 
 For the most popular libraries basic information is published under `@web-types` scope on NPM. 
 Currently following frameworks and libraries are supported in such a way:
