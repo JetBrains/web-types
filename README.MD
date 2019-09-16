@@ -30,7 +30,10 @@ your package are always available, make sure it's listed in `pacakges/registry.j
 
 # Schema
 
-Web-types schema is available in `schema` folder.
+Web-types schema is available in `schema` folder. Use following URL to reference it in your JSON files:
+```
+https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json
+```
 
 # Generating web-types
 
