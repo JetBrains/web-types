@@ -2,7 +2,7 @@
   "$schema": "../../schema/web-types.json",
   "framework": "vue",
   "name": "bootstrap-vue",
-  "version": "2.0.0-rc.26",
+  "version": "2.0.0",
   "contributions": {
     "html": {
       "types-syntax": "typescript",
@@ -1918,17 +1918,6 @@
               "default": "false"
             },
             {
-              "name": "throttle",
-              "value": {
-                "kind": "expression",
-                "type": [
-                  "number",
-                  "string"
-                ]
-              },
-              "default": "100"
-            },
-            {
               "name": "top",
               "value": {
                 "kind": "expression",
@@ -2148,6 +2137,15 @@
             },
             {
               "name": "noTouch",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "noWrap",
               "value": {
                 "kind": "expression",
                 "type": "boolean"
@@ -2437,10 +2435,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -2626,10 +2621,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -2809,10 +2801,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -2998,10 +2987,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -3540,6 +3526,14 @@
               },
               "type": "boolean",
               "default": "false"
+            },
+            {
+              "name": "splitButtonType",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"button\""
             },
             {
               "name": "splitHref",
@@ -4152,6 +4146,14 @@
               },
               "type": "boolean",
               "default": "false"
+            },
+            {
+              "name": "splitButtonType",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"button\""
             },
             {
               "name": "splitHref",
@@ -4811,13 +4813,17 @@
               "default": "false"
             },
             {
+              "name": "size",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -5011,10 +5017,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -5203,10 +5206,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -5350,10 +5350,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "boolean",
-                  "string"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -5380,13 +5377,6 @@
           "name": "BFormFieldset",
           "attributes": [
             {
-              "name": "breakpoint",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              }
-            },
-            {
               "name": "description",
               "value": {
                 "kind": "expression",
@@ -5409,15 +5399,6 @@
                 "type": "string"
               },
               "default": "\"assertive\""
-            },
-            {
-              "name": "horizontal",
-              "value": {
-                "kind": "expression",
-                "type": "boolean"
-              },
-              "type": "boolean",
-              "default": "false"
             },
             {
               "name": "id",
@@ -5577,10 +5558,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -5608,17 +5586,6 @@
               },
               "type": "boolean",
               "default": "false"
-            }
-          ],
-          "slots": [
-            {
-              "name": "description"
-            },
-            {
-              "name": "label"
-            },
-            {
-              "name": "valid-feedback"
             }
           ]
         },
@@ -5769,13 +5736,17 @@
               "default": "false"
             },
             {
+              "name": "size",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -5799,13 +5770,6 @@
           },
           "attributes": [
             {
-              "name": "breakpoint",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              }
-            },
-            {
               "name": "description",
               "value": {
                 "kind": "expression",
@@ -5828,15 +5792,6 @@
                 "type": "string"
               },
               "default": "\"assertive\""
-            },
-            {
-              "name": "horizontal",
-              "value": {
-                "kind": "expression",
-                "type": "boolean"
-              },
-              "type": "boolean",
-              "default": "false"
             },
             {
               "name": "id",
@@ -5996,10 +5951,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -6027,17 +5979,6 @@
               },
               "type": "boolean",
               "default": "false"
-            }
-          ],
-          "slots": [
-            {
-              "name": "description"
-            },
-            {
-              "name": "label"
-            },
-            {
-              "name": "valid-feedback"
             }
           ]
         },
@@ -6209,10 +6150,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -6313,10 +6251,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "boolean",
-                  "string"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -6464,10 +6399,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -6638,10 +6570,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -6825,10 +6754,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -7069,10 +6995,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -7163,10 +7086,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "boolean",
-                  "string"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -7476,17 +7396,6 @@
               "required": true
             },
             {
-              "name": "throttle",
-              "value": {
-                "kind": "expression",
-                "type": [
-                  "number",
-                  "string"
-                ]
-              },
-              "default": "100"
-            },
-            {
               "name": "thumbnail",
               "value": {
                 "kind": "expression",
@@ -7677,10 +7586,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -8441,6 +8347,20 @@
           },
           "attributes": [
             {
+              "name": "ariaLabel",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "autoFocusButton",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
               "name": "bodyBgVariant",
               "value": {
                 "kind": "expression",
@@ -8453,7 +8373,8 @@
                 "kind": "expression",
                 "type": [
                   "string",
-                  "any[]"
+                  "any[]",
+                  "object"
                 ]
               }
             },
@@ -8528,7 +8449,8 @@
                 "kind": "expression",
                 "type": [
                   "string",
-                  "any[]"
+                  "any[]",
+                  "object"
                 ]
               }
             },
@@ -8538,7 +8460,8 @@
                 "kind": "expression",
                 "type": [
                   "string",
-                  "any[]"
+                  "any[]",
+                  "object"
                 ]
               }
             },
@@ -8562,7 +8485,8 @@
                 "kind": "expression",
                 "type": [
                   "string",
-                  "any[]"
+                  "any[]",
+                  "object"
                 ]
               }
             },
@@ -8593,7 +8517,8 @@
                 "kind": "expression",
                 "type": [
                   "string",
-                  "any[]"
+                  "any[]",
+                  "object"
                 ]
               }
             },
@@ -8677,7 +8602,8 @@
                 "kind": "expression",
                 "type": [
                   "string",
-                  "any[]"
+                  "any[]",
+                  "object"
                 ]
               }
             },
@@ -8805,11 +8731,31 @@
               "default": "\"\""
             },
             {
+              "name": "titleClass",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]",
+                  "object"
+                ]
+              }
+            },
+            {
               "name": "titleHtml",
               "value": {
                 "kind": "expression",
                 "type": "string"
               }
+            },
+            {
+              "name": "titleSrOnly",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "titleTag",
@@ -8862,7 +8808,7 @@
               }
             },
             {
-              "name": "fill",
+              "name": "cardHeader",
               "value": {
                 "kind": "expression",
                 "type": "boolean"
@@ -8871,7 +8817,7 @@
               "default": "false"
             },
             {
-              "name": "isNavBar",
+              "name": "fill",
               "value": {
                 "kind": "expression",
                 "type": "boolean"
@@ -8972,22 +8918,6 @@
               },
               "type": "boolean",
               "default": "false"
-            },
-            {
-              "name": "extraMenuClasses",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              },
-              "default": "\"\""
-            },
-            {
-              "name": "extraToggleClasses",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              },
-              "default": "\"\""
             },
             {
               "name": "html",
@@ -9148,22 +9078,6 @@
               },
               "type": "boolean",
               "default": "false"
-            },
-            {
-              "name": "extraMenuClasses",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              },
-              "default": "\"\""
-            },
-            {
-              "name": "extraToggleClasses",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              },
-              "default": "\"\""
             },
             {
               "name": "html",
@@ -9398,8 +9312,7 @@
               "value": {
                 "kind": "expression",
                 "type": "object"
-              },
-              "default": "{}"
+              }
             },
             {
               "name": "linkClasses",
@@ -9503,22 +9416,6 @@
               },
               "type": "boolean",
               "default": "false"
-            },
-            {
-              "name": "extraMenuClasses",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              },
-              "default": "\"\""
-            },
-            {
-              "name": "extraToggleClasses",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              },
-              "default": "\"\""
             },
             {
               "name": "html",
@@ -9682,22 +9579,6 @@
               },
               "type": "boolean",
               "default": "false"
-            },
-            {
-              "name": "extraMenuClasses",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              },
-              "default": "\"\""
-            },
-            {
-              "name": "extraToggleClasses",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              },
-              "default": "\"\""
             },
             {
               "name": "html",
@@ -10310,8 +10191,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"md\""
+              }
             },
             {
               "name": "totalRows",
@@ -10573,8 +10453,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"md\""
+              }
             },
             {
               "name": "useRouter",
@@ -10614,6 +10493,7 @@
                 "kind": "expression",
                 "type": [
                   "string",
+                  "object",
                   "object"
                 ]
               },
@@ -10631,7 +10511,11 @@
               "name": "container",
               "value": {
                 "kind": "expression",
-                "type": "string"
+                "type": [
+                  "string",
+                  "object",
+                  "object"
+                ]
               }
             },
             {
@@ -10639,8 +10523,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"\""
+              }
             },
             {
               "name": "customClass",
@@ -10659,7 +10542,7 @@
                   "string"
                 ]
               },
-              "default": "0"
+              "default": "50"
             },
             {
               "name": "disabled",
@@ -10680,6 +10563,13 @@
                 ]
               },
               "default": "\"flip\""
+            },
+            {
+              "name": "id",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "noFade",
@@ -10725,18 +10615,18 @@
                 "type": [
                   "string",
                   "object",
-                  "object",
-                  "(...args: any[]) => any"
+                  "(...args: any[]) => any",
+                  "object"
                 ]
-              }
+              },
+              "required": true
             },
             {
               "name": "title",
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"\""
+              }
             },
             {
               "name": "triggers",
@@ -10781,6 +10671,14 @@
             },
             {
               "name": "update:show"
+            }
+          ],
+          "vue-scoped-slots": [
+            {
+              "name": "default"
+            },
+            {
+              "name": "title"
             }
           ]
         },
@@ -11071,10 +10969,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -11242,10 +11137,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -11456,10 +11348,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -11582,14 +11471,6 @@
                 "kind": "expression",
                 "type": "string"
               }
-            },
-            {
-              "name": "href",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              },
-              "default": "\"#\""
             },
             {
               "name": "id",
@@ -11779,10 +11660,7 @@
               "name": "fields",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "any[]",
-                  "object"
-                ]
+                "type": "any[]"
               }
             },
             {
@@ -11793,16 +11671,40 @@
                   "string",
                   "RegExp",
                   "object",
-                  "any[]",
-                  "(...args: any[]) => any"
+                  "any[]"
                 ]
               }
+            },
+            {
+              "name": "filterDebounce",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
+              "default": "0"
             },
             {
               "name": "filterFunction",
               "value": {
                 "kind": "expression",
                 "type": "(...args: any[]) => any"
+              }
+            },
+            {
+              "name": "filterIgnoredFields",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              }
+            },
+            {
+              "name": "filterIncludedFields",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
               }
             },
             {
@@ -11887,6 +11789,15 @@
                 "type": "string"
               },
               "default": "\"Click to sort Descending\""
+            },
+            {
+              "name": "noBorderCollapse",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
             },
             {
               "name": "noFooterSorting",
@@ -12043,7 +11954,10 @@
               "name": "sortCompareLocale",
               "value": {
                 "kind": "expression",
-                "type": "string"
+                "type": [
+                  "string",
+                  "any[]"
+                ]
               }
             },
             {
@@ -12072,7 +11986,37 @@
               "default": "\"asc\""
             },
             {
+              "name": "sortIconLeft",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "sortNullLast",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "stacked",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "stickyHeader",
               "value": {
                 "kind": "expression",
                 "type": [
@@ -12104,12 +12048,20 @@
               }
             },
             {
+              "name": "tableVariant",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
               "name": "tbodyClass",
               "value": {
                 "kind": "expression",
                 "type": [
                   "string",
-                  "any[]"
+                  "any[]",
+                  "object"
                 ]
               }
             },
@@ -12302,10 +12254,7 @@
               "name": "fields",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "any[]",
-                  "object"
-                ]
+                "type": "any[]"
               }
             },
             {
@@ -12365,6 +12314,15 @@
               "default": "[]"
             },
             {
+              "name": "noBorderCollapse",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "outlined",
               "value": {
                 "kind": "expression",
@@ -12414,6 +12372,18 @@
               "default": "false"
             },
             {
+              "name": "stickyHeader",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
               "name": "striped",
               "value": {
                 "kind": "expression",
@@ -12434,12 +12404,20 @@
               }
             },
             {
+              "name": "tableVariant",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
               "name": "tbodyClass",
               "value": {
                 "kind": "expression",
                 "type": [
                   "string",
-                  "any[]"
+                  "any[]",
+                  "object"
                 ]
               }
             },
@@ -12552,6 +12530,165 @@
           ]
         },
         {
+          "name": "BTableSimple",
+          "source": {
+            "symbol": "BTableSimple"
+          },
+          "attributes": [
+            {
+              "name": "bordered",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "borderless",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "captionTop",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "fixed",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "hover",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "id",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "noBorderCollapse",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "outlined",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "responsive",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "small",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "stacked",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "stickyHeader",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "striped",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tableClass",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]",
+                  "object"
+                ]
+              }
+            },
+            {
+              "name": "tableVariant",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
           "name": "BTabs",
           "source": {
             "symbol": "BTabs"
@@ -12587,7 +12724,7 @@
               }
             },
             {
-              "name": "bottom",
+              "name": "card",
               "value": {
                 "kind": "expression",
                 "type": "boolean"
@@ -12596,7 +12733,7 @@
               "default": "false"
             },
             {
-              "name": "card",
+              "name": "cardHeader",
               "value": {
                 "kind": "expression",
                 "type": "boolean"
@@ -12753,6 +12890,79 @@
           "events": [
             {
               "name": "input"
+            }
+          ]
+        },
+        {
+          "name": "BTbody",
+          "source": {
+            "symbol": "BTbody"
+          },
+          "attributes": [
+            {
+              "name": "tbodyTransitionHandlers",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              }
+            },
+            {
+              "name": "tbodyTransitionProps",
+              "value": {
+                "kind": "expression",
+                "type": "object"
+              }
+            }
+          ]
+        },
+        {
+          "name": "BTd",
+          "source": {
+            "symbol": "BTd"
+          },
+          "attributes": [
+            {
+              "name": "colspan",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
+            },
+            {
+              "name": "rowspan",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
+            },
+            {
+              "name": "stackedHeading",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "stickyColumn",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "variant",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             }
           ]
         },
@@ -12924,10 +13134,7 @@
               "name": "state",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "boolean"
-                ]
+                "type": "boolean"
               },
               "type": "boolean"
             },
@@ -12977,6 +13184,87 @@
           "vue-model": {
             "event": "update"
           }
+        },
+        {
+          "name": "BTfoot",
+          "source": {
+            "symbol": "BTfoot"
+          },
+          "attributes": [
+            {
+              "name": "footVariant",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
+          "name": "BTh",
+          "source": {
+            "symbol": "BTh"
+          },
+          "attributes": [
+            {
+              "name": "colspan",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
+            },
+            {
+              "name": "rowspan",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
+            },
+            {
+              "name": "stackedHeading",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "stickyColumn",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "variant",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
+          "name": "BThead",
+          "source": {
+            "symbol": "BThead"
+          },
+          "attributes": [
+            {
+              "name": "headVariant",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            }
+          ]
         },
         {
           "name": "BToast",
@@ -13215,6 +13503,7 @@
                 "kind": "expression",
                 "type": [
                   "string",
+                  "object",
                   "object"
                 ]
               },
@@ -13232,7 +13521,11 @@
               "name": "container",
               "value": {
                 "kind": "expression",
-                "type": "string"
+                "type": [
+                  "string",
+                  "object",
+                  "object"
+                ]
               }
             },
             {
@@ -13252,7 +13545,7 @@
                   "string"
                 ]
               },
-              "default": "0"
+              "default": "50"
             },
             {
               "name": "disabled",
@@ -13273,6 +13566,13 @@
                 ]
               },
               "default": "\"flip\""
+            },
+            {
+              "name": "id",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "noFade",
@@ -13318,18 +13618,18 @@
                 "type": [
                   "string",
                   "object",
-                  "object",
-                  "(...args: any[]) => any"
+                  "(...args: any[]) => any",
+                  "object"
                 ]
-              }
+              },
+              "required": true
             },
             {
               "name": "title",
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"\""
+              }
             },
             {
               "name": "triggers",
@@ -13374,6 +13674,26 @@
             },
             {
               "name": "update:show"
+            }
+          ],
+          "vue-scoped-slots": [
+            {
+              "name": "default"
+            }
+          ]
+        },
+        {
+          "name": "BTr",
+          "source": {
+            "symbol": "BTr"
+          },
+          "attributes": [
+            {
+              "name": "variant",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             }
           ]
         }
