@@ -2,7 +2,7 @@
   "$schema": "../../schema/web-types.json",
   "framework": "vue",
   "name": "vuetify",
-  "version": "2.0.0-beta.3",
+  "version": "2.0.1",
   "contributions": {
     "html": {
       "types-syntax": "typescript",
@@ -580,7 +580,7 @@
                 "kind": "expression",
                 "type": "string"
               },
-              "default": "\"div\""
+              "default": "\"header\""
             },
             {
               "name": "tile",
@@ -703,14 +703,6 @@
               "default": "\"\""
             },
             {
-              "name": "browserAutocomplete",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              },
-              "default": "\"off\""
-            },
-            {
               "name": "cacheItems",
               "value": {
                 "kind": "expression",
@@ -747,8 +739,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"primary\""
+              }
             },
             {
               "name": "counter",
@@ -788,6 +779,14 @@
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "eager",
               "value": {
                 "kind": "expression",
                 "type": "boolean"
@@ -904,16 +903,12 @@
               }
             },
             {
-              "name": "itemAvatar",
+              "name": "itemColor",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "any[]",
-                  "(...args: any[]) => any"
-                ]
+                "type": "string"
               },
-              "default": "\"avatar\""
+              "default": "\"primary\""
             },
             {
               "name": "itemDisabled",
@@ -1007,7 +1002,7 @@
                   "object"
                 ]
               },
-              "default": "{\"eager\":true,\"closeOnClick\":false,\"closeOnContentClick\":false,\"disableKeys\":true,\"openOnClick\":false,\"maxHeight\":300,\"offsetY\":true,\"offsetOverflow\":true,\"transition\":false}"
+              "default": "{\"closeOnClick\":false,\"closeOnContentClick\":false,\"disableKeys\":true,\"openOnClick\":false,\"maxHeight\":300,\"offsetY\":true,\"offsetOverflow\":true,\"transition\":false}"
             },
             {
               "name": "messages",
@@ -1266,7 +1261,7 @@
               "name": "update:error"
             },
             {
-              "name": "update:searchInput"
+              "name": "update:search-input"
             }
           ],
           "slots": [
@@ -1305,6 +1300,9 @@
             {
               "name": "selection",
               "properties": [
+                {
+                  "name": "attrs"
+                },
                 {
                   "name": "parent"
                 },
@@ -1932,7 +1930,7 @@
               "name": "input"
             },
             {
-              "name": "update:inputValue"
+              "name": "update:input-value"
             }
           ],
           "slots": [
@@ -2104,6 +2102,15 @@
               "type": "boolean"
             },
             {
+              "name": "retainFocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "true"
+            },
+            {
               "name": "returnValue"
             },
             {
@@ -2148,7 +2155,7 @@
               "name": "keydown"
             },
             {
-              "name": "update:returnValue"
+              "name": "update:return-value"
             }
           ],
           "slots": [
@@ -2645,16 +2652,6 @@
               "type": "boolean"
             },
             {
-              "name": "size",
-              "value": {
-                "kind": "expression",
-                "type": [
-                  "number",
-                  "string"
-                ]
-              }
-            },
-            {
               "name": "small",
               "value": {
                 "kind": "expression",
@@ -2897,6 +2894,115 @@
                 "kind": "expression",
                 "type": "string"
               }
+            },
+            {
+              "name": "eventColor",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "(...args: any[]) => any"
+                ]
+              },
+              "default": "\"secondary\""
+            },
+            {
+              "name": "eventEnd",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"end\""
+            },
+            {
+              "name": "eventHeight",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
+              "default": "20"
+            },
+            {
+              "name": "eventMarginBottom",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
+              "default": "1"
+            },
+            {
+              "name": "eventMore",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "eventMoreText",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"$vuetify.calendar.moreEvents\""
+            },
+            {
+              "name": "eventName",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "(...args: any[]) => any"
+                ]
+              },
+              "default": "\"name\""
+            },
+            {
+              "name": "eventOverlapThreshold",
+              "value": {
+                "kind": "expression",
+                "type": "number"
+              },
+              "default": "60"
+            },
+            {
+              "name": "eventRipple",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "object"
+                ]
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "eventStart",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"start\""
+            },
+            {
+              "name": "eventTextColor",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "(...args: any[]) => any"
+                ]
+              },
+              "default": "\"white\""
+            },
+            {
+              "name": "events",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
+              "default": "[]"
             },
             {
               "name": "firstInterval",
@@ -4377,8 +4483,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"accent\""
+              }
             },
             {
               "name": "dark",
@@ -4641,6 +4746,9 @@
             },
             {
               "name": "update:error"
+            },
+            {
+              "name": "update:indeterminate"
             }
           ],
           "slots": [
@@ -4669,6 +4777,15 @@
             "symbol": "VChip"
           },
           "attributes": [
+            {
+              "name": "active",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "true"
+            },
             {
               "name": "activeClass",
               "value": {
@@ -4851,16 +4968,6 @@
               "type": "boolean"
             },
             {
-              "name": "size",
-              "value": {
-                "kind": "expression",
-                "type": [
-                  "number",
-                  "string"
-                ]
-              }
-            },
-            {
               "name": "small",
               "value": {
                 "kind": "expression",
@@ -4964,14 +5071,6 @@
               "type": "boolean"
             },
             {
-              "name": "choice",
-              "value": {
-                "kind": "expression",
-                "type": "boolean"
-              },
-              "type": "boolean"
-            },
-            {
               "name": "color",
               "value": {
                 "kind": "expression",
@@ -5048,14 +5147,6 @@
               "default": "\"$vuetify.icons.next\""
             },
             {
-              "name": "outlined",
-              "value": {
-                "kind": "expression",
-                "type": "boolean"
-              },
-              "type": "boolean"
-            },
-            {
               "name": "prevIcon",
               "value": {
                 "kind": "expression",
@@ -5105,6 +5196,195 @@
           "vue-model": {
             "event": "change"
           }
+        },
+        {
+          "name": "VCol",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VCol"
+          },
+          "attributes": [
+            {
+              "name": "alignSelf",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "cols",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string",
+                  "number"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "lg",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string",
+                  "number"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "md",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string",
+                  "number"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "offset",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            },
+            {
+              "name": "offsetLg",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            },
+            {
+              "name": "offsetMd",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            },
+            {
+              "name": "offsetSm",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            },
+            {
+              "name": "offsetXl",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            },
+            {
+              "name": "order",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            },
+            {
+              "name": "orderLg",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            },
+            {
+              "name": "orderMd",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            },
+            {
+              "name": "orderSm",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            },
+            {
+              "name": "orderXl",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "number"
+                ]
+              }
+            },
+            {
+              "name": "sm",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string",
+                  "number"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "tag",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"div\""
+            },
+            {
+              "name": "xl",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string",
+                  "number"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            }
+          ]
         },
         {
           "name": "VColorPicker",
@@ -5440,14 +5720,6 @@
               "default": "\"\""
             },
             {
-              "name": "browserAutocomplete",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              },
-              "default": "\"off\""
-            },
-            {
               "name": "cacheItems",
               "value": {
                 "kind": "expression",
@@ -5484,8 +5756,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"primary\""
+              }
             },
             {
               "name": "counter",
@@ -5533,6 +5804,14 @@
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "eager",
               "value": {
                 "kind": "expression",
                 "type": "boolean"
@@ -5649,16 +5928,12 @@
               }
             },
             {
-              "name": "itemAvatar",
+              "name": "itemColor",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "any[]",
-                  "(...args: any[]) => any"
-                ]
+                "type": "string"
               },
-              "default": "\"avatar\""
+              "default": "\"primary\""
             },
             {
               "name": "itemDisabled",
@@ -5752,7 +6027,7 @@
                   "object"
                 ]
               },
-              "default": "{\"eager\":true,\"closeOnClick\":false,\"closeOnContentClick\":false,\"disableKeys\":true,\"openOnClick\":false,\"maxHeight\":300,\"offsetY\":true,\"offsetOverflow\":true,\"transition\":false}"
+              "default": "{\"closeOnClick\":false,\"closeOnContentClick\":false,\"disableKeys\":true,\"openOnClick\":false,\"maxHeight\":300,\"offsetY\":true,\"offsetOverflow\":true,\"transition\":false}"
             },
             {
               "name": "messages",
@@ -6012,7 +6287,7 @@
               "name": "update:error"
             },
             {
-              "name": "update:searchInput"
+              "name": "update:search-input"
             }
           ],
           "slots": [
@@ -6052,6 +6327,9 @@
               "name": "selection",
               "properties": [
                 {
+                  "name": "attrs"
+                },
+                {
                   "name": "parent"
                 },
                 {
@@ -6083,6 +6361,15 @@
             "symbol": "VContainer"
           },
           "attributes": [
+            {
+              "name": "fluid",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "false"
+            },
             {
               "name": "id",
               "value": {
@@ -6831,7 +7118,8 @@
               "value": {
                 "kind": "expression",
                 "type": "(...args: any[]) => any"
-              }
+              },
+              "default": "false"
             },
             {
               "name": "customSort",
@@ -7181,14 +7469,6 @@
                 "type": "any[]"
               },
               "default": "[]"
-            },
-            {
-              "name": "virtualRows",
-              "value": {
-                "kind": "expression",
-                "type": "boolean"
-              },
-              "type": "boolean"
             }
           ],
           "events": [
@@ -7589,7 +7869,7 @@
               "name": "input"
             },
             {
-              "name": "update:pickerDate"
+              "name": "update:picker-date"
             }
           ],
           "slots": [
@@ -7778,7 +8058,7 @@
           ],
           "events": [
             {
-              "name": "tableDate"
+              "name": "update:table-date"
             }
           ]
         },
@@ -8031,7 +8311,7 @@
           ],
           "events": [
             {
-              "name": "tableDate"
+              "name": "update:table-date"
             }
           ]
         },
@@ -8328,6 +8608,15 @@
               "type": "boolean"
             },
             {
+              "name": "retainFocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "true"
+            },
+            {
               "name": "returnValue"
             },
             {
@@ -8376,7 +8665,7 @@
               "name": "keydown"
             },
             {
-              "name": "update:returnValue"
+              "name": "update:return-value"
             }
           ],
           "slots": [
@@ -8611,7 +8900,7 @@
               "name": "open"
             },
             {
-              "name": "update:returnValue"
+              "name": "update:return-value"
             }
           ],
           "slots": [
@@ -8986,6 +9275,503 @@
               "default": "\"top center 0\""
             }
           ]
+        },
+        {
+          "name": "VFileInput",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "VFileInput"
+          },
+          "attributes": [
+            {
+              "name": "appendIcon",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "appendOuterIcon",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "autofocus",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "backgroundColor",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"\""
+            },
+            {
+              "name": "chips",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "clearIcon",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"$vuetify.icons.clear\""
+            },
+            {
+              "name": "clearable",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "color",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "counter",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "number",
+                  "string"
+                ]
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "counterSizeString",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"$vuetify.fileInput.counterSize\""
+            },
+            {
+              "name": "counterString",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"$vuetify.fileInput.counter\""
+            },
+            {
+              "name": "dark",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "error",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "errorCount",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
+              "default": "1"
+            },
+            {
+              "name": "errorMessages",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]"
+                ]
+              },
+              "default": "[]"
+            },
+            {
+              "name": "filled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "flat",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "fullWidth",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "height",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              }
+            },
+            {
+              "name": "hideDetails",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "hint",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "id",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "label",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "light",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "loaderHeight",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
+              "default": "2"
+            },
+            {
+              "name": "loading",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "string"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "messages",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]"
+                ]
+              },
+              "default": "[]"
+            },
+            {
+              "name": "outlined",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "persistentHint",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "placeholder",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "prefix",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "prependIcon",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"$vuetify.icons.file\""
+            },
+            {
+              "name": "prependInnerIcon",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "readonly",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean",
+              "default": "true"
+            },
+            {
+              "name": "reverse",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "rounded",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "rules",
+              "value": {
+                "kind": "expression",
+                "type": "any[]"
+              },
+              "default": "[]"
+            },
+            {
+              "name": "shaped",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "showSize",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "boolean",
+                  "number"
+                ]
+              },
+              "type": "boolean",
+              "default": "false"
+            },
+            {
+              "name": "singleLine",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "smallChips",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "solo",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "soloInverted",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "success",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "successMessages",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "any[]"
+                ]
+              },
+              "default": "[]"
+            },
+            {
+              "name": "suffix",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "truncateLength",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
+              "default": "22"
+            },
+            {
+              "name": "type",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"file\""
+            },
+            {
+              "name": "validateOnBlur",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "value",
+              "default": "[]"
+            }
+          ],
+          "events": [
+            {
+              "name": "blur"
+            },
+            {
+              "name": "change"
+            },
+            {
+              "name": "click"
+            },
+            {
+              "name": "focus"
+            },
+            {
+              "name": "input"
+            },
+            {
+              "name": "keydown"
+            },
+            {
+              "name": "mousedown"
+            },
+            {
+              "name": "mouseup"
+            },
+            {
+              "name": "update:error"
+            }
+          ],
+          "slots": [
+            {
+              "name": "append"
+            },
+            {
+              "name": "append-outer"
+            },
+            {
+              "name": "default"
+            },
+            {
+              "name": "label"
+            },
+            {
+              "name": "prepend"
+            },
+            {
+              "name": "prepend-inner"
+            },
+            {
+              "name": "progress"
+            }
+          ],
+          "vue-scoped-slots": [
+            {
+              "name": "selection"
+            }
+          ],
+          "vue-model": {
+            "event": "change"
+          }
         },
         {
           "name": "VFlex",
@@ -10222,6 +11008,9 @@
           ],
           "events": [
             {
+              "name": "click"
+            },
+            {
               "name": "input"
             }
           ],
@@ -11064,7 +11853,7 @@
               "name": "input"
             },
             {
-              "name": "update:returnValue"
+              "name": "update:return-value"
             }
           ],
           "slots": [
@@ -11166,37 +11955,6 @@
                 "type": "any[]"
               },
               "default": "[]"
-            }
-          ]
-        },
-        {
-          "name": "VMobileRow",
-          "source": {
-            "module": "vuetify/lib",
-            "symbol": "VMobileRow"
-          },
-          "attributes": [
-            {
-              "name": "headers",
-              "value": {
-                "kind": "expression",
-                "type": "any[]"
-              }
-            },
-            {
-              "name": "item",
-              "value": {
-                "kind": "expression",
-                "type": "object"
-              }
-            },
-            {
-              "name": "rtl",
-              "value": {
-                "kind": "expression",
-                "type": "boolean"
-              },
-              "type": "boolean"
             }
           ]
         },
@@ -11386,6 +12144,13 @@
               "type": "boolean"
             },
             {
+              "name": "tag",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
               "name": "temporary",
               "value": {
                 "kind": "expression",
@@ -11488,14 +12253,6 @@
               "default": "\"\""
             },
             {
-              "name": "browserAutocomplete",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              },
-              "default": "\"off\""
-            },
-            {
               "name": "cacheItems",
               "value": {
                 "kind": "expression",
@@ -11532,8 +12289,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"primary\""
+              }
             },
             {
               "name": "counter",
@@ -11573,6 +12329,14 @@
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "eager",
               "value": {
                 "kind": "expression",
                 "type": "boolean"
@@ -11697,16 +12461,12 @@
               }
             },
             {
-              "name": "itemAvatar",
+              "name": "itemColor",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "any[]",
-                  "(...args: any[]) => any"
-                ]
+                "type": "string"
               },
-              "default": "\"avatar\""
+              "default": "\"primary\""
             },
             {
               "name": "itemDisabled",
@@ -11800,7 +12560,7 @@
                   "object"
                 ]
               },
-              "default": "{\"eager\":true,\"closeOnClick\":false,\"closeOnContentClick\":false,\"disableKeys\":true,\"openOnClick\":false,\"maxHeight\":300,\"offsetY\":true,\"offsetOverflow\":true,\"transition\":false}"
+              "default": "{\"closeOnClick\":false,\"closeOnContentClick\":false,\"disableKeys\":true,\"openOnClick\":false,\"maxHeight\":300,\"offsetY\":true,\"offsetOverflow\":true,\"transition\":false}"
             },
             {
               "name": "messages",
@@ -12067,7 +12827,7 @@
               "name": "update:error"
             },
             {
-              "name": "update:searchInput"
+              "name": "update:search-input"
             }
           ],
           "slots": [
@@ -12106,6 +12866,9 @@
             {
               "name": "selection",
               "properties": [
+                {
+                  "name": "attrs"
+                },
                 {
                   "name": "parent"
                 },
@@ -12708,8 +13471,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"accent\""
+              }
             },
             {
               "name": "dark",
@@ -13143,8 +13905,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"primary\""
+              }
             },
             {
               "name": "dark",
@@ -13369,8 +14130,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"primary\""
+              }
             },
             {
               "name": "thumbLabel",
@@ -13430,8 +14190,14 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"primary lighten-3\""
+              }
+            },
+            {
+              "name": "trackFillColor",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "validateOnBlur",
@@ -13815,67 +14581,133 @@
           },
           "attributes": [
             {
-              "name": "headers",
+              "name": "align",
               "value": {
                 "kind": "expression",
-                "type": "any[]"
+                "type": "string"
               }
             },
             {
-              "name": "item",
+              "name": "alignContent",
               "value": {
                 "kind": "expression",
-                "type": "object"
+                "type": "string"
               }
             },
             {
-              "name": "rtl",
+              "name": "alignContentLg",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "alignContentMd",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "alignContentSm",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "alignContentXl",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "alignLg",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "alignMd",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "alignSm",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "alignXl",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "dense",
               "value": {
                 "kind": "expression",
                 "type": "boolean"
               },
               "type": "boolean"
-            }
-          ]
-        },
-        {
-          "name": "VRowGroup",
-          "source": {
-            "module": "vuetify/lib",
-            "symbol": "VRowGroup"
-          },
-          "attributes": [
+            },
             {
-              "name": "contentClass",
+              "name": "justify",
               "value": {
                 "kind": "expression",
                 "type": "string"
               }
             },
             {
-              "name": "headerClass",
+              "name": "justifyLg",
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"v-row-group__header\""
+              }
             },
             {
-              "name": "summaryClass",
+              "name": "justifyMd",
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"v-row-group__summary\""
+              }
             },
             {
-              "name": "value",
+              "name": "justifySm",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "justifyXl",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "noGutters",
               "value": {
                 "kind": "expression",
                 "type": "boolean"
               },
-              "type": "boolean",
-              "default": "true"
+              "type": "boolean"
+            },
+            {
+              "name": "tag",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"div\""
             }
           ]
         },
@@ -14177,14 +15009,6 @@
               "default": "\"\""
             },
             {
-              "name": "browserAutocomplete",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              },
-              "default": "\"on\""
-            },
-            {
               "name": "cacheItems",
               "value": {
                 "kind": "expression",
@@ -14221,8 +15045,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"primary\""
+              }
             },
             {
               "name": "counter",
@@ -14262,6 +15085,14 @@
             },
             {
               "name": "disabled",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "eager",
               "value": {
                 "kind": "expression",
                 "type": "boolean"
@@ -14363,16 +15194,12 @@
               }
             },
             {
-              "name": "itemAvatar",
+              "name": "itemColor",
               "value": {
                 "kind": "expression",
-                "type": [
-                  "string",
-                  "any[]",
-                  "(...args: any[]) => any"
-                ]
+                "type": "string"
               },
-              "default": "\"avatar\""
+              "default": "\"primary\""
             },
             {
               "name": "itemDisabled",
@@ -14466,7 +15293,7 @@
                   "object"
                 ]
               },
-              "default": "{\"eager\":true,\"closeOnClick\":false,\"closeOnContentClick\":false,\"disableKeys\":true,\"openOnClick\":false,\"maxHeight\":300}"
+              "default": "{\"closeOnClick\":false,\"closeOnContentClick\":false,\"disableKeys\":true,\"openOnClick\":false,\"maxHeight\":300}"
             },
             {
               "name": "messages",
@@ -14746,6 +15573,9 @@
             {
               "name": "selection",
               "properties": [
+                {
+                  "name": "attrs"
+                },
                 {
                   "name": "parent"
                 },
@@ -15459,8 +16289,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"primary\""
+              }
             },
             {
               "name": "dark",
@@ -15685,8 +16514,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"primary\""
+              }
             },
             {
               "name": "thumbLabel",
@@ -15746,8 +16574,14 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"primary lighten-3\""
+              }
+            },
+            {
+              "name": "trackFillColor",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "validateOnBlur",
@@ -15845,14 +16679,6 @@
           "attributes": [
             {
               "name": "absolute",
-              "value": {
-                "kind": "expression",
-                "type": "boolean"
-              },
-              "type": "boolean"
-            },
-            {
-              "name": "autoHeight",
               "value": {
                 "kind": "expression",
                 "type": "boolean"
@@ -16497,8 +17323,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"accent\""
+              }
             },
             {
               "name": "dark",
@@ -16847,14 +17672,6 @@
               "type": "boolean"
             },
             {
-              "name": "status",
-              "value": {
-                "kind": "expression",
-                "type": "boolean"
-              },
-              "type": "boolean"
-            },
-            {
               "name": "window",
               "value": {
                 "kind": "expression",
@@ -17039,6 +17856,13 @@
                 "type": "boolean"
               },
               "type": "boolean"
+            },
+            {
+              "name": "id",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
             },
             {
               "name": "reverseTransition",
@@ -17356,6 +18180,17 @@
               }
             },
             {
+              "name": "sliderSize",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "string"
+                ]
+              },
+              "default": "2"
+            },
+            {
               "name": "value"
             },
             {
@@ -17590,13 +18425,6 @@
               "default": "\"\""
             },
             {
-              "name": "browserAutocomplete",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              }
-            },
-            {
               "name": "clearIcon",
               "value": {
                 "kind": "expression",
@@ -17617,8 +18445,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"primary\""
+              }
             },
             {
               "name": "counter",
@@ -18036,13 +18863,6 @@
               "default": "\"\""
             },
             {
-              "name": "browserAutocomplete",
-              "value": {
-                "kind": "expression",
-                "type": "string"
-              }
-            },
-            {
               "name": "clearIcon",
               "value": {
                 "kind": "expression",
@@ -18063,8 +18883,7 @@
               "value": {
                 "kind": "expression",
                 "type": "string"
-              },
-              "default": "\"primary\""
+              }
             },
             {
               "name": "counter",
@@ -19230,7 +20049,7 @@
                 "kind": "expression",
                 "type": "string"
               },
-              "default": "\"div\""
+              "default": "\"header\""
             },
             {
               "name": "tile",
@@ -19629,6 +20448,14 @@
               "default": "\"v-treeview-node--active\""
             },
             {
+              "name": "color",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"primary\""
+            },
+            {
               "name": "dark",
               "value": {
                 "kind": "expression",
@@ -19682,6 +20509,14 @@
                 "type": "string"
               },
               "default": "\"children\""
+            },
+            {
+              "name": "itemDisabled",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"disabled\""
             },
             {
               "name": "itemKey",
@@ -19788,6 +20623,14 @@
               "default": "false"
             },
             {
+              "name": "rounded",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
               "name": "search",
               "value": {
                 "kind": "expression",
@@ -19809,6 +20652,22 @@
                 "type": "string"
               },
               "default": "\"accent\""
+            },
+            {
+              "name": "selectionType",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"leaf\""
+            },
+            {
+              "name": "shaped",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
             },
             {
               "name": "transition",
@@ -19874,6 +20733,14 @@
               "default": "\"v-treeview-node--active\""
             },
             {
+              "name": "color",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"primary\""
+            },
+            {
               "name": "expandIcon",
               "value": {
                 "kind": "expression",
@@ -19903,6 +20770,14 @@
                 "type": "string"
               },
               "default": "\"children\""
+            },
+            {
+              "name": "itemDisabled",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              },
+              "default": "\"disabled\""
             },
             {
               "name": "itemKey",
@@ -19960,6 +20835,14 @@
               "type": "boolean"
             },
             {
+              "name": "rounded",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
               "name": "selectable",
               "value": {
                 "kind": "expression",
@@ -19974,6 +20857,14 @@
                 "type": "string"
               },
               "default": "\"accent\""
+            },
+            {
+              "name": "shaped",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
             },
             {
               "name": "transition",
@@ -20322,6 +21213,13 @@
         }
       ],
       "attributes": [
+        {
+          "name": "v-click-outside",
+          "source": {
+            "module": "vuetify/lib",
+            "symbol": "ClickOutside"
+          }
+        },
         {
           "name": "v-resize",
           "source": {
