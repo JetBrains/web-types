@@ -2,9 +2,9 @@
 
 # Web-types
 
-Welcome to web-types, the JSON standard to make web component libraries IDE friendly. 
+Welcome to web-types, the JSON standard to document web component libraries.
 
-Web-types is a framework agnostic standard to provide IDE with metadata information about contents 
+Web-types is a framework agnostic standard to provide IDEs and other tools with metadata information about contents 
 of a web components library. It also provides extensions for a framework specific content.
 
 # Distribution
