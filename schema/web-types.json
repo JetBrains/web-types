@@ -96,7 +96,7 @@
         "slots": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/named-entity"
+            "$ref": "#/definitions/html-tag-slot"
           }
         },
         "vue-scoped-slots": {
@@ -169,10 +169,13 @@
         "source": {
           "$ref": "#/definitions/source"
         },
+        "vue-argument": {
+          "$ref": "#/definitions/html-attribute-vue-argument"
+        },
         "vue-modifiers": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/named-entity"
+            "$ref": "#/definitions/html-attribute-vue-modifier"
           }
         }
       },
@@ -263,11 +266,35 @@
       ],
       "additionalProperties": false
     },
+    "html-tag-slot": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "$ref": "#/definitions/name"
+        },
+        "pattern": {
+          "$ref": "#/definitions/pattern"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "doc-url": {
+          "$ref": "#/definitions/doc-url"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "additionalProperties": false
+    },
     "html-tag-vue-scoped-slot": {
       "type": "object",
       "properties": {
         "name": {
           "$ref": "#/definitions/name"
+        },
+        "pattern": {
+          "$ref": "#/definitions/pattern"
         },
         "description": {
           "$ref": "#/definitions/description"
@@ -303,7 +330,7 @@
       "additionalProperties": false
     },
     "html-attribute-value": {
-      "oneOf": [
+      "anyOf": [
         {
           "type": "object",
           "properties": {
@@ -312,6 +339,9 @@
               "const": "number"
             }
           },
+          "required": [
+            "kind"
+          ],
           "additionalProperties": false
         },
         {
@@ -322,6 +352,9 @@
               "const": "boolean"
             }
           },
+          "required": [
+            "kind"
+          ],
           "additionalProperties": false
         },
         {
@@ -341,6 +374,7 @@
             }
           },
           "required": [
+            "kind",
             "items"
           ],
           "additionalProperties": false
@@ -357,17 +391,42 @@
             }
           },
           "required": [
+            "kind",
             "type"
           ],
           "additionalProperties": false
         }
       ]
     },
-    "named-entity": {
+    "html-attribute-default": {
+      "type": "string"
+    },
+    "html-attribute-required": {
+      "type": "boolean"
+    },
+    "html-attribute-vue-argument": {
+      "type": "object",
+      "properties": {
+        "pattern": {
+          "$ref": "#/definitions/pattern"
+        },
+        "description": {
+          "$ref": "#/definitions/description"
+        },
+        "doc-url": {
+          "$ref": "#/definitions/doc-url"
+        }
+      },
+      "additionalProperties": false
+    },
+    "html-attribute-vue-modifier": {
       "type": "object",
       "properties": {
         "name": {
           "$ref": "#/definitions/name"
+        },
+        "pattern": {
+          "$ref": "#/definitions/pattern"
         },
         "description": {
           "$ref": "#/definitions/description"
@@ -498,11 +557,25 @@
       "description": "Link to online documentation.",
       "type": "string"
     },
-    "html-attribute-default": {
-      "type": "string"
-    },
-    "html-attribute-required": {
-      "type": "boolean"
+    "pattern": {
+      "description": "A RegEx pattern to match whole content. Syntax should work with at least ECMA, Java and Python implementations.",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "regex": {
+              "type": "string"
+            },
+            "case-sensitive": {
+              "type": "boolean",
+              "default": true
+            }
+          }
+        }
+      ]
     }
   }
 }
