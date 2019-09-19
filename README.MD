@@ -27,7 +27,7 @@ Currently following frameworks and libraries are supported in such a way:
 Published JSONs are checked into repository under `packages` folder. In case of web-types published to `@web-types` scope,  IDEs are supposed to download required JSONs without any changes to user project structure.
 
 Various IDEs perform optimizations when scanning `node_modules` directory, so to ensure that `web-types` for 
-your package are always available, make sure it's listed in `pacakges/registry.json`.
+your package are always available, make sure it's listed in `packages/registry.json`.
 
 # Schema
 
