@@ -85,14 +85,12 @@
             {
               "name": "cell({key})",
               "pattern": "cell\\([A-Za-z0-9_$]+\\)"
-            }
-          ],
-          "vue-scoped-slots": [
+            },
             {
               "name": "scoped-example",
               "description": "This slot allows you to access component's scope",
               "doc-url": "http://example.com/docs/components/ex-component#scoped-slot.scoped-example",
-              "properties": [
+              "vue-properties": [
                 {
                   "name": "color",
                   "type": [
@@ -118,7 +116,7 @@
                 "regex": "col-[a-z0-9]",
                 "case-sensitive": false
               },
-              "properties": [
+              "vue-properties": [
                 {
                   "name": "content",
                   "type": "string"

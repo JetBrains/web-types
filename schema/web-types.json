@@ -100,10 +100,9 @@
           }
         },
         "vue-scoped-slots": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/html-tag-vue-scoped-slot"
-          }
+          "description": "Deprecated. Use regular 'slot' property instead and specify 'vue-properties' to provide slot scope information.",
+          "type": "null",
+          "additionalProperties": false
         },
         "vue-model": {
           "$ref": "#/definitions/html-tag-vue-model"
@@ -280,29 +279,8 @@
         },
         "doc-url": {
           "$ref": "#/definitions/doc-url"
-        }
-      },
-      "required": [
-        "name"
-      ],
-      "additionalProperties": false
-    },
-    "html-tag-vue-scoped-slot": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "$ref": "#/definitions/name"
         },
-        "pattern": {
-          "$ref": "#/definitions/pattern"
-        },
-        "description": {
-          "$ref": "#/definitions/description"
-        },
-        "doc-url": {
-          "$ref": "#/definitions/doc-url"
-        },
-        "properties": {
+        "vue-properties": {
           "description": "Specify properties of the slot scope",
           "type": "array",
           "items": {
