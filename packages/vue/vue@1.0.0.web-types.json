@@ -1,12 +1,59 @@
 {
-  "$schema": "../../schema/web-types.schema.json",
+  "$schema": "../../schema/web-types.json",
   "framework": "vue",
   "name": "vue",
   "version": "1.0.0",
   "contributions": {
     "html": {
       "types-syntax": "typescript",
-      "tags": [],
+      "tags": [
+        {
+          "name": "Component",
+          "doc-url": "https://v1.vuejs.org/api/#component",
+          "description": "Alternative syntax for invoking components. Primarily used for dynamic components with the `is` attribute.",
+          "attributes": [
+            {
+              "name": "is"
+            },
+            {
+              "name": "keep-alive",
+              "value": {
+                "kind": "expression",
+                "type": "boolean"
+              },
+              "type": "boolean"
+            },
+            {
+              "name": "transition-mode"
+            }
+          ]
+        },
+        {
+          "name": "Slot",
+          "doc-url": "https://v1.vuejs.org/api/#slot",
+          "description": "`<slot>` elements serve as content distribution outlets in component templates. The slot element itself will be replaced.\nA slot with the `name` attribute is called a named slot. A named slot will distribute content with a `slot` attribute that matches its name.",
+          "attributes": [
+            {
+              "name": "name",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            }
+          ]
+        },
+        {
+          "name": "Partial",
+          "doc-url": "https://v1.vuejs.org/api/#partial",
+          "description": "`<partial>` elements serve as outlets for registered template partials. Partial contents are also compiled by Vue when inserted. The `<partial>` element itself will be replaced. It requires a `name` attribute which will be used to resolve the partial’s content.",
+          "attributes": [
+            {
+              "name": "name",
+              "required": true
+            }
+          ]
+        }
+      ],
       "attributes": [
         {
           "name": "v-bind"
@@ -16,26 +63,41 @@
         },
         {
           "name": "v-el",
-          "source-file": "./node_modules/vue/src/directives/public/el.js"
+          "source": {
+            "file": "src/directives/public/el.js",
+            "offset": 0
+          }
         },
         {
           "name": "v-for",
-          "source-file": "./node_modules/vue/src/directives/public/for.js"
+          "source": {
+            "file": "src/directives/public/for.js",
+            "offset": 0
+          }
         },
         {
           "name": "v-html"
         },
         {
           "name": "v-if",
-          "source-file": "./node_modules/vue/src/directives/public/if.js"
+          "source": {
+            "file": "src/directives/public/if.js",
+            "offset": 0
+          }
         },
         {
           "name": "v-model",
-          "source-file": "./node_modules/vue/src/directives/public/model/index.js"
+          "source": {
+            "file": "src/directives/public/model/index.js",
+            "offset": 0
+          }
         },
         {
           "name": "v-on",
-          "source-file": "./node_modules/vue/src/directives/public/on.js"
+          "source": {
+            "file": "src/directives/public/on.js",
+            "offset": 0
+          }
         },
         {
           "name": "v-ref"
