@@ -10,7 +10,15 @@ of a web components library. It also provides extensions for a framework specifi
 # Distribution
 
 Library providers are welcome to include detailed web-types JSONs and link them through `web-types`
-property in `package.json`. Currently following libraries are providing or working on providing this feature:
+property in `package.json`. E.g.:
+```
+{
+  ...
+  "web-types": "./web-types.json"
+  ...
+}
+```
+Currently following libraries are providing or working on providing this feature:
  * Vue.js
    * vuetify (https://github.com/vuetifyjs/vuetify/pull/7906)
    * quasar (https://github.com/quasarframework/quasar/pull/4749)
