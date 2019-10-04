@@ -220,6 +220,9 @@
         "doc-url": {
           "$ref": "#/definitions/doc-url"
         },
+        "source": {
+          "$ref": "#/definitions/source"
+        },
         "accepts": {
           "description": "Type of expression on the left hand-side of the pipe of operator",
           "$ref": "#/definitions/type"

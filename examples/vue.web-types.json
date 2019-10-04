@@ -180,6 +180,10 @@
           "name": "capitalize",
           "description": "Capitalize",
           "doc-url": "https://www.example.com/docs/filters/capitalize",
+          "source": {
+            "file": "./src/directives/example.js",
+            "offset": 213
+          },
           "accepts": "string",
           "returns": "string",
           "arguments": [
