@@ -2,7 +2,7 @@
   "$schema": "../../schema/web-types.json",
   "framework": "vue",
   "name": "vue",
-  "version": "2.0.0",
+  "version": "2.3.0",
   "contributions": {
     "html": {
       "types-syntax": "typescript",
@@ -85,6 +85,17 @@
               }
             },
             {
+              "name": "duration",
+              "description": "Specifies the duration of transition. By default, Vue waits for the first `transitionend` or `animationend` event on the root transition element.",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "{ enter: number, leave: number }"
+                ]
+              }
+            },
+            {
               "name": "enterClass",
               "value": {
                 "kind": "expression",
@@ -100,6 +111,27 @@
             },
             {
               "name": "appearClass",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "enterToClass",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "leaveToClass",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "appearToClass",
               "value": {
                 "kind": "expression",
                 "type": "string"
@@ -226,6 +258,17 @@
               }
             },
             {
+              "name": "duration",
+              "description": "Specifies the duration of transition. By default, Vue waits for the first `transitionend` or `animationend` event on the root transition element.",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "number",
+                  "{ enter: number, leave: number }"
+                ]
+              }
+            },
+            {
               "name": "enterClass",
               "value": {
                 "kind": "expression",
@@ -241,6 +284,27 @@
             },
             {
               "name": "appearClass",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "enterToClass",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "leaveToClass",
+              "value": {
+                "kind": "expression",
+                "type": "string"
+              }
+            },
+            {
+              "name": "appearToClass",
               "value": {
                 "kind": "expression",
                 "type": "string"
@@ -315,7 +379,33 @@
         {
           "name": "KeepAlive",
           "doc-url": "https://vuejs.org/v2/api/#keep-alive",
-          "description": "When wrapped around a dynamic component, `<keep-alive>` caches the inactive component instances without destroying them. Similar to `<transition>`, `<keep-alive>` is an abstract component: it doesn’t render a DOM element itself, and doesn’t show up in the component parent chain."
+          "description": "When wrapped around a dynamic component, `<keep-alive>` caches the inactive component instances without destroying them. Similar to `<transition>`, `<keep-alive>` is an abstract component: it doesn’t render a DOM element itself, and doesn’t show up in the component parent chain.",
+          "attributes": [
+            {
+              "name": "include",
+              "description": "Only components with matching names will be cached.",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "RegExp",
+                  "(string|RegExp)[]"
+                ]
+              }
+            },
+            {
+              "name": "exclude",
+              "description": "Any component with a matching name will not be cached.",
+              "value": {
+                "kind": "expression",
+                "type": [
+                  "string",
+                  "RegExp",
+                  "(string|RegExp)[]"
+                ]
+              }
+            }
+          ]
         },
         {
           "name": "Slot",
@@ -379,6 +469,15 @@
           }
         },
         {
+          "name": "v-else-if",
+          "description": "Denote the “else if block” for `v-if`. Can be chained.",
+          "doc-url": "https://vuejs.org/v2/api/#v-else-if",
+          "value": {
+            "kind": "expression",
+            "type": "any"
+          }
+        },
+        {
           "name": "v-for",
           "description": "Render the element or template block multiple times based on the source data. The directive’s value must use the special syntax `alias in expression` to provide an alias for the current element being iterated on. Alternatively, you can also specify an alias for the index (or the key if used on an Object). The default behavior of `v-for` will try to patch the elements in-place without moving them. To force it to reorder elements, you need to provide an ordering hint with the `key` special attribute.",
           "doc-url": "https://vuejs.org/v2/api/#v-for",
@@ -439,6 +538,22 @@
             {
               "name": "once",
               "description": "Trigger handler at most once."
+            },
+            {
+              "name": "left",
+              "description": "Only trigger handler for left button mouse events."
+            },
+            {
+              "name": "right",
+              "description": "Only trigger handler for right button mouse events."
+            },
+            {
+              "name": "middle",
+              "description": "Only trigger handler for middle button mouse events."
+            },
+            {
+              "name": "passive",
+              "description": "attaches a DOM event with `{ passive: true }`."
             }
           ]
         },
@@ -461,6 +576,14 @@
             {
               "name": "prop",
               "description": "Bind as a DOM property instead of an attribute. If the tag is a component then `.prop` will set the property on the component’s `$el`"
+            },
+            {
+              "name": "camel",
+              "description": "Transform the kebab-case attribute name into camelCase."
+            },
+            {
+              "name": "sync",
+              "description": "A syntax sugar that expands into a `v-on` handler for updating the bound value"
             }
           ]
         },
