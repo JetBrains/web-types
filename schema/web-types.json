@@ -410,6 +410,7 @@
     },
     "html-attribute-vue-argument": {
       "type": "object",
+      "description": "Provide information about directive argument",
       "properties": {
         "pattern": {
           "$ref": "#/definitions/pattern"
@@ -419,6 +420,11 @@
         },
         "doc-url": {
           "$ref": "#/definitions/doc-url"
+        },
+        "required": {
+          "description": "Whether directive requires an argument",
+          "type": "boolean",
+          "default": false
         }
       },
       "additionalProperties": false
