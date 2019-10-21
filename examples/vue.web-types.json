@@ -148,7 +148,8 @@
           },
           "value": {
             "kind": "expression",
-            "type": "string"
+            "type": "string",
+            "required": true
           },
           "vue-argument": {
             "pattern": "[0-9]{3}-[0-9]{3}-[0-9]{3}",

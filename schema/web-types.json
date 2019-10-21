@@ -341,6 +341,10 @@
             "kind": {
               "type": "string",
               "const": "number"
+            },
+            "required": {
+              "type": "boolean",
+              "default": false
             }
           },
           "required": [
@@ -354,6 +358,10 @@
             "kind": {
               "type": "string",
               "const": "boolean"
+            },
+            "required": {
+              "type": "boolean",
+              "default": false
             }
           },
           "required": [
@@ -375,6 +383,10 @@
                   "type": "string"
                 }
               ]
+            },
+            "required": {
+              "type": "boolean",
+              "default": false
             }
           },
           "required": [
@@ -392,6 +404,10 @@
             },
             "type": {
               "$ref": "#/definitions/type"
+            },
+            "required": {
+              "type": "boolean",
+              "default": false
             }
           },
           "required": [
