@@ -7,6 +7,8 @@ Welcome to web-types, the JSON standard to document web component libraries.
 Web-types is a framework agnostic standard to provide IDEs and other tools with metadata information about contents 
 of a web components library. It also provides extensions for a framework specific content.
 
+You can check out features supported by IDEs [here](https://github.com/JetBrains/web-types/wiki/Features-supported-by-IDEs).
+
 # Distribution
 
 Library providers are welcome to include detailed web-types JSONs and link them through `web-types`
