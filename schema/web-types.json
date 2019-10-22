@@ -340,6 +340,23 @@
           "properties": {
             "kind": {
               "type": "string",
+              "const": "string"
+            },
+            "required": {
+              "type": "boolean",
+              "default": false
+            }
+          },
+          "required": [
+            "kind"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "type": "string",
               "const": "number"
             },
             "required": {
