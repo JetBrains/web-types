@@ -20,9 +20,9 @@ property in `package.json`. E.g.:
   ...
 }
 ```
-Currently following libraries are providing or working on providing this feature:
+Currently following libraries are providing this feature:
  * Vue.js
-   * vuetify (https://github.com/vuetifyjs/vuetify/pull/7906)
+   * vuetify (https://github.com/vuetifyjs/vuetify/pull/9440)
    * quasar (https://github.com/quasarframework/quasar/pull/4749)
    * bootstrap-vue (https://github.com/bootstrap-vue/bootstrap-vue/pull/4110)
 
