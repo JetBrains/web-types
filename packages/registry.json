@@ -4,6 +4,10 @@
     "quasar",
     "quasar-framework",
     "vue",
-    "vuetify"
+    "vue-client-only",
+    "vue-no-ssr",
+    "vue-router",
+    "vuetify",
+    "@nuxt/vue-app"
   ]
 }

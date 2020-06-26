@@ -1,0 +1,31 @@
+{
+  "$schema": "../../schema/web-types.json",
+  "name": "vue-client-only",
+  "version": "2.0.0",
+  "framework": "vue",
+  "contributions": {
+    "html": {
+      "types-syntax": "typescript",
+      "description-markup": "markdown",
+      "tags": [
+        {
+          "name": "client-only",
+          "description": "This component is used to purposely render a component only on client-side. To import a component only on the client, register the component in a client-side only plugin.",
+          "doc-url": "https://github.com/egoist/vue-client-only/blob/master/README.md",
+          "attributes": [
+            {
+              "name": "placeholder",
+              "description": "Use a text as placeholder until `<client-only />` is mounted on client-side."
+            }
+          ],
+          "slots": [
+            {
+              "name": "placeholder",
+              "description": "Use a slot as placeholder until `<client-only />` is mounted on client-side."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
