@@ -25,6 +25,7 @@ Currently following libraries are providing this feature:
    * vuetify (https://github.com/vuetifyjs/vuetify/pull/9440)
    * quasar (https://github.com/quasarframework/quasar/pull/4749)
    * bootstrap-vue (https://github.com/bootstrap-vue/bootstrap-vue/pull/4110)
+   * nuxt.js (https://github.com/nuxt/nuxt.js/pull/7611)
 
 For the most popular libraries basic information is published under `@web-types` scope on NPM. 
 Currently following frameworks and libraries are supported in such a way:
@@ -32,7 +33,8 @@ Currently following frameworks and libraries are supported in such a way:
     * bootstrap-vue 
     * quasar
     * quasar-framework
-    * vuetify 
+    * vuetify
+    * nuxt.js
 
 Published JSONs are checked into repository under `packages` folder. In case of web-types published to `@web-types` scope,  IDEs are supposed to download required JSONs without any changes to user project structure.
 
