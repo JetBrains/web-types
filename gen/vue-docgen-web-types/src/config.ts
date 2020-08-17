@@ -1,30 +1,11 @@
 import * as path from "path";
 import * as fs from "fs";
-import {DocGenOptions} from "vue-docgen-api";
-import {Html} from "../types/web-types";
-
-export interface WebTypesDocgenConfig {
-    cwd: string,
-    watch: boolean,
-    componentsRoot: string,
-    components: string,
-    outFile: string,
-    /**
-     * Allows you to pass [vue-docgen-api](https://vue-styleguidist.github.io/docs/Docgen.html) some config.
-     * Most notably, you can specify whether your components contain JSX code and the alias configured in your webpack.
-     */
-    apiOptions?: DocGenOptions,
-
-    packageName: string,
-    packageVersion: string,
-    descriptionMarkup?: Html['description-markup'],
-    typesSyntax?: Html['types-syntax'],
-}
+import {WebTypesBuilderConfig} from "../types/config";
 
 export function extractConfig(cwd: string,
                               watch: boolean = false,
                               configFileFromCmd?: string,
-                              pathArray: string[] = []): WebTypesDocgenConfig {
+                              pathArray: string[] = []): WebTypesBuilderConfig {
     const configFilePath = configFileFromCmd
         ? path.resolve(cwd, configFileFromCmd)
         : path.join(cwd, 'web-types.config.js')
@@ -35,7 +16,7 @@ export function extractConfig(cwd: string,
     return {
         cwd,
         watch,
-        componentsRoot: path.dirname(configFilePath),
+        componentsRoot: configFilePath ? path.dirname(configFilePath) : cwd,
         components: componentsFromCmd || 'src/components/**/[a-zA-Z]*.vue',
         outFile: outFileFromCmd || packageJson["web-types"] || './web-types.json',
         packageName: packageJson["name"],

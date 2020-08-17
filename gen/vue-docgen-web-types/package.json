@@ -4,7 +4,7 @@
   "main": "lib/index.js",
   "license": "MIT",
   "author": "JetBrains",
-  "repository": "https://github.com/JetBrains/web-types/gen/vue-docgen-web-types",
+  "repository": "https://github.com/JetBrains/web-types/tree/master/gen/vue-docgen-web-types",
   "bin": {
     "vue-docgen-web-types": "lib/cli.js"
   },

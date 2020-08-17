@@ -1,4 +1,4 @@
-import {WebTypesDocgenConfig} from "./config";
+import {WebTypesBuilderConfig} from "../types/config";
 import * as path from "path";
 import glob from 'globby';
 import * as chokidar from 'chokidar';
@@ -14,7 +14,7 @@ interface FileContents {
     "vue-filters"?: HtmlVueFilter[];
 }
 
-export default async function build(config: WebTypesDocgenConfig) {
+export default async function build(config: WebTypesBuilderConfig) {
 
     config.componentsRoot = path.resolve(config.cwd, config.componentsRoot)
     config.outFile = path.resolve(config.cwd, config.outFile)
@@ -58,7 +58,7 @@ async function getSources(
 }
 
 async function rebuild(
-    config: WebTypesDocgenConfig,
+    config: WebTypesBuilderConfig,
     files: string[],
     cachedContent: { [filepath: string]: FileContents },
     watcher: FSWatcher,
@@ -95,7 +95,7 @@ async function rebuild(
     await writeDownWebTypesFile(config, Object.values(cachedContent), config.outFile)
 }
 
-async function writeDownWebTypesFile(config: WebTypesDocgenConfig, definitions: FileContents[], destFilePath: string) {
+async function writeDownWebTypesFile(config: WebTypesBuilderConfig, definitions: FileContents[], destFilePath: string) {
     const destFolder = path.dirname(destFilePath)
     await mkdirp(destFolder)
     let writeStream = fs.createWriteStream(destFilePath)
@@ -140,7 +140,7 @@ function sorter(a: {name: string}, b: {name: string}): number {
 
 async function extractInformation(
     absolutePath: string,
-    config: WebTypesDocgenConfig,
+    config: WebTypesBuilderConfig,
 ): Promise<FileContents> {
     const doc = await parse(absolutePath, config.apiOptions)
     return {
