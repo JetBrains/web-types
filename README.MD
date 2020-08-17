@@ -64,6 +64,9 @@ Currently, following component documentation formats are supported:
   you can pass a custom configuration file via `--config` parameter. 
   See [config.d.ts](https://github.com/JetBrains/web-types/blob/master/gen/vue-docgen-web-types/types/config.d.ts)
   for detailed information on supported configuration file options.
+  
+If you're not using JSDoc in your project, you can create your own builder for `web-types` JSON. For examples see
+vuetify, quasar or bootstrap-vue pull requests from above.
 
 ### From published NPM packages for inclusion in @web-types namespace
 To extract metadata information from NPM published library you can use `scripts/extract.sh` bash script. 
