@@ -138,6 +138,10 @@ function sorter(a: {name: string}, b: {name: string}): number {
     return a.name .localeCompare(b.name)
 }
 
+function ensureRelative(path: string) {
+    return path.startsWith("./") || path.startsWith("../") ? path : "./" + path;
+}
+
 async function extractInformation(
     absolutePath: string,
     config: WebTypesBuilderConfig,
@@ -167,7 +171,7 @@ async function extractInformation(
                     description: slot.description
                 })),
                 source: {
-                    module: path.relative(path.dirname(config.outFile), absolutePath),
+                    module: ensureRelative(path.relative(config.cwd, absolutePath)),
                     symbol: doc.exportName
                 }
             }
