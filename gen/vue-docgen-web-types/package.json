@@ -1,0 +1,30 @@
+{
+  "name": "vue-docgen-web-types",
+  "version": "0.1.1",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "author": "JetBrains",
+  "repository": "https://github.com/JetBrains/web-types/gen/vue-docgen-web-types",
+  "bin": {
+    "vue-docgen-web-types": "lib/cli.js"
+  },
+  "scripts": {
+    "build": "rm -R lib/* && tsc",
+    "web-types:gen": "json2ts -i ../../schema/web-types.json -o types/web-types.d.ts"
+  },
+  "dependencies": {
+    "chokidar": "^3.4.2",
+    "globby": "^11.0.1",
+    "vue-docgen-api": "^4.30.0"
+  },
+  "peerDependencies": {
+    "vue": ">=2.0.0"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.0",
+    "@types/mkdirp": "^1.0.1",
+    "@types/pug": "^2.0.4",
+    "json-schema-to-typescript": "^9.1.1",
+    "typescript": "~3.9.7"
+  }
+}
