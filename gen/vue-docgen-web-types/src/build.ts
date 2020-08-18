@@ -147,11 +147,24 @@ async function extractInformation(
     config: WebTypesBuilderConfig,
 ): Promise<FileContents> {
     const doc = await parse(absolutePath, config.apiOptions)
+    let description = doc.description?.trim() ?? ""
+
+    doc.docsBlocks?.forEach(block => {
+        if (description.length > 0) {
+            if (config.descriptionMarkup === "html") {
+                description += "<br/><br/>"
+            } else {
+                description += "\n\n"
+            }
+        }
+        description += block
+    })
+
     return {
         tags: [
             {
                 name: doc.displayName,
-                description: doc.description,
+                description,
                 attributes: doc.props?.map(prop => ({
                     name: prop.name,
                     required: prop.required,
