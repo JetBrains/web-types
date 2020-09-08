@@ -1,6 +1,6 @@
 {
   "name": "vue-docgen-web-types",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "lib/index.js",
   "license": "MIT",
   "readme": "README.MD",
@@ -16,6 +16,7 @@
   "dependencies": {
     "chokidar": "^3.4.2",
     "globby": "^11.0.1",
+    "lodash": "^4.17.20",
     "vue-docgen-api": "^4.30.0"
   },
   "keywords": [
@@ -30,6 +31,7 @@
   "devDependencies": {
     "@types/minimist": "^1.2.0",
     "@types/mkdirp": "^1.0.1",
+    "@types/lodash": "^4.14.161",
     "@types/pug": "^2.0.4",
     "json-schema-to-typescript": "^9.1.1",
     "typescript": "~3.9.7"

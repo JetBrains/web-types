@@ -7,6 +7,7 @@ import {parse} from 'vue-docgen-api'
 import {HtmlAttribute, HtmlTag, HtmlVueFilter, JSONSchemaForWebTypes} from "../types/web-types";
 import * as fs from "fs";
 import mkdirp from 'mkdirp'
+import _ from 'lodash'
 
 interface FileContents {
     tags?: HtmlTag[];
@@ -27,7 +28,8 @@ export default async function build(config: WebTypesBuilderConfig) {
 
     console.log("Building web-types to " + config.outFile)
 
-    const buildWebTypesBound = rebuild.bind(null, config, componentFiles, {}, watcher)
+    const cache: { [filepath: string]: FileContents } = {}
+    const buildWebTypesBound = rebuild.bind(null, config, componentFiles, cache, watcher)
     try {
         await buildWebTypesBound()
     } catch (e) {
@@ -36,7 +38,13 @@ export default async function build(config: WebTypesBuilderConfig) {
         return
     }
     if (config.watch) {
-        watcher.on('add', buildWebTypesBound).on('change', buildWebTypesBound)
+        watcher.on('add', buildWebTypesBound)
+            .on('change', buildWebTypesBound)
+            .on('unlink', async (filePath) => {
+                console.log("Rebuilding on file removal " + filePath)
+                delete cache[filePath]
+                await writeDownWebTypesFile(config, Object.values(cache), config.outFile)
+            })
     }
     else {
         await watcher.close()
@@ -107,9 +115,9 @@ async function writeDownWebTypesFile(config: WebTypesBuilderConfig, definitions:
             html: {
                 "description-markup": config.descriptionMarkup,
                 "types-syntax": config.typesSyntax,
-                tags: definitions?.map(d => d.tags)?.reduce(flatten)?.sort(sorter),
-                attributes: definitions?.map(d => d.attributes)?.reduce(flatten)?.sort(sorter),
-                "vue-filters": definitions?.map(d => d["vue-filters"])?.reduce(flatten)?.sort(sorter),
+                tags: _(definitions).flatMap(d => d.tags || []).orderBy("name","asc").value(),
+                attributes: _(definitions).flatMap(d => d.attributes || []).orderBy("name","asc").value(),
+                "vue-filters": _(definitions).flatMap(d => d["vue-filters"] || []).orderBy("name","asc").value(),
             }
         }
     }
@@ -123,19 +131,6 @@ async function writeDownWebTypesFile(config: WebTypesBuilderConfig, definitions:
 
     // close the stream
     writeStream.close()
-}
-
-function flatten<T>(prev: T[], cur: T[]) {
-    if (!cur) {
-        return prev
-    }
-    const res = (prev || [])
-    res.push(...cur)
-    return res
-}
-
-function sorter(a: {name: string}, b: {name: string}): number {
-    return a.name .localeCompare(b.name)
 }
 
 function ensureRelative(path: string) {
