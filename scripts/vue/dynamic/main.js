@@ -152,9 +152,15 @@ function copyProps(obj) {
             for (let key of Object.getOwnPropertyNames(prop)) {
                 let value = prop[key];
                 if (key === "default") {
-                    if (typeof value === "function") {
+                    let isFunction = typeof value === "function"
+                    if (isFunction) {
                         try {
-                            value = value();
+                            if(isFactoryFunctionForEmptyDefaultValue(value)) {
+                                isFunction = false
+                                value = value()
+                            } else {
+                                value = getReadableDefaultFunction(value)
+                            }
                         } catch (e) {
                             value = undefined;
                         }
@@ -167,7 +173,7 @@ function copyProps(obj) {
                                 // and date from vuetify framework
                                 || value.match(/[0-9]+-[0-9]+-[0-9]+/)))) {
                         value = undefined;
-                    } else {
+                    } else if(!isFunction) {
                         value = JSON.stringify(value);
                     }
                 }
@@ -269,4 +275,18 @@ function createBrowserPolyfills() {
     global.getComputedStyle = function () {
         return style
     }
+}
+
+function isFactoryFunctionForEmptyDefaultValue(func) {
+    const returnValue = func()
+    const isEmptyArray = (Array.isArray(returnValue) && returnValue.length === 0)
+    const isEmptyObject = (typeof returnValue === "object" && Object.keys(returnValue).length === 0)
+    return isEmptyArray || isEmptyObject
+}
+
+function getReadableDefaultFunction(func) {
+    return func.toString()
+        .replace(/\n/g, '')
+        .replace(/ {2,}/g, ' ')
+        .replace('function _default()', '() =>')
 }
