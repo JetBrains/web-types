@@ -26,6 +26,7 @@ Currently following libraries are providing this feature:
    * quasar (https://github.com/quasarframework/quasar/pull/4749)
    * bootstrap-vue (https://github.com/bootstrap-vue/bootstrap-vue/pull/4110)
    * nuxt.js (https://github.com/nuxt/nuxt.js/pull/7611)
+   * @ionic/vue (https://github.com/ionic-team/ionic-framework/pull/22428)
 
 For the most popular libraries basic information is published under `@web-types` scope on NPM. 
 Currently following frameworks and libraries are supported in such a way:
