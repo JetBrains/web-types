@@ -134,7 +134,8 @@ async function writeDownWebTypesFile(config: WebTypesBuilderConfig, definitions:
 }
 
 function ensureRelative(path: string) {
-    return path.startsWith("./") || path.startsWith("../") ? path : "./" + path;
+    // The .replace() is a fix for paths that end up like "./src\\components\\General\\VerticalButton.vue" on windows machines.
+    return (path.startsWith("./") || path.startsWith("../") ? path : "./" + path).replace(/\\/g, '/');
 }
 
 async function extractInformation(
