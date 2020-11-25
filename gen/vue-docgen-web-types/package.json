@@ -1,6 +1,6 @@
 {
   "name": "vue-docgen-web-types",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "lib/index.js",
   "license": "MIT",
   "readme": "README.MD",
