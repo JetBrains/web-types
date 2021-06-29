@@ -4,10 +4,30 @@
 
 Welcome to web-types, the JSON standard to document web component libraries.
 
-Web-types is a framework agnostic standard to provide IDEs and other tools with metadata information about contents 
+Web-types is a framework-agnostic standard to provide IDEs and other tools with metadata information about contents 
 of a web components library. It also provides extensions for a framework specific content.
 
 You can check out features supported by IDEs [here](https://github.com/JetBrains/web-types/wiki/Features-supported-by-IDEs).
+
+# Upcoming version 2.0 of the standard
+
+For last couple of months we have been working very hard to create a version of web-types, which 
+would work seamlessly for any kind of web framework, or even for libraries, which modify HTML
+in a custom way.
+
+The preview of [new web-types schema](https://github.com/JetBrains/web-types/blob/master/v2-preview/web-types.json)
+is available in `v2-preview` folder. There is also [an example web-types file](https://github.com/JetBrains/web-types/blob/master/v2-preview/vue@3.0.0.web-types.json), 
+which describes support for Vue framework in detail.
+
+You can preview the new support in WebStorm (and other JetBrains IDEs) through [Early Access Program](https://www.jetbrains.com/webstorm/nextversion/) of 2020.2 version.
+To enable your web-types file in the project, link it through `web-types` property of your local `package.json` file.
+You can specify multiple web-types files by providing an array of paths.
+
+**Support is still in preview mode and schema may change**. The goal of preview phase is to gather 
+feedback from the community and improve the format. Therefore, please do not bundle any web-types (in the new format) 
+with your libraries yet.
+
+The new version of web-types provides legacy support for Vue-only web-types.
 
 # Distribution
 
