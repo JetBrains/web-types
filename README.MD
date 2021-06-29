@@ -21,7 +21,11 @@ which describes support for Vue framework in detail.
 
 You can preview the new support in WebStorm (and other JetBrains IDEs) through [Early Access Program](https://www.jetbrains.com/webstorm/nextversion/) of 2020.2 version.
 To enable your web-types file in the project, link it through `web-types` property of your local `package.json` file.
-You can specify multiple web-types files by providing an array of paths.
+You can specify multiple web-types files by providing an array of paths. Please mind, that the new version
+of the schema has not yet been released to SchemaStore, so you need to manually specify it through `$schema` property
+in your web-types JSON. You can use following URL:
+
+https://raw.githubusercontent.com/JetBrains/web-types/master/v2-preview/web-types.json
 
 **Support is still in preview mode and schema may change**. The goal of preview phase is to gather 
 feedback from the community and improve the format. Therefore, please do not bundle any web-types (in the new format) 

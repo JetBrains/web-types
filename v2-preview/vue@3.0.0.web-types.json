@@ -1,5 +1,5 @@
 {
-  "$schema": "./web-types.json",
+  "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/v2-preview/web-types.json",
   "framework": "vue",
   "name": "vue",
   "version": "3.0.0",
