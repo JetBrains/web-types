@@ -228,6 +228,9 @@
         "description": {
           "$ref": "#/definitions/description"
         },
+        "description-sections": {
+          "$ref": "#/definitions/description-sections"
+        },
         "doc-url": {
           "$ref": "#/definitions/doc-url"
         },
@@ -278,6 +281,9 @@
           "items": {
             "$ref": "#/definitions/html-attribute"
           }
+        },
+        "exclusive-contributions": {
+          "$ref": "#/definitions/exclusive-contributions"
         }
       },
       "additionalProperties": false
@@ -462,6 +468,13 @@
       "description": "Short description to be rendered in documentation popup. It will be rendered according to description-markup setting.",
       "type": "string"
     },
+    "description-sections": {
+      "description": "Custom sections to be shown below description in the documentation popup.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
     "doc-url": {
       "description": "Link to online documentation.",
       "type": "string"
@@ -503,6 +516,13 @@
           "$ref": "#/definitions/name-pattern"
         }
       ]
+    },
+    "exclusive-contributions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "/(html|js|css)/[^/\\n\\r]+"
+      }
     },
     "name-pattern": {
       "type": "object",
