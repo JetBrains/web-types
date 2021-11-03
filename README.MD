@@ -11,15 +11,16 @@ You can check out features supported by IDEs [here](https://github.com/JetBrains
 
 # Upcoming version 2.0 of the standard
 
-For last couple of months we have been working very hard to create a version of web-types, which 
+For over a year we have been working very hard to create a version of web-types, which 
 would work seamlessly for any kind of web framework, or even for libraries, which modify HTML
 in a custom way.
 
 The preview of [new web-types schema](https://github.com/JetBrains/web-types/blob/master/v2-preview/web-types.json)
-is available in `v2-preview` folder. There is also [an example web-types file](https://github.com/JetBrains/web-types/blob/master/v2-preview/vue@3.0.0.web-types.json), 
-which describes support for Vue framework in detail.
+is available in `v2-preview` folder together with examples to show how Vue or Angular is supported. 
 
-You can preview the new support in WebStorm (and other JetBrains IDEs) through [Early Access Program](https://www.jetbrains.com/webstorm/nextversion/) of 2020.2 version.
+Experimental support is present in WebStorm (and other JetBrains IDEs) since version 2021.2. In 2021.3 the support
+will be in *stable* condition with a lot of bugfixes and improvements like support for CSS classes and properties coming in.
+
 To enable your web-types file in the project, link it through `web-types` property of your local `package.json` file.
 You can specify multiple web-types files by providing an array of paths. Please mind, that the new version
 of the schema has not yet been released to SchemaStore, so you need to manually specify it through `$schema` property
@@ -27,11 +28,9 @@ in your web-types JSON. You can use following URL:
 
 https://raw.githubusercontent.com/JetBrains/web-types/master/v2-preview/web-types.json
 
-**Support is still in preview mode and schema may change**. The goal of preview phase is to gather 
-feedback from the community and improve the format. Therefore, please do not bundle any web-types (in the new format) 
-with your libraries yet.
-
 The new version of web-types provides legacy support for Vue-only web-types.
+
+Documentation on version 2.0 is coming soon.
 
 # Distribution
 

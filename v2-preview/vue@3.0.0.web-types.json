@@ -66,8 +66,7 @@
               "name": "scope",
               "deprecated": true,
               "value": {
-                "kind": "expression",
-                "parser": "vue:slot-scope"
+                "kind": "expression"
               }
             }
           ]
@@ -84,10 +83,52 @@
                 "type": "string"
               }
             }
+          ],
+          "vue-special-properties": [
+            {
+              "name": "Scoped slot binding",
+              "pattern": "(?!v-).*",
+              "doc-hide-pattern": true,
+              "priority": "low",
+              "attribute-value": {
+                "required": true
+              }
+            }
+          ]
+        },
+        {
+          "name": "textarea",
+          "extension": true,
+          "vue-special-properties": [
+            {
+              "name": "value"
+            }
+          ]
+        },
+        {
+          "name": "select",
+          "extension": true,
+          "vue-special-properties": [
+            {
+              "name": "value"
+            }
           ]
         }
       ],
       "attributes": [
+        {
+          "name": "data-*",
+          "description": "The `data-*` global attributes form a class of attributes called custom data attributes, that allow proprietary information to be exchanged between the HTML and its DOM representation by scripts.",
+          "doc-url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/data-*",
+          "pattern": {
+            "template": [
+              "data-",
+              {
+                "regex": ".*"
+              }
+            ]
+          }
+        },
         {
           "name": "Vue directive",
           "description": "Directives are special attributes with the `v-` prefix. Directive attribute values are expected to be a single JavaScript expression (with the exception of `v-for` and `v-on`). A directive's job is to reactively apply side effects to the DOM when the value of its expression changes.",
@@ -95,10 +136,12 @@
           "virtual": true,
           "value": {
             "kind": "expression",
-            "parser": "vue:expression",
             "type": "any",
             "required": false
           },
+          "exclusive-contributions": [
+            "/html/modifiers"
+          ],
           "pattern": {
             "items": "/html/vue-directives",
             "template": [
@@ -115,7 +158,7 @@
                 "proximity": 5
               },
               {
-                "items": "modifiers",
+                "items": "/html/modifiers",
                 "template": [
                   ".",
                   "#item:modifier"
@@ -133,10 +176,12 @@
           "virtual": true,
           "value": {
             "kind": "expression",
-            "parser": "vue:expression",
             "type": "any",
             "required": false
           },
+          "exclusive-contributions": [
+            "/html/modifiers"
+          ],
           "pattern": {
             "proximity": 10,
             "delegate": "/html/vue-directives/on",
@@ -151,7 +196,7 @@
                 "required": true
               },
               {
-                "items": "modifiers",
+                "items": "/html/modifiers",
                 "template": [
                   ".",
                   "#item:modifier"
@@ -169,10 +214,12 @@
           "virtual": true,
           "value": {
             "kind": "expression",
-            "parser": "vue:expression",
             "type": "any",
             "required": false
           },
+          "exclusive-contributions": [
+            "/html/modifiers"
+          ],
           "pattern": {
             "proximity": 10,
             "delegate": "/html/vue-directives/bind",
@@ -187,7 +234,7 @@
                 ]
               },
               {
-                "items": "modifiers",
+                "items": "/html/modifiers",
                 "template": [
                   ".",
                   "#item:modifier"
@@ -205,59 +252,77 @@
           "virtual": true,
           "value": {
             "kind": "expression",
-            "parser": "vue:expression",
             "type": "any",
             "required": false
           },
           "pattern": {
             "proximity": 10,
-            "delegate": "/html/vue-directives/slot",
+            "items": "vue-available-slots",
             "template": [
               "#",
               "$...",
+              "#item:slot name"
+            ]
+          }
+        },
+        {
+          "name": "slot",
+          "description": "Denote named slots or slots that expect to receive props.",
+          "doc-url": "https://v3.vuejs.org/api/directives.html#v-slot",
+          "virtual": true,
+          "value": {
+            "kind": "expression",
+            "type": "any",
+            "required": false
+          },
+          "pattern": {
+            "template": [
+              "v-slot",
               {
-                "delegate": "argument",
-                "required": true,
+                "items": "vue-available-slots",
+                "required": false,
+                "proximity": 5,
                 "template": [
+                  ":",
+                  "#...",
                   "#item:slot name"
                 ]
-              },
-              {
-                "items": "modifiers",
-                "template": [
-                  ".",
-                  "#item:modifier"
-                ],
-                "required": false,
-                "repeat": true
               }
             ]
           }
         },
         {
-          "name": "slot-scope",
-          "deprecated": true,
-          "virtual": true,
-          "value": {
-            "kind": "expression",
-            "parser": "vue:slot-scope"
-          }
-        },
-        {
-          "name": "slot",
-          "deprecated": true
-        },
-        {
           "name": "ref",
-          "priority": "low"
+          "priority": "low",
+          "proximity": 10,
+          "description": "`ref` is used to register a reference to an element or a child component. The reference will be registered under the parent component's `$refs` object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance.",
+          "doc-url": "https://v3.vuejs.org/api/special-attributes.html#ref"
         },
         {
           "name": "is",
-          "priority": "low"
+          "priority": "low",
+          "proximity": 10,
+          "doc-url": "https://v3.vuejs.org/api/special-attributes.html#is",
+          "description": "Used for [dynamic components](https://v3.vuejs.org/guide/component-dynamic-async.html).",
+          "value": {
+            "type": [
+              "string",
+              "object"
+            ]
+          }
         },
         {
           "name": "key",
-          "priority": "low"
+          "priority": "low",
+          "proximity": 10,
+          "description": "The `key` special attribute is primarily used as a hint for Vue's virtual DOM algorithm to identify VNodes when diffing the new list of nodes against the old list. Without keys, Vue uses an algorithm that minimizes element movement and tries to patch/reuse elements of the same type in-place as much as possible. With keys, it will reorder elements based on the order change of keys, and elements with keys that are no longer present will always be removed/destroyed.\n\nChildren of the same common parent must have **unique keys**. Duplicate keys will cause render errors.\n\nThe most common use case is combined with `v-for`.",
+          "doc-url": "https://v3.vuejs.org/api/special-attributes.html#key",
+          "value": {
+            "type": [
+              "number",
+              "string"
+            ]
+          }
         }
       ],
       "vue-file-top-elements": [
@@ -303,7 +368,8 @@
             {
               "name": "setup",
               "value": {
-                "kind": "no-value"
+                "kind": "expression",
+                "required": false
               }
             }
           ]
@@ -622,7 +688,6 @@
           "description": "Render the element or template block multiple times based on the source data. The directive’s value must use the special syntax `alias in expression` to provide an alias for the current element being iterated on. Alternatively, you can also specify an alias for the index (or the key if used on an Object). The default behavior of `v-for` will try to patch the elements in-place without moving them. To force it to reorder elements, you need to provide an ordering hint with the `key` special attribute.",
           "doc-url": "https://v3.vuejs.org/api/directives.html#v-for",
           "attribute-value": {
-            "parser": "vue:for",
             "type": "void",
             "required": true
           }
@@ -632,7 +697,6 @@
           "description": "Attaches an event listener to the element. The event type is denoted by the argument. The expression can be a method name, an inline statement, or omitted if there are modifiers present.\n\nWhen used on a normal element, it listens to *native DOM events* only. When used on a custom element component, it listens to *custom events* emitted on that child component.\n\nWhen listening to native DOM events, the method receives the native event as the only argument. If using inline statement, the statement has access to the special `$event` property: `v-on:click=\"handle('ok', $event)\"`.\n\n`v-on` also supports binding to an object of event/listener pairs without an argument. Note when using the object syntax, it does not support any modifiers.",
           "doc-url": "https://v3.vuejs.org/api/directives.html#v-on",
           "attribute-value": {
-            "parser": "vue:on",
             "type": "void",
             "required": true
           },
@@ -642,7 +706,7 @@
             "pattern": {
               "or": [
                 {
-                  "items": "/html/events",
+                  "items": "/js/events",
                   "priority": "normal"
                 },
                 {
@@ -688,110 +752,118 @@
               "description": "attaches a DOM event with `{ passive: true }`."
             }
           ],
-          "events": [
-            {
-              "name": "Mouse button event modifiers",
-              "extension": true,
-              "pattern": {
-                "or": [
-                  "click",
-                  "dblclick",
-                  "mousedown",
-                  "mouseup"
-                ]
-              },
-              "modifiers": [
-                {
-                  "name": "left",
-                  "description": "Only trigger handler for left button mouse events."
+          "js": {
+            "events": [
+              {
+                "name": "Mouse button event modifiers",
+                "extension": true,
+                "pattern": {
+                  "or": [
+                    "click",
+                    "dblclick",
+                    "mousedown",
+                    "mouseup"
+                  ]
                 },
-                {
-                  "name": "right",
-                  "description": "Only trigger handler for right button mouse events."
-                },
-                {
-                  "name": "middle",
-                  "description": "Only trigger handler for middle button mouse events."
+                "html": {
+                  "modifiers": [
+                    {
+                      "name": "left",
+                      "description": "Only trigger handler for left button mouse events."
+                    },
+                    {
+                      "name": "right",
+                      "description": "Only trigger handler for right button mouse events."
+                    },
+                    {
+                      "name": "middle",
+                      "description": "Only trigger handler for middle button mouse events."
+                    }
+                  ]
                 }
-              ]
-            },
-            {
-              "name": "Key event modifiers",
-              "extension": true,
-              "pattern": {
-                "or": [
-                  "keydown",
-                  "keypress",
-                  "keyup"
-                ]
               },
-              "modifiers": [
-                {
-                  "name": "Key alias",
-                  "pattern": {
-                    "or": [
-                      "enter",
-                      "tab",
-                      "delete",
-                      "esc",
-                      "space",
-                      "up",
-                      "down",
-                      "left",
-                      "right"
-                    ]
-                  }
-                }
-              ]
-            },
-            {
-              "name": "System event modifiers",
-              "extension": true,
-              "pattern": {
-                "or": [
-                  "keydown",
-                  "keypress",
-                  "keyup",
-                  "click",
-                  "contextmenu",
-                  "dblclick",
-                  "mousedown",
-                  "mouseenter",
-                  "mouseleave",
-                  "mousemove",
-                  "mouseout",
-                  "mouseover",
-                  "mouseup",
-                  "show",
-                  "drag",
-                  "dragend",
-                  "dragenter",
-                  "dragleave",
-                  "dragover",
-                  "dragstart",
-                  "drop"
-                ]
-              },
-              "modifiers": [
-                {
-                  "name": "System modifier key",
-                  "description": "Triggers mouse or keyboard event listeners only when the modifier key is pressed.",
-                  "pattern": {
-                    "or": [
-                      "ctrl",
-                      "alt",
-                      "shift",
-                      "meta"
-                    ]
-                  }
+              {
+                "name": "Key event modifiers",
+                "extension": true,
+                "pattern": {
+                  "or": [
+                    "keydown",
+                    "keypress",
+                    "keyup"
+                  ]
                 },
-                {
-                  "name": "exact",
-                  "description": "Allows control of the exact combination of system modifiers needed to trigger an event."
+                "html": {
+                  "modifiers": [
+                    {
+                      "name": "Key alias",
+                      "pattern": {
+                        "or": [
+                          "enter",
+                          "tab",
+                          "delete",
+                          "esc",
+                          "space",
+                          "up",
+                          "down",
+                          "left",
+                          "right"
+                        ]
+                      }
+                    }
+                  ]
                 }
-              ]
-            }
-          ]
+              },
+              {
+                "name": "System event modifiers",
+                "extension": true,
+                "pattern": {
+                  "or": [
+                    "keydown",
+                    "keypress",
+                    "keyup",
+                    "click",
+                    "contextmenu",
+                    "dblclick",
+                    "mousedown",
+                    "mouseenter",
+                    "mouseleave",
+                    "mousemove",
+                    "mouseout",
+                    "mouseover",
+                    "mouseup",
+                    "show",
+                    "drag",
+                    "dragend",
+                    "dragenter",
+                    "dragleave",
+                    "dragover",
+                    "dragstart",
+                    "drop"
+                  ]
+                },
+                "html": {
+                  "modifiers": [
+                    {
+                      "name": "System modifier key",
+                      "description": "Triggers mouse or keyboard event listeners only when the modifier key is pressed.",
+                      "pattern": {
+                        "or": [
+                          "ctrl",
+                          "alt",
+                          "shift",
+                          "meta"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "exact",
+                      "description": "Allows control of the exact combination of system modifiers needed to trigger an event."
+                    }
+                  ]
+                }
+              }
+            ]
+          }
         },
         {
           "name": "bind",
@@ -806,7 +878,8 @@
                   "path": "/html/attributes",
                   "includeVirtual": false,
                   "filter": "vue-bind"
-                }
+                },
+                "/html/vue-special-properties"
               ]
             }
           },
@@ -831,7 +904,7 @@
               "items": {
                 "path": "attributes",
                 "filter": "match-with-target-list",
-                "target-list": "/html/events",
+                "target-list": "/js/events",
                 "prefix": "update:"
               }
             }
@@ -858,22 +931,6 @@
               }
             }
           ]
-        },
-        {
-          "name": "slot",
-          "description": "Denote named slots or slots that expect to receive props.",
-          "doc-url": "https://v3.vuejs.org/api/directives.html#v-slot",
-          "attribute-value": {
-            "parser": "vue:slot",
-            "type": "void"
-          },
-          "argument": {
-            "name": "Slot name",
-            "description": "Slot name (optional, defaults to `default`)",
-            "pattern": {
-              "items": "vue-available-slots"
-            }
-          }
         },
         {
           "name": "pre",

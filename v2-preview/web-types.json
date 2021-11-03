@@ -501,9 +501,6 @@
     "proximity": {
       "type": "integer"
     },
-    "expression-parser": {
-      "type": "string"
-    },
     "selector": {
       "type": "string"
     },
@@ -714,6 +711,14 @@
           "items": {
             "$ref": "#/definitions/html-attribute"
           }
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/generic-contribution"
+          },
+          "description": "Events are deprecated in HTML namespace. Contribute events to JS namespace: /js/events",
+          "deprecationMessage": "Contribute events to JS namespace: /js/events"
         }
       },
       "additionalProperties": false
@@ -725,6 +730,16 @@
           "$ref": "#/definitions/base-contribution"
         }
       ],
+      "properties": {
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/generic-contribution"
+          },
+          "description": "Events are deprecated in HTML namespace. Contribute events to JS namespace: js/events",
+          "deprecationMessage": "Contribute events to JS namespace: js/events"
+        }
+      },
       "additionalProperties": false
     },
     "html-attribute": {
@@ -791,9 +806,6 @@
         },
         "default": {
           "type": "string"
-        },
-        "parser": {
-          "$ref": "#/definitions/expression-parser"
         }
       },
       "additionalProperties": false
@@ -875,6 +887,22 @@
           "$ref": "#/definitions/generic-contributions-host"
         }
       ],
+      "properties": {
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/generic-contribution"
+          },
+          "description": "DOM Events"
+        },
+        "properties": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/generic-contribution"
+          },
+          "description": "JavaScript properties of an object, HTML tag, framework component, etc."
+        }
+      },
       "additionalProperties": false
     },
     "deprecated-types-syntax": {
