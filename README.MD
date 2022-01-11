@@ -1,40 +1,39 @@
 [![GitHub license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
 
-# Web-types
+# Web-Types
 
-Welcome to web-types, the JSON standard to document web component libraries.
+Welcome to Web-Types, the JSON format to document web component libraries.
 
-Web-types is a framework-agnostic standard to provide IDEs and other tools with metadata information about contents 
-of a web components library. It also provides extensions for a framework specific content.
+Web-Types is a framework-agnostic format to provide IDEs and other tools with metadata information about contents 
+of a web library. It's powerful name patterns allow encoding information about web framework syntax, or
+customizing code completion for large icon libraries.
 
-You can check out features supported by IDEs [here](https://github.com/JetBrains/web-types/wiki/Features-supported-by-IDEs).
+# Version 2.0 of the format
 
-# Upcoming version 2.0 of the standard
+Web-Types started as a format to support Vue libraries, but we've always wanted to provide a generic solution. 
+Finally, version 2.0 of Web-Types format works seamlessly for any kind of web framework, 
+Web Components library, or CSS icons pack.
 
-For over a year we have been working very hard to create a version of web-types, which 
-would work seamlessly for any kind of web framework, or even for libraries, which modify HTML
-in a custom way.
+Starting with version 2021.3.1 of WebStorm (and other JetBrains IDEs), a full support for the new Web-Types format 
+is implemented (the new format has been partially supported since 2021.2). You can now add custom HTML elements and 
+attributes, custom CSS classes, properties, functions, pseudo-classes and pseudo-elements. Vue and Angular support 
+integrates fully with the format, so you can easily mix Web Components in Angular or Vue templates.
 
-The preview of [new web-types schema](https://github.com/JetBrains/web-types/blob/master/v2-preview/web-types.json)
-is available in `v2-preview` folder together with examples to show how Vue or Angular is supported. 
+Examples of how basic support for frameworks and libraries is implemented in WebStorm through Web-Types are available
+in `examples` directory.
 
-Experimental support is present in WebStorm (and other JetBrains IDEs) since version 2021.2. In 2021.3 the support
-will be in *stable* condition with a lot of bugfixes and improvements like support for CSS classes and properties coming in.
+A webinar of Piotr Tomiak explaining new version of the format and how pattern processing works: https://www.youtube.com/watch?v=nkAhI1YyU0w
 
-To enable your web-types file in the project, link it through `web-types` property of your local `package.json` file.
-You can specify multiple web-types files by providing an array of paths. Please mind, that the new version
-of the schema has not yet been released to SchemaStore, so you need to manually specify it through `$schema` property
-in your web-types JSON. You can use following URL:
+The new version of Web-Types is backward compatible with the Vue-only Web-Types.
 
-https://raw.githubusercontent.com/JetBrains/web-types/master/v2-preview/web-types.json
+# Local development with Web-Types
 
-The new version of web-types provides legacy support for Vue-only web-types.
-
-Documentation on version 2.0 is coming soon.
+To enable your Web-Types file in the project, link it through `web-types` property of your local `package.json` file.
+You can specify multiple Web-Types files by providing an array of paths.
 
 # Distribution
 
-Library providers are welcome to include detailed web-types JSONs and link them through `web-types`
+Library providers are welcome to include detailed Web-Types JSONs and link them through `web-types`
 property in `package.json`. E.g.:
 ```
 {
@@ -60,14 +59,15 @@ Currently following frameworks and libraries are supported in such a way:
     * vuetify
     * nuxt.js
 
-Published JSONs are checked into repository under `packages` folder. In case of web-types published to `@web-types` scope,  IDEs are supposed to download required JSONs without any changes to user project structure.
+Published JSONs are checked into repository under `packages` folder. In case of Web-Types published to `@web-types` scope, 
+IDEs are supposed to download required JSONs without any changes to user project structure.
 
 Various IDEs perform optimizations when scanning `node_modules` directory, so to ensure that `web-types` for 
 your package are always available, make sure it's listed in `packages/registry.json`.
 
 # Schema
 
-Web-types schema is available in `schema` folder. Use one of the following URLs to reference it in your JSON files:
+Web-Types schema is available in `schema` folder. Use one of the following URLs to reference it in your JSON files:
 ```
 http://json.schemastore.org/web-types
 ```
@@ -76,8 +76,7 @@ or
 https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json
 ```
 
-
-# Generating web-types
+# Generating Web-Types
 
 ### From source
 
@@ -92,52 +91,34 @@ Currently, following component documentation formats are supported:
 If you're not using JSDoc in your project, you can create your own builder for `web-types` JSON. For examples see
 vuetify, quasar or bootstrap-vue pull requests from above.
 
-### From published NPM packages for inclusion in @web-types namespace
-To extract metadata information from NPM published library you can use `scripts/extract.sh` bash script. 
-So far only vue.js framework extraction is supported. The usage syntax for the script is following:
-
-```
-extract.sh vue <package-name> <sem-version-range> [--production,--discard-same]
-```
-Example usage:
-```
-extract.sh vue vuetify ">=1.0.0" --production --discard-same
-```
-The script will output "#Error:..." strings into JSON in case of syntax it doesn't understand
-while performing static analysis. This allows to improve script to handle specific syntax used
-by a library. However, while publishing metadata we don't want to include errors, so one can
-use `--production` parameter to exclude errors from the output. 
-
-Some versions of libraries contain exactly the same information and with `--discard-same` parameter
-we can minimize amount of generated JSONS and produce only those, which are unique.
-
-# Local development with web-types
-
-You can use web-types in your local project or library. Just link a generated web-types file in your `package.json` and IDE will pick up global components from it.
-
 # Publishing to `@web-types` scope
 
-To publish a package to `@web-types` you need to have permission. Automated publishing is done with
-`script/publish.sh` script, which usage syntax is following:
+We await your PRs with Web-Types for libraries in `packages` folder. There should be a single file per library in format:
+
+```
+packages/<pkg-name>/<pkg-name>@<pkg-version>.web-types.json
+```
+
+We are syncing contents of `packages` folder using `script/publish.sh` script, which usage syntax is following:
 ```
 publish.sh <package-name> [--dry-run]
 ```
-The script will scan folder `packages/<package-name>` for generated web-types jsons and synchronize
-contents with NPM. 
+The script scans folder `packages/<package-name>` for provided Web-Types jsons and synchronizes
+contents with NPM.
 
 # Versioning and naming of `@web-types` scope
 Versioning and naming rules are as follows:
-* web-types for package `pkg-name` are available under `@web-types/pkg-name`
-* web-types for package `@scope/pkg-name` are available under `@web-types/at-scope-pkg-name`
-* web-types for version `1.2.3` are published as prerelease `1.2.3-n`, e.g. `1.2.3-3`
-* web-types for pre-release version `1.2.3-rc.1` are published with additional segment, 
+* Web-Types for package `pkg-name` are available under `@web-types/pkg-name`
+* Web-Types for package `@scope/pkg-name` are available under `@web-types/at-scope-pkg-name`
+* Web-Types for version `1.2.3` are published as prerelease `1.2.3-n`, e.g. `1.2.3-3`
+* Web-Types for pre-release version `1.2.3-rc.1` are published with additional segment, 
   e.g. `1.2.3-rc.1.3`
-* to search for appropriate web-types package use range `<pkg-ver` and include prerelease versions, 
-  e.g. to find web-types for version `1.2.6`, query package list with `<1.2.6`, which can match 
-  web-types in version `1.2.4-12` 
+* to search for appropriate Web-Types package use range `<pkg-ver` and include prerelease versions, 
+  e.g. to find Web-Types for version `1.2.6`, query package list with `<1.2.6`, which can match 
+  Web-Types in version `1.2.4-12` 
 * all outdated versions are marked as deprecated and should be ignored by an IDE
 
 # Contributions
 
-All contributions are welcome! We need your help to improve the web-types standard specification,
+All contributions are welcome! We need your help to improve the Web-Types format specification,
 to support other frameworks and to improve quality of generated metadata through scripts. 

@@ -1,6 +1,6 @@
 {
-  "$schema": "https://json-schema.org/draft-04/schema#",
-  "title": "JSON schema for web-types. Preview of version 2.0 of the standard.",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "JSON schema for Web-Types",
   "type": "object",
   "properties": {
     "$schema": {
@@ -640,7 +640,6 @@
       },
       "patternProperties": {
         "^(?!pattern$).*$": {
-          "description": "A generic contribution, contributions list or property.",
           "$ref": "#/definitions/generic-html-contributions"
         }
       }
@@ -799,14 +798,14 @@
           "description": "CSS pseudo-elements",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/css-generic-item"
+            "$ref": "#/definitions/css-pseudo-element"
           }
         },
         "pseudo-classes": {
           "description": "CSS pseudo-classes",
           "type": "array",
           "items": {
-            "$ref": "#/definitions/css-generic-item"
+            "$ref": "#/definitions/css-pseudo-class"
           }
         },
         "functions": {
@@ -826,7 +825,6 @@
       },
       "patternProperties": {
         "^(?!pattern$).*$": {
-          "description": "A generic contribution, contributions list or property.",
           "$ref": "#/definitions/generic-css-contributions"
         }
       }
@@ -914,6 +912,40 @@
         }
       ]
     },
+    "css-pseudo-element": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/base-contribution"
+        },
+        {
+          "$ref": "#/definitions/css-contributions-host"
+        }
+      ],
+      "properties": {
+        "arguments": {
+          "type": "boolean",
+          "description": "Specify whether the pseudo-element requires arguments."
+        }
+      }
+    },
+    "css-pseudo-class": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/base-contribution"
+        },
+        {
+          "$ref": "#/definitions/css-contributions-host"
+        }
+      ],
+      "properties": {
+        "arguments": {
+          "type": "boolean",
+          "description": "Specify whether the pseudo-class requires arguments."
+        }
+      }
+    },
     "js-contributions-host": {
       "type": "object",
       "javaInterfaces": [
@@ -938,7 +970,6 @@
       },
       "patternProperties": {
         "^(?!pattern$).*$": {
-          "description": "A generic contribution, contributions list or property.",
           "$ref": "#/definitions/generic-js-contributions"
         }
       }
