@@ -1,0 +1,86 @@
+{
+  "$schema": "../../schema/web-types.json",
+  "framework": "lit",
+  "name": "lit",
+  "version": "2.1.1",
+  "js-types-syntax": "typescript",
+  "description-markup": "markdown",
+  "default-icon": "icons/lit.svg",
+  "framework-config": {
+    "enable-when": {
+      "node-packages": [
+        "lit"
+      ]
+    }
+  },
+  "contributions": {
+    "html": {
+      "attributes": [
+        {
+          "name": "Event listeners",
+          "description": "Event listeners expression",
+          "virtual": true,
+          "doc-url": "https://lit.dev/docs/templates/expressions/#event-listener-expressions",
+          "value": {
+            "kind": "expression",
+            "type": "(event: Event) => void",
+            "required": true
+          },
+          "pattern": {
+            "items": "/js/events",
+            "template": [
+              "@",
+              "$...",
+              "#item:event name"
+            ]
+          }
+        },
+        {
+          "name": "Boolean Attributes",
+          "description": "Boolean Attributes expression",
+          "virtual": true,
+          "doc-url": "https://lit.dev/docs/templates/expressions/#boolean-attribute-expressions",
+          "value": {
+            "kind": "expression",
+            "type": "boolean",
+            "required": true
+          },
+          "pattern": {
+            "items": {
+              "path": "/html/attributes",
+              "includeVirtual": false
+            },
+            "template": [
+              "?",
+              "$...",
+              "#item:attribute name"
+            ]
+          }
+        },
+        {
+          "name": "Properties",
+          "description": "Properties expression",
+          "virtual": true,
+          "doc-url": "https://lit.dev/docs/templates/expressions/#property-expressions",
+          "value": {
+            "kind": "expression",
+            "type": "any",
+            "required": true
+          },
+          "inject-language": "JavaScript",
+          "pattern": {
+            "items": {
+              "path": "/html/attributes",
+              "includeVirtual": false
+            },
+            "template": [
+              ".",
+              "$...",
+              "#item:property name"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
