@@ -27,11 +27,24 @@
             "required": true
           },
           "pattern": {
-            "items": "/js/events",
-            "template": [
-              "@",
-              "$...",
-              "#item:event name"
+            "or": [
+              {
+                "items": "/js/events",
+                "template": [
+                  "@",
+                  "$...",
+                  "#item:event name"
+                ],
+                "priority": "normal"
+              },
+              {
+                "template": [
+                  {
+                    "regex": "@[-a-z0-9]+"
+                  }
+                ],
+                "priority": "lowest"
+              }
             ]
           }
         },
