@@ -37,8 +37,17 @@ function publishVersion() {
 
   #Copy files
   cp publish/package-template.json $TMP_DIR/package.json || exit 1
-  cp publish/README-template.MD $TMP_DIR/README.MD || exit 1
-  cp "../packages/$PACKAGE_NAME/$PACKAGE_NAME@$PACKAGE_VERSION.web-types.json" $TMP_DIR/"$PACKAGE_NAME".web-types.json || exit 1
+  cp publish/README-template.MD $TMP_DIR/README.MD || exit
+
+  if [ -e "../packages/$PACKAGE_NAME/$PACKAGE_NAME@$PACKAGE_VERSION.web-types.json" ]; then
+      cp "../packages/$PACKAGE_NAME/$PACKAGE_NAME@$PACKAGE_VERSION.web-types.json" $TMP_DIR/"$PACKAGE_NAME".web-types.json || exit 1
+      echo "Copying ../packages/$PACKAGE_NAME/$PACKAGE_NAME@$PACKAGE_VERSION.web-types.json"
+  elif [ -d "../packages/$PACKAGE_NAME/$PACKAGE_NAME@$PACKAGE_VERSION" ]; then
+      cp -r "../packages/$PACKAGE_NAME/$PACKAGE_NAME@$PACKAGE_VERSION/" "$TMP_DIR/" || exit 1
+      echo "Copying ../packages/$PACKAGE_NAME/$PACKAGE_NAME@$PACKAGE_VERSION"
+  else
+      echo "No web-types.json nor folder found for $PACKAGE_NAME - $PACKAGE_VERSION"
+  fi
 
   # Replace variables in the templates
   cd $TMP_DIR || exit 1
@@ -75,6 +84,8 @@ function publishVersion() {
   # Publish new package version
   if [[ "$DRY_RUN" == "false" ]]; then
     npm publish --access public || exit 1
+  else
+    echo "Dry run mode - not publishing"
   fi
   PUBLISHED+=("$FULL_VER")
 }
@@ -105,7 +116,7 @@ EXISTING_VERSIONS_NPM=($(npm view "@web-types/$PACKAGE_NAME" versions | sed 's/[
 
 # shellcheck disable=SC2012
 # shellcheck disable=SC2207
-TO_PUBLISH=($(ls -1 ../packages/"$PACKAGE_NAME" | sed -e 's/.*@\(.*\)\.web-types\.json/\1/g' | sort -V))
+TO_PUBLISH=($(ls -1 ../packages/"$PACKAGE_NAME" | sed -e 's/.*@\(.*\)/\1/g' | sed -e 's/\(.*\)\.web-types\.json/\1/g' | sort -V))
 
 echo "Existing versions: ${EXISTING_VERSIONS_NPM[*]}"
 echo "Going to synchronize contents of versions: ${TO_PUBLISH[*]}"
@@ -115,18 +126,26 @@ for version in "${TO_PUBLISH[@]}"; do
   publishVersion "$version" || exit 1
 done
 
-TO_DEPRECATE=$(diff <(printf "%s\n" "${PUBLISHED[@]}" | sort -V) <(printf "%s\n" "${EXISTING_VERSIONS_NPM[@]}" | sort -V) | grep ">" | sed -e 's/> //g')
+echo "Published versions: ${PUBLISHED}"
+echo "EXISTING_VERSIONS_NPM versions: ${EXISTING_VERSIONS_NPM[*]}test"
+echo "Published versions: ${PUBLISHED[*]}"
 
-echo "Depracating following versions: ${TO_DEPRECATE[*]}"
 
-# shellcheck disable=SC2068
-for version in ${TO_DEPRECATE[@]}; do
-  if [[ "$(npm view "@web-types/$PACKAGE_NAME@$version" deprecated)" == "" ]]; then
-    echo "- making $version depracated"
-    if [[ "$DRY_RUN" == "false" ]]; then
-      npm deprecate "@web-types/$PACKAGE_NAME@$version" "Improved version available"
-    fi
-  else
-    echo "- $version is already deprecated, skipping"
-  fi
-done
+if [ ${#EXISTING_VERSIONS_NPM[@]} -eq 0 ]; then
+    echo "It was the first time Web-Types for $PACKAGE_NAME were published so nothing need to be deprecated"
+else
+    TO_DEPRECATE=$(diff <(printf "%s\n" "${PUBLISHED[@]}" | sort -V) <(printf "%s\n" "${EXISTING_VERSIONS_NPM[@]}" | sort -V) | grep ">" | sed -e 's/> //g')
+    echo "Deprecating following versions: ${TO_DEPRECATE[*]}"
+
+    # shellcheck disable=SC2068
+    for version in ${TO_DEPRECATE[@]}; do
+      if [[ "$(npm view "@web-types/$PACKAGE_NAME@$version" deprecated)" == "" ]]; then
+        echo "- making $version deprecated"
+        if [[ "$DRY_RUN" == "false" ]]; then
+          npm deprecate "@web-types/$PACKAGE_NAME@$version" "Improved version available"
+        fi
+      else
+        echo "- $version is already deprecated, skipping"
+      fi
+    done
+fi
