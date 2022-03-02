@@ -82,15 +82,26 @@
           },
           "inject-language": "JavaScript",
           "pattern": {
-            "items": {
-              "path": "/html/attributes",
-              "includeVirtual": false
-            },
-            "template": [
-              ".",
-              "$...",
-              "#item:property name"
-            ]
+            "or": [{
+              "items": {
+                "path": "/html/attributes",
+                "includeVirtual": false
+              },
+              "template": [
+                ".",
+                "$...",
+                "#item:property name"
+              ]
+            }, {
+              "items": {
+                "path": "/js/properties"
+              },
+              "template": [
+                ".",
+                "$...",
+                "#item:property name"
+              ]
+            }]
           }
         }
       ]
