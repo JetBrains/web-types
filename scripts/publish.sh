@@ -55,7 +55,7 @@ function publishVersion() {
   sed -i "" "s/\%PACKAGE_NAME\%/$PACKAGE_NAME/g" package.json || exit 1
   sed -i "" "s/\%PACKAGE_VERSION_FULL\%/$FULL_VER/g" package.json || exit 1
 
-  sed -i "" "s/\.\.\/\.\.\/schema\/web-types\.json/https:\/\/raw\.githubusercontent\.com\/JetBrains\/web-types\/master\/schema\/web-types\.json/g" "$PACKAGE_NAME".web-types.json || exit 1
+  sed -i "" "s/\(\.\.\/\)*schema\/web-types\.json/https:\/\/raw\.githubusercontent\.com\/JetBrains\/web-types\/master\/schema\/web-types\.json/g" "$PACKAGE_NAME".web-types.json || exit 1
 
   sed -i "" "s/\%PACKAGE_NAME\%/$PACKAGE_NAME/g" README.MD || exit 1
 
