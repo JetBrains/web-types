@@ -29,9 +29,9 @@
     "vue": ">=2.0.0"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.161",
     "@types/minimist": "^1.2.0",
     "@types/mkdirp": "^1.0.1",
-    "@types/lodash": "^4.14.161",
     "@types/pug": "^2.0.4",
     "json-schema-to-typescript": "^9.1.1",
     "typescript": "~3.9.7"
