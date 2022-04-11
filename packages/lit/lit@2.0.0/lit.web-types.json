@@ -1,8 +1,8 @@
 {
-  "$schema": "../../schema/web-types.json",
+  "$schema": "../../../schema/web-types.json",
   "framework": "lit",
   "name": "lit",
-  "version": "2.1.1",
+  "version": "2.0.0",
   "js-types-syntax": "typescript",
   "description-markup": "markdown",
   "default-icon": "icons/lit.svg",
@@ -82,26 +82,18 @@
           },
           "inject-language": "JavaScript",
           "pattern": {
-            "or": [{
-              "items": {
-                "path": "/html/attributes",
-                "includeVirtual": false
-              },
-              "template": [
-                ".",
-                "$...",
-                "#item:property name"
-              ]
-            }, {
-              "items": {
-                "path": "/js/properties"
-              },
-              "template": [
-                ".",
-                "$...",
-                "#item:property name"
-              ]
-            }]
+            "or": [
+              {
+                "items": {
+                  "path": "/js/properties"
+                },
+                "template": [
+                  ".",
+                  "$...",
+                  "#item:property name"
+                ]
+              }
+            ]
           }
         }
       ]
