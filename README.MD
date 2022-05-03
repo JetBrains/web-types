@@ -28,7 +28,7 @@ The new version of Web-Types is backward compatible with the Vue-only Web-Types.
 
 # Local development with Web-Types
 
-To enable your Web-Types file in the project, link it through the `web-types` property of your local priject `package.json` file.
+To enable your Web-Types file in the project, link it through the `web-types` property of your local project `package.json` file.
 You can specify multiple Web-Types files by providing an array of paths.
 
 # Distribution
