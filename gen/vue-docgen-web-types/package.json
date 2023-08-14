@@ -17,8 +17,9 @@
     "chokidar": "^3.4.2",
     "globby": "^11.0.1",
     "lodash": "^4.17.20",
-    "vue-docgen-api": "^4.30.0",
-    "mkdirp": "^1.0.4"
+    "minimist": "^1.2.8",
+    "mkdirp": "^1.0.4",
+    "vue-docgen-api": "^4.30.0"
   },
   "keywords": [
     "web-types",
