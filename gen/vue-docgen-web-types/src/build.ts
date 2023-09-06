@@ -73,7 +73,7 @@ async function rebuild(
     changedFilePath?: string) {
 
     const cacheWebTypesContent = async (filePath: string) => {
-        cachedContent[filePath] = await extractInformation(
+        cachedContent[filePath.replace(/\\/g, '/')] = await extractInformation(
             path.join(config.componentsRoot, filePath),
             config
         )
