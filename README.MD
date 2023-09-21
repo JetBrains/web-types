@@ -14,15 +14,16 @@ Web-Types started as a format to support Vue libraries, but we've always wanted 
 Finally, version 2.0 of Web-Types format works seamlessly for any kind of web framework, 
 Web Components library, or CSS icons pack.
 
+A detailed documentation of the format is available [here](https://plugins.jetbrains.com/docs/intellij/websymbols-web-types.html)
+
 Starting with version 2021.3.1 of [WebStorm](https://www.jetbrains.com/webstorm/) (and other [JetBrains IDEs](https://www.jetbrains.com/products/#lang=js&type=ide)), a full support for the new Web-Types format 
 is supported (the new format has been partially supported since 2021.2). You can now add custom HTML elements and 
 attributes, custom CSS classes, properties, functions, pseudo-classes, and pseudo-elements. Vue and Angular support 
 integrates fully with the format, so you can easily mix Web Components in Angular or Vue templates.
 
-Examples of how basic support for frameworks and libraries is implemented in WebStorm through Web-Types are available
-in the `examples` directory.
-
-A detailed documentation of the format is available [here](https://plugins.jetbrains.com/docs/intellij/websymbols-web-types.html)
+Example Web-Types files are available in `examples` folder. Web-Types for Angular and Vue frameworks are available
+in the `examples/references` directory. They require dynamic contributions based on project source from IDE plugins 
+to work properly. 
 
 A webinar recording with Piotr Tomiak explaining the new version of the format and how pattern processing works is available on [YouTube](https://www.youtube.com/watch?v=nkAhI1YyU0w).
 
