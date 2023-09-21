@@ -9,5 +9,8 @@
     "vue-router",
     "vuetify",
     "@nuxt/vue-app"
+  ],
+  "lit": [
+    "lit"
   ]
 }

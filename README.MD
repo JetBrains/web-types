@@ -10,7 +10,7 @@ customizing code completion suggestions for large icon libraries in the IDEs tha
 
 # Version 2.0 of the format
 
-Web-Types started as a format to support Vue libraries but we've always wanted to provide a more generic solution. 
+Web-Types started as a format to support Vue libraries, but we've always wanted to provide a more generic solution. 
 Finally, version 2.0 of Web-Types format works seamlessly for any kind of web framework, 
 Web Components library, or CSS icons pack.
 
@@ -21,6 +21,8 @@ integrates fully with the format, so you can easily mix Web Components in Angula
 
 Examples of how basic support for frameworks and libraries is implemented in WebStorm through Web-Types are available
 in the `examples` directory.
+
+A detailed documentation of the format is available [here](https://plugins.jetbrains.com/docs/intellij/websymbols-web-types.html)
 
 A webinar recording with Piotr Tomiak explaining the new version of the format and how pattern processing works is available on [YouTube](https://www.youtube.com/watch?v=nkAhI1YyU0w).
 
@@ -42,7 +44,7 @@ property in `package.json`. E.g.:
   ...
 }
 ```
-Currently, the following libraries are providing this feature:
+Many libraries are providing this feature, for instance:
  * Vue.js
    * vuetify (https://github.com/vuetifyjs/vuetify/pull/9440)
    * quasar (https://github.com/quasarframework/quasar/pull/4749)
@@ -50,14 +52,12 @@ Currently, the following libraries are providing this feature:
    * nuxt.js (https://github.com/nuxt/nuxt.js/pull/7611)
    * @ionic/vue (https://github.com/ionic-team/ionic-framework/pull/22428)
 
-For the most popular libraries basic information is published under the `@web-types` scope on NPM. 
+In case a library is not shipping Web Types, they can be published under the `@web-types` scope on NPM. 
 Currently, the following frameworks and libraries are supported in such a way:
  * Vue.js
-    * bootstrap-vue 
-    * quasar
     * quasar-framework
-    * vuetify
-    * nuxt.js
+ * Web Components
+   * lit
 
 Published JSONs are checked into this repository under the `packages` folder. In case of Web-Types published to `@web-types` scope, 
 IDEs are supposed to download required JSONs without any changes to the user project structure.
