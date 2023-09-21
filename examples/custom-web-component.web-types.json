@@ -1,0 +1,57 @@
+{
+  "$schema": "../schema/web-types.json",
+  "name": "Cool library",
+  "version": "1.0.0",
+  "js-types-syntax": "typescript",
+  "description-markup": "markdown",
+  "contributions": {
+    "html": {
+      "elements": [
+        {
+          "name": "cool-component",
+          "description": "Use the cool component to make your website more attractive.",
+          "doc-url": "https://example.com/docs/cool-component",
+          "attributes": [
+            {
+              "name": "color",
+              "description": "Choose color for coolness",
+              "default": "blue",
+              "required": false,
+              "doc-url": "https://example.com/docs/cool-component#attrs",
+              "value": {
+                "type": "string"
+              }
+            }
+          ],
+          "slots": [
+            {
+              "name": "container"
+            }
+          ],
+          "js": {
+            "events": [
+              {
+                "name": "color:changed",
+                "description": "Emitted when color changes"
+              }
+            ],
+            "properties": [
+              {
+                "name": "color",
+                "type": "string",
+                "default": "blue"
+              }
+            ]
+          },
+          "css": {
+            "properties": [
+              {
+                "name": "--cool-degree"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

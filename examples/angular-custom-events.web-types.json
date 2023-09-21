@@ -1,0 +1,54 @@
+{
+  "$schema": "../schema/web-types.json",
+  "name": "Cool events",
+  "framework": "angular",
+  "version": "1.0.0",
+  "description-markup": "markdown",
+  "framework-config": {
+    "enable-when": {
+      "node-packages": [
+        "@angular/core"
+      ]
+    }
+  },
+  "contributions": {
+    "js": {
+      "ng-custom-events": [
+        {
+          "name": "Custom modifiers for declarative events handling",
+          "priority": "normal",
+          "pattern": {
+            "template": [
+              {
+                "items": {
+                  "path": "/js/events",
+                  "includeVirtual": false
+                }
+              },
+              {
+                "items": "ng-event-plugins-modifiers",
+                "template": [
+                  ".",
+                  "#...",
+                  "#item:modifiers"
+                ],
+                "priority": "high",
+                "repeat": true,
+                "unique": true,
+                "required": false
+              }
+            ]
+          },
+          "ng-event-plugins-modifiers": [
+            {
+              "name": "prevent"
+            },
+            {
+              "name": "stop"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

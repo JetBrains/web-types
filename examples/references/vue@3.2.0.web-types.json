@@ -1,5 +1,5 @@
 {
-  "$schema": "../schema/web-types.json",
+  "$schema": "../../schema/web-types.json",
   "framework": "vue",
   "name": "vue",
   "version": "3.2.0",
@@ -26,7 +26,38 @@
         {
           "name": "Vue component",
           "pattern": {
-            "items": "/html/vue-components"
+            "or": [
+              {
+                "items": "/html/vue-components"
+              },
+              {
+                "items":"/js/vue-component-namespaces",
+                "template":  [
+                  "#item",
+                  {
+                    "items": [
+                      {
+                        "path": "/html/vue-components",
+                        "name-conversion": {
+                          "canonical-names": "as-is",
+                          "match-names": ["as-is"],
+                          "name-variants": ["as-is"]
+                        }
+                      },
+                      "/js/vue-component-namespaces"
+                    ],
+                    "template": [
+                      ".",
+                      "#...",
+                      "#item"
+                    ],
+                    "repeat": true,
+                    "unique": false,
+                    "required": false
+                  }
+                ]
+              }
+            ]
           },
           "attributes": [
             {
@@ -44,8 +75,7 @@
                 ]
               },
               "value": {
-                "type": "of-match",
-                "kind": "plain"
+                "type": "of-match"
               },
               "vue-custom-prop": {
                 "name": "Custom Vue component property",
@@ -53,7 +83,8 @@
                 "doc-hide-pattern": true,
                 "attribute-value": {
                   "required": false
-                }
+                },
+                "hide-from-completion": true
               }
             }
           ]
@@ -127,7 +158,8 @@
                 "regex": ".*"
               }
             ]
-          }
+          },
+          "hide-from-completion": true
         },
         {
           "name": "Vue directive",
@@ -257,7 +289,10 @@
           },
           "pattern": {
             "proximity": 10,
-            "items": "vue-available-slots",
+            "items": [
+              "vue-available-slots",
+              "/html/vue-dynamic-argument"
+            ],
             "template": [
               "#",
               "$...",
@@ -279,7 +314,10 @@
             "template": [
               "v-slot",
               {
-                "items": "vue-available-slots",
+                "items": [
+                  "vue-available-slots",
+                  "/html/vue-dynamic-argument"
+                ],
                 "required": false,
                 "proximity": 5,
                 "template": [
@@ -405,8 +443,7 @@
               "description": "An HTML tag name, a Component name or Component class reference.",
               "type": [
                 "string",
-                "ComponentDefinition",
-                "ComponentConstructor"
+                "object"
               ]
             }
           ]
@@ -704,18 +741,19 @@
             "name": "event name",
             "description": "Optional event name",
             "pattern": {
-              "or": [
+              "items": [
+                "/js/events",
+                "/html/vue-dynamic-argument"
+              ]
+            },
+            "js": {
+              "events": [
                 {
-                  "items": "/js/events",
-                  "priority": "normal"
-                },
-                {
-                  "template": [
-                    {
-                      "regex": "(?!\\.).*"
-                    }
-                  ],
-                  "priority": "lowest"
+                  "name": "Custom event",
+                  "pattern": "(?!\\.).*",
+                  "priority": "lowest",
+                  "doc-hide-pattern": true,
+                  "hide-from-completion": true
                 }
               ]
             }
@@ -879,7 +917,8 @@
                   "includeVirtual": false,
                   "filter": "vue-bind"
                 },
-                "/html/vue-special-properties"
+                "/html/vue-special-properties",
+                "/html/vue-dynamic-argument"
               ]
             }
           },
@@ -909,12 +948,16 @@
           "argument": {
             "name": "v-model prop/event pair to bind",
             "pattern": {
-              "items": {
-                "path": "/html/attributes",
-                "filter": "match-with-target-list",
-                "target-list": "/js/events",
-                "prefix": "update:"
-              }
+              "items": [
+                {
+                  "path": "/html/attributes",
+                  "includeVirtual": false,
+                  "filter": "match-with-target-list",
+                  "target-list": "/js/events",
+                  "prefix": "update:"
+                },
+                "/html/vue-dynamic-argument"
+              ]
             }
           },
           "modifiers": [
@@ -981,15 +1024,32 @@
             "type": "string",
             "required": true
           }
+        },
+        {
+          "name": "Vue Composition API local directive",
+          "pattern": {
+            "items": "vue-script-setup-local-directives"
+          }
         }
       ],
       "vue-model-modifiers": [
         {
           "name": "Unknown",
           "description": "An unknown Vue model modifier.",
-          "pattern": ".*"
+          "pattern": ".*",
+          "doc-hide-pattern": true,
+          "hide-from-completion": true
         }
-      ]
+      ],
+      "vue-dynamic-argument": {
+        "name": "Dynamic directive argument",
+        "description": "It is possible to use a JavaScript expression in a directive argument by wrapping it with square brackets. The expression's evaluated value will be used as the final value for the argument.\n\nDynamic arguments are expected to evaluate to a string, with the exception of `null`. The special value `null` can be used to explicitly remove the binding. Any other non-string value will trigger a warning.",
+        "doc-url": "https://vuejs.org/guide/essentials/template-syntax.html#dynamic-arguments",
+        "hide-from-completion": true,
+        "doc-hide-pattern": true,
+        "pattern": "\\[[^\\]]+\\]",
+        "priority": "high"
+      }
     },
     "css": {
       "functions": [
