@@ -85,7 +85,7 @@ Currently, the following component documentation formats are supported:
 - JSDoc using [styleguidist](https://vue-styleguidist.github.io/docs/Documenting.html#code-comments) `vue-docgen-api`
   library - add [`vue-docgen-web-types`](https://www.npmjs.com/package/vue-docgen-web-types) package to your project 
   and run the `vue-docgen-web-types` command. You can launch it in a watch mode by passing `--watch` and 
-  you can pass a custom configuration file via `--config` parameter. 
+  you can pass a custom configuration file via `--configFile` parameter. 
   See [config.d.ts](https://github.com/JetBrains/web-types/blob/master/gen/vue-docgen-web-types/types/config.d.ts)
   for detailed information on supported configuration file options.
   
