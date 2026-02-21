@@ -14,7 +14,7 @@ Web-Types started as a format to support Vue libraries, but we've always wanted 
 Finally, version 2.0 of Web-Types format works seamlessly for any kind of web framework, 
 Web Components library, or CSS icons pack.
 
-A detailed documentation of the format is available [here](https://plugins.jetbrains.com/docs/intellij/websymbols-web-types.html)
+A detailed documentation of the format is available [here](https://plugins.jetbrains.com/docs/intellij/polysymbols-web-types.html)
 
 Starting with version 2021.3.1 of [WebStorm](https://www.jetbrains.com/webstorm/) (and other [JetBrains IDEs](https://www.jetbrains.com/products/#lang=js&type=ide)), a full support for the new Web-Types format 
 is supported (the new format has been partially supported since 2021.2). You can now add custom HTML elements and 
